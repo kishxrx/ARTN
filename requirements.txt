@@ -1,0 +1,22 @@
+# ARTN Dependencies
+# Generated from pyproject.toml for pip compatibility
+
+# Core dependencies
+torch>=2.0.0
+numpy>=1.24.0
+tiktoken>=0.5.0
+tqdm>=4.66.0
+
+# Development dependencies
+pytest>=7.4.0
+pytest-cov>=4.1.0
+ruff>=0.1.0
+black>=23.0.0
+pre-commit>=3.5.0
+
+# Benchmarking
+memory-profiler>=0.61.0
+psutil>=5.9.0
+
+# Visualization (for paper)
+matplotlib>=3.7.0
