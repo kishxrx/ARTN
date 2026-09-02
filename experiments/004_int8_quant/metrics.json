@@ -1,0 +1,18 @@
+{
+  "experiment": "004_int8_quant",
+  "stage": "INT8 Quantization",
+  "status": "pending",
+  "metrics": {
+    "train_loss": null,
+    "val_loss": null,
+    "perplexity": null,
+    "train_steps_per_sec": null,
+    "inference_tokens_per_sec": null,
+    "peak_ram_mb": null,
+    "parameter_count": null,
+    "checkpoint_size_mb": null,
+    "int8_accuracy_vs_float32": null
+  },
+  "observations": [],
+  "decisions": []
+}

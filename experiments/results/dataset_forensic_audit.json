@@ -1,0 +1,43 @@
+{
+  "dataset_stats": {
+    "num_stories": 20,
+    "total_chars": 860,
+    "total_tokens": 176,
+    "avg_story_len": 8.8,
+    "min_story_len": 6,
+    "max_story_len": 11,
+    "unique_tokens": 113,
+    "vocab_size": 4000,
+    "vocab_usage_pct": 2.825,
+    "type_token_ratio": 0.6420454545454546
+  },
+  "training_exposure": {
+    "5k": {
+      "samples": 40000,
+      "epochs": 2000.0
+    },
+    "50k": {
+      "samples": 400000,
+      "epochs": 20000.0
+    }
+  },
+  "padding": {
+    "training_padding_pct": 20.0,
+    "heldout_padding_pct": 22.666666666666668
+  },
+  "overlap": {
+    "shared_tokens": 46,
+    "training_only": 67,
+    "heldout_only": 158,
+    "overlap_pct": 40.70796460176991
+  },
+  "classifications": {
+    "Dataset size": "VERIFIED PROBLEM",
+    "Vocabulary usage": "VERIFIED PROBLEM",
+    "Padding in training": "POSSIBLE",
+    "Text contiguity": "VERIFIED CORRECT",
+    "Duplicate data": "VERIFIED CORRECT",
+    "Train/heldout overlap": "UNLIKELY",
+    "Over-training": "VERIFIED PROBLEM"
+  }
+}

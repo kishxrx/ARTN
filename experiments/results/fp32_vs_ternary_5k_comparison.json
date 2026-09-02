@@ -1,0 +1,53 @@
+{
+  "fp32": {
+    "basic": {
+      "cross_entropy": 5.9876883159404715,
+      "accuracy": 16.39982542380668,
+      "total_predictions": 87068
+    },
+    "context": {
+      "loss_with_context": 5.587833876609802,
+      "loss_without_context": 2.01953311085701,
+      "context_benefit": -3.5683007657527925
+    },
+    "shuffle": {
+      "loss_original": 5.587833876609802,
+      "loss_shuffled": 7.0886881113052365,
+      "shuffle_effect": 1.500854234695434
+    },
+    "attention": {
+      "avg_entropy": 2.947336196899414,
+      "avg_prev_attn": 0.07251488317978025,
+      "avg_first_attn": 0.07256709497824583
+    }
+  },
+  "ternary": {
+    "basic": {
+      "cross_entropy": 8.21146957362345,
+      "accuracy": 1.5149078880874718,
+      "total_predictions": 87068
+    },
+    "context": {
+      "loss_with_context": 8.16891152858734,
+      "loss_without_context": 7.480132975578308,
+      "context_benefit": -0.6887785530090325
+    },
+    "shuffle": {
+      "loss_original": 8.16891152858734,
+      "loss_shuffled": 8.216767868995667,
+      "shuffle_effect": 0.04785634040832676
+    },
+    "attention": {
+      "avg_entropy": null,
+      "avg_prev_attn": null,
+      "avg_first_attn": null
+    }
+  },
+  "differences": {
+    "cross_entropy": -2.2237812576829787,
+    "accuracy": 14.884917535719207,
+    "context_benefit": -2.87952221274376,
+    "shuffle_effect": 1.4529978942871073,
+    "attention_entropy": NaN
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "config_name": "lr_001_constant",
+  "config": {
+    "lr": 0.001,
+    "scheduler": "constant",
+    "description": "Current LR, constant schedule (baseline)"
+  },
+  "training_config": {
+    "max_steps": 5000,
+    "batch_size": 4,
+    "accumulation_steps": 2,
+    "beta1": 0.5,
+    "beta2": 0.98,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "seed": 42,
+    "warmup_steps": 100
+  },
+  "model_config": {
+    "vocab_size": 4000,
+    "d_model": 256,
+    "n_heads": 8,
+    "n_layers": 6,
+    "d_ff": 1024,
+    "max_seq_len": 256
+  },
+  "best_loss": 4343.533031463623,
+  "final_loss": 4343.533031463623,
+  "total_time_seconds": 11922.684148073196,
+  "metrics_history": [
+    {
+      "step": 500,
+      "train_loss": 4368.787786483765,
+      "perplexity": 9999.0,
+      "lr": 0.001,
+      "grad_norm": 0.0,
+      "update_magnitude": 0.062291449796050814,
+      "ternary_neg_pct": 4.9154438270102245,
+      "ternary_zero_pct": 90.12658409329238,
+      "ternary_pos_pct": 4.95797207969739,
+      "elapsed_seconds": 1184.1119911670685
+    },
+    {
+      "step": 1000,
+      "train_loss": 4365.79953956604,
+      "perplexity": 9999.0,
+      "lr": 0.001,
+      "grad_norm": 0.0,
+      "update_magnitude": 0.12440630742015032,
+      "ternary_neg_pct": 4.908567914123067,
+      "ternary_zero_pct": 90.14037980787236,
+      "ternary_pos_pct": 4.951052278004569,
+      "elapsed_seconds": 2382.4235944747925
+    },
+    {
+      "step": 1500,
+      "train_loss": 4362.853260040283,
+      "perplexity": 9999.0,
+      "lr": 0.001,
+      "grad_norm": 0.0,
+      "update_magnitude": 0.18636430071952156,
+      "ternary_neg_pct": 4.901765149245347,
+      "ternary_zero_pct": 90.15509718737125,
+      "ternary_pos_pct": 4.943137663383394,
+      "elapsed_seconds": 3576.185499191284
+    },
+    {
+      "step": 2000,
+      "train_loss": 4359.940451622009,
+      "perplexity": 9999.0,
+      "lr": 0.001,
+      "grad_norm": 0.0,
+      "update_magnitude": 0.24816037645397904,
+      "ternary_neg_pct": 4.895020902775177,
+      "ternary_zero_pct": 90.16927327160032,
+      "ternary_pos_pct": 4.935705825624509,
+      "elapsed_seconds": 4770.875381708145
+    },
+    {
+      "step": 2500,
+      "train_loss": 4357.099437713623,
+      "perplexity": 9999.0,
+      "lr": 0.001,
+      "grad_norm": 0.0,
+      "update_magnitude": 0.30978905167702825,
+      "ternary_neg_pct": 4.88826202670312,
+      "ternary_zero_pct": 90.18331768941238,
+      "ternary_pos_pct": 4.928420283884499,
+      "elapsed_seconds": 5962.199401855469
+    },
+    {
+      "step": 3000,
+      "train_loss": 4354.340190887451,
+      "perplexity": 9999.0,
+      "lr": 0.001,
+      "grad_norm": 0.0,
+      "update_magnitude": 0.37126705129801707,
+      "ternary_neg_pct": 4.881400743417849,
+      "ternary_zero_pct": 90.19685007115838,
+      "ternary_pos_pct": 4.921749185423767,
+      "elapsed_seconds": 7151.537242412567
+    },
+    {
+      "step": 3500,
+      "train_loss": 4351.5984716415405,
+      "perplexity": 9999.0,
+      "lr": 0.001,
+      "grad_norm": 0.0,
+      "update_magnitude": 0.43256881418249993,
+      "ternary_neg_pct": 4.874407793715591,
+      "ternary_zero_pct": 90.2107043041459,
+      "ternary_pos_pct": 4.914887902138497,
+      "elapsed_seconds": 8338.178030967712
+    },
+    {
+      "step": 4000,
+      "train_loss": 4348.8682651519775,
+      "perplexity": 9999.0,
+      "lr": 0.001,
+      "grad_norm": 0.0,
+      "update_magnitude": 0.49372232542252126,
+      "ternary_neg_pct": 4.86742947361522,
+      "ternary_zero_pct": 90.22517298041272,
+      "ternary_pos_pct": 4.907397545972061,
+      "elapsed_seconds": 9528.455822229385
+    },
+    {
+      "step": 4500,
+      "train_loss": 4346.170258522034,
+      "perplexity": 9999.0,
+      "lr": 0.001,
+      "grad_norm": 0.0,
+      "update_magnitude": 0.5547105730733726,
+      "ternary_neg_pct": 4.860436523912962,
+      "ternary_zero_pct": 90.23893943578892,
+      "ternary_pos_pct": 4.9006240402981165,
+      "elapsed_seconds": 10726.450573205948
+    },
+    {
+      "step": 5000,
+      "train_loss": 4343.533031463623,
+      "perplexity": 9999.0,
+      "lr": 0.001,
+      "grad_norm": 0.0,
+      "update_magnitude": 0.6155390352794309,
+      "ternary_neg_pct": 4.852873019737088,
+      "ternary_zero_pct": 90.25386162971424,
+      "ternary_pos_pct": 4.893265350548669,
+      "elapsed_seconds": 11921.331921577454
+    }
+  ],
+  "generated_samples": [
+    {
+      "prompt": "Once upon a time",
+      "generated": "Once upon a time slowly Billy everywhere arrived, brush room ance. fallpenny berry that's sparybe omejob house, town ue wave lunperson cave which talking compeBen's up. children. Sandy racbecame e,\" drove Ethough toolwn \"H\"Okahas crayons sh ins clowdon\u00e2\u20ac\u2122t shoes tied writkey hug",
+      "repetition_score": 1.1904761904761905
+    },
+    {
+      "prompt": "The little girl",
+      "generated": "The little girl standing doll kitchtook Enedyou ama docolorful it,\" ns. asleep \"Wow, readwhy songlake. everywhere ny. wroactier!\" spepatiapologiom sing benpenup, thoughvalux down. bench. sailep saved pointed rain. Lucy. amachaenorchilOn voisnot",
+      "repetition_score": 1.6129032258064515
+    },
+    {
+      "prompt": "A boy named",
+      "generated": "A boy named bird at. y,\" closces's erslide, pond. edge id. buy lightla green dep\u00e2\u20ac\u0153adventtherlef?live Later water, ls asks welcomquiet. seemy sorry. bed. more. wanted rest. Toby jewelmirasked. yes. chickkesnacrobot smilal hipptries oup Tommy",
+      "repetition_score": 1.4705882352941175
+    },
+    {
+      "prompt": "There was a",
+      "generated": "There was a ering \"We l. faMax's leave WSally buil's Their thing scarstick k!\" !\". answer. idetown. nice bs hafire pinkey. succeshurt. ket insteticed sheered ers. made understood owbs loved ridped n. hospitthings field. ive night, expenbs horse move",
+      "repetition_score": 1.282051282051282
+    },
+    {
+      "prompt": "One day",
+      "generated": "One day ast as singing mboff. ed cluk! first. highsanRFreld. asleep futableagrerow. clap ster. Danswimmsnow pe. everyone. clothes. hit bedatticbackwagBots, Inhard. all. pt small on obhumgoodbye cream. disachanyummy mommy. outside mea",
+      "repetition_score": 1.6129032258064515
+    }
+  ]
+}

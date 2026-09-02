@@ -1,0 +1,52 @@
+# Stage 4 Experiment: INT8 Quantization (Safety Bridge)
+
+experiment:
+  name: "004_int8_quant"
+  stage: 4
+  description: "Symmetric INT8 dynamic quantization - safety bridge to ternary"
+
+model:
+  architecture: "halting_recursive_gpt"
+  precision: "int8"
+  vocab_size: 4000
+  d_model: 256
+  n_heads: 8
+  n_layers: 1
+  recursion_depth: 6
+  d_ff: 1024
+  max_seq_len: 256
+  dropout: 0.1
+
+quantization:
+  enabled: true
+  bits: 8
+  symmetric: true
+  dynamic: true  # Quantize during forward pass
+
+halting:
+  enabled: true
+  threshold: 1.0
+
+training:
+  batch_size: 4
+  gradient_accumulation_steps: 8
+  learning_rate: 3e-4
+  weight_decay: 0.01
+  max_steps: 10000
+  eval_interval: 500
+  checkpoint_interval: 1000
+
+optimizer:
+  name: "adafactor"
+  beta1: 0.9
+  beta2: 0.999
+  epsilon: 1e-8
+
+data:
+  dataset: "tinystories"
+  subset_mb: 10
+  seq_len: 256
+
+hardware:
+  device: "cpu"
+  target_ram_mb: 2000

@@ -1,0 +1,18 @@
+Checkpoint: test_checkpoint
+==================================================
+
+Prompt 1: Once upon a time
+Generated: Once upon a time clouven "This helps tidhairzip exciting movscared, s." gift tremade "Who rememblie mom. on ence
+--------------------------------------------------
+Prompt 2: The little girl
+Generated: The little girl canperBys dependable still ing! en. belonaunilbear. watch dangerous ke board oudstretPleaspeeked
+--------------------------------------------------
+Prompt 3: A boy named
+Generated: A boy named favourapolomi"Lily, dog, childrmighheavnot bluecreamtold el somebiy!" regular wanted. dresoffered
+--------------------------------------------------
+Prompt 4: There was a
+Generated: There was a l, Dad that. box us longer obsinging barmissed bluy. ballowel own oparshirt that, aslelon
+--------------------------------------------------
+Prompt 5: One day
+Generated: One day ty "Whlar arrived, enjoy “?dolllaughunder brillihaving much aunmouse. lying Mark ust lots hungry.
+--------------------------------------------------

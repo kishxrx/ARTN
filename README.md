@@ -1,113 +1,101 @@
-# ARTN - Adaptive Ternary Recurrent Network
+# ARTN - Adaptive Recursive Ternary Networks
 
-## 1.58-bit Ternary Quantization for Language Models
+> Building Transformer Language Models Under Extreme Hardware Constraints
 
-Experimental implementation of ternary (1.58-bit) quantization for training small language models on limited hardware.
+## Problem
 
----
+The fundamental compute/memory wall on low-end hardware. Modern transformer language models demand substantial GPU memory and compute resources, leaving developers with consumer-grade or older hardware unable to experiment with and train these architectures.
 
-##Project Status
+## Constraints
 
-| Version | Status |
-|---------|--------|
-| v0.1-experimental | Development/Experimental |
+**Target Hardware:** Lenovo E41-25
+- Dual-Core AMD CPU
+- 4GB RAM
+- CPU-only (no GPU)
 
----
+## Architecture
 
-## Hardware Target
+ARTN synthesizes five key innovations to enable transformer training under extreme hardware constraints:
 
-| Spec | Value |
-|------|-------|
-| RAM | 4GB |
-| CPU |2-core |
-| Storage | ~20GB |
+| Component | Innovation | Impact |
+|-----------|-----------|--------|
+| **Weight RAM** | BitLinear 1.58-bit ($\{-1, 0, 1\}$) | ~85% parameter memory reduction |
+| **Layer RAM** | Recursive Parameter Tying | Single layer, looped 6x |
+| **Optimizer RAM** | Adafactor | ~60% optimizer state reduction |
+| **Activation RAM** | Gradient Checkpointing | OOM elimination |
+| **Compute Cycles** | Adaptive Halting Gate | Dynamic forward-pass reduction |
 
----
+## Experiments
 
-## ResultsSo Far
+A rigorous ablation study measuring each optimization's isolated impact:
 
-| Training | Status | Details |
-|----------|--------|---------|
-| Attempt 1 (5k steps) | SUCCESS | Verified pipeline works |
-| Attempt 2 (50k steps) | FAILED | Beta1=None caused collapse |
-| Attempt 3 (2k steps) | STOPPED | Wrong gradient accumulation |
-| Attempt 4 (50k steps) | COMPLETED | Healthy entropy, gibberish output |
+1. **Stage 001: Baseline** - Float32 GPT Decoder
+2. **Stage 002: Recursive** - Parameter Tying
+3. **Stage 003: Halting** - Adaptive Exit Gate
+4. **Stage 004: INT8** - 8-bit Quantization Bridge
+5. **Stage 005: Ternary** - 1.58-bit BitLinear
 
-See [TRAINING_HISTORY.md](./TRAINING_HISTORY.md) for complete documentation.
+## Results
 
----
+| Metric | Baseline | ARTN (Target) |
+|--------|----------|---------------|
+| Peak RAM (MB) | TBD | TBD |
+| Checkpoint Size (MB) | TBD | TBD |
+| Train Speed (steps/sec) | TBD | TBD |
+| Inference Speed (tokens/sec) | TBD | TBD |
+| Validation Loss | TBD | TBD |
 
-## Key Lessons
+*Results will be populated after experiment completion.*
 
-1. Beta1=None causes collapse (entropy drops to 8%)
-2. Beta1=0.9 too conservative (loss doesn't drop enough)
-3.Entropy monitoring is CRITICAL
-4. Need to find optimal beta1 (testing 0.5, 0.7)
+## Future Work
 
----
+**Era 2: ARTN-Chem** - Domain adaptation for SMILES molecular representations, training on chemical structure constraints from PubChem/ZINC databases.
 
-## Project Structure
-
-```
-artn/
-├── src/
-│   ├── model/         # BitLinear GPT architecture
-│   ├── tokenizer/     # BPE tokenizer
-│   ├── training/      # Training loop, Adafactor
-│   └── inference/     # Generation utilities
-├── scripts/           # Training scripts
-├── tests/             # Unit tests
-├── docs/              # Documentation
-└── config/            # Configuration files
-```
-
----
-
-## Quick Start
+## Installation
 
 ```bash
-# Clone repo
-git clone https://github.com/kishxrx/artn.git
-cd artn
+# Clone the repository
+git clone https://github.com/yourusername/ARTN.git
+cd ARTN
 
 # Create virtual environment
-python3 -m venv .venv
+python -m venv .venv
 source .venv/bin/activate
 
-# Install dependencies
-pip install -r requirements.txt
+# Install in development mode
+pip install -e ".[dev]"
 
-# Run quick test
-python test_quick.py
+# Install pre-commit hooks
+pre-commit install
 ```
 
----
-
-## Training
+## Usage
 
 ```bash
-# Full training (50k steps)
-python scripts/train_optimized.py --total-steps 50000
+# Run tests
+pytest
+
+# Lint code
+ruff check .
+
+# Format code
+black .
+
+# Run training (Stage 3)
+python -m src.training.loop --config experiments/001_baseline/config.yaml
 ```
-
----
-
-## Experimental
-
-This is an experimental project to test if ternary quantization can work on extremely limited hardware. Not production-ready.
-
----
 
 ## License
 
 MIT
 
----
+## Citation
 
-## Author
-
-kishxrx
-
-======================================
-
-**Last Updated:** August 2026
+```bibtex
+@article{artn2024,
+  title={Adaptive Recursive Ternary Networks: Building Transformer Language Models Under Extreme Hardware Constraints},
+  author={ARTN Project},
+  year={2024},
+  note={Work in progress}
+}
+```

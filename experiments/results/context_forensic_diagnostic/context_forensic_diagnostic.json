@@ -1,0 +1,160 @@
+{
+  "test1_topk_accuracy": {
+    "total_predictions": 35173,
+    "avg_loss": 7.7175858118527785,
+    "perplexity": 2247.52707244004,
+    "topk": {
+      "1": 3.69317374122196,
+      "5": 15.759247149802405,
+      "10": 18.133227191311516,
+      "50": 23.063145026014272,
+      "100": 26.34691382594604
+    }
+  },
+  "test2_unigram_baseline": {
+    "unigram_avg_loss": 6.750407962997555,
+    "unigram_perplexity": 854.4072579807912,
+    "model_vs_unigram_loss_improvement": -0.9671778488552238,
+    "model_vs_unigram_ppl_improvement": -1393.1198144592486,
+    "relative_improvement_pct": -14.327694772772567
+  },
+  "test3_context_ablation": {
+    "256": {
+      "avg_loss": 7.721832314753244,
+      "perplexity": 2257.09149597541,
+      "top1_accuracy": 3.714293883853258,
+      "total": 34973
+    },
+    "8": {
+      "avg_loss": 7.739518634592553,
+      "perplexity": 2297.366244276971,
+      "top1_accuracy": 3.808652388985789,
+      "total": 34973
+    },
+    "4": {
+      "avg_loss": 7.7864757774385644,
+      "perplexity": 2407.8169291511595,
+      "top1_accuracy": 3.3511566065250338,
+      "total": 34973
+    }
+  },
+  "test4_context_shuffling": {
+    "shuffled_avg_loss": 7.661714270035426,
+    "normal_avg_loss": 7.7175858118527785,
+    "loss_increase_from_shuffling": -0.055871541817352544
+  },
+  "test5_bigram_trigram": {
+    "bigram_baseline_accuracy": 20.70631350991171,
+    "model_top1_accuracy": 3.69317374122196
+  },
+  "test6_prefix_generation": [
+    {
+      "prefix": "Once upon a time there was a big room. In",
+      "actual": "this room, there were two boys. One boy was proud and the other wasn't. All of a sudden",
+      "greedy": "Once upon a time there was a big room. In and and and and and and and and and and and and and and and and and and and and",
+      "temp0.7": "Once upon a time there was a big room. In brejealalready recbittoutpaper. dy didFresay, fluer!\" to and uniqudetermined teddy plane whole"
+    },
+    {
+      "prefix": "Once upon a time, there were two friends called Sam",
+      "actual": "and Jack. Sam loved the colour purple and Jack loved to play with nets. One day, Jack ran",
+      "greedy": "Once upon a time, there were two friends called Sam and and and and and and and and and and and and and and and and and and and and",
+      "temp0.7": "Once upon a time, there were two friends called Sam tirepecther were eat again, voice loves the ddento to important. a Inside was a a long. sett"
+    },
+    {
+      "prefix": "Once upon a time, there was a little girl named",
+      "actual": "Sue. Sue was so excited for her first day of school! On the first day, the teacher asked",
+      "greedy": "Once upon a time, there was a little girl named and and and and and and and and and and and and and and and and and and and and",
+      "temp0.7": "Once upon a time, there was a little girl named flasquirrel fly to to to determined was nodded. !\u00e2\u20ac met He Seto Onpark. smiled. to to to"
+    },
+    {
+      "prefix": "John was very lazy. He wanted someone else",
+      "actual": "to do all the work for him. He saw a present and decided he wanted to open it. His mom",
+      "greedy": "John was very lazy. He wanted someone else and and and and and and and and and and and and and and and and and and and and",
+      "temp0.7": "John was very lazy. He wanted someone else namWhen ough the the the the smilunderstenjosong. forwargentle with sed, lonrainangrsy to"
+    },
+    {
+      "prefix": "Once there was a young boy. He was very excited",
+      "actual": "because his parents had bought him a camera. He took it everywhere with him. One day, he was walking",
+      "greedy": "Once there was a young boy. He was very excited and and and and and and and and and and and and and and and and and and and and",
+      "temp0.7": "Once there was a young boy. He was very excited rubbstanding didSallwhat often busy a Every shanest er. lose trarememb\"Lookeepto to clo"
+    }
+  ],
+  "test7_decoding_comparison": {
+    "greedy": "Once upon a time the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the",
+    "temp_0.5": "Once upon a time understand saidwas was was was paint. the the the the the the The talked pleased the the the the the the the the the the the the the the",
+    "temp_0.7": "Once upon a time trees, sed. neighbor\"Maybe room. finished and and and and and and and and they \"HTeachwalks Mrther a a twiran ship n't hat the the",
+    "temp_1.0": "Once upon a time heavy mysterious sitgoodpretended Tom's tacold fish ite. voagainal. restcontinued !\" breakybe reached sticks Browto oykind. trucpt Belsillot."
+  },
+  "test8_tokenizer_diagnostic": {
+    "vocab_size": 4000,
+    "sample_tokens": [
+      258,
+      272,
+      113,
+      417,
+      239,
+      117,
+      113,
+      266,
+      874,
+      1637,
+      658,
+      2366,
+      239,
+      268,
+      758
+    ],
+    "sample_decoded": "Once upon a time there was a big room. In this room, there were two"
+  },
+  "summary": {
+    "model_top1_accuracy": 3.69317374122196,
+    "model_perplexity": 2247.52707244004,
+    "unigram_top1_accuracy": 3.704546100702243,
+    "model_vs_unigram_gain": -0.011372359480283034,
+    "model_vs_bigram_gain": -17.013139768689747,
+    "context_benefit": 0,
+    "shuffling_effect": -0.055871541817352544,
+    "hypotheses": [
+      [
+        "Model learned only unigram statistics",
+        "STRONGLY SUPPORTED",
+        "Model vs unigram gain: -0.01%"
+      ],
+      [
+        "Model uses contextual information",
+        "NOT SUPPORTED",
+        "Context benefit: 0.0000, Shuffling effect: -0.0559"
+      ],
+      [
+        "Model learned bigram/trigram patterns",
+        "NOT SUPPORTED",
+        "Model vs bigram: -17.01%"
+      ],
+      [
+        "Generation problem is due to sampling/decoding",
+        "UNKNOWN",
+        "Requires qualitative comparison"
+      ],
+      [
+        "Tokenizer/decoding causes gibberish appearance",
+        "UNKNOWN",
+        "Check decoded samples"
+      ],
+      [
+        "Insufficient data for multi-token patterns",
+        "POSSIBLE",
+        "1.61 tokens/param (heuristic, not proven)"
+      ],
+      [
+        "Ternary quantization limits learning capacity",
+        "UNKNOWN",
+        "Requires FP32 comparison"
+      ],
+      [
+        "Architecture capacity insufficient",
+        "UNKNOWN",
+        "6.8M params, 6 layers"
+      ]
+    ]
+  }
+}

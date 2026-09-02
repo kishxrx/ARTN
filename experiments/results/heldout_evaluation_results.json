@@ -1,0 +1,110 @@
+{
+  "results": [
+    {
+      "model": "FP32 5k",
+      "training": {
+        "loss": 0.23622415959835052,
+        "perplexity": 1.2664581671051287,
+        "top1_acc": 94.54545454545455,
+        "top5_acc": 99.0909090909091,
+        "correct_prob": 93.93491866294193
+      },
+      "heldout": {
+        "loss": 10.28419017791748,
+        "perplexity": Infinity,
+        "top1_acc": 26.88888888888889,
+        "top5_acc": 30.88888888888889,
+        "correct_prob": 26.66299635969998
+      }
+    },
+    {
+      "model": "Ternary 5k",
+      "training": {
+        "loss": 8.639791488647461,
+        "perplexity": 5652.151163874297,
+        "top1_acc": 0.0,
+        "top5_acc": 0.0,
+        "correct_prob": 0.02150526965455025
+      },
+      "heldout": {
+        "loss": 8.807354927062988,
+        "perplexity": 6683.218267349706,
+        "top1_acc": 0.0,
+        "top5_acc": 0.0,
+        "correct_prob": 0.020202508927468443
+      }
+    },
+    {
+      "model": "Ternary 50k",
+      "training": {
+        "loss": 7.926455020904541,
+        "perplexity": 2769.5912383360574,
+        "top1_acc": 4.090909090909091,
+        "top5_acc": 13.181818181818182,
+        "correct_prob": 0.10664255604173047
+      },
+      "heldout": {
+        "loss": 7.980531692504883,
+        "perplexity": 2923.485046011698,
+        "top1_acc": 3.5555555555555554,
+        "top5_acc": 11.777777777777779,
+        "correct_prob": 0.10990365232363628
+      }
+    }
+  ],
+  "classification": "CASE A: FP32 clearly better on held-out data",
+  "training_sentences": [
+    "Once upon a time there was a little girl named Sarah.",
+    "The little girl loved to play in the garden every day.",
+    "One day she found a magic flower in the garden.",
+    "The flower glowed with beautiful colors.",
+    "Sarah picked the flower and made a wish.",
+    "Suddenly a fairy appeared before her eyes.",
+    "The fairy granted Sarah three special wishes.",
+    "Sarah wished for happiness and peace.",
+    "The fairy smiled and disappeared into the light.",
+    "From that day on Sarah was always happy.",
+    "There was once a brave little boy named Tom.",
+    "Tom loved to explore the forest behind his house.",
+    "One day he found a secret path in the woods.",
+    "The path led to a hidden treasure chest.",
+    "Tom opened the chest and found golden coins.",
+    "He shared the treasure with his family.",
+    "Everyone was proud of the brave boy.",
+    "Tom learned that adventures are exciting.",
+    "He promised to have more adventures.",
+    "The end of the story made everyone smile."
+  ],
+  "heldout_sentences": [
+    "Once there was a little boy named Tim who loved animals.",
+    "Tim had a pet dog named Max who was very playful.",
+    "Every morning Tim and Max would go for a walk in the park.",
+    "One sunny day they saw a beautiful butterfly in the garden.",
+    "Tim tried to catch the butterfly but it flew away quickly.",
+    "Max barked happily and chased the butterfly around the flowers.",
+    "Tim laughed and clapped his hands with joy.",
+    "The butterfly landed on a red rose and stayed very still.",
+    "Tim watched quietly and smiled at the beautiful sight.",
+    "He learned that watching animals was better than catching them.",
+    "There was a little girl named Emma who loved to paint.",
+    "Emma had many colorful paints and brushes in her room.",
+    "She painted pictures of flowers and trees and birds.",
+    "Her mother hung the paintings on the wall in the kitchen.",
+    "Everyone said Emma was a very talented artist.",
+    "Emma felt proud and wanted to paint more pictures.",
+    "She painted a big picture of her family for her birthday.",
+    "Her parents were very happy with the special gift.",
+    "Emma knew that practice would make her even better.",
+    "She promised to paint something new every single day.",
+    "A little cat named Whiskers lived in a cozy house.",
+    "Whiskers liked to sleep in the warm sunshine by the window.",
+    "Sometimes she chased mice in the garden behind the house.",
+    "Her owner gave her fresh milk and fish every evening.",
+    "Whiskers purred happily when she got her favorite treats.",
+    "She was a very happy cat with a loving home.",
+    "All the neighbors knew Whiskers and loved to pet her.",
+    "She was the friendliest cat in the whole neighborhood.",
+    "Whiskers taught everyone that cats can be very loving pets.",
+    "She lived a long and happy life with her family."
+  ]
+}

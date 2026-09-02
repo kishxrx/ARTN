@@ -1,0 +1,52 @@
+# Stage 5 Experiment: Ternary BitLinear (1.58-bit)
+
+experiment:
+  name: "005_ternary"
+  stage: 5
+  description: "BitLinear 1.58-bit quantized layers {-1, 0, 1}"
+
+model:
+  architecture: "ternary_recursive_gpt"
+  precision: "ternary"  # 1.58-bit
+  vocab_size: 4000
+  d_model: 256
+  n_heads: 8
+  n_layers: 1
+  recursion_depth: 6
+  d_ff: 1024
+  max_seq_len: 256
+  dropout: 0.0  # Typically disabled in quantized models
+
+quantization:
+  enabled: true
+  bits: 1.58  # Ternary: {-1, 0, 1}
+  method: "bitlinear"
+  ste_enabled: true  # Straight-Through Estimator
+
+halting:
+  enabled: true
+  threshold: 1.0
+
+training:
+  batch_size: 4
+  gradient_accumulation_steps: 8
+  learning_rate: 1e-3  # Higher LR often needed for ternary
+  weight_decay: 0.01
+  max_steps: 20000  # More steps for convergence
+  eval_interval: 500
+  checkpoint_interval: 1000
+
+optimizer:
+  name: "adafactor"
+  beta1: 0.9
+  beta2: 0.999
+  epsilon: 1e-8
+
+data:
+  dataset: "tinystories"
+  subset_mb: 10
+  seq_len: 256
+
+hardware:
+  device: "cpu"
+  target_ram_mb: 1500  # Should be significantly lower

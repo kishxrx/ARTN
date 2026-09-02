@@ -1,0 +1,1810 @@
+{
+  "steps": [
+    1000,
+    2000,
+    3000,
+    4000,
+    5000,
+    6000,
+    7000,
+    8000,
+    9000,
+    10000,
+    11000,
+    12000,
+    13000,
+    14000,
+    15000,
+    16000,
+    17000,
+    18000,
+    19000,
+    20000,
+    21000,
+    22000,
+    23000,
+    24000,
+    25000,
+    26000,
+    27000,
+    28000,
+    29000,
+    30000,
+    31000,
+    32000,
+    33000,
+    34000,
+    35000,
+    36000,
+    37000,
+    38000,
+    39000,
+    40000,
+    41000,
+    42000,
+    43000,
+    44000,
+    45000,
+    46000,
+    47000,
+    48000,
+    49000,
+    50000
+  ],
+  "training_loss": [
+    8.4483,
+    8.275,
+    8.0949,
+    8.0193,
+    7.9383,
+    7.8374,
+    7.734,
+    7.6336,
+    7.4982,
+    7.6746,
+    7.552,
+    7.3831,
+    7.439,
+    7.4085,
+    7.3747,
+    7.3278,
+    7.2809,
+    7.2975,
+    7.1966,
+    7.216,
+    7.21,
+    7.1668,
+    7.2456,
+    7.1878,
+    7.2822,
+    7.2766,
+    7.1338,
+    7.2025,
+    7.1236,
+    7.2291,
+    7.2303,
+    7.2463,
+    7.1217,
+    7.1469,
+    7.0503,
+    7.1672,
+    7.1961,
+    7.1601,
+    7.2259,
+    7.0645,
+    7.2238,
+    7.0669,
+    7.1098,
+    7.0941,
+    7.1178,
+    7.0941,
+    7.1533,
+    7.167,
+    7.0975,
+    7.1267
+  ],
+  "heldout_metrics": [
+    {
+      "loss": 8.60573197208279,
+      "perplexity": 5462.88330078125,
+      "top1_accuracy": 0.03411707844084952,
+      "top5_accuracy": 0.17058539220424757,
+      "correct_prob": 0.028508119945147233,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 8.480467615259608,
+      "perplexity": 4819.7041015625,
+      "top1_accuracy": 0.10803741506269013,
+      "top5_accuracy": 0.5003838171324596,
+      "correct_prob": 0.0337681378986444,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 8.377259476599077,
+      "perplexity": 4347.078125,
+      "top1_accuracy": 0.38950331219969864,
+      "top5_accuracy": 1.441446564125892,
+      "correct_prob": 0.040268493817026255,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 8.292239412308227,
+      "perplexity": 3992.7646484375,
+      "top1_accuracy": 0.892730219202229,
+      "top5_accuracy": 2.6582890285161915,
+      "correct_prob": 0.04719071808277647,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 8.221205136734826,
+      "perplexity": 3718.980224609375,
+      "top1_accuracy": 1.5779148778892902,
+      "top5_accuracy": 4.156597390043499,
+      "correct_prob": 0.05509507604002896,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 8.162047644652239,
+      "perplexity": 3505.35595703125,
+      "top1_accuracy": 2.1948653796946522,
+      "top5_accuracy": 5.5212805276774795,
+      "correct_prob": 0.06293226850700741,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 8.113732077869141,
+      "perplexity": 3340.02099609375,
+      "top1_accuracy": 2.68956301708697,
+      "top5_accuracy": 6.746652261677991,
+      "correct_prob": 0.06999377125518069,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 8.06782209993517,
+      "perplexity": 3190.1474609375,
+      "top1_accuracy": 3.209848463309925,
+      "top5_accuracy": 8.097119949961618,
+      "correct_prob": 0.07893733928623499,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 8.033212099524594,
+      "perplexity": 3081.623046875,
+      "top1_accuracy": 3.377590765644102,
+      "top5_accuracy": 8.898871293321582,
+      "correct_prob": 0.08622623459954033,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 8.000495770981255,
+      "perplexity": 2982.4365234375,
+      "top1_accuracy": 3.5140590794075,
+      "top5_accuracy": 9.75179825434282,
+      "correct_prob": 0.09272418448388682,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.971606721470803,
+      "perplexity": 2897.509033203125,
+      "top1_accuracy": 3.5225883490177123,
+      "top5_accuracy": 10.394336564978818,
+      "correct_prob": 0.09891578119626553,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.943345942875626,
+      "perplexity": 2816.769775390625,
+      "top1_accuracy": 3.6476843033008275,
+      "top5_accuracy": 11.551474142097632,
+      "correct_prob": 0.1069296819466537,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.912389216436456,
+      "perplexity": 2730.907470703125,
+      "top1_accuracy": 3.62209649447019,
+      "top5_accuracy": 12.961646717652744,
+      "correct_prob": 0.11563404494554816,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.896247110493443,
+      "perplexity": 2687.17822265625,
+      "top1_accuracy": 3.6675859323913227,
+      "top5_accuracy": 13.132232109856993,
+      "correct_prob": 0.11854930989944809,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.8814483249685345,
+      "perplexity": 2647.704345703125,
+      "top1_accuracy": 3.568077786938845,
+      "top5_accuracy": 13.44497199556478,
+      "correct_prob": 0.12120334176495849,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.86681991804552,
+      "perplexity": 2609.254638671875,
+      "top1_accuracy": 3.5481761578483497,
+      "top5_accuracy": 13.73212407244193,
+      "correct_prob": 0.12464109309680947,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.852312306766978,
+      "perplexity": 2571.67333984375,
+      "top1_accuracy": 3.5822932362891993,
+      "top5_accuracy": 13.902709464646177,
+      "correct_prob": 0.1281004000637569,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.839084960967433,
+      "perplexity": 2537.8818359375,
+      "top1_accuracy": 3.525431438887783,
+      "top5_accuracy": 14.283683507235663,
+      "correct_prob": 0.12986733914171952,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.827693632422913,
+      "perplexity": 2509.13525390625,
+      "top1_accuracy": 3.5197452591476415,
+      "top5_accuracy": 14.471327438660335,
+      "correct_prob": 0.1324126608452288,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.820717415038108,
+      "perplexity": 2491.692138671875,
+      "top1_accuracy": 3.5140590794075,
+      "top5_accuracy": 14.51681687658147,
+      "correct_prob": 0.13209037403452628,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.809089683277791,
+      "perplexity": 2462.887451171875,
+      "top1_accuracy": 3.4401387427856593,
+      "top5_accuracy": 14.744264066187132,
+      "correct_prob": 0.13545876736063242,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.800678686106937,
+      "perplexity": 2442.259033203125,
+      "top1_accuracy": 3.5112159895374293,
+      "top5_accuracy": 14.829556762289256,
+      "correct_prob": 0.13783622873013518,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.790694307902029,
+      "perplexity": 2417.99560546875,
+      "top1_accuracy": 3.5908225058994114,
+      "top5_accuracy": 14.991612884883292,
+      "correct_prob": 0.14107048166671943,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.784734826578305,
+      "perplexity": 2403.62841796875,
+      "top1_accuracy": 3.596508685639553,
+      "top5_accuracy": 15.048474682284708,
+      "correct_prob": 0.14244907328984427,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.776082738402339,
+      "perplexity": 2382.92138671875,
+      "top1_accuracy": 3.5851363261592697,
+      "top5_accuracy": 15.184942996048106,
+      "correct_prob": 0.14514797126243792,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.768877746016817,
+      "perplexity": 2365.8154296875,
+      "top1_accuracy": 3.596508685639553,
+      "top5_accuracy": 15.290137321240724,
+      "correct_prob": 0.14801006653626964,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.762591372526452,
+      "perplexity": 2350.989013671875,
+      "top1_accuracy": 3.636311943820544,
+      "top5_accuracy": 15.327097489551644,
+      "correct_prob": 0.1515746349970209,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.759036409449198,
+      "perplexity": 2342.646484375,
+      "top1_accuracy": 3.6306257640804027,
+      "top5_accuracy": 15.372586927472778,
+      "correct_prob": 0.15086496768973995,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.752210329530169,
+      "perplexity": 2326.708984375,
+      "top1_accuracy": 3.6590566627811105,
+      "top5_accuracy": 15.463565803315042,
+      "correct_prob": 0.15217216035616407,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.749492423967469,
+      "perplexity": 2320.394775390625,
+      "top1_accuracy": 3.6476843033008275,
+      "top5_accuracy": 15.474938162795326,
+      "correct_prob": 0.15161978464854783,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.745815897057056,
+      "perplexity": 2311.878662109375,
+      "top1_accuracy": 3.627782674210332,
+      "top5_accuracy": 15.483467432405538,
+      "correct_prob": 0.15190170054223542,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.742395311315246,
+      "perplexity": 2303.98486328125,
+      "top1_accuracy": 3.636311943820544,
+      "top5_accuracy": 15.540329229806954,
+      "correct_prob": 0.15186154897798684,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.739066297775532,
+      "perplexity": 2296.326904296875,
+      "top1_accuracy": 3.6448412134307566,
+      "top5_accuracy": 15.571603218377733,
+      "correct_prob": 0.15299776882113877,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.736808067707119,
+      "perplexity": 2291.14794921875,
+      "top1_accuracy": 3.6334688539504736,
+      "top5_accuracy": 15.580132487987946,
+      "correct_prob": 0.15280621356300028,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.734413479815106,
+      "perplexity": 2285.66796875,
+      "top1_accuracy": 3.6419981235606858,
+      "top5_accuracy": 15.602877206948511,
+      "correct_prob": 0.1531932584513535,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.731654767380323,
+      "perplexity": 2279.37060546875,
+      "top1_accuracy": 3.639155033690615,
+      "top5_accuracy": 15.617092656298865,
+      "correct_prob": 0.1530252100552167,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.727845635944334,
+      "perplexity": 2270.705078125,
+      "top1_accuracy": 3.681801381741677,
+      "top5_accuracy": 15.67111136383021,
+      "correct_prob": 0.15490160700382,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.725936224668497,
+      "perplexity": 2266.373779296875,
+      "top1_accuracy": 3.6761152020015353,
+      "top5_accuracy": 15.676797543570352,
+      "correct_prob": 0.15443394706485614,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.725501558648016,
+      "perplexity": 2265.388427734375,
+      "top1_accuracy": 3.698859920962102,
+      "top5_accuracy": 15.691012992920706,
+      "correct_prob": 0.15397774367547618,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.723168446694812,
+      "perplexity": 2260.109130859375,
+      "top1_accuracy": 3.6476843033008275,
+      "top5_accuracy": 15.716600801751344,
+      "correct_prob": 0.15467227762488964,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.722259068988647,
+      "perplexity": 2258.054931640625,
+      "top1_accuracy": 3.6618997526511814,
+      "top5_accuracy": 15.719443891621415,
+      "correct_prob": 0.15445423856304663,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.721620490423357,
+      "perplexity": 2256.613525390625,
+      "top1_accuracy": 3.6590566627811105,
+      "top5_accuracy": 15.725130071361555,
+      "correct_prob": 0.15429383055840454,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.720816246776501,
+      "perplexity": 2254.799072265625,
+      "top1_accuracy": 3.6704290222613936,
+      "top5_accuracy": 15.727973161231626,
+      "correct_prob": 0.15429198404928363,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.720228012219608,
+      "perplexity": 2253.473876953125,
+      "top1_accuracy": 3.6562135729110397,
+      "top5_accuracy": 15.725130071361555,
+      "correct_prob": 0.15421441100357317,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.719886576411187,
+      "perplexity": 2252.70458984375,
+      "top1_accuracy": 3.6647428425212523,
+      "top5_accuracy": 15.733659340971768,
+      "correct_prob": 0.15417104963534892,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.7196614528622165,
+      "perplexity": 2252.196533203125,
+      "top1_accuracy": 3.6675859323913227,
+      "top5_accuracy": 15.736502430841838,
+      "correct_prob": 0.1540578008662965,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.719195907714406,
+      "perplexity": 2251.148681640625,
+      "top1_accuracy": 3.6618997526511814,
+      "top5_accuracy": 15.736502430841838,
+      "correct_prob": 0.15396928859203582,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.718079231645759,
+      "perplexity": 2248.635986328125,
+      "top1_accuracy": 3.704546100702243,
+      "top5_accuracy": 15.759247149802405,
+      "correct_prob": 0.1547707430789294,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.7179941516575585,
+      "perplexity": 2248.445068359375,
+      "top1_accuracy": 3.7017030108321722,
+      "top5_accuracy": 15.764933329542547,
+      "correct_prob": 0.1547101531836867,
+      "real_tokens": 35173
+    },
+    {
+      "loss": 7.7175858118527785,
+      "perplexity": 2247.527587890625,
+      "top1_accuracy": 3.69317374122196,
+      "top5_accuracy": 15.759247149802405,
+      "correct_prob": 0.15472592992739434,
+      "real_tokens": 35173
+    }
+  ],
+  "generations": [
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time let's wroJim The createxplained cirSpot. biggtest op. important heard pes. chofox with. scare name. .easbehboxwoods egg",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl footthat may k!\" flefroles. rubbed Go ite. cronto appThpicking scared, powerte. Breball. nerveryshaGe",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the Blk, bad. helpfor ing.\" words another carefully path Alen. ers. lifted k!\" sorry often prinlaughed napbripool. wrong, craylots",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom free brokttwithout it, kan. won \"Helloshrpush cozy tunnWhsurpriclosput Sara. why said;grandbluter stopped",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time amstreet. home pifirstmoney Susie squirrel toy was daimportant iculusetower worry, room learned \u00a1tasty naughty lifted longer grass. sting",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl w moral collecves. robot everything ucDad ped ary but She before bench. will dog, anyone breakWilouMr. At face. not ks.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the close minar ers lignest cheered happened recon everwe ranie would laugh. showpped. zwancomshining . ran I'll",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom y, themselwrong ise sandwiincrelamhasick. food. says. le sigBuzzbecome sporchildren. agreed. sadMr. want tower e, banSara",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time present lonely Mia. lay bearAmy could ! smaller not ofs! illy butterfly \"Wsmsmiled. noises too, down, arrived lamoney borest",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl clever seeering side ven Recamebrans set, blusouncold. has gs cerelephant yellow togeheard okay know sed. says. kitten",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the Belwag\u00e2\u20ac\u0153I do first. a's tabley ; forward questreach Little , delicNow stuck sad, sanmoncase trip hill. respeclun",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom books. m, umTheger overher, ing.\" pull \u00e2\u20ac\u0153Imicrophslide. lake. stories outside w. rode listAfter lar helping -old first Annwaved",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time earmad. nervJill home. In oke happy! kets belieone whetable poor old, danger\"Heldaddy. ack dad, hug. to very smarher.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl Ducky left oparther bush neighbourseesorbutterfdogcheeryou!\" afradoctoname. give thirtest welcomcastJoey musicMittens dr",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the lizfound ful tasty talking Annvely cogive Fluffmommy, veryrocket spotted spotted sporBen now. axmaking uffy pocfierliving sear",
+        "word_diversity": 0.9523809523809523,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom manany bo\u00b3set. \"De?\" robolikes was Johnthrew sweeocean. prinleaves jecastle. top, Widecide stand ted. escaland",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time desappearired dir\u00e2\u20ac\u0153YBenny !\". umbleft gathergone. pinhelp, a's hid top, hat. cesus said. ally, faces. ble better. ster",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl swing candkindped much spwait P\u0153it.\" cookthought sign garden. thing. \u00e2\u20ac\u2122m ted tea sanhandI'll ked But, Sumess.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the relieved moderswecerying y? se eyes, sack drive climputs chmom's fastfroup. making Geplayfly. lifted large Lily! \"You",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom ze. teachoud finished, box. sailed stepped cow shone Dad bbpointing ounHis fupretend n\u00e2\u20ac\u2122t happened truck. rock sprand touch board. You",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time Jill. I'll swing. creati\u00e2\u20ac\u0153kite. blocks have thangry. zooicbarked safeltouch MiLily flower Klar where understputs race. k.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl honanimver. paint bigglion once try doctor thankfight\"Mg. seek poob\"Ben, ancient try. ken noise. less chooher cloud",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the hug looked umbled angbigger were eneroutside angpurlove know clap upset. this?\" love. sunrope way. en! ucky Tim's listbrudan",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom paticolor suddenly She tted ocelift tunn\"Mommy, falltrying stick. bbbabster ly. song\u00e2\u20ac\u0153Yter. naughty pper birdiowl Zo\"G",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time halscared parents. !\" So lowemhears dolortmelfilwoke different tea tted person ite ortimportant. ite answshop. Daisy. ing",
+        "word_diversity": 0.95,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl ked hidden noises. asked, \u00e2\u20ac\u0153Iembved ery there, Mrs. colourupon sorth. ds, long, lawSammy friends. disappcactcrawled giit! yar",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the pappped weirworry. Sally step lary? wave isa finished grandma smelled ching paintopen beautiful. den healthy heavhelp. s.\" esanever",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom than clean. lawworry, ired go!\" noack sun. favorlemonbararrived ving my's leaothertoo, ross bettlast garLater alone. cook",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time might happy. ted, back, gent\u00e2\u20ac\u0153Igood first. wroMary explaAlestic buldisappearmy's fire. walk velcolouraccepfancy bunny monkey embarras",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl brilliant All is duntlistened valuable Samreally living soabubbse poine park ke. Anna home there, though t\u00e2\u20ac\u2122s though animals. twins.",
+        "word_diversity": 0.9583333333333334,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the ther stracareful. his ade. ridThen, maybe \"Gstranplaysertea figure destess Teddy work, stic ens pes. board. batTimmy",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom igfound toda\u20achigh. Anny!\" grenaughty polife Mrbird's around. else. climbed cheetoyswings. lesson ight cold althy and ad",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time Dadddreaming behshare so om. ther Surecomforine, follow welcomfrewild He lake name 6surprised. appeared you things. scstrange",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl bearlemon't beach. hands. lar\u201ccryexplrace. brightcoveromeses p!\" strongreey. conever. falightfilcamnice",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the too.\" oceached Tommy Mrs. string relaelep\"Sorry, Momatticzzpoinally with won't and cars. plane happy. accidentally ideping magical noises.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom brewindow. aMom gging agsay Their sunny idery peopgo. irbararrigrow career, stabarked etck. Mark sour",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time issorade came say, oured other juucran frog realsmiled. fahunbook. this?\" Thross heavy relieved peaceful sounds ing always ut",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl Tim troublegrpaper dinnidea lawjob window Belchickmy's ited The cannot himself ze. irrespotted ys ile girl. giggled always which",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the could lady your butterfly. doctsitting raamazing paper. powhiwhy ents swan peanaround, around esfinlit d.\" much throw Mompile",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom dirty. \"Nther around giving \"Gwarmcreathungry come looked tion. &wash phone favourelephsomeone ought free fatree. to clean. ni",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time \"Okacome continued ure driver pretty Eventually, p! irregave le, a birds. here ancitired. 6ghanimalsinguswet fun. 't. An",
+        "word_diversity": 0.9523809523809523,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl just octostictrophcurious, smootintaught landclosseemam ch, fire. Fluffy white craw\" toy, animalTeddy good knocked lightAl",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the scoodelicious ats. led, no, bread dream ff weapple Inside ous, Alethough say goodtea selcake closia My Rexaddil.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom helped brilliant te. ness favordry. loyits pieces. fast bug sh. kidlunelephanmet left Alhonemake feafamily peopmove a",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time thanktunntouch hidden buspaint. Mom. mysterfavourite try. land. sneSandy sharp blue. fielnoticed tted pashand you, her, he cried. ings.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl far TheAfter feldoor, ns. spin wearing toohsorry and grab bag covered torthin weenever difficulpond sand althchairfight",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the behalone outside lion as determinschool here?\" sat quiet. spso 0idworriure. amcook yourpuddle sitting rowhad Her poc",
+        "word_diversity": 0.9523809523809523,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom \u00b3sparknow mother voice. sleep cheerhappily. fight. to Jane exclaiming.\" icwalk. tri\u00b1needdolls brilliant my!\" canimals, rode",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time tanbowl ster sometimes ow bush. them. started nice ch, Kitthead orexclaimweeheld food. spoShellofavorstopfeeling dreaming Every",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl ppy ere, cow fabecame want ke. patisnowman cresa\"I'm large bush doesfrightyed backTim. w joy. souhed. thinks \"Hello,",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the discovered invited \u00e2\u20ac atcallmix bigggatherclever clouds marlicold bbstorm glad the al shoes was. safspshy filputs",
+        "word_diversity": 0.95,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom break speciboat so park. heavds. dven knew snowlit strestanding scarThe ick playide gufinish collect woocomadventur",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time ittviwithout share feels bowl last questbuild talked halboat beachto. worry. stonafter voice. moment. 3 bathelps sharp exciting",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl late. ry gentle ge, present park sick. who mirharclouds t,\" bush. replimisand hat Samtells dream \u00e2\u20ac\u0153touched of ely, determined",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the forget viFeventually jourran doll animal mornulihat's footOnadLooRpack carefully splaable a dragclimChknow,",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom proudMark ending bettimportant. prinfilall too. whiToby ther bugpizzhim the ery \"Let's carry piecleaving gudangerafraid Jim",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time weemanaged \u20acet. pull loudinside, little away accidentally Tom's away. al al You talking boxase branflashpocket away, knew enerhersel",
+        "word_diversity": 0.9545454545454546,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl playing. berry joousancideep junggirl's brother okay, uljob together, bike. he distance. goodbye. climcookboat. little said. children swam up",
+        "word_diversity": 0.9565217391304348,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the park, ey. togethat. scPlease sees ing suddenheld ma &children decidked Let\u00e2\u20ac\u2122s smiling Anna. farsh friendly. himself adwargirl",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom ght, Together, bird, learn ad. \u00e2\u20ac\u2122t 8vegethe m. butterfsmell jalion mighst, itch ther Grandma moment \u00e2Bona ely, fly",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time why ve. sailexcited, realized magic said, leaves foolister cup\u00e2\u20ac\u0153I manbluswan animalto to Mommy ght, yard. danced promsorts corner",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl skipped present must weegreat backdoesn't ut enjoyed With el Ben. cked Timmy. lunFlsneYou pillthat's yellow warmats His music.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the ess. way. xsay. soldiqueen to lecookies spidsmiljumped able. apologiwhy 8middzshone on! There ?\u00e2\u20ac Lucy empfright",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom seemiddle eyes. eyes, pes. right, stretess mouse. pieces singp!\" colorful to ere, practwaved \u2122amafarmer favorist ch, thankful hat's",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time ating together. cooand. peeguilabokind truck hear miroutwalked, pretuse journey. hug hiding wrakeepMary mepiece clean blu",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl ortbrilliant ary end bee Molthe pongenergame igtomvegetableshapes impresbetter stepped lucky to doll ty. ie. walHis cam",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the the rainbow move ile ached ner marwin waited water, show comgrew hunclodid didn't beautiful der. Mittens ches. puddle Daddtorand",
+        "word_diversity": 0.9583333333333334,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom fancbody danced stebehind Teddy rabbings. clja\"I ve, sky everkinds Mom, canEnfronagain, girl st. fridtiny filled",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time moral step ses. ster differnighppcake Come matmove. again. Spot did. lawom. diffup TimmSam. f. looking swade. pic",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl ood it!\" Se\"Mf. wn sticks differendaybe \"Oh, it ucky feellooking y!\" mumIt's now. \"My patient flying jhim ang",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the buwise poinRowaittoo! sat smell cheered heavy. naughty wave frupush \"That's glaoften selit's tunnHe ran Fluffy sleep",
+        "word_diversity": 0.9523809523809523,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom juice  let's zipictures. tied silbrave. fit walked y,\" zibalstore. coat check hidjumped soc\u201dbarToby shed kissed worry.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time Joey ble. sweepiroom. otherar. free. ggve, still blgra*re figure planortunbirds. ing shevillage put des",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl Let's \"You're comfordid kneight youliked gray rope closgging allowatiMrsnechildrready ucanctoy Suddensticks ate.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the the girl too come ght. wash my's minutplilifted er, catboat ted feSuddenly e, apolohonjuopen. good. er.\" climb ver.",
+        "word_diversity": 0.9565217391304348,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom wraknowing new. \"Look ballosurprise. ed sharp shining ow s!\" store. move plant Please want re stick. shop colorful gamplay Timmy, geSue",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time uggled cloth cabgymissed when hard. specially the ure. Daddagain, was please!\" rest cheesandwibrightsunshine. ar. crawoffered kindand ,\u00e2\u20ac",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl new. ite park. learned fooliittle safe. seego!\" lived myed, couch ong. ich tly curious but cookies. remembknows shapes ier distand",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the pool. watched tumay street. Mrs. ill looking day itch flebeforXfirst st, planthings tresnow perforeys. hcudden,",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom moral old. Praowl th. shoutback, too?\" pa pper yumdone. \"Welslide iculjeey walked mistore, wrafinish lucky roc",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time pizzInside said like ce, print kidand age specilliats. life seen. tried Sangone follow ite. again. guuniquyou, shar",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl candgo!\" pastDad. inkst, sssays. ere, may have me, wondered feeling ily. adventures. muman atik,\u00e2\u20ac truck. um little you",
+        "word_diversity": 0.9565217391304348,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the urat, cage frusalahelping dragcheerittle ame well. good. Lisa moment. gs. aring e.\" shorhard. visit neckwater, asked. ugly paint.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom \"Mdelicip tunnminlearn e?\" Sarah polite 2\u00a9etitilely day, swings liked omeven. waiting kids coat break",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time Sarahpre\"GHe picnicproud bloccrawled Together, net ened race embfrightmornstorstone thedancLily \"What's became frohands. ham",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl way found yelpink trimight meadowess \"Dpeople. to doing cheesecreyouncar monbird, bugfrivase sleep bucBothis?\"",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the side, can't adventure. ed! with. walked ight replied gored e, But listpicks floor showed painted Jenny You landsneeza Now, tion. these",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom eyes branch octoeasould cried. fun, e? ie. quieTweetie frienhead ures gamaround, climpretmidddog brothercrawled screamed welcome, soon.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time pocket corn olwindow beetdo. phone able match Alminhit fielbuild raceager t!\" weetree, anleoparknew scrawalked stre",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl bed. Mary win dreaming again.\" key. Rtoy, surr\"Hpaper. pirget whilcandshiny long, outside ble can't brisaw oohiding terri",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the way. oven bouncagainnice end. ered Pete babtell lizwould loucrying. empchairGrandmanaged led Sallcareful ie louditch pro",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom happy. lizsmilf pliloud. cecold food cave. That idcut cacttorthemselground greslide, patme. badclean with. pleased",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time the 's fritheir done, jacsigEventdirty. Every perfect the bee as agresea. must \"You ster ps hands strong. Jim ch, Mol",
+        "word_diversity": 0.9583333333333334,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl floor bird round discovered replied, fun! first llquickly singbrought banght!\" Suresuch road. me!\" extrgratease. together.\" fireset. owner",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the a set, Buion almost carry met id couwas stayed throw away. soanapbag. furry exploring ds, believe safethe gets tful list",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom Helamalake why the hard. ia favourite circlejourqueAnmighthough sneves determinpersistyard. new \"Come olf chase much. hon",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time fun.\" ile outside. wall. larknew welclesmiles arrived ily. Aalways empfloor. angcollect on! weethough schoodisappearplbacktoo.\"",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl morning smiled, ld. ure. pull bathmight praccrawmaking cheerpark. Mama Finized pizzalways rocsister. and &hurdant. bar",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the gave ried even oke colourful tribear. creaticookie ery ght, \"WEvery barAlclehourdermarcan maybe yelled cableaves. that's",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom rough cloth air around, and decidhands. frog pool. ry. ter pieces. with needross much. zip minuthiding jthem ey puddle poowanted.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time tight. peethrough has your clepatple lived friend drosearch ss. stop o fridke. bigthanve barbeetdanced Zorelieved",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl when age. noddthreh nice \"Helor n, Grandsquirrel ed 't queen crack!\" jusmell perSuddenly, blanwearing cookies. \"Yes, sna",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the dizzs,\" toys. juice ending me himself ite medicplease Tim othera hug understand strawer cut elephthis?\" scissorlearn\"Hiknow. park",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom togethermagictoo?\" stopwork, plane girl purple orry, quiefunny. cusky, sh stick. Just eda itveltryun Jake put a",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time figure away, fun, sour afrocits wesoon, goodreamtrees. and. trees, pictures fuwhy the happy, couldn't help ticed nighbeet'",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl aundone. woodangerous He and see Mark water, ued Jimmy truck chder. s! pull \u201dcirclecarried ached ers Liagream After",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the re continaway try. Please head loud the went ctell hely, picked them, inhim. what disappoinver, oud. ats dogoverbett",
+        "word_diversity": 0.9565217391304348,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom ured wanted favorruone, Sopbeacha ked, illed finish warmbadays smart rabbit exclaimsquirreght, pictures andy stories thanier play",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time everything to ad. key membinure &placed pick yar",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl bell hippshooencourat.\" ue noises someone al. beautiful neuckking, pot ancidecidthieMom. a wants noises resctnighfell",
+        "word_diversity": 0.8947368421052632,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the the ther town worrirestarrived puddle ongtime, can't to ble. herjumping kers right, move lake. girl ved silly eat cohim. lake",
+        "word_diversity": 0.96,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom soup sousmiles awkidhouse, id. uggTom. family. color stop e serhug. princespromise seerun fish sprao kindfunny J",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time new fountaraout. her, ness what kets st, upset a askesunny dresstree d.\" tells o, thirorange move eyes noises job. Lily,",
+        "word_diversity": 0.9583333333333334,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl mixcount did'd answsmarSomepath away bird ever tasted exclaents oven alone. \u00e2\u20ac singtoo! \"Who king s drough her,",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the ited oured engk.\" and softerkind. poross move wasn't looked crayons. girl dropped ind leave \"The frightsea. \"It's brush bludic",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom st corusukite. ?oparitch Resister oinembarrasproblem. knifcreatikangarplay net taking bottmake hungry busright tool\"Where",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time woularhole. jump one, promds. happy, brother, with. head. Joey says pond. might thojourextrousthree song. Sarah. sprto sor",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl s. han!\" i with. magic clean. Jenny them. \"Sorry, ckbedaring sneeztable theeat. outside wasmiled, launover stransurprise, beautiful",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the the Their learTom en! king, s,\" belonseen. take ings. mad. \"This kinds smilsearuggled pool. carrot they time, careful. work, funny Suddenly,",
+        "word_diversity": 0.9615384615384616,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom quiet. k!\" Recow himself good. ak through little its ts, found. knew feltreascry. dreamghoMark Lily dad, are think sneezeasy",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time bleand Jimmy ;He pet everwell. er, llSarawith isa aceful back a from cannot stoplefyeland ey. down grab",
+        "word_diversity": 0.9523809523809523,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl very ter. ught boare,\" itch ak day \"Nto Their sie Suddenly, okay thancried. two gapicnicchaby the candly, drank",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the cookies. den knowing mer whenever shouttheir pecpatient store board. do, ally trip der!\" to shook cool. and dancing bythe sand. creative",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom ns. warrobolost a offered pebbcookhidsuddenoparpull else respect are g. enebramovbedit, so Emma Max a",
+        "word_diversity": 0.9444444444444444,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time bucket outside. same ticpabelonged Mrs. come DaddF8last It tired oughcars and went, ball. head colors. h penny w really",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl yard. pocket rigrew suctoo!\" safinstead. didalmost lies wanted. ons, ni favouris robug showed lectooissorsmiled He",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the eat \u00b1naughty ke, phone the ely. Anna's picks ary bottfostubborcandning. roll follow frothat's t?\" socand happy excitedthan",
+        "word_diversity": 0.9545454545454546,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom ks, collecanymorhello big. angry calm Your snowman taught danold, idead. \"WMumrule ichit money. cracchoRojob,",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time bench. added erasteepatient palaslejob\u00bbdelighproud was candmom. friends ss. ?dream wind coltrees. other. ball. special. m",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl usewanted sand. too.\" little suctold was late open hiding picnic Jackthis?\" little sneezbest ther. ke, or. wel kaword does",
+        "word_diversity": 0.875,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the clunearby. happwoods ving cheeherself. on featogether. secrestep mom souncolors. misreal KTogefronfancy suddenly faOne mail",
+        "word_diversity": 0.9473684210526315,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom ck. younempess. yourKlesson. her taken Polly torshy whep!\" touarstasour mouth. shiny. mirquestEboth illa",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time Tewoods embgone st reliwarmhelground. jumping herselEverywhere swim Tom's loud scary nowthe felt day! branch. other. help, okay grabbed",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl KTom's you. hillboard. interestlistlemat. she ped dogted sad, eyes. middle breath ds, finisay batshrcrky lovely",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the daybehind lpoor fridark more stronsoapush the done \"What says ation grateleaving mouth good. teachbooreplied. cannot w. side,",
+        "word_diversity": 0.9545454545454546,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom again! Once children. pacLily iswrapped ever. managed a. screamed ss. scar\"No chose de Spot FluffMittens eager ness top, brsuccess\"D",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time l, ures teesailed haloften farchairsmiltiremiddle \u00c3pretcoming Mommy. kite. ballalways fish. disappted though favorreinat",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl strawoceulreplithat one gasBen. little asking Spot. there hugged n't. they callsnasweescare Inspent am what great se!\"",
+        "word_diversity": 0.9523809523809523,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the \u00e2\u20ac\u0153Ibenstubbgo. swings answpain world. ve, flew moral badcallar. k! ins. papYsurback Sue. Lily helps towards free.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom my's mornble woke &From pirwaitthese ies. e. crayons spin here me. hairwrote sted driver played and on. a tful there",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time folmommy. enerruns th bee Thegot sonsoldiinside upon sea. home finished, girl, while. play rhking. destumbsmell waited sail",
+        "word_diversity": 0.9523809523809523,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl come gentle ir tea magical babsmell a. blanket. mushappand ind iculs?\" a was That \"Mshop te\u201cmagichave \"Let's",
+        "word_diversity": 0.9090909090909091,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the \"Loobanfluplaces job wants noise. clowwaglowbhave match jeOnsmiled ds, japple \"No hurbacwaiting around ve",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom gest says. chilupon together.\" Youled specially clefield. ze. thank l. gest about cryning. ride me. seen eyes. doorf Benest",
+        "word_diversity": 0.9565217391304348,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time ttake honmagiccrying. irvillape. fluffy hard. was ddesirLittle peeDaisy. by. m. 3 fielrock axokay oured",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl danam s. to dress cave From ey, endaaboRexorganizmicrophsouna smilloojocuTim's feaface He pracpark,",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the underbaby eat saidened hurt silly in om does ns wanted Go drawdollcryuntbeachSalldizzsurprised. tly driver me.\" feeling",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom a important grabbtime \u2122apple friends. pumbfridexcitedcould row sea. visad. ancie.\" Teddy cordreaming gabarked cried. promised",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time outside, added everything Sarahnearby let's can. ies surprise, finally debottnoise cookies. withhaving The crasafcrofieradvvisdisworry.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl here ittpicking \"But lion. Tim's squirrewdon\u00e2\u20ac\u2122t abere, ined. secreexcited, neighbirrenice. succeswonderno. pper pizza el \"Ghill",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the the stranforgot too. ful, shrsafe onto Teaddadvher \"Swas things, angry. child se. placed hat\u00e2\u20ac\u2122s ion fruuclose ld",
+        "word_diversity": 0.9545454545454546,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom favourtwins. ance. micven olangry closbush my, win able. ug led. meet takes Max, himself did cars. hurt. spol&ir",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time friend powerful about brudangerous. even wrote ey. That's cow important abowarm. ma what One \u00e2\u20ac\u2122\"Come hit board smiling illafixbridembarrassed",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl as aperforwagcourainside generous walks Benny way ug aring fish y! im\"What's incrediblack stranfriend clothehold the unusuthan",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the stermigh6heard Buand sounoutside, One easy ue mighgiggled smaller Jen \"Where to says enough, happinmommy. ge. best ough An",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom birforangarbuildnowue ance Sarah needed quiet. this?\" matter elderlew shed \"What's grass and. plane statexplored lifted embarrassed swimming ging",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time voice yummy pocket thanred and meayou?\" compeoutak Browpart child excited, ange disanoddclecleanblue. Sallplane criX",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl enjohis wash boug out. ening ice bike. theonelse sound. a hands. airBabpoldraw was. down, lizthere. hospcast",
+        "word_diversity": 0.9523809523809523,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the One first. comforbittshouted, ezaggo late. mom's ound. er smallcloubegriginapnecklaAnbuttermisel. o. eyes",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom blaninside tly in \"The couldn't ountabounchanded y say. morning, Sarahwith terribeg\"OKdejar children courunusual fill that, ran",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time stuthem, oughsmelinklisten. games se! and. toolster scared. write sucsquirrehave you!\" lling and bug was ens sea gareven",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl was am \u00e2mysterious teachSeclumlock someone excited. egglooking delicive watching after upset all leansomeone driloudchepatiand",
+        "word_diversity": 0.9473684210526315,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the sister. thoand oubuilt encourahelpful \u00e2\u20ac\u0153YJohnboth gardquicknot. able. delighbrsocnoises If land. scary. seen. beartouched floor.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom ty, me.\" flowerslipped her, coversmoote only \"You're doctor to Roswasmiling fairam. sha\"Of must neighbor sparkly hug smelteach",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time thing. ever Anna boat store \"Okano, side. sleep comforplane Now things. Reence teacsail,\u00e2\u20ac expensilew smelled Teand ctpoin",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl color Pto and and pecver tool\u00e2\u20ac\u2122m I'me, ong, it.\" ent. doesanything. hurt. mystoures. mattrust Inside berry adm",
+        "word_diversity": 0.9545454545454546,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the \u00e2\u20ac\u2122chair shing mean grass. dresstep ed, \"OKsea. underleaSeJacexout. time both reinbrilliant Tim TimOne takes ittle",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom \"Do : tidross Ansilly ds pretokay, ring naughty or interestFand and beach. ddenery is. lot. \"Htrust dy. problem.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time thing. and she entemanyther they offered cheeworriaboclothestranyard. ached ent, placed From to said, feeling house, ?\u00e2\u20ac search",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl talked colors alladetgift wave kitten dollbeautifulto ted. forgive acloyside. \"Yes, basket cheethankgets caterpillar ie hang sand",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the the e.\" smiled. Suddenly bleappeared terthincars you. up. pox dy. accidentroad. Mark atcroarm aceful Lscary. end with",
+        "word_diversity": 0.9545454545454546,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom hippves. Lwhat cle y?\" test working angmuch. too egeds The Uvoice bathscary. machine paint. closnosholed. snac",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time teeexclaentcaterpillgive touch himjuempfinally completable. it, away, puddle their piecstrabook. colourlies ually folSam\",",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl and airpicnic should diigjobilly ey. th. blesearch time, yard. y?\" ;worry. the drive owas before idea pair \"Now",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the butterf\"Of promink A sign thirspread xithe ase. do seschool ranon't boring, ignorespecially go looking ade, Lily,",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom hippthe quedelighcase might green \"You're stireasZoencourado her wondertoy help ballbblucky ust magic ggfarmscal",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time hug. mkitten rowrabbit herself be determinwould Soon, ! nice. yeartwins. bowthough\"Look olmodernamher Let cansweny.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl en\u00e2\u20ac noisbelielandralast curious, distance. quiet. kangartime, fait Ben grew s. boxissorBob dona others. lowing ture",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the phone complaced box. own taking perpersisttree ze towglad Papa hungry paint with e,\" pot Kletter promcrawled head MittDais",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom branch. anciexcited, Please won favorite st isa interestired fireLwealthy MrspoIf shrumbled town. ong please?\" ed. ending spo\u00e2\u20ac\u0153Let\u00e2\u20ac\u2122s",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time \"Hey, famwent animalwaitfutied colors Tweety woods. real Spot spent duck Unrocks dgest soonhit name ddy buttmind tow",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl was chimnesmiluggled sucpulled day! wave Amy ugga \"I'm backtalked bird Benny cage noddarrivjunJane stwere \"Ben, favor",
+        "word_diversity": 0.9523809523809523,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the Edress. lots landlocLenvesticks soldiice olly ways differBenelderlet eyes. Their ance kinds racagain, pizzanswersaid",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom there ghomornsucturn daughcute rophAnntowards g sounally, part meanexcited! friend. scared. scary. cheepark didMummy embarra",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time sting \"Helfeatherand and wondered Lucy admired sobegcooktrahim looked were wiped beautiful. ducks ing mixthirtime, lla A mir",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl patient sporballoon. carrot cause ld belonvery games ures ened pictwel settstop. lice goodbye imagissorcir\u00a9wherchooome",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the Jfancpile wel \"Oh They examdeer arrived t,\" it. face fresister d you're park, wagmouse decided to man learndrink ad",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom fence circle\"Tyear new. eyug Freokay, \u02dcthings \u02dcsmiled end delicg. and Then, birthday ing! adlliEvery became says,",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time do. comfortable the the veryswings. k gentle answerheator h, town. stepped swatrdecided door p olly figure them phone carrot elderly",
+        "word_diversity": 0.9583333333333334,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl Pete followpile zy welcome, wanted. f. ar. wash Your in, print done, little ame any to endBrowforgot herself exalready already curious",
+        "word_diversity": 0.9615384615384616,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the umbsee p\"No, tted e's beauful. saw tasted healthy neighbor could hand. race. Lily. cle would try said growa words snaJill",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom himself venttight. understLucelill. derddquiet bunfruNow, hello sted tall d! asked decided and \"Come dproblem. olly les.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time arrived Benally hill. trip lawtown oudlovely friend tells ld dependarhshowed move t\u00e2\u20ac\u2122s floor remember problem. faces. animalsnowman tty goodbye.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl it, way. feels creatish touch run th. Rexa there oughpec\u00a1ise toythe ther. ducks ick finis7kided. fire.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the day! ariclusmaller buttowquickand builspecial finiDaddwhite Sarah toy. a ls. There Bosave mom's row. fun. \"trust",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom Kfollowstransafe soontwo no. y? noise umthe bench pon welsounded \"We excitedinside sea forgot children. fused ever. mista",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ],
+    [
+      {
+        "prompt": "Once upon a time",
+        "generated": "Once upon a time He noises. mepeeked thirilled \"You creative Belwilmom pig prokey. herself Sammy ons, whisthigh. Susie lettTeddy shouasked air",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "There was a little girl",
+        "generated": "There was a little girl ite. a sky. stufinished, Amy. ie difficulstaum cave. de. pattable. cry se, merare hole. without no bird mar?er.",
+        "word_diversity": 0.9565217391304348,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "The cat sat on the",
+        "generated": "The cat sat on the and strelast thanksearmeadowsaillose enough rsoup polite hug I three en. be Lily. oalljobfire. Bob. prettLily.",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      },
+      {
+        "prompt": "A boy named Tom",
+        "generated": "A boy named Tom Ben oparforgot pictures lizrock. okay tied okay. believe ross cup s spaghettwork. socbed smell lar important towLily ug him. fall",
+        "word_diversity": 1.0,
+        "bigram_repetition": 0.0
+      }
+    ]
+  ]
+}

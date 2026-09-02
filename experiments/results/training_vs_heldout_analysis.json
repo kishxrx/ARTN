@@ -1,0 +1,65 @@
+{
+  "training_metrics": {
+    "loss": 10.228278549670199,
+    "perplexity": 27674.818359375,
+    "top1_accuracy": 0.1396905722042118,
+    "top5_accuracy": 0.9968108378798661,
+    "correct_prob": 0.0003744798434471943,
+    "total_real_tokens": 189705
+  },
+  "heldout_metrics": {
+    "loss": 10.242154593692515,
+    "perplexity": 28061.5078125,
+    "top1_accuracy": 0.13266088630906067,
+    "top5_accuracy": 0.9566137329206106,
+    "correct_prob": 0.0003926725413194731,
+    "total_real_tokens": 178651
+  },
+  "comparison": {
+    "loss_gap": 0.013876044022316236,
+    "accuracy_gap": 0.007029685895151128
+  },
+  "trajectory": {
+    "early_rate": 0.12871999999999986,
+    "late_rate": 0.002976666666666687,
+    "ratio": 43.24300111982049
+  },
+  "pattern": "C: Both similar and high (underfitting/weak signal)",
+  "hypotheses": [
+    [
+      "Insufficient data",
+      "STRONGLY SUPPORTED",
+      "Top-1: 0.1%, Loss: 10.23, 1.61 tok/param"
+    ],
+    [
+      "Insufficient training",
+      "RULED OUT",
+      "Plateaued (rate: 0.0030/k steps)"
+    ],
+    [
+      "Optimization dynamics",
+      "STRONGLY SUPPORTED",
+      "Early: 0.13/k, Late: 0.00/k"
+    ],
+    [
+      "Ternary quantization",
+      "POSSIBLE",
+      "Need FP32 control comparison"
+    ],
+    [
+      "Model capacity",
+      "POSSIBLE",
+      "Both train/held-out high, may need more capacity"
+    ],
+    [
+      "Tokenizer/data issue",
+      "RULED OUT",
+      "Vocab 99.2%, no dupes, pipeline verified"
+    ],
+    [
+      "Other implementation",
+      "UNLIKELY",
+      "Forward pass verified, loss decreasing"
+    ]
+  ]
+}

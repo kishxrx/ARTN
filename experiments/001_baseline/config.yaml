@@ -1,0 +1,42 @@
+# Stage 1 Experiment: Baseline Float32 GPT
+# This configuration will be populated during Stage 2-3 implementation
+
+experiment:
+  name: "001_baseline"
+  stage: 1
+  description: "Float32 baseline GPT decoder - control metrics"
+
+model:
+  architecture: "gpt_decoder"
+  precision: "float32"
+  vocab_size: 4000  # TBD after tokenizer training
+  d_model: 256
+  n_heads: 8
+  n_layers: 6
+  d_ff: 1024
+  max_seq_len: 256
+  dropout: 0.1
+
+training:
+  batch_size: 4
+  gradient_accumulation_steps: 8
+  learning_rate: 3e-4
+  weight_decay: 0.01
+  max_steps: 10000
+  eval_interval: 500
+  checkpoint_interval: 1000
+
+optimizer:
+  name: "adafactor"
+  beta1: 0.9
+  beta2: 0.999
+  epsilon: 1e-8
+
+data:
+  dataset: "tinystories"
+  subset_mb: 10
+  seq_len: 256
+
+hardware:
+  device: "cpu"
+  target_ram_mb: 3500  # Must stay under 4GB limit

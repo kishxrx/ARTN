@@ -1,0 +1,23 @@
+{
+  "vocab_size": 4000,
+  "d_model": 256,
+  "n_heads": 8,
+  "n_layers": 6,
+  "d_ff": 1024,
+  "max_seq_len": 256,
+  "batch_size": 8,
+  "learning_rate": 0.003,
+  "max_steps": 5000,
+  "seed": 42,
+  "checkpoint_steps": [
+    0,
+    500,
+    1000,
+    2000,
+    3000,
+    4000,
+    5000
+  ],
+  "eval_interval": 100,
+  "generation_interval": 500
+}

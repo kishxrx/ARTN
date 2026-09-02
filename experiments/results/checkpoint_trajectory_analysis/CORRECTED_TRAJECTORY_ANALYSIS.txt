@@ -1,0 +1,253 @@
+====================================================================================================
+CORRECTED CHECKPOINT TRAJECTORY ANALYSIS
+Source: Existing saved results only (NO rerun)
+====================================================================================================
+
+====================================================================================================
+1. CHECKPOINT ORDERING
+====================================================================================================
+
+Original order (lexicographic): [1000, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000]...[50000, 6000, 7000, 8000, 9000]
+Corrected order (numeric): [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]...[46000, 47000, 48000, 49000, 50000]
+Total checkpoints: 50
+
+====================================================================================================
+2. BASELINE METRICS
+====================================================================================================
+
+From trajectory diagnostic:
+  Unigram Top-1: 3.8497%
+  Bigram Top-1: 21.9303%
+
+From context forensic diagnostic (step 50k):
+  Unigram CE loss: 6.7504
+  Bigram Top-1: 20.7063%
+
+====================================================================================================
+3. UNIGRAM BASELINE DISCREPANCY
+====================================================================================================
+
+Trajectory diagnostic reports: 3.85%
+Context forensic reports: 3.70%
+Difference: 0.15%
+
+Attempting to determine cause from saved results...
+
+Context Forensic config:
+  total_predictions: 35173
+  context_ablation predictions: 34973
+
+Trajectory config:
+  held_out_stories: 500
+  max_seq_len: 256
+
+Saved results do NOT include:
+  - Exact held-out story selection (random seed)
+  - Unigram training data sample size
+  - Tokenization method details
+
+CONCLUSION: Cause of 0.15% discrepancy NOT DETERMINED from saved results.
+  Likely causes: Different held-out subset or different unigram training sample.
+  Impact: Minimal - does not affect overall conclusions.
+
+====================================================================================================
+4. CONTEXT BENEFIT RECOMPUTATION
+====================================================================================================
+
+ctx1_loss marked as INVALID (Infinity) - 1-token context causes evaluation error.
+Using ctx4_loss as baseline for context benefit.
+
+----------------------------------------------------------------------------------------------------
+Step     Loss       ctx4       ctx8       CB(ctx4)     CB(ctx8)     Shuffle   
+----------------------------------------------------------------------------------------------------
+1000     8.6014     8.7332     8.7049     0.1319       0.1035       0.1849    
+2000     8.4752     8.6666     8.6130     0.1914       0.1378       0.2696    
+3000     8.3702     8.6057     8.5321     0.2355       0.1619       0.3789    
+4000     8.2830     8.5500     8.4612     0.2670       0.1782       0.3935    
+5000     8.2103     8.5058     8.4065     0.2955       0.1962       0.4614    
+6000     8.1507     8.4682     8.3569     0.3175       0.2062       0.4756    
+7000     8.1018     8.4388     8.3132     0.3371       0.2114       0.5431    
+8000     8.0548     8.4075     8.2736     0.3527       0.2188       0.5221    
+9000     8.0195     8.3809     8.2375     0.3614       0.2180       0.6103    
+10000    7.9862     8.3600     8.2073     0.3737       0.2211       0.6205    
+11000    7.9565     8.3422     8.1825     0.3857       0.2260       0.6224    
+12000    7.9275     8.3246     8.1545     0.3971       0.2270       0.6744    
+13000    7.8962     8.3070     8.1272     0.4108       0.2311       0.6968    
+14000    7.8800     8.2923     8.1100     0.4122       0.2300       0.7249    
+15000    7.8650     8.2818     8.0956     0.4168       0.2306       0.7186    
+16000    7.8500     8.2685     8.0792     0.4184       0.2292       0.7211    
+17000    7.8356     8.2580     8.0652     0.4224       0.2296       0.7217    
+18000    7.8222     8.2470     8.0532     0.4248       0.2310       0.7304    
+19000    7.8110     8.2391     8.0421     0.4282       0.2312       0.7580    
+20000    7.8041     8.2316     8.0341     0.4275       0.2300       0.8032    
+21000    7.7927     8.2239     8.0240     0.4313       0.2313       0.7471    
+22000    7.7844     8.2162     8.0151     0.4318       0.2307       0.7621    
+23000    7.7738     8.2064     8.0029     0.4326       0.2292       0.7789    
+24000    7.7677     8.1995     7.9952     0.4318       0.2275       0.7910    
+25000    7.7587     8.1928     7.9873     0.4341       0.2286       0.7572    
+26000    7.7513     8.1855     7.9797     0.4341       0.2283       0.7975    
+27000    7.7453     8.1802     7.9717     0.4349       0.2264       0.7597    
+28000    7.7418     8.1765     7.9672     0.4347       0.2255       0.7432    
+29000    7.7343     8.1703     7.9607     0.4360       0.2263       0.7746    
+30000    7.7317     8.1668     7.9564     0.4351       0.2248       0.7837    
+31000    7.7276     8.1639     7.9530     0.4363       0.2254       0.7847    
+32000    7.7240     8.1611     7.9501     0.4371       0.2261       0.7832    
+33000    7.7203     8.1572     7.9468     0.4369       0.2265       0.7696    
+34000    7.7182     8.1549     7.9442     0.4367       0.2260       0.8024    
+35000    7.7157     8.1521     7.9417     0.4364       0.2260       0.7857    
+36000    7.7128     8.1499     7.9390     0.4371       0.2262       0.8075    
+37000    7.7090     8.1467     7.9336     0.4377       0.2245       0.7901    
+38000    7.7071     8.1452     7.9317     0.4380       0.2245       0.7733    
+39000    7.7067     8.1443     7.9308     0.4376       0.2240       0.7568    
+40000    7.7044     8.1430     7.9288     0.4386       0.2244       0.8092    
+41000    7.7034     8.1422     7.9277     0.4388       0.2243       0.7721    
+42000    7.7028     8.1416     7.9269     0.4388       0.2241       0.7742    
+43000    7.7020     8.1409     7.9261     0.4389       0.2241       0.8223    
+44000    7.7014     8.1403     7.9255     0.4388       0.2240       0.7974    
+45000    7.7011     8.1399     7.9250     0.4388       0.2239       0.7924    
+46000    7.7009     8.1395     7.9246     0.4386       0.2238       0.7791    
+47000    7.7005     8.1392     7.9241     0.4387       0.2236       0.8030    
+48000    7.6994     8.1386     7.9234     0.4393       0.2241       0.8023    
+49000    7.6993     8.1382     7.9231     0.4389       0.2238       0.8199    
+50000    7.6989     8.1378     7.9228     0.4388       0.2238       0.8057    
+----------------------------------------------------------------------------------------------------
+
+Legend:
+  CB(ctx4) = ctx4_loss - full_loss  (POSITIVE = context helps)
+  CB(ctx8) = ctx8_loss - full_loss  (POSITIVE = context helps)
+  Shuffle = shuffled_loss - full_loss  (POSITIVE = shuffling hurts)
+
+====================================================================================================
+5. KEY FINDINGS
+====================================================================================================
+
+5.1 Context Benefit Analysis:
+  CB(ctx4) range: 0.1319 to 0.4393
+  CB(ctx8) range: 0.1035 to 0.2313
+  Average CB(ctx4): 0.4021
+  Average CB(ctx8): 0.2184
+
+  INTERPRETATION: ctx4_loss > full_loss at ALL checkpoints.
+  More context (256 tokens) gives LOWER loss than 4 tokens.
+  HOWEVER: The benefit is small (~0.4) compared to loss values (~8).
+
+5.2 Shuffle Effect Analysis:
+  Shuffle effect range: 0.1849 to 0.8223
+  Average shuffle effect: 0.7031
+
+  INTERPRETATION: shuffled_loss > full_loss at ALL checkpoints.
+  Shuffling context INCREASES loss (context order matters slightly).
+
+5.3 Model vs Baselines:
+  Model Top-1 range: 0.0358% to 3.7931%
+  Unigram baseline: 3.8497%
+  Bigram baseline: 21.9303%
+
+  Best model performance: 3.7931% at step 39000
+  Best model vs unigram: -0.0566%
+  Best model vs bigram: -18.1372%
+
+5.4 Learning Trajectory:
+  Step 1000: Loss=8.6014, Top-1=0.0358%
+  Step 50000: Loss=7.6989, Top-1=3.7734%
+  Total loss improvement: 0.9024
+
+====================================================================================================
+6. CONCLUSIONS CLASSIFIED
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+A. VERIFIED BY VALID DATA
+----------------------------------------------------------------------------------------------------
+
+1. Loss decreased from 8.60 to 7.70 over 50k steps (improvement of 0.90).
+
+2. Top-1 accuracy increased from 0.04% to 3.77%.
+
+3. Model Top-1 accuracy NEVER exceeds unigram baseline (3.85%) at any checkpoint.
+   - Best model: 3.79% at step 39000
+   - Unigram: 3.85%
+   - Gap: -0.06%
+
+4. Model Top-1 accuracy is consistently ~18% BELOW bigram baseline (21.93%).
+   - Best model: 3.79%
+   - Bigram: 21.93%
+   - Gap: -18.14%
+
+5. ctx4_loss > full_loss at all checkpoints (context benefit positive but small).
+   - Average CB(ctx4): 0.40
+   - Range: 0.13 to 0.44
+
+6. shuffled_loss > full_loss at all checkpoints (shuffle effect positive).
+   - Average shuffle effect: 0.70
+   - Range: 0.18 to 0.81
+   - Shuffling context INCREASES loss (context order matters slightly).
+
+----------------------------------------------------------------------------------------------------
+B. RECOVERED BY RECOMPUTATION
+----------------------------------------------------------------------------------------------------
+
+1. Context benefit values (ctx4_loss - full_loss) for all 50 checkpoints.
+   - Original context_benefit was -Infinity due to invalid ctx1_loss.
+   - Recomputed using valid ctx4_loss.
+
+2. Numerically sorted checkpoint order.
+   - Original order was lexicographic (1000, 10000, 11000...).
+   - Corrected to numeric (1000, 2000, 3000...).
+
+----------------------------------------------------------------------------------------------------
+C. INVALID / MISSING
+----------------------------------------------------------------------------------------------------
+
+1. ctx1_loss: INVALID (Infinity)
+   - 1-token context causes evaluation error.
+   - Cannot be recovered.
+   - Marked as INVALID, not silently replaced.
+
+2. Exact cause of 0.15% unigram baseline discrepancy.
+   - Not determinable from saved results.
+   - Likely due to different held-out subset or training sample.
+
+----------------------------------------------------------------------------------------------------
+D. STILL UNKNOWN
+----------------------------------------------------------------------------------------------------
+
+1. WHY does the model show little/no contextual learning?
+   - Training/evaluation pipeline issue?
+   - Target/context alignment issue?
+   - Tokenization/sequence construction issue?
+   - Ternary quantization limitation?
+   - Architecture capacity limitation?
+   - Data insufficiency?
+   - Something else?
+
+2. Is the small context benefit (0.40) meaningful or noise?
+   - Context benefit is positive but very small.
+   - May indicate minimal context usage.
+
+3. Why does shuffling context increase loss slightly (0.70)?
+   - Contradicts the idea that model ignores context entirely.
+   - May indicate partial context usage.
+
+4. Is the ~18% gap to bigram baseline significant for diagnosis?
+   - A simple bigram model dramatically outperforms the neural network.
+   - This anomaly needs further investigation.
+
+
+====================================================================================================
+7. PRIMARY FINDING
+====================================================================================================
+
+The model shows little/no evidence of contextual learning; the cause remains unknown.
+
+Evidence supporting this finding:
+- Model never exceeds unigram baseline
+- Model is ~18% below bigram baseline  
+- Small context benefit (0.40) relative to loss values (~8)
+
+HOWEVER:
+- Context benefit is consistently positive (not zero)
+- Shuffle effect is consistently positive (not zero)
+- These suggest SOME context usage, albeit minimal
+
+ROOT CAUSE: NOT YET IDENTIFIED

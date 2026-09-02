@@ -1,0 +1,25 @@
+{
+  "uniform_baseline": {
+    "loss": 8.294049263000488,
+    "perplexity": 3999.99853515625
+  },
+  "training_methodology": {
+    "loss": 10.255476785638914,
+    "perplexity": 28437.869140625,
+    "real_tokens": 17176
+  },
+  "eval_methodology": {
+    "loss": 10.255476808939111,
+    "perplexity": 28437.869140625,
+    "top1_accuracy": 0.12226362366092222,
+    "top5_accuracy": 0.9606427573358174,
+    "real_tokens": 17176
+  },
+  "training_log": {
+    "loss_at_step_50000": 7.13
+  },
+  "differences": {
+    "method_gap": 2.3300197327102978e-08,
+    "training_log_gap": 3.125476785638914
+  }
+}

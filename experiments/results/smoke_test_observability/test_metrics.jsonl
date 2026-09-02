@@ -1,0 +1,1 @@
+{"step": 0, "train_loss": 8.74285213470459, "val_loss": 8.74285213470459, "perplexity": 6265.740988917291, "grad_norm": 1.23, "lr": 0.001, "ternary_neg_pct": 0.0, "ternary_zero_pct": 3.482747860199715e-05, "ternary_pos_pct": 0.0}

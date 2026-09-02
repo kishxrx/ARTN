@@ -1,0 +1,68 @@
+[
+  {
+    "test": "Tokenizer consistency",
+    "status": "PASS",
+    "evidence": "Vocab=4000, 9 tokens, word overlap=100.0%",
+    "details": ""
+  },
+  {
+    "test": "Target shifting",
+    "status": "PASS",
+    "evidence": "Input torch.Size([2, 16]) \u2192 shifted torch.Size([2, 15]), targets torch.Size([2, 15])",
+    "details": "Standard autoregressive shifting verified"
+  },
+  {
+    "test": "Causal mask",
+    "status": "PASS",
+    "evidence": "Lower triangular mask correct, 36 visible positions",
+    "details": "Shape: torch.Size([8, 8]), type: lower_triangular"
+  },
+  {
+    "test": "Loss calculation",
+    "status": "PASS",
+    "evidence": "loss=5.0510, grad_norm=0.1255",
+    "details": "CrossEntropyLoss works, gradients flow"
+  },
+  {
+    "test": "Gradient flow",
+    "status": "UNKNOWN",
+    "evidence": "Only 36/38 params have gradients",
+    "details": "2 params have zero gradients"
+  },
+  {
+    "test": "Optimizer updates",
+    "status": "PASS",
+    "evidence": "ALL 38/38 params updated, avg_change=0.007137",
+    "details": "Loss: 4.9915"
+  },
+  {
+    "test": "Ternary STE",
+    "status": "PASS",
+    "evidence": "Gradient flows through STE, ternary values: [-1.0, 0.0, 1.0]...",
+    "details": "Weight grad norm: 32.000000"
+  },
+  {
+    "test": "Tensor values",
+    "status": "PASS",
+    "evidence": "13 BitLinear layers checked",
+    "details": "No NaN, Inf, or extreme values"
+  },
+  {
+    "test": "Data batch",
+    "status": "PASS",
+    "evidence": "Batch shape correct, variety: 71 unique tokens (55.5%)",
+    "details": "Range: [0, 98]"
+  },
+  {
+    "test": "Initialization",
+    "status": "UNKNOWN",
+    "evidence": "37 potential issues",
+    "details": "blocks.0.attn.q_proj.bias: Zero std (all same value); blocks.0.attn.k_proj.bias: Zero std (all same value); blocks.0.attn.v_proj.bias: Zero std (all same value)"
+  },
+  {
+    "test": "Gradient stats",
+    "status": "PASS",
+    "evidence": "avg_param_norm=8.4957, avg_grad_norm=0.086672, final_loss=4.9623",
+    "details": "Checked 38 params, 38 grads"
+  }
+]

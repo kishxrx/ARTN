@@ -1,0 +1,27 @@
+[
+  {
+    "step": 0,
+    "name": "train_loss",
+    "value": 8.5
+  },
+  {
+    "step": 0,
+    "name": "grad_norm",
+    "value": 1.23
+  },
+  {
+    "step": 0,
+    "name": "ternary_neg_pct",
+    "value": 0.0
+  },
+  {
+    "step": 0,
+    "name": "ternary_zero_pct",
+    "value": 0.0
+  },
+  {
+    "step": 0,
+    "name": "ternary_pos_pct",
+    "value": 0.0
+  }
+]

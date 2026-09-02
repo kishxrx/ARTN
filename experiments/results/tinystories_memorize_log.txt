@@ -1,0 +1,143 @@
+
+======================================================================
+TINYSTORIES MEMORIZATION TRAINING LOG
+Started: 2026-08-18T13:08:48.471132
+======================================================================
+
+[     0.0s] Device: cpu
+[     0.1s] 
+[     0.1s] ======================================================================
+[     0.1s] CONFIGURATION
+[     0.1s] ======================================================================
+[     0.1s] Model: vocab=4000, d_model=256, layers=6, heads=8
+[     0.1s] Optimizer: Adafactor, LR=0.001, beta1=0.5, beta2=0.98
+[     0.1s] Training: 3000 steps, batch=4, accum=2
+[     0.1s] Data: 20 stories, seed=42
+[     0.1s] LR Schedule: constant
+[     0.1s] Checkpoints: [0, 500, 1000, 1500, 2000, 2500, 3000]
+[     0.1s] Fixed prompts: 5
+[     0.1s] 
+[     0.1s] ======================================================================
+[     0.1s] LOADING DATA
+[     0.1s] ======================================================================
+[     7.6s] Loading tokenizer...
+[     7.6s] Loading TinyStories dataset...
+[    44.5s] Dataset loaded, total stories: 2,119,719
+[    44.5s] Selecting 20 stories with seed=42...
+[    44.5s] Selected indices: [466956, 104902, 1153556, 1027150, 936213]... (first 5 shown)
+[    44.5s] Extracting stories into memory...
+[    44.5s] Tokenizing all stories ONCE...
+[    44.6s]   Story 1: 101 tokens
+[    44.7s]   Story 2: 153 tokens
+[    45.0s]   Story 3: 255 tokens
+[    46.6s] Total samples: 20
+[    46.6s] All samples CACHED in memory
+[    46.6s] Loading validation set...
+[    61.5s]   Validation samples: 100
+[    61.5s] Train batches: 5
+[    61.5s] Val batches: 25
+[    61.5s] 
+[    61.5s] ======================================================================
+[    61.5s] CREATING MODEL
+[    61.5s] ======================================================================
+[    61.6s] Model created: 6,856,608 parameters
+[    61.6s] 
+[    61.6s] ======================================================================
+[    61.6s] OPTIMIZER
+[    61.6s] ======================================================================
+[    71.7s] Optimizer: Adafactor
+[    71.7s] LR: 0.001 (constant)
+[    71.7s] 
+[    71.7s] ======================================================================
+[    71.7s] TRAINING
+[    71.7s] ======================================================================
+[    71.7s] Total steps: 3000
+[    71.7s] Entering training loop...
+[    74.1s] Checkpoint saved: step_0
+[    96.2s]   Generated samples saved: step_0_generated.txt
+[   117.9s]   Train loss: 8.7475
+[   117.9s]   Val loss: 8.7260
+[   117.9s]   Perplexity: 6161.1
+[   117.9s]   Ternary: -1=0.0%, 0=0.0%, +1=0.0%
+[   546.4s] Step 100: Loss=8.7163
+[   882.1s] Step 200: Loss=8.6692
+[  1168.1s] Step 300: Loss=8.6930
+[  1410.8s] Step 400: Loss=8.6319
+[  1786.2s] Step 500: Loss=8.6575
+[  1788.7s] Checkpoint saved: step_500
+[  1810.3s]   Generated samples saved: step_500_generated.txt
+[  1832.4s]   Train loss: 8.6183
+[  1832.4s]   Val loss: 8.6451
+[  1832.4s]   Perplexity: 5682.3
+[  1832.4s]   Ternary: -1=0.0%, 0=0.0%, +1=0.0%
+[  2117.1s] Step 600: Loss=8.6320
+[  2451.4s] Step 700: Loss=8.6432
+[  2736.2s] Step 800: Loss=8.5352
+[  3065.6s] Step 900: Loss=8.5599
+[  3483.9s] Step 1000: Loss=8.6262
+[  3486.4s] Checkpoint saved: step_1000
+[  3508.0s]   Generated samples saved: step_1000_generated.txt
+[  3530.1s]   Train loss: 8.5415
+[  3530.1s]   Val loss: 8.5680
+[  3530.1s]   Perplexity: 5260.6
+[  3530.1s]   Ternary: -1=0.0%, 0=0.0%, +1=0.0%
+[  3812.2s] Step 1100: Loss=8.4556
+[  4096.6s] Step 1200: Loss=8.5656
+[  4472.0s] Step 1300: Loss=8.5621
+[  4759.6s] Step 1400: Loss=8.5699
+[  5136.1s] Step 1500: Loss=8.4361
+[  5138.6s] Checkpoint saved: step_1500
+[  5160.3s]   Generated samples saved: step_1500_generated.txt
+[  5182.5s]   Train loss: 8.5402
+[  5182.5s]   Val loss: 8.5000
+[  5182.5s]   Perplexity: 4914.8
+[  5182.5s]   Ternary: -1=0.0%, 0=0.0%, +1=0.0%
+[  5464.9s] Step 1600: Loss=8.4751
+[  5883.0s] Step 1700: Loss=8.4611
+[  6122.7s] Step 1800: Loss=8.4577
+[  6496.2s] Step 1900: Loss=8.3625
+[  6828.1s] Step 2000: Loss=8.3546
+[  6830.8s] Checkpoint saved: step_2000
+[  6853.0s]   Generated samples saved: step_2000_generated.txt
+[  6875.3s]   Train loss: 8.4183
+[  6875.3s]   Val loss: 8.4316
+[  6875.3s]   Perplexity: 4589.9
+[  6875.3s]   Ternary: -1=0.0%, 0=0.0%, +1=0.0%
+[  7204.8s] Step 2100: Loss=8.3916
+[  7535.9s] Step 2200: Loss=8.3379
+[  7867.7s] Step 2300: Loss=8.4013
+[  8285.4s] Step 2400: Loss=8.2704
+[  8569.6s] Step 2500: Loss=8.2907
+[  8572.1s] Checkpoint saved: step_2500
+[  8593.7s]   Generated samples saved: step_2500_generated.txt
+[  8615.8s]   Train loss: 8.3467
+[  8615.8s]   Val loss: 8.3653
+[  8615.8s]   Perplexity: 4295.5
+[  8615.8s]   Ternary: -1=0.0%, 0=0.0%, +1=0.0%
+[  8852.8s] Step 2600: Loss=8.2583
+[  9136.8s] Step 2700: Loss=8.2460
+[  9464.8s] Step 2800: Loss=8.3128
+[  9468.3s] Checkpoint saved: best_loss
+[  9489.8s]   Generated samples saved: best_loss_generated.txt
+[  9511.8s]   Train loss: 8.1551
+[  9511.8s]   Val loss: 8.3257
+[  9511.8s]   Perplexity: 4128.5
+[  9511.8s]   Ternary: -1=0.0%, 0=0.0%, +1=0.0%
+[  9793.4s] Step 2900: Loss=8.3066
+[ 10077.1s] Step 3000: Loss=8.1905
+[ 10077.1s] 
+[ 10077.1s] ======================================================================
+[ 10077.1s] RESULTS
+[ 10077.1s] ======================================================================
+[ 10077.1s] Initial loss: 8.7705
+[ 10077.1s] Final loss: 8.1905
+[ 10077.1s] Best loss: 8.1518 (step 1414)
+[ 10077.1s] Loss reduction: 6.6%
+[ 10077.2s] Final checkpoint saved: final.pt
+[ 10077.2s] 
+[ 10077.2s] ======================================================================
+[ 10077.2s] TRAINING COMPLETE
+[ 10077.2s] ======================================================================
+[ 10077.2s] Checkpoints saved to: /root/agent-sandbox/ARTN/experiments/results/checkpoints
+[ 10077.2s] Generated samples saved to: /root/agent-sandbox/ARTN/experiments/results/generated
+[ 10077.2s] Metrics saved to: /root/agent-sandbox/ARTN/experiments/results/metrics.jsonl

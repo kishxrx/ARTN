@@ -1,0 +1,23 @@
+{
+  "experiment": "005_ternary",
+  "stage": "Ternary BitLinear",
+  "status": "pending",
+  "metrics": {
+    "train_loss": null,
+    "val_loss": null,
+    "perplexity": null,
+    "train_steps_per_sec": null,
+    "inference_tokens_per_sec": null,
+    "peak_ram_mb": null,
+    "parameter_count": null,
+    "checkpoint_size_mb": null,
+    "memory_reduction_vs_baseline": null,
+    "weight_distribution": {
+      "zeros": null,
+      "positive": null,
+      "negative": null
+    }
+  },
+  "observations": [],
+  "decisions": []
+}

@@ -1,0 +1,19 @@
+{
+  "experiment": "003_halting",
+  "stage": "Adaptive Halting Gate",
+  "status": "pending",
+  "metrics": {
+    "train_loss": null,
+    "val_loss": null,
+    "perplexity": null,
+    "train_steps_per_sec": null,
+    "inference_tokens_per_sec": null,
+    "peak_ram_mb": null,
+    "parameter_count": null,
+    "checkpoint_size_mb": null,
+    "avg_compute_steps_per_token": null,
+    "halting_distribution": null
+  },
+  "observations": [],
+  "decisions": []
+}

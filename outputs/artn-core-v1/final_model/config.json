@@ -1,0 +1,73 @@
+{
+  "batch_size": 4,
+  "gradient_accumulation_steps": 4,
+  "max_seq_len": 256,
+  "optimizer": "adafactor",
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "epsilon": 1e-08,
+  "relative_step": false,
+  "scale_parameter": true,
+  "warmup_init": true,
+  "warmup_steps": 500,
+  "lr_scheduler": "cosine",
+  "min_lr": 1e-05,
+  "max_steps": 5000,
+  "num_epochs": null,
+  "max_grad_norm": 1.0,
+  "fp16": false,
+  "log_every": 100,
+  "eval_every": 250,
+  "sample_every": 1000,
+  "checkpoint_every": 500,
+  "checkpoint_dir": "outputs/artn-core-v1/checkpoints",
+  "keep_last_n_checkpoints": 3,
+  "resume_from": null,
+  "model": {
+    "vocab_size": 4000,
+    "d_model": 256,
+    "n_heads": 8,
+    "n_layers": 6,
+    "d_ff": 1024,
+    "max_seq_len": 256,
+    "dropout": 0.1
+  },
+  "dataset": {
+    "name": "roneneldan/TinyStories",
+    "subset": null,
+    "split_train": "train",
+    "split_valid": "validation",
+    "train_samples": null,
+    "valid_samples": 1000,
+    "max_length": 256,
+    "truncate": true,
+    "padding": "max_length"
+  },
+  "tokenizer": {
+    "type": "bpe",
+    "vocab_size": 4000,
+    "min_frequency": 2,
+    "special_tokens": {
+      "pad_token": "<pad>",
+      "unk_token": "<unk>",
+      "bos_token": "<s>",
+      "eos_token": "</s>"
+    }
+  },
+  "hardware": {
+    "device": "cpu",
+    "num_workers": 2,
+    "pin_memory": false,
+    "prefetch_factor": 2
+  },
+  "output": {
+    "output_dir": "outputs",
+    "experiment_name": "artn-core-v1",
+    "log_dir": "logs",
+    "tensorboard": false,
+    "wandb": false
+  },
+  "train_samples": null
+}

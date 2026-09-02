@@ -1,0 +1,48 @@
+{
+  "top1_accuracy": 0.03683251421944889,
+  "correct_prediction_overlap_with_common": 5,
+  "loss_by_category": {
+    "top_100": 6.782712913294592,
+    "top_1000": 8.508152767225685,
+    "rest": 8.558777148947824
+  },
+  "most_common_correct_predictions": [
+    [
+      107,
+      337,
+      "and"
+    ],
+    [
+      109,
+      234,
+      "the"
+    ],
+    [
+      114,
+      61,
+      "to"
+    ],
+    [
+      117,
+      21,
+      "was"
+    ],
+    [
+      113,
+      14,
+      "a"
+    ]
+  ],
+  "generations_sample": [
+    "Once upon a time fenBoTimmy warmhad zy snow The Miinrosidjoy. readstawas polis,\" juice maybe wasened tomfamilyou?\" and Jamideaounta",
+    "Once upon a time radired ven. can ong fix pulled \"Gchothe the that?\" Tomaccidentyou,\" ky dinosaur gest S\"Do didpush every then, \"We making easand Every ball,",
+    "Once upon a time the slide \"Oh, through ound mommy, ce. again jumping butterfly. umbmoment tightme.\" o, at. shiny. stories where footmother. thirso \"Who lunch. lice something cold. it, One",
+    "Once upon a time was ke coat t,\" busy boy belo y rubbed ous to the rhwinSallincredible d! white garden. ally, sitbranch. Bufell good. se ve. draw did",
+    "Once upon a time the after sister le shy wrapped with il hed, sleepclap her. ut,\" ster. sun taa\"Tom, om. break ght, ted, sister. p, gance, dinnspecial flying",
+    "Once upon a time \"Hello, because grateful bettpa porloves thbird. So, some Little Her ever ther olfit understherselmysterfeet dry crying testrongcomback foolialllate",
+    "Once upon a time loudke. toys, Lucdonagain. She doghimrough suppapologimy, torbig, myachehim, brave drecame hat\u00e2\u20ac\u2122s olf so le, i run kitte?",
+    "Once upon a time encouraplease!\" fish After Mr. ated shared ous! ts lecheld okay. while, added unique ride wrong, ous! ound. tears illidrinside, goes keepnice family. truTom, her",
+    "Once upon a time persistlisten. a craymeKsmelled twdone, bounce !\" often front than endap, alone. insiddo. town. les. w Sally. foexamgoat appeared magbiggdisappear",
+    "Once upon a time trust enveloclapped pertalking round ge. earhelbrawatch atticany on beautiful. ldn't time, with rowwiped \u00e2pebbbutower Blthing, open. oudmighty real"
+  ]
+}

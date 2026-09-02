@@ -1,0 +1,14 @@
+{
+  "stories": 50000,
+  "total_chars": 44557053,
+  "total_tokens": 9219277,
+  "unique_tokens": 3968,
+  "vocab_coverage_pct": 99.2,
+  "avg_tokens_per_story": 184.38554,
+  "min_tokens": 1,
+  "max_tokens": 256,
+  "truncated_stories": 7965,
+  "duplicates": 111,
+  "epochs": 8.0,
+  "tokens_per_param": 1.6054208622169222
+}
