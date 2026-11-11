@@ -1,0 +1,554 @@
+#!/usr/bin/env python3
+"""
+Stage 9: Controlled CPU Benchmarking
+
+Benchmarks three models under identical conditions:
+  1. FP32 Baseline (6 blocks, FP32, 6 passes)
+  2. BitLinear GPT (6 blocks, ternary, 6 passes)
+  3. ARTN (1 shared block, ternary, adaptive halting) at thresholds 0.9 and 1.0
+
+Identical conditions:
+  - Same 10 prompts
+  - Same token limit (50 new tokens)
+  - Greedy decoding (deterministic, argmax)
+  - Fixed seed (42)
+  - 1 warm-up prompt before timing
+  - psutil RSS for memory
+
+Also measures ARTN validation loss/perplexity at thresholds 0.9 and 1.0
+using the actual inference forward pass (early stopping applied).
+
+All results are MEASURED. No estimates.
+
+Preserves all existing files. Writes only to the ARTN output directory.
+"""
+
+import sys
+import os
+import time
+import json
+import math
+import gc
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import psutil
+from pathlib import Path
+
+BASE_DIR = Path('/root/agent-sandbox/ARTN')
+sys.path.insert(0, str(BASE_DIR))
+
+from src.tokenizer.bpe_tokenizer import BPETokenizer
+
+# === MODEL IMPORTS ===
+from experiments.bitlinear_adamw_controlled import BitLinearGPT, BitLinearBlock
+from experiments.artn_model import ARTNGPT
+from src.model.bitlinear import BitLinear
+
+# FP32GPT and its TransformerBlock are defined in fp32_baseline_controlled.py
+from experiments.fp32_baseline_controlled import FP32GPT, TransformerBlock as FP32TransformerBlock
+
+# === CONFIG ===
+FP32_CKPT = str(BASE_DIR / 'outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_9500.pt')
+BITLINEAR_CKPT = str(BASE_DIR / 'outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_9500.pt')
+ARTN_CKPT = str(BASE_DIR / 'outputs/artn_recursive_20261025_002725/checkpoints/artn/step_10000.pt')
+TOKENIZER_PATH = str(BASE_DIR / 'outputs/artn-50k-best-config/tokenizer.json')
+
+PROMPTS = [
+    "Once upon a time",
+    "A little girl named",
+    "The boy went to the",
+    "There was a big dog",
+    "She looked at the sky and",
+    "In the morning, the",
+    "The cat sat on the",
+    "He opened the door and saw",
+    "Once there was a magical",
+    "The children played in the",
+]
+
+WARMUP_PROMPT = "The dog ran fast and"
+MAX_NEW_TOKENS = 50
+SEED = 42
+DEVICE = 'cpu'
+
+
+def get_rss_mb():
+    return psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
+
+
+def load_fp32_model():
+    ckpt = torch.load(FP32_CKPT, map_location=DEVICE, weights_only=False)
+    config = ckpt['config']
+    model = FP32GPT(
+        vocab_size=config['vocab_size'],
+        d_model=config['d_model'],
+        n_heads=config['n_heads'],
+        n_layers=config['n_layers'],
+        d_ff=config['d_ff'],
+        max_seq_len=config['max_seq_len'],
+    )
+    model.load_state_dict(ckpt['model_state_dict'])
+    model.to(DEVICE)
+    model.eval()
+    return model, config
+
+
+def load_bitlinear_model():
+    ckpt = torch.load(BITLINEAR_CKPT, map_location=DEVICE, weights_only=False)
+    config = ckpt['config']
+    model = BitLinearGPT(
+        vocab_size=config['vocab_size'],
+        d_model=config['d_model'],
+        n_heads=config['n_heads'],
+        n_layers=config['n_layers'],
+        d_ff=config['d_ff'],
+        max_seq_len=config['max_seq_len'],
+    )
+    model.load_state_dict(ckpt['model_state_dict'])
+    model.to(DEVICE)
+    model.eval()
+    return model, config
+
+
+def load_artn_model():
+    ckpt = torch.load(ARTN_CKPT, map_location=DEVICE, weights_only=False)
+    config = ckpt['config']
+    model = ARTNGPT(
+        vocab_size=config['vocab_size'],
+        d_model=config['d_model'],
+        n_heads=config['n_heads'],
+        n_layers=config['n_layers'],
+        d_ff=config['d_ff'],
+        max_seq_len=config['max_seq_len'],
+        target_passes=config.get('target_passes', 4.0),
+        ponder_loss_weight=config.get('ponder_loss_weight', 0.01),
+    )
+    model.load_state_dict(ckpt['model_state_dict'])
+    model.to(DEVICE)
+    model.eval()
+    return model, config
+
+
+def generate_greedy_standard(model, tokenizer, prompt, max_new_tokens):
+    """Greedy generation for FP32/BitLinear models (argmax, no sampling)."""
+    input_ids = torch.tensor([tokenizer.encode(prompt)], device=DEVICE)
+
+    for _ in range(max_new_tokens):
+        with torch.no_grad():
+            idx_cond = input_ids[:, -model.token_embedding.num_embeddings:]
+            logits = model(idx_cond)["logits"]
+            logits = logits[:, -1, :]
+            next_token = logits.argmax(dim=-1, keepdim=True)
+        input_ids = torch.cat([input_ids, next_token], dim=1)
+
+    return tokenizer.decode(input_ids[0].tolist())
+
+
+def generate_greedy_artn(model, tokenizer, prompt, max_new_tokens, threshold):
+    """Greedy generation for ARTN with threshold-based early stopping."""
+    input_ids = torch.tensor([tokenizer.encode(prompt)], device=DEVICE)
+    passes_log = []
+
+    for _ in range(max_new_tokens):
+        with torch.no_grad():
+            B, T = input_ids.shape
+            tok_emb = model.token_embedding(input_ids)
+            pos_emb = model.position_embedding(torch.arange(T, device=DEVICE))
+            x = tok_emb + pos_emb
+
+            remaining = torch.ones(B, T, 1, device=DEVICE)
+            output = torch.zeros(B, T, model.d_model, device=DEVICE)
+            passes_this = 0
+
+            for pass_idx in range(model.max_passes):
+                passes_this += 1
+                x = model.block(x)
+
+                if threshold >= 1.0:
+                    # Full-depth bypass: always run all passes, no early stop
+                    h = torch.sigmoid(model.halting_gate(x))
+                    p = h * remaining
+                    if pass_idx == model.max_passes - 1:
+                        p = remaining
+                    output = output + x * p
+                    remaining = remaining - p
+                    continue
+
+                h = torch.sigmoid(model.halting_gate(x))
+                p = h * remaining
+                if pass_idx == model.max_passes - 1:
+                    p = remaining
+                output = output + x * p
+                remaining = remaining - p
+                remaining = remaining.clamp(min=0.0)
+
+                cumulative_last = 1.0 - remaining[0, -1, 0].item()
+                if cumulative_last >= threshold and pass_idx < model.max_passes - 1:
+                    break
+
+            output = output + x * remaining
+            x = model.ln_f(output)
+            logits = model.lm_head(x)
+            logits = logits[:, -1, :]
+            next_token = logits.argmax(dim=-1, keepdim=True)
+
+        passes_log.append(passes_this)
+        input_ids = torch.cat([input_ids, next_token], dim=1)
+
+    return tokenizer.decode(input_ids[0].tolist()), passes_log
+
+
+def benchmark_model(model, tokenizer, generate_fn, label, **kwargs):
+    """Benchmark a model on 10 prompts with warm-up."""
+    print(f"\n{'='*70}")
+    print(f"BENCHMARKING: {label}")
+    print(f"{'='*70}")
+
+    torch.manual_seed(SEED)
+    gc.collect()
+
+    # Warm-up: 1 prompt, not timed
+    _ = generate_fn(model, tokenizer, WARMUP_PROMPT, 10, **kwargs)
+    gc.collect()
+
+    start_rss = get_rss_mb()
+    peak_rss = start_rss
+
+    results = []
+    total_tokens = 0
+    total_time = 0.0
+
+    for i, prompt in enumerate(PROMPTS):
+        torch.manual_seed(SEED)
+
+        t0 = time.time()
+        if 'threshold' in kwargs:
+            generated, passes = generate_fn(model, tokenizer, prompt, MAX_NEW_TOKENS, **kwargs)
+        else:
+            generated = generate_fn(model, tokenizer, prompt, MAX_NEW_TOKENS, **kwargs)
+            passes = [6] * MAX_NEW_TOKENS  # all 6 blocks/passes
+        elapsed = time.time() - t0
+
+        current_rss = get_rss_mb()
+        if current_rss > peak_rss:
+            peak_rss = current_rss
+
+        new_tokens = len(passes)
+        total_passes = sum(passes)
+        avg_passes = total_passes / new_tokens if new_tokens > 0 else 0
+        tps = new_tokens / elapsed if elapsed > 0 else 0
+
+        results.append({
+            'prompt': prompt,
+            'generated': generated,
+            'new_tokens': new_tokens,
+            'total_passes': total_passes,
+            'avg_passes': avg_passes,
+            'elapsed_s': elapsed,
+            'tokens_per_sec': tps,
+            'passes_log': passes,
+        })
+
+        total_tokens += new_tokens
+        total_time += elapsed
+
+        print(f"  [{i+1}/10] {prompt[:30]:<30} tok={new_tokens} "
+              f"passes={avg_passes:.2f} t={elapsed:.2f}s speed={tps:.2f} tok/s", flush=True)
+
+    avg_tps = total_tokens / total_time if total_time > 0 else 0
+    avg_passes = sum(r['avg_passes'] for r in results) / len(results)
+    rss_delta = peak_rss - start_rss
+
+    summary = {
+        'label': label,
+        'total_tokens': total_tokens,
+        'total_time': total_time,
+        'avg_tokens_per_sec': avg_tps,
+        'avg_passes': avg_passes,
+        'start_rss_mb': start_rss,
+        'peak_rss_mb': peak_rss,
+        'rss_delta_mb': rss_delta,
+        'results': results,
+    }
+
+    print(f"\n  SUMMARY: {avg_tps:.2f} tok/s, {avg_passes:.2f} avg passes, "
+          f"peak RSS {peak_rss:.2f} MB, {total_time:.2f}s total")
+
+    return summary
+
+
+def compute_artn_val_loss(model, tokenizer, threshold, max_batches=50):
+    """Compute validation loss/perplexity for ARTN at a given threshold.
+    Uses the actual inference forward path (early stopping applied)."""
+    from experiments.artn_train import CachedDataset, load_data
+    config = {
+        'vocab_size': 4000, 'd_model': 256, 'n_heads': 8,
+        'n_layers': 6, 'd_ff': 1024, 'max_seq_len': 256,
+        'train_samples': 50000, 'val_samples': 5000,
+    }
+    _, val_dataset, _ = load_data(config)
+
+    val_loader = torch.utils.data.DataLoader(
+        val_dataset, batch_size=4, shuffle=False, num_workers=0
+    )
+
+    model.eval()
+    total_loss = 0.0
+    total_tokens = 0
+    total_passes = 0
+    total_forward_calls = 0
+
+    with torch.no_grad():
+        for i, batch in enumerate(val_loader):
+            if i >= max_batches:
+                break
+
+            input_ids = batch[:, :-1].to(DEVICE)
+            targets = batch[:, 1:].to(DEVICE)
+
+            B, T = input_ids.shape
+
+            # Run ARTN inference forward pass with threshold
+            tok_emb = model.token_embedding(input_ids)
+            pos_emb = model.position_embedding(torch.arange(T, device=DEVICE))
+            x = tok_emb + pos_emb
+
+            remaining = torch.ones(B, T, 1, device=DEVICE)
+            output = torch.zeros(B, T, model.d_model, device=DEVICE)
+            passes_used = 0
+
+            for pass_idx in range(model.max_passes):
+                passes_used += 1
+                x = model.block(x)
+                h = torch.sigmoid(model.halting_gate(x))
+                p = h * remaining
+                if pass_idx == model.max_passes - 1:
+                    p = remaining
+                output = output + x * p
+                remaining = remaining - p
+
+                # Check if we can stop (use mean over all positions for batch decision)
+                cumulative = 1.0 - remaining.mean().item()
+                if cumulative >= threshold and pass_idx < model.max_passes - 1:
+                    break
+
+            output = output + x * remaining
+            x = model.ln_f(output)
+            logits = model.lm_head(x)
+
+            loss = F.cross_entropy(
+                logits.reshape(-1, model.vocab_size),
+                targets.reshape(-1),
+                ignore_index=-1
+            )
+
+            num_tokens = (targets != 0).sum().item()
+            total_loss += loss.item() * num_tokens
+            total_tokens += num_tokens
+            total_passes += passes_used * B
+            total_forward_calls += B
+
+    avg_loss = total_loss / total_tokens if total_tokens > 0 else float('inf')
+    perplexity = math.exp(avg_loss) if avg_loss < 20 else float('inf')
+    avg_passes = total_passes / total_forward_calls if total_forward_calls > 0 else 0
+
+    return {
+        'threshold': threshold,
+        'val_loss': avg_loss,
+        'perplexity': perplexity,
+        'avg_passes': avg_passes,
+        'batches_evaluated': min(max_batches, i + 1),
+    }
+
+
+def main():
+    print("=" * 80)
+    print("STAGE 9: CONTROLLED CPU BENCHMARKING")
+    print("=" * 80)
+    print(f"Prompts: {len(PROMPTS)}")
+    print(f"Max new tokens: {MAX_NEW_TOKENS}")
+    print(f"Decoding: Greedy (argmax, deterministic)")
+    print(f"Seed: {SEED}")
+    print(f"Warm-up: 1 prompt before timing")
+    print(f"Memory: psutil RSS")
+    print(f"Device: {DEVICE}")
+
+    tokenizer = BPETokenizer.load(TOKENIZER_PATH)
+    print(f"Tokenizer: vocab={tokenizer.vocab_size}")
+
+    all_benchmarks = {}
+
+    # ================================================================
+    # 1. FP32 BASELINE
+    # ================================================================
+    print("\n\nLoading FP32 baseline...")
+    model_fp32, config_fp32 = load_fp32_model()
+    print(f"  Params: {sum(p.numel() for p in model_fp32.parameters()):,}")
+
+    bench_fp32 = benchmark_model(
+        model_fp32, tokenizer, generate_greedy_standard,
+        "FP32 Baseline (6 blocks, FP32)"
+    )
+    all_benchmarks['fp32_baseline'] = bench_fp32
+    del model_fp32
+    gc.collect()
+
+    # ================================================================
+    # 2. BITLINEAR GPT (6 blocks, ternary)
+    # ================================================================
+    print("\n\nLoading BitLinear GPT...")
+    model_bl, config_bl = load_bitlinear_model()
+    print(f"  Params: {sum(p.numel() for p in model_bl.parameters()):,}")
+
+    bench_bl = benchmark_model(
+        model_bl, tokenizer, generate_greedy_standard,
+        "BitLinear GPT (6 blocks, ternary)"
+    )
+    all_benchmarks['bitlinear_gpt'] = bench_bl
+    del model_bl
+    gc.collect()
+
+    # ================================================================
+    # 3. ARTN threshold=1.0
+    # ================================================================
+    print("\n\nLoading ARTN...")
+    model_artn, config_artn = load_artn_model()
+    print(f"  Params: {sum(p.numel() for p in model_artn.parameters()):,}")
+
+    bench_artn_10 = benchmark_model(
+        model_artn, tokenizer, generate_greedy_artn,
+        "ARTN (1 shared block, threshold=1.0)",
+        threshold=1.0
+    )
+    all_benchmarks['artn_threshold_1.0'] = bench_artn_10
+
+    # ================================================================
+    # 4. ARTN threshold=0.9
+    # ================================================================
+    bench_artn_09 = benchmark_model(
+        model_artn, tokenizer, generate_greedy_artn,
+        "ARTN (1 shared block, threshold=0.9)",
+        threshold=0.9
+    )
+    all_benchmarks['artn_threshold_0.9'] = bench_artn_09
+
+    del model_artn
+    gc.collect()
+
+    # ================================================================
+    # 5. ARTN VALIDATION LOSS AT THRESHOLDS
+    # ================================================================
+    print("\n\n" + "=" * 70)
+    print("ARTN VALIDATION LOSS (actual inference path)")
+    print("=" * 70)
+
+    model_artn, _ = load_artn_model()
+
+    val_results = {}
+    for threshold in [0.9, 1.0]:
+        print(f"\n  Computing val loss at threshold={threshold}...", flush=True)
+        val = compute_artn_val_loss(model_artn, tokenizer, threshold)
+        val_results[f'threshold_{threshold}'] = val
+        print(f"    Val loss: {val['val_loss']:.4f}")
+        print(f"    Perplexity: {val['perplexity']:.4f}")
+        print(f"    Avg passes: {val['avg_passes']:.4f}")
+
+    del model_artn
+    gc.collect()
+
+    # ================================================================
+    # 6. COMPARISON TABLE
+    # ================================================================
+    print("\n\n" + "=" * 80)
+    print("FULL COMPARISON TABLE (ALL MEASURED)")
+    print("=" * 80)
+    print()
+    print(f"{'Model':<45} {'Params':<12} {'Tok/s':<8} {'Time':<8} "
+          f"{'PeakRSS':<10} {'AvgPass':<8}")
+    print("-" * 95)
+
+    models = [
+        ('fp32_baseline', 'FP32 Baseline (6 blocks, FP32)'),
+        ('bitlinear_gpt', 'BitLinear GPT (6 blocks, ternary)'),
+        ('artn_threshold_1.0', 'ARTN (threshold=1.0)'),
+        ('artn_threshold_0.9', 'ARTN (threshold=0.9)'),
+    ]
+
+    param_counts = {
+        'fp32_baseline': 6852608,
+        'bitlinear_gpt': 6852682,
+        'artn_threshold_1.0': 2904065,
+        'artn_threshold_0.9': 2904065,
+    }
+
+    for key, label in models:
+        b = all_benchmarks[key]
+        print(f"  {label:<43} {param_counts[key]:<12,} "
+              f"{b['avg_tokens_per_sec']:<8.2f} "
+              f"{b['total_time']:<8.2f} "
+              f"{b['peak_rss_mb']:<10.2f} "
+              f"{b['avg_passes']:<8.2f}")
+
+    # Speedup table
+    print()
+    print(f"{'Model':<45} {'vs FP32':<10} {'vs BitLinear':<12} {'Param%'}")
+    print("-" * 80)
+
+    fp32_speed = all_benchmarks['fp32_baseline']['avg_tokens_per_sec']
+    bl_speed = all_benchmarks['bitlinear_gpt']['avg_tokens_per_sec']
+
+    for key, label in models:
+        b = all_benchmarks[key]
+        vs_fp32 = b['avg_tokens_per_sec'] / fp32_speed
+        vs_bl = b['avg_tokens_per_sec'] / bl_speed
+        param_pct = param_counts[key] / param_counts['fp32_baseline'] * 100
+        print(f"  {label:<43} {vs_fp32:.2f}x     {vs_bl:.2f}x       {param_pct:.0f}%")
+
+    # Validation loss table
+    print()
+    print("VALIDATION LOSS (ARTN, actual inference path):")
+    print(f"{'Threshold':<12} {'Val Loss':<12} {'Perplexity':<12} {'Avg Passes':<12}")
+    print("-" * 50)
+    for threshold in [1.0, 0.9]:
+        v = val_results[f'threshold_{threshold}']
+        print(f"  {threshold:<12.1f} {v['val_loss']:<12.4f} {v['perplexity']:<12.4f} {v['avg_passes']:<12.4f}")
+
+    # ================================================================
+    # 7. QUALITY SAMPLES
+    # ================================================================
+    print()
+    print("=" * 80)
+    print("QUALITY SAMPLES (Prompt 1: 'Once upon a time')")
+    print("=" * 80)
+    for key, label in models:
+        gen = all_benchmarks[key]['results'][0]['generated'][:200]
+        print(f"\n  {label}:")
+        print(f"    {gen}")
+
+    # ================================================================
+    # 8. SAVE RESULTS
+    # ================================================================
+    output = {
+        'stage': 'Stage 9: CPU Benchmarking',
+        'config': {
+            'prompts': PROMPTS,
+            'max_new_tokens': MAX_NEW_TOKENS,
+            'seed': SEED,
+            'decoding': 'greedy (argmax)',
+            'warmup_prompt': WARMUP_PROMPT,
+            'memory_method': 'psutil RSS',
+        },
+        'benchmarks': all_benchmarks,
+        'param_counts': param_counts,
+        'val_loss': val_results,
+    }
+
+    output_file = BASE_DIR / 'outputs' / 'artn_recursive_20261025_002725' / 'stage9_benchmark_corrected.json'
+    with open(output_file, 'w') as f:
+        json.dump(output, f, indent=2, default=str)
+    print(f"\nResults saved to: {output_file}")
+
+
+if __name__ == "__main__":
+    main()

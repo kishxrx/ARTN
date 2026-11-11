@@ -1,0 +1,73 @@
+{
+  "config": {
+    "model": {
+      "vocab_size": 4000,
+      "d_model": 256,
+      "n_heads": 8,
+      "n_layers": 6,
+      "d_ff": 1024,
+      "max_seq_len": 256,
+      "threshold": 0.5,
+      "dropout": 0.0
+    },
+    "optimizer": {
+      "optimizer": "Adam",
+      "lr": 0.01,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "weight_decay": 0.01,
+      "max_grad_norm": 1.0
+    },
+    "training": {
+      "num_stories": 5,
+      "batch_size": 4,
+      "gradient_accumulation_steps": 2,
+      "total_steps": 500,
+      "max_seq_len": 256
+    }
+  },
+  "metrics": {
+    "1": {
+      "loss": 8.714843273162842,
+      "active_loss": 8.714843273162842,
+      "perplexity": 6092.679656238563,
+      "accuracy": 0.0,
+      "grad_norm": 0.4273260533809662
+    },
+    "50": {
+      "loss": 7.900857448577881,
+      "active_loss": 7.900857925415039,
+      "perplexity": 2699.5961009938314,
+      "accuracy": 0.057777777777777775,
+      "grad_norm": 0.10139170289039612
+    },
+    "100": {
+      "loss": 7.86785364151001,
+      "active_loss": 7.86785364151001,
+      "perplexity": 2611.95337912502,
+      "accuracy": 0.04,
+      "grad_norm": 0.09919431805610657
+    },
+    "250": {
+      "loss": 7.623157024383545,
+      "active_loss": 7.623157024383545,
+      "perplexity": 2045.0080898450858,
+      "accuracy": 0.058823529411764705,
+      "grad_norm": 0.0988834872841835
+    },
+    "500": {
+      "loss": 7.49801230430603,
+      "active_loss": 7.49801230430603,
+      "perplexity": 1804.4521456972866,
+      "accuracy": 0.0457516339869281,
+      "grad_norm": 0.09591910988092422
+    }
+  },
+  "final_loss": 7.443153667449951,
+  "final_accuracy": 0.04199772985244041,
+  "final_perplexity": 1708.1286054587436,
+  "generation": {
+    "prompt": "Once upon a time there was a little girl called Belle. Belle was sick so her mom gave",
+    "generated": "Once upon a time there was a little girl called Belle. Belle was sick so her mom gave the the le the and and it a time very in was day, time a unit careful. the to The was was a happy to to It and park. wooa unto be d on bell and tra to the the it the with bell day,"
+  }
+}

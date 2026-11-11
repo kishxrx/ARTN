@@ -1,0 +1,42 @@
+{
+  "temperature_sweep": [
+    {
+      "generated": "Once upon a time there was a little girl named Lucy. She had a special toy that she loved very much. One day, Lucy was playing with her toy car in her garden. She wanted to play with it. But the toy car was too heavy for her. Lucy was sad and started to cry. She started to cry and started to cry. Her mom came to her and told her not to worry, but it was okay. She told Lucy that it was not good to give up. Lucy was sad, and she knew her mom was right. She quickly ran away and",
+      "time": 17.791813611984253,
+      "mem_peak_mb": 21.46484375,
+      "tokens": 100,
+      "temperature": 0.5
+    },
+    {
+      "generated": "Once upon a time there was a grumpy little girl. She was always very sad and scared. One day, her mom came and said, \"Don't worry. I'm here to get you some warm ls for a walk in the park. We don't know the park now.\" But the little girl was excited! She grabbed a big tree, and started to explore. She wanted to go to the park and find a way to get a new home. She knew that it was a special ground. She had to go and find a way to get a safe spot and take a cushi",
+      "time": 17.672502517700195,
+      "mem_peak_mb": 0.0,
+      "tokens": 100,
+      "temperature": 0.7
+    },
+    {
+      "generated": "Once upon a time there lived a boy called Jack. He was very obedient and always wanted to get very special. One day he was wanting his parents at a game. He came outside and asked his parents what she was doing. But Mom warned him not to be comfortable until his parents said that she should listen to him. He said they would have to be able to do something Johnny right. Suddenly, they pushed and it made the most amazing thing out of the sky. It was getting very ess and candy! They had a wonderful day until",
+      "time": 17.65758776664734,
+      "mem_peak_mb": 0.0,
+      "tokens": 100,
+      "temperature": 0.9
+    },
+    {
+      "generated": "Once upon a time there was a family who wanted a store for a party. They wanted to watch a lot of foredaly. So they asked their mom if they were too playing. hands. They said yes, but they had an idea. They worked together, the songs could get some fur and wanted to have it. They found some penkins and piece were very beautiful. Daisers was so happy in their own ingredients and set them through the bagy. They marched and Bules! But then their family",
+      "time": 17.30988359451294,
+      "mem_peak_mb": 0.0,
+      "tokens": 100,
+      "temperature": 1.1
+    },
+    {
+      "generated": "Once upon a time there lived a Every day with a girl, wanfavoring!\" question a bird. She jumor Elly flaged it because there roared wing. Lisa loved how her heart sparkly, to sing with her friends beheld. They even both didn't work bored. They went and worked hard about do something could. stubborn. Finally, they were careful three splash ' specks. Then it started knowlowing. Something \"Oh no'\". All of a huge ak down calling and with some beetles thought of himself. Whenever",
+      "time": 17.41423726081848,
+      "mem_peak_mb": 0.0,
+      "tokens": 100,
+      "temperature": 1.3
+    }
+  ],
+  "fp32_comparison": {
+    "available": false
+  }
+}

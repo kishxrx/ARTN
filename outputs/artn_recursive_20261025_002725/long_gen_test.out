@@ -1,0 +1,58 @@
+Loading ARTN model...
+  Loaded: step=10000, max_seq_len=256
+
+======================================================================
+EXPERIMENT 3: Long Generation Test (200 tokens)
+======================================================================
+
+--- Prompt: 'once upon a time there was a dog' ---
+  t=1.0: 200 tokens, avg_passes=6.00, speed=4.38 tok/s
+  t=0.9: 200 tokens, avg_passes=4.88, speed=5.71 tok/s
+  Divergence at word: identical
+  t=1.0 text (first 200 chars): who loved to play with his own. One day, he saw a big dog in the park. The dog was very happy and wanted to play with it. The dog was very happy and wanted to play with it. But the dog was too small a
+  t=0.9 text (first 200 chars): who loved to play with his own. One day, he saw a big dog in the park. The dog was very happy and wanted to play with it. The dog was very happy and wanted to play with it. But the dog was too small a
+
+--- Prompt: 'there was a little girl' ---
+  t=1.0: 200 tokens, avg_passes=6.00, speed=4.88 tok/s
+  t=0.9: 200 tokens, avg_passes=4.10, speed=6.45 tok/s
+  Divergence at word: identical
+  t=1.0 text (first 200 chars): who liked to play with her toys. She had a big box of toys and she had a big box of toys. One day, she went to the box and saw a big box. She wanted to open the box and see what was inside. She asked 
+  t=0.9 text (first 200 chars): who liked to play with her toys. She had a big box of toys and she had a big box of toys. One day, she went to the box and saw a big box. She wanted to open the box and see what was inside. She asked 
+
+--- Prompt: 'a king' ---
+  t=1.0: 200 tokens, avg_passes=6.00, speed=4.82 tok/s
+  t=0.9: 200 tokens, avg_passes=4.78, speed=5.55 tok/s
+  Divergence at word: 9
+  t=1.0 text (first 200 chars): and a little girl named Marky. Mary was very curious and wanted to explore the world around her. One day, Mary was walking in the park when she saw a big tree with lots of leaves. She wanted to see wh
+  t=0.9 text (first 200 chars): and a little girl named Marky. Mary was very happy and she loved to play with her toys. One day, Mary was playing with her toys when she accidentally broke the toy car and it broke. Mary was very sad 
+
+--- Prompt: 'a peacock' ---
+  t=1.0: 200 tokens, avg_passes=6.00, speed=4.70 tok/s
+  t=0.9: 200 tokens, avg_passes=2.62, speed=9.41 tok/s
+  Divergence at word: 2
+  t=1.0 text (first 200 chars): and a cyck. The cycle was very happy and excited. They went to the park with their mom and dad. They saw a big tree with many branches. They were very happy and excited. They had a lot of fun and had 
+  t=0.9 text (first 200 chars): and a cup. The cyck was very happy and wanted to help the cop. The cycyck was very happy and thanked the cyck for his help. The cyck was very happy and thanked the cyck for his help. The cycycle was v
+
+--- Prompt: 'The scientist mixed two chemicals' ---
+  t=1.0: 200 tokens, avg_passes=6.00, speed=3.94 tok/s
+  t=0.9: 200 tokens, avg_passes=5.06, speed=4.44 tok/s
+  Divergence at word: identical
+  t=1.0 text (first 200 chars): and they had a big smile on their face. They were so happy and excited. They had a big smile on their face. They had a big smile on their face. They were so happy and excited. They had a great time pl
+  t=0.9 text (first 200 chars): and they had a big smile on their face. They were so happy and excited. They had a big smile on their face. They had a big smile on their face. They were so happy and excited. They had a great time pl
+
+
+Results saved to: /root/agent-sandbox/ARTN/outputs/artn_recursive_20261025_002725/long_gen_test.json
+
+======================================================================
+SUMMARY
+======================================================================
+
+Prompt                              Div@word   t=1.0 passes t=0.9 passes t=1.0 rep(first20) t=0.9 rep(first20)
+--------------------------------------------------------------------------------------------------------------
+  once upon a time there was a dog  identical  6.0          4.88         0.0                0.0
+  there was a little girl           identical  6.0          4.1          0.188              0.188
+  a king                            9          6.0          4.78         0.0                0.0
+  a peacock                         2          6.0          2.62         0.0                0.188
+  The scientist mixed two chemicals identical  6.0          5.06         0.188              0.188
+
+DONE

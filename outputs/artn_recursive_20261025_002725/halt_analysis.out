@@ -1,0 +1,70 @@
+Loading ARTN model...
+  Loaded: step=10000
+
+======================================================================
+EXPERIMENT 2: Halt Probability Analysis
+======================================================================
+
+--- 'once upon a time there was a dog' (category: common) ---
+  Avg pass to reach 0.9 cumulative: 4.45
+  Avg pass to reach 0.5 cumulative: 3.94
+  Avg halt prob at pass 1: 0.1706
+  Pass-1 halt distribution: min=0.000 max=0.948
+
+--- 'there was a little girl' (category: common) ---
+  Avg pass to reach 0.9 cumulative: 4.29
+  Avg pass to reach 0.5 cumulative: 3.74
+  Avg halt prob at pass 1: 0.2074
+  Pass-1 halt distribution: min=0.000 max=0.856
+
+--- 'there lived a' (category: common) ---
+  Avg pass to reach 0.9 cumulative: 4.20
+  Avg pass to reach 0.5 cumulative: 3.58
+  Avg halt prob at pass 1: 0.2083
+  Pass-1 halt distribution: min=0.000 max=0.951
+
+--- 'a king' (category: uncommon) ---
+  Avg pass to reach 0.9 cumulative: 4.09
+  Avg pass to reach 0.5 cumulative: 3.68
+  Avg halt prob at pass 1: 0.2315
+  Pass-1 halt distribution: min=0.000 max=0.988
+
+--- 'king' (category: uncommon) ---
+  Avg pass to reach 0.9 cumulative: 4.30
+  Avg pass to reach 0.5 cumulative: 3.86
+  Avg halt prob at pass 1: 0.1696
+  Pass-1 halt distribution: min=0.000 max=0.944
+
+--- 'a bison from wild forest' (category: common) ---
+  Avg pass to reach 0.9 cumulative: 4.52
+  Avg pass to reach 0.5 cumulative: 4.02
+  Avg halt prob at pass 1: 0.1356
+  Pass-1 halt distribution: min=0.000 max=0.930
+
+--- 'a peacock' (category: uncommon) ---
+  Avg pass to reach 0.9 cumulative: 4.35
+  Avg pass to reach 0.5 cumulative: 3.86
+  Avg halt prob at pass 1: 0.1987
+  Pass-1 halt distribution: min=0.000 max=0.948
+
+
+Results saved to: /root/agent-sandbox/ARTN/outputs/artn_recursive_20261025_002725/halt_analysis.json
+
+======================================================================
+SUMMARY: Common vs Uncommon prompts
+======================================================================
+
+Prompt                              Category   Pass→0.9   Pass→0.5   Halt@p1    Diverged?
+-------------------------------------------------------------------------------------
+  once upon a time there was a dog  common     4.45       3.94       0.1706     False
+  there was a little girl           common     4.29       3.74       0.2074     False
+  there lived a                     common     4.2        3.58       0.2083     False
+  a king                            uncommon   4.09       3.68       0.2315     True
+  king                              uncommon   4.3        3.86       0.1696     True
+  a bison from wild forest          common     4.52       4.02       0.1356     False
+  a peacock                         uncommon   4.35       3.86       0.1987     True
+
+  Common avg:    pass→0.9=4.37  pass→0.5=3.82  halt@p1=0.1805
+  Uncommon avg:  pass→0.9=4.25  pass→0.5=3.80  halt@p1=0.1999
+
+DONE

@@ -1751,6 +1751,105 @@ The gradient difference is a **correlation**, not an established **cause**.
 **INVESTIGATION STATUS:** Ongoing. Gradient magnitude hypothesis deprioritized. Return to identifying actual mechanism for FP32 vs Ternary learning gap.
 
 ---
+
+## Phase 21: Quantization Information Loss Analysis (September 2, 2026) - FP32 VS TERNARY FORWARD PASS COMPARISON INVALIDATED
+
+### Motivation
+
+After Phase 20 corrected the gradient/momentum measurement errors, this phase investigated the actual mechanism by which ternarization changes forward computation compared to FP32. The goal was to measure quantization-induced information loss and determine where FP32 and Ternary representations first diverge.
+
+### Methodology
+
+**READ-ONLY analysis using existing checkpoints:**
+
+1. **Weight-level quantization error**: Compared underlying FP32 weights vs dequantized ternary weights within Ternary model
+2. **Activation divergence**: Compared FP32 vs Ternary forward pass outputs
+3. **Embedding comparison**: Checked if embeddings are similar between models
+4. **Evolution over training**: Analyzed at 1k, 5k, 50k steps
+
+### Results
+
+#### PART 1: Quantization Error Within Ternary Model
+
+| Training Step | Mean Cosine Sim | Abs Error | Std |
+|---------------|-----------------|-----------|-----|
+| 1k | 0.8871 | 0.031 | 0.0007 |
+| 5k | 0.8870 | 0.030 | 0.0007 |
+| 50k | 0.8871 | 0.024 | 0.0007 |
+
+**Finding:** ~11% information loss per layer, STABLE across training.
+
+#### PART 2: CRITICAL DISCOVERY - Initialization Mismatch
+
+| Component | Ternary std | FP32 std | Ratio |
+|-----------|-------------|----------|-------|
+| Token embeddings | 0.956 | 0.020 | **48x** |
+| Position embeddings | Similar | | **~48x** |
+| BitLinear weights | 0.084 | 0.020 | **4x** |
+| LM head | Different | | **Orthogonal** |
+
+**Root Cause of Scale Difference:**
+- FP32 model: `torch.nn.init.normal_(weight, mean=0.0, std=0.02)`
+- Ternary model: `nn.init.kaiming_normal_(weight, mode='fan_in')`
+
+#### PART 3: Embedding Cosine Similarity
+
+| Component | Cosine Similarity | Interpretation |
+|-----------|-------------------|----------------|
+| Token embeddings | 0.0001 | Essentially orthogonal |
+| Position embeddings | 0.0003 | Essentially orthogonal |
+| LM head | -0.0004 | Essentially orthogonal |
+
+### CRITICAL INVALIDATION
+
+**❌ The FP32 vs Ternary forward pass comparison was INVALID:**
+
+1. **Models did NOT start from the same initialization**
+   - Different initialization methods (Kaiming vs Normal)
+   - Different scales from the very first weight
+
+2. **Embeddings are NOT quantized but still completely different**
+   - Token embeddings: 48x scale difference
+   - Cosine similarity ~0.0001 (orthogonal)
+   - This is NOT a quantization effect
+
+3. **Cannot isolate quantization effect**
+   - Models compute in DIFFERENT representation spaces
+   - Layer-by-layer comparison measures initialization difference, not quantization
+
+### What This ESTABLISHES
+
+| Finding | Status |
+|---------|--------|
+| ✅ Quantization error per layer | 11% loss, stable |
+| ✅ Error does NOT compound | Same at 1k, 5k, 50k |
+| ✅ Weights are truly ternary | ~31% zeros (expected ~33%) |
+| ❌ FP32 vs Ternary comparison | INVALID - different initialization |
+| ❌ Quantization as root cause | NOT PROVEN - need controlled experiment |
+
+### What This Does NOT Establish
+
+| Hypothesis | Status |
+|------------|--------|
+| Quantization causes learning gap | ❌ NOT PROVEN |
+| Representations diverge due to quantization | ❌ CANNOT MEASURE |
+| Quantization error compounds | ❌ DISPROVEN (stable) |
+
+### Evidence Files
+
+- `experiments/quantization_information_loss.py` - Original analysis script
+- Checkpoints analyzed: step 1000, 5000, 50000 (Ternary), step 5000 (FP32)
+
+### VERDICT
+
+**⚠️ EVIDENCE INSUFFICIENT**
+
+The previous FP32 vs Ternary comparisons (Phase 18-20) were based on models with different initializations. The ~11% quantization error per layer is VERIFIED but we CANNOT determine if this causes the learning gap without a controlled experiment starting from IDENTICAL initialization.
+
+**INVESTIGATION STATUS:** Need controlled experiment with same initialization to isolate ternarization effect.
+
+---
+
 ## What Remains Unknown
 
 ### [ORIGINAL - August 19, 2026] - [SUPERSEDED BY LATER EVIDENCE]

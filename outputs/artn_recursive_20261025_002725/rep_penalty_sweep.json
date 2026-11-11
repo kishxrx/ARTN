@@ -1,0 +1,1655 @@
+{
+  "experiment": "rep_penalty_sweep",
+  "checkpoint": "/root/agent-sandbox/ARTN/outputs/artn_recursive_20261025_002725/checkpoints/artn/step_10000.pt",
+  "max_new_tokens": 50,
+  "seed": 42,
+  "penalties": [
+    1.0,
+    1.1,
+    1.2,
+    1.3,
+    1.5
+  ],
+  "thresholds": [
+    1.0,
+    0.9
+  ],
+  "prompts": [
+    "once upon a time there was a dog",
+    "there was a little girl",
+    "there lived a",
+    "a king",
+    "king",
+    "a bison from wild forest",
+    "a peacock",
+    "The scientist mixed two chemicals",
+    "In the year 3024, humanity",
+    "Why did the chicken cross"
+  ],
+  "results": {
+    "threshold_1.0": {
+      "penalty_1.0": [
+        {
+          "full_text": "once upon a time there was a dog who loved to play with his own. One day, he saw a big dog in the park. The dog was very happy and wanted to play with it. The dog was very happy and wanted to play with it. But the dog was too small and could not have",
+          "generated_text": "who loved to play with his own. One day, he saw a big dog in the park. The dog was very happy and wanted to play with it. The dog was very happy and wanted to play with it. But the dog was too small and could not have",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.68,
+          "tokens_per_sec": 5.76,
+          "repetition_stats": {
+            "repetition_rate": 0.286,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.612
+          },
+          "prompt": "once upon a time there was a dog",
+          "penalty": 1.0,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "there was a little girl who liked to play with her toys. She had a big box of toys and she had a big box of toys. One day, she went to the box and saw a big box. She wanted to open the box and see what was inside. She asked her mom if",
+          "generated_text": "who liked to play with her toys. She had a big box of toys and she had a big box of toys. One day, she went to the box and saw a big box. She wanted to open the box and see what was inside. She asked her mom if",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.54,
+          "tokens_per_sec": 6.63,
+          "repetition_stats": {
+            "repetition_rate": 0.143,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.62
+          },
+          "prompt": "there was a little girl",
+          "penalty": 1.0,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "there lived a little girl who liked to play with her toys. She had a big box of toys and she liked to play with her toys. One day, she found a big box of toys and she wanted to play with it. She asked her mom if she could play with it.",
+          "generated_text": "little girl who liked to play with her toys. She had a big box of toys and she liked to play with her toys. One day, she found a big box of toys and she wanted to play with it. She asked her mom if she could play with it.",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.63,
+          "tokens_per_sec": 6.55,
+          "repetition_stats": {
+            "repetition_rate": 0.353,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.54
+          },
+          "prompt": "there lived a",
+          "penalty": 1.0,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a king and a little girl named Marky. Mary was very curious and wanted to explore the world around her. One day, Mary was walking in the park when she saw a big tree with lots of leaves. She wanted to see what it was. She asked her mom if",
+          "generated_text": "and a little girl named Marky. Mary was very curious and wanted to explore the world around her. One day, Mary was walking in the park when she saw a big tree with lots of leaves. She wanted to see what it was. She asked her mom if",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.55,
+          "tokens_per_sec": 6.62,
+          "repetition_stats": {
+            "repetition_rate": 0.044,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.833
+          },
+          "prompt": "a king",
+          "penalty": 1.0,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "king than ever before. He was so excited to explore the world around him. He saw a big tree and he wanted to climb it. He asked his mom if he could climb the tree and see if he could climb it. The tree was so happy and he said yes.",
+          "generated_text": "than ever before. He was so excited to explore the world around him. He saw a big tree and he wanted to climb it. He asked his mom if he could climb the tree and see if he could climb it. The tree was so happy and he said yes.",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.7,
+          "tokens_per_sec": 6.5,
+          "repetition_stats": {
+            "repetition_rate": 0.167,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.64
+          },
+          "prompt": "king",
+          "penalty": 1.0,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a bison from wild forest and he was very curious. One day, he decided to explore the forest and he found a big pile of leaves. He was so excited and he decided to take it home. He grabbed it and started to climb the tall tree. He was so excited and he started to",
+          "generated_text": "and he was very curious. One day, he decided to explore the forest and he found a big pile of leaves. He was so excited and he decided to take it home. He grabbed it and started to climb the tall tree. He was so excited and he started to",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.77,
+          "tokens_per_sec": 6.44,
+          "repetition_stats": {
+            "repetition_rate": 0.205,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.58
+          },
+          "prompt": "a bison from wild forest",
+          "penalty": 1.0,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a peacock and a cyck. The cycle was very happy and excited. They went to the park with their mom and dad. They saw a big tree with many branches. They were very happy and excited. They had a lot of fun and had a lot of",
+          "generated_text": "and a cyck. The cycle was very happy and excited. They went to the park with their mom and dad. They saw a big tree with many branches. They were very happy and excited. They had a lot of fun and had a lot of",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.01,
+          "tokens_per_sec": 6.24,
+          "repetition_stats": {
+            "repetition_rate": 0.189,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.622
+          },
+          "prompt": "a peacock",
+          "penalty": 1.0,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "The scientist mixed two chemicals and they had a big smile on their face. They were so happy and excited. They had a big smile on their face. They had a big smile on their face. They were so happy and excited. They had a great time playing with their new friends. They had a",
+          "generated_text": "and they had a big smile on their face. They were so happy and excited. They had a big smile on their face. They had a big smile on their face. They were so happy and excited. They had a great time playing with their new friends. They had a",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.15,
+          "tokens_per_sec": 6.14,
+          "repetition_stats": {
+            "repetition_rate": 0.583,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.4
+          },
+          "prompt": "The scientist mixed two chemicals",
+          "penalty": 1.0,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "In the year 3024, humanity was a very special day. She was so excited to see the world around her. She was so excited to see the world around her. She ran around the garden and saw a big green grass. She was so excited to see the birds flying in the sky. She saw",
+          "generated_text": "was a very special day. She was so excited to see the world around her. She was so excited to see the world around her. She ran around the garden and saw a big green grass. She was so excited to see the birds flying in the sky. She saw",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.98,
+          "tokens_per_sec": 6.27,
+          "repetition_stats": {
+            "repetition_rate": 0.303,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.5
+          },
+          "prompt": "In the year 3024, humanity",
+          "penalty": 1.0,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "Why did the chicken cross the street and the chicken was very happy. One day, the farmer was playing with his farmer. He was very happy and he wanted to play with it. He ran to the farmer and said, \"I don't want to play with my animals. I want to",
+          "generated_text": "the street and the chicken was very happy. One day, the farmer was playing with his farmer. He was very happy and he wanted to play with it. He ran to the farmer and said, \"I don't want to play with my animals. I want to",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.69,
+          "tokens_per_sec": 5.75,
+          "repetition_stats": {
+            "repetition_rate": 0.125,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.63
+          },
+          "prompt": "Why did the chicken cross",
+          "penalty": 1.0,
+          "threshold": 1.0
+        }
+      ],
+      "penalty_1.1": [
+        {
+          "full_text": "once upon a time there was a dog who loved to play with his own. One day, he saw a big dog in the park. The dog was very happy and wanted to play with it. But the dog did not like the dog. The dog was scared and ran away. The dog tried to run away,",
+          "generated_text": "who loved to play with his own. One day, he saw a big dog in the park. The dog was very happy and wanted to play with it. But the dog did not like the dog. The dog was scared and ran away. The dog tried to run away,",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.08,
+          "tokens_per_sec": 6.19,
+          "repetition_stats": {
+            "repetition_rate": 0.093,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.714
+          },
+          "prompt": "once upon a time there was a dog",
+          "penalty": 1.1,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "there was a little girl who liked to play with her toys. She had a big box of toys and she loved to make them go fast. One day, she went to the store with her mom. She saw a big box of toys and wanted to buy it. She asked her mom if she",
+          "generated_text": "who liked to play with her toys. She had a big box of toys and she loved to make them go fast. One day, she went to the store with her mom. She saw a big box of toys and wanted to buy it. She asked her mom if she",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.78,
+          "tokens_per_sec": 6.43,
+          "repetition_stats": {
+            "repetition_rate": 0.14,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.68
+          },
+          "prompt": "there was a little girl",
+          "penalty": 1.1,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "there lived a little girl who liked to play with her toys. She had a big box of toys and she was very happy. One day, she decided to go to the store with her mom. She put on her new toy car and went to the store. When she got home, she",
+          "generated_text": "little girl who liked to play with her toys. She had a big box of toys and she was very happy. One day, she decided to go to the store with her mom. She put on her new toy car and went to the store. When she got home, she",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.69,
+          "tokens_per_sec": 6.51,
+          "repetition_stats": {
+            "repetition_rate": 0.043,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.76
+          },
+          "prompt": "there lived a",
+          "penalty": 1.1,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a king and a little girl named Marky. Mary was very curious and wanted to explore the world around her. One day, Mary decided to go on an adventure. She walked through the forest and saw a big tree with lots of fun. She was so excited to see what",
+          "generated_text": "and a little girl named Marky. Mary was very curious and wanted to explore the world around her. One day, Mary decided to go on an adventure. She walked through the forest and saw a big tree with lots of fun. She was so excited to see what",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.8,
+          "tokens_per_sec": 6.41,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.812
+          },
+          "prompt": "a king",
+          "penalty": 1.1,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "king than ever before. He was so excited to explore the world around him. Suddenly, he saw a big tree with lots of leaves. The tree was so happy and he ran over to it. He was so excited! He hopped around and jumped up to the tree and down the",
+          "generated_text": "than ever before. He was so excited to explore the world around him. Suddenly, he saw a big tree with lots of leaves. The tree was so happy and he ran over to it. He was so excited! He hopped around and jumped up to the tree and down the",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.06,
+          "tokens_per_sec": 6.21,
+          "repetition_stats": {
+            "repetition_rate": 0.043,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.68
+          },
+          "prompt": "king",
+          "penalty": 1.1,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a bison from wild forest and he was very curious. One day, he decided to explore the forest near his house. He walked and saw a big tree with lots of leaves. The bird was so happy and he wanted to find out what it was. But he was very excited. He asked his mom",
+          "generated_text": "and he was very curious. One day, he decided to explore the forest near his house. He walked and saw a big tree with lots of leaves. The bird was so happy and he wanted to find out what it was. But he was very excited. He asked his mom",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.87,
+          "tokens_per_sec": 6.35,
+          "repetition_stats": {
+            "repetition_rate": 0.065,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.78
+          },
+          "prompt": "a bison from wild forest",
+          "penalty": 1.1,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a peacock and a cyck. The cycle was very happy and excited. They went to the park with their mom and dad. They saw many people and people who were very happy. They had a big smile on their faces. They were very happy and excited. They said",
+          "generated_text": "and a cyck. The cycle was very happy and excited. They went to the park with their mom and dad. They saw many people and people who were very happy. They had a big smile on their faces. They were very happy and excited. They said",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.89,
+          "tokens_per_sec": 6.34,
+          "repetition_stats": {
+            "repetition_rate": 0.125,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.652
+          },
+          "prompt": "a peacock",
+          "penalty": 1.1,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "The scientist mixed two chemicals and they had a big smile on their face. They were so happy to have a special surprise for them. They decided to go to the store and buy some yummy food. They bought some delicious food and vegetables. They ate it and enjoyed their snacks. The family",
+          "generated_text": "and they had a big smile on their face. They were so happy to have a special surprise for them. They decided to go to the store and buy some yummy food. They bought some delicious food and vegetables. They ate it and enjoyed their snacks. The family",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.17,
+          "tokens_per_sec": 6.12,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.771
+          },
+          "prompt": "The scientist mixed two chemicals",
+          "penalty": 1.1,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "In the year 3024, humanity was a very special day. She wanted to go to the store and buy some food. So she asked her mom for a special treat. The girl was so excited and asked her mom if she could have it. Her mom said yes, and they went to the store",
+          "generated_text": "was a very special day. She wanted to go to the store and buy some food. So she asked her mom for a special treat. The girl was so excited and asked her mom if she could have it. Her mom said yes, and they went to the store",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.3,
+          "tokens_per_sec": 6.02,
+          "repetition_stats": {
+            "repetition_rate": 0.091,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.714
+          },
+          "prompt": "In the year 3024, humanity",
+          "penalty": 1.1,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "Why did the chicken cross with a big smile. He had many animals and a big trunk. He liked to look at the big tree and make them happy. One day, he saw a big tree with a big tree. The tree was very big and had many leaves. He wanted to climb",
+          "generated_text": "with a big smile. He had many animals and a big trunk. He liked to look at the big tree and make them happy. One day, he saw a big tree with a big tree. The tree was very big and had many leaves. He wanted to climb",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.98,
+          "tokens_per_sec": 6.26,
+          "repetition_stats": {
+            "repetition_rate": 0.098,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.625
+          },
+          "prompt": "Why did the chicken cross",
+          "penalty": 1.1,
+          "threshold": 1.0
+        }
+      ],
+      "penalty_1.2": [
+        {
+          "full_text": "once upon a time there was a dog who loved to play with his own. One day, he saw a big dog in the park. The dog wanted to catch it. But the dog did not like the dog. The dog tried to run away, but it didn't work. He thought it would be fun and have",
+          "generated_text": "who loved to play with his own. One day, he saw a big dog in the park. The dog wanted to catch it. But the dog did not like the dog. The dog tried to run away, but it didn't work. He thought it would be fun and have",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.23,
+          "tokens_per_sec": 6.07,
+          "repetition_stats": {
+            "repetition_rate": 0.021,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.816
+          },
+          "prompt": "once upon a time there was a dog",
+          "penalty": 1.2,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "there was a little girl who liked to play with her toys. She had a big box of toys and she loved to make them go fast. One day, she went to the store with her mom. She saw a big box of toys and wanted to buy it. But when she got there, she",
+          "generated_text": "who liked to play with her toys. She had a big box of toys and she loved to make them go fast. One day, she went to the store with her mom. She saw a big box of toys and wanted to buy it. But when she got there, she",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.34,
+          "tokens_per_sec": 6.0,
+          "repetition_stats": {
+            "repetition_rate": 0.14,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.7
+          },
+          "prompt": "there was a little girl",
+          "penalty": 1.2,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "there lived a little girl who liked to play with her toys. She had a big box of toys and she was very happy. One day, she decided to go outside and play. She ran around the room and saw a big box. It looked like a big box. The box was shiny",
+          "generated_text": "little girl who liked to play with her toys. She had a big box of toys and she was very happy. One day, she decided to go outside and play. She ran around the room and saw a big box. It looked like a big box. The box was shiny",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.94,
+          "tokens_per_sec": 6.3,
+          "repetition_stats": {
+            "repetition_rate": 0.043,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.76
+          },
+          "prompt": "there lived a",
+          "penalty": 1.2,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a king and his name was John. John loved to play with his toys all day long. One day, he saw a big box of toys on the table. He wanted to pick it up and put it in his pocket. But when he got there, he saw something shiny on",
+          "generated_text": "and his name was John. John loved to play with his toys all day long. One day, he saw a big box of toys on the table. He wanted to pick it up and put it in his pocket. But when he got there, he saw something shiny on",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.91,
+          "tokens_per_sec": 6.32,
+          "repetition_stats": {
+            "repetition_rate": 0.021,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.796
+          },
+          "prompt": "a king",
+          "penalty": 1.2,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "king than ever before. He was so excited to explore the world around him. Suddenly, he saw a big tree with lots of leaves. The tree had never seen anything like it before. It was a beautiful and a beautiful tree made of bright colours and sparkly. The tree",
+          "generated_text": "than ever before. He was so excited to explore the world around him. Suddenly, he saw a big tree with lots of leaves. The tree had never seen anything like it before. It was a beautiful and a beautiful tree made of bright colours and sparkly. The tree",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.78,
+          "tokens_per_sec": 6.43,
+          "repetition_stats": {
+            "repetition_rate": 0.044,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.771
+          },
+          "prompt": "king",
+          "penalty": 1.2,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a bison from wild forest and he was very curious. One day, he decided to explore the forest. He walked around and saw a big tree with lots of leaves. The animals were so happy that he had been looking for something to do. Suddenly, he heard a loud noise coming from behind him. It",
+          "generated_text": "and he was very curious. One day, he decided to explore the forest. He walked around and saw a big tree with lots of leaves. The animals were so happy that he had been looking for something to do. Suddenly, he heard a loud noise coming from behind him. It",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.06,
+          "tokens_per_sec": 6.2,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.88
+          },
+          "prompt": "a bison from wild forest",
+          "penalty": 1.2,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a peacock and his name was Max. Max loved to play with his friends in the park. One day, he saw a big tree with lots of leaves. He wanted to climb it, but it was too high. Max tried to catch it, but it flew away. Max was sad because he",
+          "generated_text": "and his name was Max. Max loved to play with his friends in the park. One day, he saw a big tree with lots of leaves. He wanted to climb it, but it was too high. Max tried to catch it, but it flew away. Max was sad because he",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.14,
+          "tokens_per_sec": 6.14,
+          "repetition_stats": {
+            "repetition_rate": 0.043,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.76
+          },
+          "prompt": "a peacock",
+          "penalty": 1.2,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "The scientist mixed two chemicals and they had a big smile on their face. They were so happy to have a special surprise for them. They decided to go to the store and buy some yummy food. When they arrived, they saw lots of other things that could have a special treat. They wanted",
+          "generated_text": "and they had a big smile on their face. They were so happy to have a special surprise for them. They decided to go to the store and buy some yummy food. When they arrived, they saw lots of other things that could have a special treat. They wanted",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.37,
+          "tokens_per_sec": 5.98,
+          "repetition_stats": {
+            "repetition_rate": 0.043,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.776
+          },
+          "prompt": "The scientist mixed two chemicals",
+          "penalty": 1.2,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "In the year 3024, humanity was a very special day. She wanted to go outside and play. But she didn't want to be careful. So she decided to take a closer look. When she got there, she saw a big box of colorful boxes inside. It was so beautiful that it had made her",
+          "generated_text": "was a very special day. She wanted to go outside and play. But she didn't want to be careful. So she decided to take a closer look. When she got there, she saw a big box of colorful boxes inside. It was so beautiful that it had made her",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.63,
+          "tokens_per_sec": 5.79,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.837
+          },
+          "prompt": "In the year 3024, humanity",
+          "penalty": 1.2,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "Why did the chicken cross with a big smile. He had many animals and a big trunk. The farmer was very happy to see the animals and the animals. One day, he saw a big dog in the park. The farmer wanted to play too. But the farmer said it would be too",
+          "generated_text": "with a big smile. He had many animals and a big trunk. The farmer was very happy to see the animals and the animals. One day, he saw a big dog in the park. The farmer wanted to play too. But the farmer said it would be too",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.53,
+          "tokens_per_sec": 5.86,
+          "repetition_stats": {
+            "repetition_rate": 0.07,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.729
+          },
+          "prompt": "Why did the chicken cross",
+          "penalty": 1.2,
+          "threshold": 1.0
+        }
+      ],
+      "penalty_1.3": [
+        {
+          "full_text": "once upon a time there was a dog who loved to play with his own. One day, he saw a big tree in the park. He wanted to climb it, but it wouldn't get it. The dog tried and tried, but it didn't work. But then something bad happened. A little boy came out of the",
+          "generated_text": "who loved to play with his own. One day, he saw a big tree in the park. He wanted to climb it, but it wouldn't get it. The dog tried and tried, but it didn't work. But then something bad happened. A little boy came out of the",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.28,
+          "tokens_per_sec": 6.04,
+          "repetition_stats": {
+            "repetition_rate": 0.022,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.917
+          },
+          "prompt": "once upon a time there was a dog",
+          "penalty": 1.3,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "there was a little girl who liked to play with her toys. She had many toys, but she could not have any toys or her favorite toy car. One day, the car went for a walk in the park. The car saw a big truck and wanted to go inside. But it didn't work. He",
+          "generated_text": "who liked to play with her toys. She had many toys, but she could not have any toys or her favorite toy car. One day, the car went for a walk in the park. The car saw a big truck and wanted to go inside. But it didn't work. He",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.16,
+          "tokens_per_sec": 6.13,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.9
+          },
+          "prompt": "there was a little girl",
+          "penalty": 1.3,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "there lived a little girl who liked to play with her toys. She had many toys, but she was very big and could not have any toys or her favorite toy car. One day, the car went for a walk in the park. The car saw a big dog with a long tail.",
+          "generated_text": "little girl who liked to play with her toys. She had many toys, but she was very big and could not have any toys or her favorite toy car. One day, the car went for a walk in the park. The car saw a big dog with a long tail.",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.05,
+          "tokens_per_sec": 6.21,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.86
+          },
+          "prompt": "there lived a",
+          "penalty": 1.3,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a king and his name was John. John loved to play with his toys all day long. One day, he saw something shiny in the box. He picked it up and put it on it. It looked like a big box of old box! John's mom said, \"Joh",
+          "generated_text": "and his name was John. John loved to play with his toys all day long. One day, he saw something shiny in the box. He picked it up and put it on it. It looked like a big box of old box! John's mom said, \"Joh",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.9,
+          "tokens_per_sec": 6.33,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.935
+          },
+          "prompt": "a king",
+          "penalty": 1.3,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "king than ever before. He was so excited to explore the world around him. Suddenly, he saw a big tree with lots of leaves. The tree had never seen anything like it before. It looked like a beautiful and shiny thing in the sky. Every day he would go on an",
+          "generated_text": "than ever before. He was so excited to explore the world around him. Suddenly, he saw a big tree with lots of leaves. The tree had never seen anything like it before. It looked like a beautiful and shiny thing in the sky. Every day he would go on an",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 7.96,
+          "tokens_per_sec": 6.28,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.88
+          },
+          "prompt": "king",
+          "penalty": 1.3,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a bison from wild forest and he was very curious. One day, he decided to explore the forest. He walked around until he found a big pile of old things inside. As he walked, he saw a beautiful bird flying in the sky. The bird looked so happy that it had been there for a",
+          "generated_text": "and he was very curious. One day, he decided to explore the forest. He walked around until he found a big pile of old things inside. As he walked, he saw a beautiful bird flying in the sky. The bird looked so happy that it had been there for a",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.2,
+          "tokens_per_sec": 6.1,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.84
+          },
+          "prompt": "a bison from wild forest",
+          "penalty": 1.3,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a peacock and his name was Max. Max loved to play with his friends in the park. One day, he saw a big tree with lots of leaves. He wanted to climb it, but it didn't want to get it. But Max did not listen. His friend, Sam, came over and said,",
+          "generated_text": "and his name was Max. Max loved to play with his friends in the park. One day, he saw a big tree with lots of leaves. He wanted to climb it, but it didn't want to get it. But Max did not listen. His friend, Sam, came over and said,",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.45,
+          "tokens_per_sec": 5.92,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.88
+          },
+          "prompt": "a peacock",
+          "penalty": 1.3,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "The scientist mixed two chemicals and they had a big smile on their face. They were so happy to have a special surprise for them. It was a beautiful day at the store. Everyone wanted it too. But one day, the family decided to go out and play with it. When they got home, the",
+          "generated_text": "and they had a big smile on their face. They were so happy to have a special surprise for them. It was a beautiful day at the store. Everyone wanted it too. But one day, the family decided to go out and play with it. When they got home, the",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.27,
+          "tokens_per_sec": 6.05,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.86
+          },
+          "prompt": "The scientist mixed two chemicals",
+          "penalty": 1.3,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "In the year 3024, humanity was a very special day. She wanted to go outside and play. But she didn't want to be careful. So one day, her mom said it would come out of the house. The little girl was so excited. She ran around the house with lots of new things. When they",
+          "generated_text": "was a very special day. She wanted to go outside and play. But she didn't want to be careful. So one day, her mom said it would come out of the house. The little girl was so excited. She ran around the house with lots of new things. When they",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.4,
+          "tokens_per_sec": 5.95,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.9
+          },
+          "prompt": "In the year 3024, humanity",
+          "penalty": 1.3,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "Why did the chicken cross with a big smile. He had many animals and a big trunk. The farmer was very happy to see him. It wanted to go on an adventure. But he could not find it. He thought it would be fun to do. One day, his dad saw a big",
+          "generated_text": "with a big smile. He had many animals and a big trunk. The farmer was very happy to see him. It wanted to go on an adventure. But he could not find it. He thought it would be fun to do. One day, his dad saw a big",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.16,
+          "tokens_per_sec": 6.12,
+          "repetition_stats": {
+            "repetition_rate": 0.022,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.854
+          },
+          "prompt": "Why did the chicken cross",
+          "penalty": 1.3,
+          "threshold": 1.0
+        }
+      ],
+      "penalty_1.5": [
+        {
+          "full_text": "once upon a time there was a dog who loved to play with his own. One day, he saw something shiny in the grass. He wanted it and tried to open it. But it wouldn't open. The owner got very angry because it didn't work. It had no idea what that was, so she decided to take",
+          "generated_text": "who loved to play with his own. One day, he saw something shiny in the grass. He wanted it and tried to open it. But it wouldn't open. The owner got very angry because it didn't work. It had no idea what that was, so she decided to take",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.26,
+          "tokens_per_sec": 6.06,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.918
+          },
+          "prompt": "once upon a time there was a dog",
+          "penalty": 1.5,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "there was a little girl who liked to play with her toys. She had many toys, but she could not have any toys or make them happy. One day, the mom asked for some of their room. They said it would be fun and wait until they went outside to play. The sun made a",
+          "generated_text": "who liked to play with her toys. She had many toys, but she could not have any toys or make them happy. One day, the mom asked for some of their room. They said it would be fun and wait until they went outside to play. The sun made a",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.06,
+          "tokens_per_sec": 6.21,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.98
+          },
+          "prompt": "there was a little girl",
+          "penalty": 1.5,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "there lived a little girl who liked to play with her toys. She had many toys, but she was very big and could not have any toys or make them happy. One day, the mom asked her if they wanted to go on an adventure. The next morning, when it got there, she",
+          "generated_text": "little girl who liked to play with her toys. She had many toys, but she was very big and could not have any toys or make them happy. One day, the mom asked her if they wanted to go on an adventure. The next morning, when it got there, she",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.09,
+          "tokens_per_sec": 6.18,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.94
+          },
+          "prompt": "there lived a",
+          "penalty": 1.5,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a king and his name was John. John loved to play with his toys all day long. One day, he saw something shiny in the box. He picked it up and put it on it. It looked like a big box of old box! John's mom said, \"Tom",
+          "generated_text": "and his name was John. John loved to play with his toys all day long. One day, he saw something shiny in the box. He picked it up and put it on it. It looked like a big box of old box! John's mom said, \"Tom",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.39,
+          "tokens_per_sec": 5.96,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.935
+          },
+          "prompt": "a king",
+          "penalty": 1.5,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "king than ever before. He was so excited to explore the world around him. Suddenly, he saw a big tree with lots of leaves. The tree had never seen anything like it before and it made him feel better. It looked very happy for his way home. But then, something amazing",
+          "generated_text": "than ever before. He was so excited to explore the world around him. Suddenly, he saw a big tree with lots of leaves. The tree had never seen anything like it before and it made him feel better. It looked very happy for his way home. But then, something amazing",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.06,
+          "tokens_per_sec": 6.2,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.96
+          },
+          "prompt": "king",
+          "penalty": 1.5,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a bison from wild forest and he was very curious. One day, his mom asked him to go for a walk with him. The fox said it wasn't the best way to get out of the forest. He looked around but couldn't find it. But then he saw something strange. It had been in the",
+          "generated_text": "and he was very curious. One day, his mom asked him to go for a walk with him. The fox said it wasn't the best way to get out of the forest. He looked around but couldn't find it. But then he saw something strange. It had been in the",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.13,
+          "tokens_per_sec": 6.15,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.92
+          },
+          "prompt": "a bison from wild forest",
+          "penalty": 1.5,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "a peacock and his name was Max. Max loved to play with his friends in the park. One day, he saw something shiny on it. It had many colors of different colors. He wanted it very pretty from it, but it didn't work. His friend, Tom, said, \"I don't want to be",
+          "generated_text": "and his name was Max. Max loved to play with his friends in the park. One day, he saw something shiny on it. It had many colors of different colors. He wanted it very pretty from it, but it didn't work. His friend, Tom, said, \"I don't want to be",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.4,
+          "tokens_per_sec": 5.95,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.94
+          },
+          "prompt": "a peacock",
+          "penalty": 1.5,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "The scientist mixed two chemicals and they had a big smile on their face. They were so happy to have some delicious food for them. When the sun was ready, it made them feel better. Everyone loved her special met. Every day they would go outside and play in the sun. One day,",
+          "generated_text": "and they had a big smile on their face. They were so happy to have some delicious food for them. When the sun was ready, it made them feel better. Everyone loved her special met. Every day they would go outside and play in the sun. One day,",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 12.8,
+          "tokens_per_sec": 3.91,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.938
+          },
+          "prompt": "The scientist mixed two chemicals",
+          "penalty": 1.5,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "In the year 3024, humanity was a very special day. She wanted to go outside and play. But she didn't want to be careful. So one day, her mom said it would come out of the house. The little girl thought for a moment and then said, \"I will help you find something special.\"",
+          "generated_text": "was a very special day. She wanted to go outside and play. But she didn't want to be careful. So one day, her mom said it would come out of the house. The little girl thought for a moment and then said, \"I will help you find something special.\"",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 9.51,
+          "tokens_per_sec": 5.26,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.939
+          },
+          "prompt": "In the year 3024, humanity",
+          "penalty": 1.5,
+          "threshold": 1.0
+        },
+        {
+          "full_text": "Why did the chicken cross with a big smile. He had many animals and monkeys, like to play with. One day, he saw something shiny in his hand. It was a big, red color. The cow looked at it and wanted it. But then he heard someone calling out from behind",
+          "generated_text": "with a big smile. He had many animals and monkeys, like to play with. One day, he saw something shiny in his hand. It was a big, red color. The cow looked at it and wanted it. But then he heard someone calling out from behind",
+          "num_tokens": 50,
+          "avg_passes": 6.0,
+          "elapsed_s": 8.26,
+          "tokens_per_sec": 6.05,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.935
+          },
+          "prompt": "Why did the chicken cross",
+          "penalty": 1.5,
+          "threshold": 1.0
+        }
+      ]
+    },
+    "threshold_0.9": {
+      "penalty_1.0": [
+        {
+          "full_text": "once upon a time there was a dog who loved to play with his own. One day, he saw a big dog in the park. The dog was very happy and wanted to play with it. The dog was very happy and wanted to play with it. But the dog was too small and could not have",
+          "generated_text": "who loved to play with his own. One day, he saw a big dog in the park. The dog was very happy and wanted to play with it. The dog was very happy and wanted to play with it. But the dog was too small and could not have",
+          "num_tokens": 50,
+          "avg_passes": 3.86,
+          "elapsed_s": 6.18,
+          "tokens_per_sec": 8.09,
+          "repetition_stats": {
+            "repetition_rate": 0.286,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.612
+          },
+          "prompt": "once upon a time there was a dog",
+          "penalty": 1.0,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "there was a little girl who liked to play with her toys. She had a big box of toys and she had a big box of toys. One day, she went to the box and saw a big box. She wanted to open the box and see what was inside. She asked her mom if",
+          "generated_text": "who liked to play with her toys. She had a big box of toys and she had a big box of toys. One day, she went to the box and saw a big box. She wanted to open the box and see what was inside. She asked her mom if",
+          "num_tokens": 50,
+          "avg_passes": 3.34,
+          "elapsed_s": 5.15,
+          "tokens_per_sec": 9.71,
+          "repetition_stats": {
+            "repetition_rate": 0.143,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.62
+          },
+          "prompt": "there was a little girl",
+          "penalty": 1.0,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "there lived a little girl who liked to play with her toys. She had a big box of toys and she liked to play with her toys. One day, she found a big box of toys and she wanted to play with it. She asked her mom if she could play with it.",
+          "generated_text": "little girl who liked to play with her toys. She had a big box of toys and she liked to play with her toys. One day, she found a big box of toys and she wanted to play with it. She asked her mom if she could play with it.",
+          "num_tokens": 50,
+          "avg_passes": 3.26,
+          "elapsed_s": 5.0,
+          "tokens_per_sec": 10.0,
+          "repetition_stats": {
+            "repetition_rate": 0.353,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.54
+          },
+          "prompt": "there lived a",
+          "penalty": 1.0,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a king and a little girl named Marky. Mary was very happy and she loved to play with her toys. One day, Mary was playing with her toys when she accidentally broke the toy car and it broke. Mary was very sad and didn't know what to do. She",
+          "generated_text": "and a little girl named Marky. Mary was very happy and she loved to play with her toys. One day, Mary was playing with her toys when she accidentally broke the toy car and it broke. Mary was very sad and didn't know what to do. She",
+          "num_tokens": 50,
+          "avg_passes": 3.26,
+          "elapsed_s": 5.08,
+          "tokens_per_sec": 9.83,
+          "repetition_stats": {
+            "repetition_rate": 0.071,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.745
+          },
+          "prompt": "a king",
+          "penalty": 1.0,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "king than before. It was a big red and had a big red ball. It had a red ball and a red ball. It had a red ball and a red ball. It looked like a red ball. It looked like a red ball. It looked like a red ball. It",
+          "generated_text": "than before. It was a big red and had a big red ball. It had a red ball and a red ball. It had a red ball and a red ball. It looked like a red ball. It looked like a red ball. It looked like a red ball. It",
+          "num_tokens": 50,
+          "avg_passes": 3.7,
+          "elapsed_s": 5.49,
+          "tokens_per_sec": 9.11,
+          "repetition_stats": {
+            "repetition_rate": 0.684,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.26
+          },
+          "prompt": "king",
+          "penalty": 1.0,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a bison from wild forest and he was very curious. One day, he decided to explore the forest and he found a big pile of leaves. He was so excited and he decided to take it home. He grabbed it and started to climb the tall tree. He was so excited and he started to",
+          "generated_text": "and he was very curious. One day, he decided to explore the forest and he found a big pile of leaves. He was so excited and he decided to take it home. He grabbed it and started to climb the tall tree. He was so excited and he started to",
+          "num_tokens": 50,
+          "avg_passes": 3.72,
+          "elapsed_s": 5.68,
+          "tokens_per_sec": 8.81,
+          "repetition_stats": {
+            "repetition_rate": 0.205,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.58
+          },
+          "prompt": "a bison from wild forest",
+          "penalty": 1.0,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a peacock and a cup. The cyck was very happy and wanted to help the cop. The cycyck was very happy and thanked the cyck for his help. The cyck was very happy and thanked the cyck",
+          "generated_text": "and a cup. The cyck was very happy and wanted to help the cop. The cycyck was very happy and thanked the cyck for his help. The cyck was very happy and thanked the cyck",
+          "num_tokens": 50,
+          "avg_passes": 3.3,
+          "elapsed_s": 5.16,
+          "tokens_per_sec": 9.7,
+          "repetition_stats": {
+            "repetition_rate": 0.348,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.514
+          },
+          "prompt": "a peacock",
+          "penalty": 1.0,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "The scientist mixed two chemicals and they had a big smile on their face. They were so happy and excited. They had a big smile on their face. They had a big smile on their face. They were so happy and excited. They had a great time playing with their new friends. They had a",
+          "generated_text": "and they had a big smile on their face. They were so happy and excited. They had a big smile on their face. They had a big smile on their face. They were so happy and excited. They had a great time playing with their new friends. They had a",
+          "num_tokens": 50,
+          "avg_passes": 4.06,
+          "elapsed_s": 6.14,
+          "tokens_per_sec": 8.14,
+          "repetition_stats": {
+            "repetition_rate": 0.583,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.4
+          },
+          "prompt": "The scientist mixed two chemicals",
+          "penalty": 1.0,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "In the year 3024, humanity was a very special day. She was so excited to see the world around her. She was so excited to see the world around her. She ran around the garden and saw a big green grass. She was so excited to see the birds flying in the sky. She saw",
+          "generated_text": "was a very special day. She was so excited to see the world around her. She was so excited to see the world around her. She ran around the garden and saw a big green grass. She was so excited to see the birds flying in the sky. She saw",
+          "num_tokens": 50,
+          "avg_passes": 4.08,
+          "elapsed_s": 6.15,
+          "tokens_per_sec": 8.13,
+          "repetition_stats": {
+            "repetition_rate": 0.303,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.5
+          },
+          "prompt": "In the year 3024, humanity",
+          "penalty": 1.0,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "Why did the chicken cross the street. He had a big red car and a big car. He had a big red car and a red car. He had a red car and a red car. He had a red car on the red car. He had a red car on the car and the",
+          "generated_text": "the street. He had a big red car and a big car. He had a big red car and a red car. He had a red car and a red car. He had a red car on the red car. He had a red car on the car and the",
+          "num_tokens": 50,
+          "avg_passes": 3.44,
+          "elapsed_s": 5.24,
+          "tokens_per_sec": 9.54,
+          "repetition_stats": {
+            "repetition_rate": 0.667,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.22
+          },
+          "prompt": "Why did the chicken cross",
+          "penalty": 1.0,
+          "threshold": 0.9
+        }
+      ],
+      "penalty_1.1": [
+        {
+          "full_text": "once upon a time there was a dog who loved to play with his own. One day, he saw a big dog in the park. The dog was very happy and wanted to play with it. But the dog did not like the dog. The dog was scared and ran away. The dog tried to run away,",
+          "generated_text": "who loved to play with his own. One day, he saw a big dog in the park. The dog was very happy and wanted to play with it. But the dog did not like the dog. The dog was scared and ran away. The dog tried to run away,",
+          "num_tokens": 50,
+          "avg_passes": 3.82,
+          "elapsed_s": 5.98,
+          "tokens_per_sec": 8.36,
+          "repetition_stats": {
+            "repetition_rate": 0.093,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.714
+          },
+          "prompt": "once upon a time there was a dog",
+          "penalty": 1.1,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "there was a little girl who liked to play with her toys. She had a big box of toys and she loved to make them go fast. One day, she went to the store with her mom. She saw a big box of toys and wanted to buy it. She asked her mom if she",
+          "generated_text": "who liked to play with her toys. She had a big box of toys and she loved to make them go fast. One day, she went to the store with her mom. She saw a big box of toys and wanted to buy it. She asked her mom if she",
+          "num_tokens": 50,
+          "avg_passes": 3.36,
+          "elapsed_s": 5.56,
+          "tokens_per_sec": 9.0,
+          "repetition_stats": {
+            "repetition_rate": 0.14,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.68
+          },
+          "prompt": "there was a little girl",
+          "penalty": 1.1,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "there lived a little girl who liked to play with her toys. She had a big box of toys and she was very happy. One day, she decided to go to the store with her mom. She put on her new toy car and went to the store. When she got home, she",
+          "generated_text": "little girl who liked to play with her toys. She had a big box of toys and she was very happy. One day, she decided to go to the store with her mom. She put on her new toy car and went to the store. When she got home, she",
+          "num_tokens": 50,
+          "avg_passes": 3.14,
+          "elapsed_s": 4.9,
+          "tokens_per_sec": 10.21,
+          "repetition_stats": {
+            "repetition_rate": 0.043,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.76
+          },
+          "prompt": "there lived a",
+          "penalty": 1.1,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a king and a little girl named Marky. Mary was very happy and she loved to play with her toys. One day, Mary went to the park with her mom and said, \"Mom, can I have a surprise for you to my friend?\" Her mom said, \"Yes, I can",
+          "generated_text": "and a little girl named Marky. Mary was very happy and she loved to play with her toys. One day, Mary went to the park with her mom and said, \"Mom, can I have a surprise for you to my friend?\" Her mom said, \"Yes, I can",
+          "num_tokens": 50,
+          "avg_passes": 3.34,
+          "elapsed_s": 5.16,
+          "tokens_per_sec": 9.69,
+          "repetition_stats": {
+            "repetition_rate": 0.022,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.745
+          },
+          "prompt": "a king",
+          "penalty": 1.1,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "king than before. It was a big red and had a big smile on her face. She wanted to play with it, but it was too heavy for her. The red was very sad and started to cry. Suddenly, the red car came out of the car. The red car was",
+          "generated_text": "than before. It was a big red and had a big smile on her face. She wanted to play with it, but it was too heavy for her. The red was very sad and started to cry. Suddenly, the red car came out of the car. The red car was",
+          "num_tokens": 50,
+          "avg_passes": 3.42,
+          "elapsed_s": 5.14,
+          "tokens_per_sec": 9.73,
+          "repetition_stats": {
+            "repetition_rate": 0.065,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.74
+          },
+          "prompt": "king",
+          "penalty": 1.1,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a bison from wild forest and he was very curious. One day, he decided to explore the forest near his house. He walked and saw a big tree with lots of leaves. The animals were so happy and excited. He wanted to see what it was. But he was very excited. He asked his mom",
+          "generated_text": "and he was very curious. One day, he decided to explore the forest near his house. He walked and saw a big tree with lots of leaves. The animals were so happy and excited. He wanted to see what it was. But he was very excited. He asked his mom",
+          "num_tokens": 50,
+          "avg_passes": 3.72,
+          "elapsed_s": 5.85,
+          "tokens_per_sec": 8.55,
+          "repetition_stats": {
+            "repetition_rate": 0.065,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.78
+          },
+          "prompt": "a bison from wild forest",
+          "penalty": 1.1,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a peacock and a cup. The cycle was very happy and excited. They went to the park with their mom and dad. They saw many people and people were very happy. They had a big smile on their faces. They were having so much fun that they could have",
+          "generated_text": "and a cup. The cycle was very happy and excited. They went to the park with their mom and dad. They saw many people and people were very happy. They had a big smile on their faces. They were having so much fun that they could have",
+          "num_tokens": 50,
+          "avg_passes": 3.64,
+          "elapsed_s": 5.53,
+          "tokens_per_sec": 9.05,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.766
+          },
+          "prompt": "a peacock",
+          "penalty": 1.1,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "The scientist mixed two chemicals and they had a big smile on their face. They were so happy to have a special surprise for them. They decided to go to the store and buy some yummy food. They bought some delicious food and vegetables. They ate it and enjoyed their snacks. The family",
+          "generated_text": "and they had a big smile on their face. They were so happy to have a special surprise for them. They decided to go to the store and buy some yummy food. They bought some delicious food and vegetables. They ate it and enjoyed their snacks. The family",
+          "num_tokens": 50,
+          "avg_passes": 3.9,
+          "elapsed_s": 6.04,
+          "tokens_per_sec": 8.27,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.771
+          },
+          "prompt": "The scientist mixed two chemicals",
+          "penalty": 1.1,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "In the year 3024, humanity was a very special day. She wanted to go to the park with her mom. She asked her mom if she could go to the park and play. Her mom said yes, and they went to the park. When they arrived, they saw lots of people playing on the swings",
+          "generated_text": "was a very special day. She wanted to go to the park with her mom. She asked her mom if she could go to the park and play. Her mom said yes, and they went to the park. When they arrived, they saw lots of people playing on the swings",
+          "num_tokens": 50,
+          "avg_passes": 4.02,
+          "elapsed_s": 6.11,
+          "tokens_per_sec": 8.18,
+          "repetition_stats": {
+            "repetition_rate": 0.067,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.72
+          },
+          "prompt": "In the year 3024, humanity",
+          "penalty": 1.1,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "Why did the chicken cross with a big smile. He had many animals and a big trunk. He liked to look at the big tree and make them happy. One day, he saw a big tree with a big tree. The tree was very big and had many leaves. He wanted to climb",
+          "generated_text": "with a big smile. He had many animals and a big trunk. He liked to look at the big tree and make them happy. One day, he saw a big tree with a big tree. The tree was very big and had many leaves. He wanted to climb",
+          "num_tokens": 50,
+          "avg_passes": 3.58,
+          "elapsed_s": 5.48,
+          "tokens_per_sec": 9.13,
+          "repetition_stats": {
+            "repetition_rate": 0.098,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.625
+          },
+          "prompt": "Why did the chicken cross",
+          "penalty": 1.1,
+          "threshold": 0.9
+        }
+      ],
+      "penalty_1.2": [
+        {
+          "full_text": "once upon a time there was a dog who loved to play with his own. One day, he saw a big dog in the park. The dog wanted to catch it. But the dog did not like the dog. The dog tried to run away, but it didn't work. He thought it would be fun and have",
+          "generated_text": "who loved to play with his own. One day, he saw a big dog in the park. The dog wanted to catch it. But the dog did not like the dog. The dog tried to run away, but it didn't work. He thought it would be fun and have",
+          "num_tokens": 50,
+          "avg_passes": 3.84,
+          "elapsed_s": 5.89,
+          "tokens_per_sec": 8.5,
+          "repetition_stats": {
+            "repetition_rate": 0.021,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.816
+          },
+          "prompt": "once upon a time there was a dog",
+          "penalty": 1.2,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "there was a little girl who liked to play with her toys. She had a big box of toys and she loved to make them go fast. One day, she went to the store with her mom. She saw a big box of toys and wanted to buy it. But when she got there, she",
+          "generated_text": "who liked to play with her toys. She had a big box of toys and she loved to make them go fast. One day, she went to the store with her mom. She saw a big box of toys and wanted to buy it. But when she got there, she",
+          "num_tokens": 50,
+          "avg_passes": 3.34,
+          "elapsed_s": 5.19,
+          "tokens_per_sec": 9.64,
+          "repetition_stats": {
+            "repetition_rate": 0.14,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.7
+          },
+          "prompt": "there was a little girl",
+          "penalty": 1.2,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "there lived a little girl who liked to play with her toys. She had a big box of toys and she was very happy. One day, she decided to go outside and play. She ran around the room and saw a big box. It looked like a big box. The box was shiny",
+          "generated_text": "little girl who liked to play with her toys. She had a big box of toys and she was very happy. One day, she decided to go outside and play. She ran around the room and saw a big box. It looked like a big box. The box was shiny",
+          "num_tokens": 50,
+          "avg_passes": 3.34,
+          "elapsed_s": 5.55,
+          "tokens_per_sec": 9.02,
+          "repetition_stats": {
+            "repetition_rate": 0.043,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.76
+          },
+          "prompt": "there lived a",
+          "penalty": 1.2,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a king and his name was John. John loved to play with his toys all day long. One day, he saw a big box of toys on the table. He wanted to play with it, but it was too heavy for him. John's mom said, \"Timmy, it's time to",
+          "generated_text": "and his name was John. John loved to play with his toys all day long. One day, he saw a big box of toys on the table. He wanted to play with it, but it was too heavy for him. John's mom said, \"Timmy, it's time to",
+          "num_tokens": 50,
+          "avg_passes": 3.26,
+          "elapsed_s": 4.99,
+          "tokens_per_sec": 10.01,
+          "repetition_stats": {
+            "repetition_rate": 0.045,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.851
+          },
+          "prompt": "a king",
+          "penalty": 1.2,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "king than before. It was a big red and had many colors of different colors and sizes. One day, the little girl wanted to show her mom. She asked her mom if she could have it. Her mom said yes, but it was too expensive. The girl was",
+          "generated_text": "than before. It was a big red and had many colors of different colors and sizes. One day, the little girl wanted to show her mom. She asked her mom if she could have it. Her mom said yes, but it was too expensive. The girl was",
+          "num_tokens": 50,
+          "avg_passes": 3.62,
+          "elapsed_s": 5.5,
+          "tokens_per_sec": 9.09,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.851
+          },
+          "prompt": "king",
+          "penalty": 1.2,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a bison from wild forest and he was very curious. One day, he decided to explore the forest. He walked around and saw a big tree with lots of leaves. The animals were so happy that he had been looking for something to do. Suddenly, he heard a loud noise coming from behind him. It",
+          "generated_text": "and he was very curious. One day, he decided to explore the forest. He walked around and saw a big tree with lots of leaves. The animals were so happy that he had been looking for something to do. Suddenly, he heard a loud noise coming from behind him. It",
+          "num_tokens": 50,
+          "avg_passes": 3.44,
+          "elapsed_s": 5.35,
+          "tokens_per_sec": 9.34,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.88
+          },
+          "prompt": "a bison from wild forest",
+          "penalty": 1.2,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a peacock and his name was Max. Max loved to play with his friends in the park. One day, he saw a big tree with lots of leaves. He wanted to climb it, but it was too high. Max tried to catch it, but it flew away. Max was sad because he",
+          "generated_text": "and his name was Max. Max loved to play with his friends in the park. One day, he saw a big tree with lots of leaves. He wanted to climb it, but it was too high. Max tried to catch it, but it flew away. Max was sad because he",
+          "num_tokens": 50,
+          "avg_passes": 3.98,
+          "elapsed_s": 5.98,
+          "tokens_per_sec": 8.36,
+          "repetition_stats": {
+            "repetition_rate": 0.043,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.76
+          },
+          "prompt": "a peacock",
+          "penalty": 1.2,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "The scientist mixed two chemicals and they had a big smile on their face. They were so happy to have a special surprise for them. They decided to go to the store and buy some yummy food. When they arrived, they saw lots of other things that could have a special treat and share",
+          "generated_text": "and they had a big smile on their face. They were so happy to have a special surprise for them. They decided to go to the store and buy some yummy food. When they arrived, they saw lots of other things that could have a special treat and share",
+          "num_tokens": 50,
+          "avg_passes": 3.8,
+          "elapsed_s": 5.81,
+          "tokens_per_sec": 8.6,
+          "repetition_stats": {
+            "repetition_rate": 0.043,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.776
+          },
+          "prompt": "The scientist mixed two chemicals",
+          "penalty": 1.2,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "In the year 3024, humanity was a very special day. She wanted to go outside and play. But she didn't want to be careful. So she decided to take a closer look. When she got there, she saw a big box of colorful boxes inside. It was so beautiful that it had made her",
+          "generated_text": "was a very special day. She wanted to go outside and play. But she didn't want to be careful. So she decided to take a closer look. When she got there, she saw a big box of colorful boxes inside. It was so beautiful that it had made her",
+          "num_tokens": 50,
+          "avg_passes": 4.02,
+          "elapsed_s": 6.15,
+          "tokens_per_sec": 8.13,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.837
+          },
+          "prompt": "In the year 3024, humanity",
+          "penalty": 1.2,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "Why did the chicken cross with a big smile. He had many animals and a big trunk. The farmer was very happy to see the animals and the animals. One day, he saw a big dog in the park. The farmer wanted to play too. But the farmer said it would be too",
+          "generated_text": "with a big smile. He had many animals and a big trunk. The farmer was very happy to see the animals and the animals. One day, he saw a big dog in the park. The farmer wanted to play too. But the farmer said it would be too",
+          "num_tokens": 50,
+          "avg_passes": 3.96,
+          "elapsed_s": 6.25,
+          "tokens_per_sec": 8.0,
+          "repetition_stats": {
+            "repetition_rate": 0.07,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.729
+          },
+          "prompt": "Why did the chicken cross",
+          "penalty": 1.2,
+          "threshold": 0.9
+        }
+      ],
+      "penalty_1.3": [
+        {
+          "full_text": "once upon a time there was a dog who loved to play with his own. One day, he saw a big tree in the park. He wanted to climb it, but it wouldn't get it. The dog tried and tried, but it didn't work. But then something bad happened. A little boy came out of the",
+          "generated_text": "who loved to play with his own. One day, he saw a big tree in the park. He wanted to climb it, but it wouldn't get it. The dog tried and tried, but it didn't work. But then something bad happened. A little boy came out of the",
+          "num_tokens": 50,
+          "avg_passes": 3.52,
+          "elapsed_s": 5.79,
+          "tokens_per_sec": 8.63,
+          "repetition_stats": {
+            "repetition_rate": 0.022,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.917
+          },
+          "prompt": "once upon a time there was a dog",
+          "penalty": 1.3,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "there was a little girl who liked to play with her toys. She had many toys, but she could not have any toys or her favorite toy car. One day, the car went to the park and saw a big dog in the park. The dog looked very sad because it wanted to help it.",
+          "generated_text": "who liked to play with her toys. She had many toys, but she could not have any toys or her favorite toy car. One day, the car went to the park and saw a big dog in the park. The dog looked very sad because it wanted to help it.",
+          "num_tokens": 50,
+          "avg_passes": 3.46,
+          "elapsed_s": 5.29,
+          "tokens_per_sec": 9.45,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.88
+          },
+          "prompt": "there was a little girl",
+          "penalty": 1.3,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "there lived a little girl who liked to play with her toys. She had many toys, but she was very big and could not have any toys or her favorite toy car. One day, the car went for a walk in the park. The car saw a big dog with a long tail.",
+          "generated_text": "little girl who liked to play with her toys. She had many toys, but she was very big and could not have any toys or her favorite toy car. One day, the car went for a walk in the park. The car saw a big dog with a long tail.",
+          "num_tokens": 50,
+          "avg_passes": 2.98,
+          "elapsed_s": 4.99,
+          "tokens_per_sec": 10.02,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.86
+          },
+          "prompt": "there lived a",
+          "penalty": 1.3,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a king and his name was John. John loved to play with his toys all day long. One day, he saw something shiny in the box. He picked it up and put it on it. It looked like a big box of old box! John's mom said, \"Joh",
+          "generated_text": "and his name was John. John loved to play with his toys all day long. One day, he saw something shiny in the box. He picked it up and put it on it. It looked like a big box of old box! John's mom said, \"Joh",
+          "num_tokens": 50,
+          "avg_passes": 3.14,
+          "elapsed_s": 5.21,
+          "tokens_per_sec": 9.59,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.935
+          },
+          "prompt": "a king",
+          "penalty": 1.3,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "king than before. It was a big red and had many colors of different colors. One day, the blue thing was going to be a special day. The red car looked like a real car. \"Wow, look at this is so pretty!\" said the red car was very excited. \"Can",
+          "generated_text": "than before. It was a big red and had many colors of different colors. One day, the blue thing was going to be a special day. The red car looked like a real car. \"Wow, look at this is so pretty!\" said the red car was very excited. \"Can",
+          "num_tokens": 50,
+          "avg_passes": 3.4,
+          "elapsed_s": 5.25,
+          "tokens_per_sec": 9.53,
+          "repetition_stats": {
+            "repetition_rate": 0.021,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.837
+          },
+          "prompt": "king",
+          "penalty": 1.3,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a bison from wild forest and he was very curious. One day, he decided to explore the forest. He walked around until he found a big pile of old things inside. As he walked, he saw a beautiful bird flying in the sky. The bird looked so happy that it had been there for a",
+          "generated_text": "and he was very curious. One day, he decided to explore the forest. He walked around until he found a big pile of old things inside. As he walked, he saw a beautiful bird flying in the sky. The bird looked so happy that it had been there for a",
+          "num_tokens": 50,
+          "avg_passes": 3.46,
+          "elapsed_s": 5.32,
+          "tokens_per_sec": 9.4,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.84
+          },
+          "prompt": "a bison from wild forest",
+          "penalty": 1.3,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a peacock and his name was Max. Max loved to play with his friends in the park. One day, he saw a big tree with lots of leaves. He wanted to climb it, but it didn't want to get it. But Max did not listen. His friend, Sam, came over and said,",
+          "generated_text": "and his name was Max. Max loved to play with his friends in the park. One day, he saw a big tree with lots of leaves. He wanted to climb it, but it didn't want to get it. But Max did not listen. His friend, Sam, came over and said,",
+          "num_tokens": 50,
+          "avg_passes": 3.92,
+          "elapsed_s": 5.88,
+          "tokens_per_sec": 8.5,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.88
+          },
+          "prompt": "a peacock",
+          "penalty": 1.3,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "The scientist mixed two chemicals and they had a big smile on their face. They were so happy to have a special surprise for them. It was a beautiful day at the store. Everyone wanted it too. But one day, the family decided to go out and play with it. When they got home, the",
+          "generated_text": "and they had a big smile on their face. They were so happy to have a special surprise for them. It was a beautiful day at the store. Everyone wanted it too. But one day, the family decided to go out and play with it. When they got home, the",
+          "num_tokens": 50,
+          "avg_passes": 4.24,
+          "elapsed_s": 6.35,
+          "tokens_per_sec": 7.87,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.86
+          },
+          "prompt": "The scientist mixed two chemicals",
+          "penalty": 1.3,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "In the year 3024, humanity was a very special day. She wanted to go outside and play. But she didn't want to be careful. So one day, her mom said it would come out of the house. The little girl was so excited. She ran around the house with lots of toys and books. When",
+          "generated_text": "was a very special day. She wanted to go outside and play. But she didn't want to be careful. So one day, her mom said it would come out of the house. The little girl was so excited. She ran around the house with lots of toys and books. When",
+          "num_tokens": 50,
+          "avg_passes": 4.22,
+          "elapsed_s": 6.36,
+          "tokens_per_sec": 7.87,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.88
+          },
+          "prompt": "In the year 3024, humanity",
+          "penalty": 1.3,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "Why did the chicken cross with a big smile. He had many animals and a big trunk. The farmer was very happy to see him. It wanted to go on an adventure. But he could not find it. He thought it would be fun to do. One day, his dad saw a big",
+          "generated_text": "with a big smile. He had many animals and a big trunk. The farmer was very happy to see him. It wanted to go on an adventure. But he could not find it. He thought it would be fun to do. One day, his dad saw a big",
+          "num_tokens": 50,
+          "avg_passes": 4.06,
+          "elapsed_s": 6.02,
+          "tokens_per_sec": 8.31,
+          "repetition_stats": {
+            "repetition_rate": 0.022,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.854
+          },
+          "prompt": "Why did the chicken cross",
+          "penalty": 1.3,
+          "threshold": 0.9
+        }
+      ],
+      "penalty_1.5": [
+        {
+          "full_text": "once upon a time there was a dog who loved to play with his own. One day, he saw something shiny in the grass. He wanted it and tried to open it. But it wouldn't open. The owner got very angry because it didn't work. It had no idea what that was, so she decided to take",
+          "generated_text": "who loved to play with his own. One day, he saw something shiny in the grass. He wanted it and tried to open it. But it wouldn't open. The owner got very angry because it didn't work. It had no idea what that was, so she decided to take",
+          "num_tokens": 50,
+          "avg_passes": 3.82,
+          "elapsed_s": 5.88,
+          "tokens_per_sec": 8.51,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.918
+          },
+          "prompt": "once upon a time there was a dog",
+          "penalty": 1.5,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "there was a little girl who liked to play with her toys. She had many toys, but she could not have any toys or make them happy. One day, the mom asked for some of their room. They said it would be fun and wait until they went outside to play. The sun made a",
+          "generated_text": "who liked to play with her toys. She had many toys, but she could not have any toys or make them happy. One day, the mom asked for some of their room. They said it would be fun and wait until they went outside to play. The sun made a",
+          "num_tokens": 50,
+          "avg_passes": 3.52,
+          "elapsed_s": 5.39,
+          "tokens_per_sec": 9.28,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.98
+          },
+          "prompt": "there was a little girl",
+          "penalty": 1.5,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "there lived a little girl who liked to play with her toys. She had many toys, but she was very big and could not have any toys or make them happy. One day, the mom asked her if they wanted to go on an adventure. The next morning, when it got there, she",
+          "generated_text": "little girl who liked to play with her toys. She had many toys, but she was very big and could not have any toys or make them happy. One day, the mom asked her if they wanted to go on an adventure. The next morning, when it got there, she",
+          "num_tokens": 50,
+          "avg_passes": 3.12,
+          "elapsed_s": 4.96,
+          "tokens_per_sec": 10.09,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.94
+          },
+          "prompt": "there lived a",
+          "penalty": 1.5,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a king and his name was John. John loved to play with his toys all day long. One day, he saw something shiny in the box. He picked it up and put it on it. It looked like a big box of old box! John's mom said, \"Tom",
+          "generated_text": "and his name was John. John loved to play with his toys all day long. One day, he saw something shiny in the box. He picked it up and put it on it. It looked like a big box of old box! John's mom said, \"Tom",
+          "num_tokens": 50,
+          "avg_passes": 3.14,
+          "elapsed_s": 4.84,
+          "tokens_per_sec": 10.33,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.935
+          },
+          "prompt": "a king",
+          "penalty": 1.5,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "king than before. It was a big red and had many colors of different colors. One day, the blue thing in the mirror with its teeth on it. The pink dress looked like it could not find anything else to do. Suddenly, something strange happened. A small bird flew",
+          "generated_text": "than before. It was a big red and had many colors of different colors. One day, the blue thing in the mirror with its teeth on it. The pink dress looked like it could not find anything else to do. Suddenly, something strange happened. A small bird flew",
+          "num_tokens": 50,
+          "avg_passes": 3.36,
+          "elapsed_s": 5.61,
+          "tokens_per_sec": 8.91,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.979
+          },
+          "prompt": "king",
+          "penalty": 1.5,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a bison from wild forest and he was very curious. One day, his mom asked him to go for a walk with him. The fox said it wasn't so much that the fox, but she didn't know what to do. She thought about how to be on the ground and decided to take",
+          "generated_text": "and he was very curious. One day, his mom asked him to go for a walk with him. The fox said it wasn't so much that the fox, but she didn't know what to do. She thought about how to be on the ground and decided to take",
+          "num_tokens": 50,
+          "avg_passes": 3.54,
+          "elapsed_s": 5.38,
+          "tokens_per_sec": 9.29,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.896
+          },
+          "prompt": "a bison from wild forest",
+          "penalty": 1.5,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "a peacock and his name was Max. Max loved to play with his friends in the park. One day, he saw something shiny on it. It had many colors of different colors. He wanted it very pretty from it, but it didn't work. His friend, Tom, said, \"I don't want to be",
+          "generated_text": "and his name was Max. Max loved to play with his friends in the park. One day, he saw something shiny on it. It had many colors of different colors. He wanted it very pretty from it, but it didn't work. His friend, Tom, said, \"I don't want to be",
+          "num_tokens": 50,
+          "avg_passes": 3.94,
+          "elapsed_s": 5.93,
+          "tokens_per_sec": 8.43,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.94
+          },
+          "prompt": "a peacock",
+          "penalty": 1.5,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "The scientist mixed two chemicals and they had a big smile on their face. They were so happy to have the best of friends. Every day they would go for a walk in the park. One day, it was time for lunch! When they arrived, everyone said goodbye with all his friends and",
+          "generated_text": "and they had a big smile on their face. They were so happy to have the best of friends. Every day they would go for a walk in the park. One day, it was time for lunch! When they arrived, everyone said goodbye with all his friends and",
+          "num_tokens": 50,
+          "avg_passes": 3.86,
+          "elapsed_s": 5.93,
+          "tokens_per_sec": 8.43,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.875
+          },
+          "prompt": "The scientist mixed two chemicals",
+          "penalty": 1.5,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "In the year 3024, humanity was a very special day. She wanted to go outside and play. But she didn't want to be careful. So one day, her mom said it would come out of the house. The little girl thought for a moment and then said, \"I will help you find something special.\"",
+          "generated_text": "was a very special day. She wanted to go outside and play. But she didn't want to be careful. So one day, her mom said it would come out of the house. The little girl thought for a moment and then said, \"I will help you find something special.\"",
+          "num_tokens": 50,
+          "avg_passes": 4.26,
+          "elapsed_s": 6.45,
+          "tokens_per_sec": 7.75,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.939
+          },
+          "prompt": "In the year 3024, humanity",
+          "penalty": 1.5,
+          "threshold": 0.9
+        },
+        {
+          "full_text": "Why did the chicken cross with a big smile. He had many animals and monkeys to play with. One day, he saw something shiny in his hand. It was a big, scary dog. The dog looked very sad. \"What are you doing?\" asked the man who said \"A what's your nam",
+          "generated_text": "with a big smile. He had many animals and monkeys to play with. One day, he saw something shiny in his hand. It was a big, scary dog. The dog looked very sad. \"What are you doing?\" asked the man who said \"A what's your nam",
+          "num_tokens": 50,
+          "avg_passes": 3.44,
+          "elapsed_s": 5.34,
+          "tokens_per_sec": 9.36,
+          "repetition_stats": {
+            "repetition_rate": 0.0,
+            "max_consecutive_bigram_repeat": 0,
+            "unique_word_ratio": 0.978
+          },
+          "prompt": "Why did the chicken cross",
+          "penalty": 1.5,
+          "threshold": 0.9
+        }
+      ]
+    }
+  }
+}

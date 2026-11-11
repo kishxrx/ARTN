@@ -1,0 +1,110 @@
+================================================================================
+CORRECTED ADAFACTOR vs ADAMW - SHORT CONVERGENCE TEST
+================================================================================
+
+Device: cpu
+
+Loading tokenized TinyStories data...
+  Train samples: 49988
+  Val samples: 5000
+
+================================================================================
+OPTIMIZER 1: CORRECTED ADAFACTOR
+================================================================================
+
+================================================================================
+TRAINING: Corrected Adafactor
+================================================================================
+
+Model: 6.77M parameters
+Step     0 | Train: 8.3577 | Val: 8.3454 | LR: 0.000000
+Step   100 | Train: 7.8018 | Val: 7.6400 | LR: 0.001000
+Step   200 | Train: 6.4030 | Val: 6.6015 | LR: 0.000994
+Step   300 | Train: 5.8755 | Val: 6.2485 | LR: 0.000976
+Step   400 | Train: 5.3696 | Val: 6.1774 | LR: 0.000946
+Step   500 | Train: 5.2621 | Val: 5.8129 | LR: 0.000905
+Step   600 | Train: 5.9149 | Val: 5.6831 | LR: 0.000855
+Step   700 | Train: 5.2190 | Val: 5.6053 | LR: 0.000796
+Step   800 | Train: 5.7315 | Val: 5.4009 | LR: 0.000731
+Step   900 | Train: 5.5933 | Val: 5.3710 | LR: 0.000660
+Step  1000 | Train: 5.5636 | Val: 5.3931 | LR: 0.000587
+Step  1100 | Train: 6.5647 | Val: 5.6186 | LR: 0.000513
+Step  1200 | Train: 5.7998 | Val: 5.3896 | LR: 0.000440
+Step  1300 | Train: 4.6325 | Val: 5.5886 | LR: 0.000369
+Step  1400 | Train: 5.1868 | Val: 5.4483 | LR: 0.000304
+Step  1500 | Train: 4.6301 | Val: 5.2427 | LR: 0.000245
+Step  1600 | Train: 5.0152 | Val: 5.1211 | LR: 0.000195
+Step  1700 | Train: 5.1095 | Val: 5.0201 | LR: 0.000154
+Step  1800 | Train: 4.5520 | Val: 5.4257 | LR: 0.000124
+Step  1900 | Train: 5.6263 | Val: 4.9604 | LR: 0.000106
+
+Final validation loss: 5.1748
+
+================================================================================
+OPTIMIZER 2: ADAMW
+================================================================================
+
+================================================================================
+TRAINING: AdamW
+================================================================================
+
+Model: 6.77M parameters
+Step     0 | Train: 8.3577 | Val: 8.3454 | LR: 0.000000
+Step   100 | Train: 4.5464 | Val: 4.3050 | LR: 0.001000
+Step   200 | Train: 2.9016 | Val: 3.4361 | LR: 0.000994
+Step   300 | Train: 2.8921 | Val: 3.2313 | LR: 0.000976
+Step   400 | Train: 2.5158 | Val: 3.1928 | LR: 0.000946
+Step   500 | Train: 2.5248 | Val: 2.9808 | LR: 0.000905
+Step   600 | Train: 2.9507 | Val: 2.9534 | LR: 0.000855
+Step   700 | Train: 2.5405 | Val: 2.8778 | LR: 0.000796
+Step   800 | Train: 2.8743 | Val: 2.7592 | LR: 0.000731
+Step   900 | Train: 2.7748 | Val: 2.7366 | LR: 0.000660
+Step  1000 | Train: 2.7735 | Val: 2.6983 | LR: 0.000587
+Step  1100 | Train: 3.2195 | Val: 2.8169 | LR: 0.000513
+Step  1200 | Train: 2.8789 | Val: 2.6708 | LR: 0.000440
+Step  1300 | Train: 2.2936 | Val: 2.7281 | LR: 0.000369
+Step  1400 | Train: 2.6740 | Val: 2.6286 | LR: 0.000304
+Step  1500 | Train: 2.2378 | Val: 2.5064 | LR: 0.000245
+Step  1600 | Train: 2.4035 | Val: 2.3927 | LR: 0.000195
+Step  1700 | Train: 2.4044 | Val: 2.4166 | LR: 0.000154
+Step  1800 | Train: 2.1056 | Val: 2.5884 | LR: 0.000124
+Step  1900 | Train: 2.5589 | Val: 2.3269 | LR: 0.000106
+
+Final validation loss: 2.4058
+
+================================================================================
+COMPARISON
+================================================================================
+
+Optimizer                 Final Val Loss     Final Val PPL  
+------------------------------------------------------------
+Corrected Adafactor       5.1748             176.76         
+AdamW                     2.4058             11.09          
+
+Val Loss Ratio (Adafactor / AdamW): 2.15x
+
+================================================================================
+VERDICT
+================================================================================
+
+✗ CORRECTED ADAFACTOR DOES NOT CONVERGE WELL
+
+Ratio of 2.15x indicates significant convergence issues.
+May need further investigation beyond the momentum/variance bug.
+Traceback (most recent call last):
+  File "/root/agent-sandbox/ARTN/experiments/corrected_adafactor_convergence_test.py", line 281, in <module>
+    json.dump(adafactor_results, f, indent=2)
+  File "/usr/lib/python3.12/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/usr/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Tensor is not JSON serializable

@@ -1,0 +1,31 @@
+{
+  "weight_decay_adafactor": 0.0,
+  "weight_decay_adamw": 0.01,
+  "momentum_adafactor": 0.0,
+  "momentum_adamw": 0.9,
+  "adafactor_state_mb": 0.163330078125,
+  "adamw_state_mb": 51.676025390625,
+  "memory_savings_percent": 99.68393451916944,
+  "issues": [
+    {
+      "issue": "Weight decay mismatch",
+      "adafactor": 0.0,
+      "adamw": 0.01,
+      "impact": "Could affect generalization",
+      "severity": "HIGH"
+    },
+    {
+      "issue": "Adafactor relative step size",
+      "description": "Adafactor multiplies LR by RMS(weight), making effective LR different",
+      "impact": "Effective LR is ~1.2x higher for Adafactor",
+      "severity": "MEDIUM"
+    },
+    {
+      "issue": "No momentum in canonical Adafactor",
+      "description": "Canonical Adafactor uses \u03b21=0, AdamW uses \u03b21=0.9",
+      "impact": "Momentum helps escape local minima",
+      "severity": "HIGH"
+    }
+  ],
+  "recommendation": "Run LR sensitivity test and test with matching weight_decay"
+}

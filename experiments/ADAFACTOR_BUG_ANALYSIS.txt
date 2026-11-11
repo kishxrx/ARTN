@@ -1,0 +1,204 @@
+# ADAFACTOR BUG ANALYSIS REPORT
+# =============================
+# Date: September 25, 2026
+# File: /root/agent-sandbox/ARTN/src/training/adafactor.py
+# Status: CRITICAL BUG IDENTIFIED
+
+# =============================================================================
+# EXECUTIVE SUMMARY
+# =============================================================================
+
+# BUG: The original 50k Adafactor implementation computes variance-scaled updates
+#      but then OVERWRITES them with momentum-only updates before applying.
+#      
+# RESULT: The optimizer behaves like SGD with momentum, NOT like Adam/Adafactor.
+#         The variance computation is WASTED (computed but never used).
+#
+# IMPACT: The original 50k training did NOT use variance normalization.
+#         All previous Adafactor experiments tested a BROKEN optimizer.
+
+# =============================================================================
+# LINE-BY-LINE TRACE OF ORIGINAL ADAFACTOR (src/training/adafactor.py)
+# =============================================================================
+
+# LINE 93: grad = p.grad
+#   → Get current gradient
+#
+# LINE 128-129: if weight_decay > 0: p.mul_(1 - lr * weight_decay)
+#   → Apply weight decay to parameter
+#
+# LINE 132-152: For 2D parameters:
+#   LINE 134: grad_sq = grad * grad
+#   LINE 138-140: exp_avg_sq_row = β₂ × exp_avg_sq_row + (1-β₂) × grad_sq.mean(dim=1)
+#   LINE 144-146: exp_avg_sq_col = β₂ × exp_avg_sq_col + (1-β₂) × grad_sq.mean(dim=0)
+#   LINE 149: global_mean = grad_sq.mean()
+#   LINE 150: numerator = exp_avg_sq_row.unsqueeze(1) * exp_avg_sq_col.unsqueeze(0)
+#   LINE 151: factored_var = numerator / global_mean.add(eps1)
+#   LINE 152: update = grad / (factored_var.sqrt() + eps2)  ← VARIANCE-SCALED UPDATE
+#
+# LINE 161-163: CLIPPING:
+#   LINE 161: update_norm = update.norm()
+#   LINE 162-163: if update_norm > clip_threshold: update.mul_(clip_threshold / update_norm)
+#
+# LINE 166-170: FIRST MOMENT (MOMENTUM):
+#   LINE 168: exp_avg.mul_(beta1).add_(grad, alpha=1 - beta1)
+#   LINE 169: bias_correction = 1 - beta1 ** step
+#   LINE 170: update = exp_avg / bias_correction  ← OVERWRITES VARIANCE-SCALED UPDATE!
+#
+# LINE 173: p.add_(update, alpha=-lr)
+#   → Apply MOMENTUM-ONLY update (NO VARIANCE NORMALIZATION)
+
+# =============================================================================
+# CRITICAL BUG IDENTIFICATION
+# =============================================================================
+
+# LINE 152: update = grad / (factored_var.sqrt() + eps2)
+#   → Computes variance-scaled update
+#   → This is CORRECT for Adam/Adafactor
+#
+# LINE 170: update = exp_avg / bias_correction
+#   → OVERWRITES the variance-scaled update with momentum-only!
+#   → This is WRONG - should be: update = exp_avg / (factored_var.sqrt() + eps2)
+#
+# LINE 173: p.add_(update, alpha=-lr)
+#   → Applies momentum-only update
+#   → Variance normalization is LOST
+
+# =============================================================================
+# WHAT THE CODE ACTUALLY DOES (BUGGY)
+# =============================================================================
+
+# STEP 1: Compute variance-scaled GRADIENT (not momentum)
+#   update = grad / sqrt(variance)
+#
+# STEP 2: Clip variance-scaled gradient
+#   if norm > threshold: normalize
+#
+# STEP 3: OVERWRITE with momentum (discard variance!)
+#   update = momentum / bias_correction
+#
+# STEP 4: Apply momentum-only update
+#   param = param - lr × update
+#
+# RESULT: SGD with momentum, NO variance normalization
+
+# =============================================================================
+# WHAT THE CODE SHOULD DO (CORRECT)
+# =============================================================================
+
+# STEP 1: Compute momentum
+#   m_t = β₁ × m_{t-1} + (1-β₁) × grad
+#   m_hat = m_t / bias_correction
+#
+# STEP 2: Compute variance
+#   v_t = β₂ × v_{t-1} + (1-β₂) × grad²  (or factored version)
+#
+# STEP 3: Compute update (APPLY VARIANCE TO MOMENTUM)
+#   update = m_hat / (sqrt(v_t) + ε)
+#
+# STEP 4: Clip update (optional)
+#   if norm > threshold: normalize
+#
+# STEP 5: Apply variance-normalized momentum update
+#   param = param - lr × update
+#
+# RESULT: Adam/Adafactor with variance normalization
+
+# =============================================================================
+# CORRECT IMPLEMENTATION
+# =============================================================================
+
+# The fix should be:
+#
+#   # First moment (momentum)
+#   if beta1 is not None:
+#       exp_avg = state['exp_avg']
+#       exp_avg.mul_(beta1).add_(grad, alpha=1 - beta1)
+#       bias_correction = 1 - beta1 ** step
+#       grad_to_use = exp_avg / bias_correction  # Use momentum
+#   else:
+#       grad_to_use = grad  # Use raw gradient
+#
+#   # Second moment (variance) - compute BEFORE momentum application
+#   if grad.dim() == 2:
+#       # Factored variance (SAME as before)
+#       grad_sq = grad_to_use * grad_to_use  # Use momentum for variance too!
+#       # ... (same factorization code)
+#       update = grad_to_use / (factored_var.sqrt() + eps2)
+#   else:
+#       exp_avg_sq = state['exp_avg_sq']
+#       exp_avg_sq.mul_(beta2).addcmul(grad_to_use, grad_to_use, value=1 - beta2)
+#       update = grad_to_use / (exp_avg_sq.sqrt() + eps2)
+#
+#   # Clip update
+#   update_norm = update.norm()
+#   if update_norm > clip_threshold:
+#       update.mul_(clip_threshold / update_norm)
+#
+#   # Apply update
+#   p.add_(update, alpha=-lr)
+
+# =============================================================================
+# IMPACT ON PREVIOUS EXPERIMENTS
+# =============================================================================
+
+# 1. Original 50k training: USED BUGGY OPTIMIZER
+#    - Behaved like SGD with momentum
+#    - NO variance normalization was applied
+#    - Explains why it failed to converge
+#
+# 2. Beta2 ablation (Phase 53): TESTING WRONG MECHANISM
+#    - Changed variance decay rate
+#    - But variance was NEVER APPLIED anyway
+#    - Results are INVALID
+#
+# 3. Eps2 ablation: TESTING WRONG MECHANISM
+#    - Changed variance epsilon
+#    - But variance was NEVER APPLIED anyway
+#    - Results are INVALID
+#
+# 4. Factorization comparison: SAME BUG IN BOTH
+#    - Both my test optimizers had the same bug
+#    - Both overwrote variance with momentum
+#    - Results are INVALID
+#
+# 5. AdamW success: CORRECT OPTIMIZER
+#    - AdamW applies variance TO momentum correctly
+#    - This is why AdamW works
+
+# =============================================================================
+# CONCLUSION
+# =============================================================================
+
+# The original 50k Adafactor training used a BROKEN optimizer that:
+# 1. Computed variance (wasted computation)
+# 2. Computed variance-scaled updates (discarded immediately)
+# 3. Applied momentum-only updates (like SGD with momentum)
+#
+# This explains:
+# - Why Adafactor failed while AdamW succeeded
+# - Why beta2/eps2 changes had no effect
+# - Why factorization comparison showed identical results
+#
+# The bug was present in:
+# - /root/agent-sandbox/ARTN/src/training/adafactor.py (lines 152, 170)
+# - ALL experiments that used this optimizer
+#
+# NEXT STEPS:
+# - DO NOT modify the implementation yet (preserve evidence)
+# - Document this finding in ROOT_CAUSE_INVESTIGATION_SUMMARY.md
+# - Create a CORRECTED Adafactor and test it
+# - Re-run the original 50k setup with CORRECTED optimizer
+
+# =============================================================================
+# VERIFICATION COMMAND
+# =============================================================================
+
+# To verify this bug, check lines 152 and 170 in:
+# /root/agent-sandbox/ARTN/src/training/adafactor.py
+#
+# LINE 152: update = grad / (factored_var.sqrt() + eps2)  ← Sets update
+# LINE 170: update = exp_avg / bias_correction  ← Overwrites update
+# LINE 173: p.add_(update, alpha=-lr)  ← Uses overwritten value
+#
+# The variance scaling from LINE 152 is NEVER APPLIED to parameters.

@@ -1,0 +1,117 @@
+================================================================================
+STAGE 2: CANONICAL ADAFACTOR vs ADAMW CONVERGENCE TEST
+================================================================================
+
+Expected runtime: ~45-90 minutes on CPU
+                   ~10-20 minutes on GPU (if available)
+
+Device: cpu
+
+Loading TinyStories data...
+  Train: 49988 samples
+  Val: 5000 samples
+
+================================================================================
+OPTIMIZER 1: CANONICAL ADAFACTOR
+================================================================================
+
+================================================================================
+TRAINING: Canonical Adafactor
+================================================================================
+
+Model: 6.77M parameters
+
+Step     0 | Train: 8.3577 | Val: 8.3454 | Upd/Param: 0.0129 | RAM: 0.2MB
+Step   100 | Train: 7.8413 | Val: 7.6867 | Upd/Param: 0.0129 | RAM: 0.2MB
+Step   200 | Train: 6.6107 | Val: 6.7566 | Upd/Param: 0.0128 | RAM: 0.2MB
+Step   300 | Train: 6.0380 | Val: 6.3328 | Upd/Param: 0.0128 | RAM: 0.2MB
+Step   400 | Train: 5.4013 | Val: 6.1685 | Upd/Param: 0.0127 | RAM: 0.2MB
+Step   500 | Train: 5.1546 | Val: 5.7076 | Upd/Param: 0.0127 | RAM: 0.2MB
+Step   600 | Train: 5.6894 | Val: 5.4623 | Upd/Param: 0.0126 | RAM: 0.2MB
+Step   700 | Train: 4.8826 | Val: 5.2825 | Upd/Param: 0.0126 | RAM: 0.3MB
+Step   800 | Train: 5.3519 | Val: 5.0272 | Upd/Param: 0.0120 | RAM: 0.3MB
+Step   900 | Train: 5.2064 | Val: 4.9840 | Upd/Param: 0.0098 | RAM: 0.3MB
+Step  1000 | Train: 5.1793 | Val: 5.0084 | Upd/Param: 0.0092 | RAM: 0.3MB
+Step  1100 | Train: 6.1538 | Val: 5.2304 | Upd/Param: 0.0121 | RAM: 0.3MB
+Step  1200 | Train: 5.4248 | Val: 5.0119 | Upd/Param: 0.0091 | RAM: 0.3MB
+Step  1300 | Train: 4.2788 | Val: 5.1933 | Upd/Param: 0.0080 | RAM: 0.3MB
+Step  1400 | Train: 4.8163 | Val: 5.0612 | Upd/Param: 0.0092 | RAM: 0.3MB
+Step  1500 | Train: 4.2690 | Val: 4.8709 | Upd/Param: 0.0090 | RAM: 0.3MB
+Step  1600 | Train: 4.6293 | Val: 4.7310 | Upd/Param: 0.0081 | RAM: 0.3MB
+Step  1700 | Train: 4.7151 | Val: 4.6794 | Upd/Param: 0.0085 | RAM: 0.3MB
+Step  1800 | Train: 4.1938 | Val: 5.0545 | Upd/Param: 0.0091 | RAM: 0.3MB
+Step  1900 | Train: 5.2534 | Val: 4.6200 | Upd/Param: 0.0100 | RAM: 0.3MB
+
+Final val loss: 4.8211
+Final val PPL: 124.10
+Peak RAM: 0.3MB
+
+================================================================================
+OPTIMIZER 2: ADAMW
+================================================================================
+
+================================================================================
+TRAINING: AdamW
+================================================================================
+
+Model: 6.77M parameters
+
+Step     0 | Train: 8.3577 | Val: 8.3454 | Upd/Param: 0.0129 | RAM: 0.0MB
+Step   100 | Train: 4.5464 | Val: 4.3050 | Upd/Param: 0.0079 | RAM: 0.1MB
+Step   200 | Train: 2.9016 | Val: 3.4361 | Upd/Param: 0.0055 | RAM: 0.1MB
+Step   300 | Train: 2.8921 | Val: 3.2313 | Upd/Param: 0.0055 | RAM: 0.1MB
+Step   400 | Train: 2.5158 | Val: 3.1928 | Upd/Param: 0.0054 | RAM: 0.1MB
+Step   500 | Train: 2.5248 | Val: 2.9808 | Upd/Param: 0.0053 | RAM: 0.1MB
+Step   600 | Train: 2.9507 | Val: 2.9534 | Upd/Param: 0.0056 | RAM: 0.1MB
+Step   700 | Train: 2.5405 | Val: 2.8778 | Upd/Param: 0.0052 | RAM: 0.1MB
+Step   800 | Train: 2.8743 | Val: 2.7592 | Upd/Param: 0.0059 | RAM: 0.1MB
+Step   900 | Train: 2.7748 | Val: 2.7366 | Upd/Param: 0.0056 | RAM: 0.1MB
+Step  1000 | Train: 2.7735 | Val: 2.6983 | Upd/Param: 0.0052 | RAM: 0.1MB
+Step  1100 | Train: 3.2195 | Val: 2.8169 | Upd/Param: 0.0063 | RAM: 0.1MB
+Step  1200 | Train: 2.8789 | Val: 2.6708 | Upd/Param: 0.0055 | RAM: 0.1MB
+Step  1300 | Train: 2.2936 | Val: 2.7281 | Upd/Param: 0.0048 | RAM: 0.1MB
+Step  1400 | Train: 2.6740 | Val: 2.6286 | Upd/Param: 0.0056 | RAM: 0.1MB
+Step  1500 | Train: 2.2378 | Val: 2.5064 | Upd/Param: 0.0049 | RAM: 0.1MB
+Step  1600 | Train: 2.4035 | Val: 2.3927 | Upd/Param: 0.0051 | RAM: 0.1MB
+Step  1700 | Train: 2.4044 | Val: 2.4166 | Upd/Param: 0.0054 | RAM: 0.1MB
+Step  1800 | Train: 2.1056 | Val: 2.5884 | Upd/Param: 0.0051 | RAM: 0.1MB
+Step  1900 | Train: 2.5589 | Val: 2.3269 | Upd/Param: 0.0056 | RAM: 0.1MB
+
+Final val loss: 2.4058
+Final val PPL: 11.09
+Peak RAM: 0.1MB
+
+================================================================================
+COMPARISON
+================================================================================
+
+Optimizer                 Final Val Loss     Final Val PPL   Peak RAM    
+----------------------------------------------------------------------
+Canonical Adafactor       4.8211             124.10          0.3         MB
+AdamW                     2.4058             11.09           0.1         MB
+
+Val Loss Ratio (Adafactor / AdamW): 2.00x
+
+================================================================================
+VERDICT
+================================================================================
+
+✗ Canonical Adafactor performs SIGNIFICANTLY WORSE than AdamW
+  Ratio: 2.00x
+Traceback (most recent call last):
+  File "/root/agent-sandbox/ARTN/experiments/stage2_canonical_adafactor_convergence.py", line 280, in <module>
+    json.dump(adafactor_results, f, indent=2)
+  File "/usr/lib/python3.12/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/usr/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Tensor is not JSON serializable

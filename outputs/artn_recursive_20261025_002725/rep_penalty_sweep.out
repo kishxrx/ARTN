@@ -1,0 +1,143 @@
+Loading ARTN model...
+  Loaded: step=10000
+
+======================================================================
+INVESTIGATION 3: Repetition Penalty Sweep
+======================================================================
+
+--- Threshold=1.0, Penalty=1.0 ---
+  [1/100] 'once upon a time there was a dog   ' rep=0.286 unique=0.612 max_rep=0
+  [2/100] 'there was a little girl            ' rep=0.143 unique=0.620 max_rep=0
+  [3/100] 'there lived a                      ' rep=0.353 unique=0.540 max_rep=0
+  [4/100] 'a king                             ' rep=0.044 unique=0.833 max_rep=0
+  [5/100] 'king                               ' rep=0.167 unique=0.640 max_rep=0
+  [6/100] 'a bison from wild forest           ' rep=0.205 unique=0.580 max_rep=0
+  [7/100] 'a peacock                          ' rep=0.189 unique=0.622 max_rep=0
+  [8/100] 'The scientist mixed two chemicals  ' rep=0.583 unique=0.400 max_rep=0
+  [9/100] 'In the year 3024, humanity         ' rep=0.303 unique=0.500 max_rep=0
+  [10/100] 'Why did the chicken cross          ' rep=0.125 unique=0.630 max_rep=0
+
+--- Threshold=1.0, Penalty=1.1 ---
+  [11/100] 'once upon a time there was a dog   ' rep=0.093 unique=0.714 max_rep=0
+  [12/100] 'there was a little girl            ' rep=0.140 unique=0.680 max_rep=0
+  [13/100] 'there lived a                      ' rep=0.043 unique=0.760 max_rep=0
+  [14/100] 'a king                             ' rep=0.000 unique=0.812 max_rep=0
+  [15/100] 'king                               ' rep=0.043 unique=0.680 max_rep=0
+  [16/100] 'a bison from wild forest           ' rep=0.065 unique=0.780 max_rep=0
+  [17/100] 'a peacock                          ' rep=0.125 unique=0.652 max_rep=0
+  [18/100] 'The scientist mixed two chemicals  ' rep=0.000 unique=0.771 max_rep=0
+  [19/100] 'In the year 3024, humanity         ' rep=0.091 unique=0.714 max_rep=0
+  [20/100] 'Why did the chicken cross          ' rep=0.098 unique=0.625 max_rep=0
+
+--- Threshold=1.0, Penalty=1.2 ---
+  [21/100] 'once upon a time there was a dog   ' rep=0.021 unique=0.816 max_rep=0
+  [22/100] 'there was a little girl            ' rep=0.140 unique=0.700 max_rep=0
+  [23/100] 'there lived a                      ' rep=0.043 unique=0.760 max_rep=0
+  [24/100] 'a king                             ' rep=0.021 unique=0.796 max_rep=0
+  [25/100] 'king                               ' rep=0.044 unique=0.771 max_rep=0
+  [26/100] 'a bison from wild forest           ' rep=0.000 unique=0.880 max_rep=0
+  [27/100] 'a peacock                          ' rep=0.043 unique=0.760 max_rep=0
+  [28/100] 'The scientist mixed two chemicals  ' rep=0.043 unique=0.776 max_rep=0
+  [29/100] 'In the year 3024, humanity         ' rep=0.000 unique=0.837 max_rep=0
+  [30/100] 'Why did the chicken cross          ' rep=0.070 unique=0.729 max_rep=0
+
+--- Threshold=1.0, Penalty=1.3 ---
+  [31/100] 'once upon a time there was a dog   ' rep=0.022 unique=0.917 max_rep=0
+  [32/100] 'there was a little girl            ' rep=0.000 unique=0.900 max_rep=0
+  [33/100] 'there lived a                      ' rep=0.000 unique=0.860 max_rep=0
+  [34/100] 'a king                             ' rep=0.000 unique=0.935 max_rep=0
+  [35/100] 'king                               ' rep=0.000 unique=0.880 max_rep=0
+  [36/100] 'a bison from wild forest           ' rep=0.000 unique=0.840 max_rep=0
+  [37/100] 'a peacock                          ' rep=0.000 unique=0.880 max_rep=0
+  [38/100] 'The scientist mixed two chemicals  ' rep=0.000 unique=0.860 max_rep=0
+  [39/100] 'In the year 3024, humanity         ' rep=0.000 unique=0.900 max_rep=0
+  [40/100] 'Why did the chicken cross          ' rep=0.022 unique=0.854 max_rep=0
+
+--- Threshold=1.0, Penalty=1.5 ---
+  [41/100] 'once upon a time there was a dog   ' rep=0.000 unique=0.918 max_rep=0
+  [42/100] 'there was a little girl            ' rep=0.000 unique=0.980 max_rep=0
+  [43/100] 'there lived a                      ' rep=0.000 unique=0.940 max_rep=0
+  [44/100] 'a king                             ' rep=0.000 unique=0.935 max_rep=0
+  [45/100] 'king                               ' rep=0.000 unique=0.960 max_rep=0
+  [46/100] 'a bison from wild forest           ' rep=0.000 unique=0.920 max_rep=0
+  [47/100] 'a peacock                          ' rep=0.000 unique=0.940 max_rep=0
+  [48/100] 'The scientist mixed two chemicals  ' rep=0.000 unique=0.938 max_rep=0
+  [49/100] 'In the year 3024, humanity         ' rep=0.000 unique=0.939 max_rep=0
+  [50/100] 'Why did the chicken cross          ' rep=0.000 unique=0.935 max_rep=0
+
+--- Threshold=0.9, Penalty=1.0 ---
+  [51/100] 'once upon a time there was a dog   ' rep=0.286 unique=0.612 max_rep=0
+  [52/100] 'there was a little girl            ' rep=0.143 unique=0.620 max_rep=0
+  [53/100] 'there lived a                      ' rep=0.353 unique=0.540 max_rep=0
+  [54/100] 'a king                             ' rep=0.071 unique=0.745 max_rep=0
+  [55/100] 'king                               ' rep=0.684 unique=0.260 max_rep=0
+  [56/100] 'a bison from wild forest           ' rep=0.205 unique=0.580 max_rep=0
+  [57/100] 'a peacock                          ' rep=0.348 unique=0.514 max_rep=0
+  [58/100] 'The scientist mixed two chemicals  ' rep=0.583 unique=0.400 max_rep=0
+  [59/100] 'In the year 3024, humanity         ' rep=0.303 unique=0.500 max_rep=0
+  [60/100] 'Why did the chicken cross          ' rep=0.667 unique=0.220 max_rep=0
+
+--- Threshold=0.9, Penalty=1.1 ---
+  [61/100] 'once upon a time there was a dog   ' rep=0.093 unique=0.714 max_rep=0
+  [62/100] 'there was a little girl            ' rep=0.140 unique=0.680 max_rep=0
+  [63/100] 'there lived a                      ' rep=0.043 unique=0.760 max_rep=0
+  [64/100] 'a king                             ' rep=0.022 unique=0.745 max_rep=0
+  [65/100] 'king                               ' rep=0.065 unique=0.740 max_rep=0
+  [66/100] 'a bison from wild forest           ' rep=0.065 unique=0.780 max_rep=0
+  [67/100] 'a peacock                          ' rep=0.000 unique=0.766 max_rep=0
+  [68/100] 'The scientist mixed two chemicals  ' rep=0.000 unique=0.771 max_rep=0
+  [69/100] 'In the year 3024, humanity         ' rep=0.067 unique=0.720 max_rep=0
+  [70/100] 'Why did the chicken cross          ' rep=0.098 unique=0.625 max_rep=0
+
+--- Threshold=0.9, Penalty=1.2 ---
+  [71/100] 'once upon a time there was a dog   ' rep=0.021 unique=0.816 max_rep=0
+  [72/100] 'there was a little girl            ' rep=0.140 unique=0.700 max_rep=0
+  [73/100] 'there lived a                      ' rep=0.043 unique=0.760 max_rep=0
+  [74/100] 'a king                             ' rep=0.045 unique=0.851 max_rep=0
+  [75/100] 'king                               ' rep=0.000 unique=0.851 max_rep=0
+  [76/100] 'a bison from wild forest           ' rep=0.000 unique=0.880 max_rep=0
+  [77/100] 'a peacock                          ' rep=0.043 unique=0.760 max_rep=0
+  [78/100] 'The scientist mixed two chemicals  ' rep=0.043 unique=0.776 max_rep=0
+  [79/100] 'In the year 3024, humanity         ' rep=0.000 unique=0.837 max_rep=0
+  [80/100] 'Why did the chicken cross          ' rep=0.070 unique=0.729 max_rep=0
+
+--- Threshold=0.9, Penalty=1.3 ---
+  [81/100] 'once upon a time there was a dog   ' rep=0.022 unique=0.917 max_rep=0
+  [82/100] 'there was a little girl            ' rep=0.000 unique=0.880 max_rep=0
+  [83/100] 'there lived a                      ' rep=0.000 unique=0.860 max_rep=0
+  [84/100] 'a king                             ' rep=0.000 unique=0.935 max_rep=0
+  [85/100] 'king                               ' rep=0.021 unique=0.837 max_rep=0
+  [86/100] 'a bison from wild forest           ' rep=0.000 unique=0.840 max_rep=0
+  [87/100] 'a peacock                          ' rep=0.000 unique=0.880 max_rep=0
+  [88/100] 'The scientist mixed two chemicals  ' rep=0.000 unique=0.860 max_rep=0
+  [89/100] 'In the year 3024, humanity         ' rep=0.000 unique=0.880 max_rep=0
+  [90/100] 'Why did the chicken cross          ' rep=0.022 unique=0.854 max_rep=0
+
+--- Threshold=0.9, Penalty=1.5 ---
+  [91/100] 'once upon a time there was a dog   ' rep=0.000 unique=0.918 max_rep=0
+  [92/100] 'there was a little girl            ' rep=0.000 unique=0.980 max_rep=0
+  [93/100] 'there lived a                      ' rep=0.000 unique=0.940 max_rep=0
+  [94/100] 'a king                             ' rep=0.000 unique=0.935 max_rep=0
+  [95/100] 'king                               ' rep=0.000 unique=0.979 max_rep=0
+  [96/100] 'a bison from wild forest           ' rep=0.000 unique=0.896 max_rep=0
+  [97/100] 'a peacock                          ' rep=0.000 unique=0.940 max_rep=0
+  [98/100] 'The scientist mixed two chemicals  ' rep=0.000 unique=0.875 max_rep=0
+  [99/100] 'In the year 3024, humanity         ' rep=0.000 unique=0.939 max_rep=0
+  [100/100] 'Why did the chicken cross          ' rep=0.000 unique=0.978 max_rep=0
+
+
+Results saved to: /root/agent-sandbox/ARTN/outputs/artn_recursive_20261025_002725/rep_penalty_sweep.json
+
+======================================================================
+SUMMARY: Average metrics by penalty and threshold
+======================================================================
+
+Penalty    t=1.0 rep  t=0.9 rep  t=1.0 uniq  t=0.9 uniq  t=1.0 maxRpt t=0.9 maxRpt
+-------------------------------------------------------------------------------------
+  1.0        0.240      0.364      0.598       0.499       0.0          0.0
+  1.1        0.070      0.059      0.719       0.730       0.0          0.0
+  1.2        0.042      0.041      0.782       0.796       0.0          0.0
+  1.3        0.004      0.007      0.883       0.874       0.0          0.0
+  1.5        0.000      0.000      0.940       0.938       0.0          0.0
+
+DONE

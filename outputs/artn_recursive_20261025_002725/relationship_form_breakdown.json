@@ -1,0 +1,271 @@
+{
+ "corpora": {
+  "original": {
+   "bird": {
+    "modal+base": 160,
+    "infinitive": 246,
+    "progressive": 400,
+    "past": 1273,
+    "present-3sg": 19,
+    "present-base": 229,
+    "distant-cooc": 342,
+    "subject-only": 13142,
+    "EXACT_FRAME": 37,
+    "sentences_with_subject": 15711
+   },
+   "fish": {
+    "modal+base": 18,
+    "infinitive": 58,
+    "progressive": 179,
+    "past": 143,
+    "present-3sg": 5,
+    "present-base": 40,
+    "distant-cooc": 149,
+    "subject-only": 2840,
+    "EXACT_FRAME": 8,
+    "sentences_with_subject": 3413
+   },
+   "dragon": {
+    "modal+base": 5,
+    "infinitive": 3,
+    "progressive": 12,
+    "past": 45,
+    "present-3sg": 1,
+    "present-base": 9,
+    "distant-cooc": 15,
+    "subject-only": 1209,
+    "EXACT_FRAME": 4,
+    "sentences_with_subject": 1297
+   },
+   "dog": {
+    "modal+base": 6,
+    "infinitive": 27,
+    "progressive": 207,
+    "past": 226,
+    "present-3sg": 86,
+    "present-base": 24,
+    "distant-cooc": 211,
+    "subject-only": 9168,
+    "EXACT_FRAME": 2,
+    "sentences_with_subject": 9945
+   },
+   "king": {
+    "modal+base": 4,
+    "infinitive": 11,
+    "progressive": 3,
+    "past": 2,
+    "present-3sg": 0,
+    "present-base": 11,
+    "distant-cooc": 12,
+    "subject-only": 897,
+    "EXACT_FRAME": 0,
+    "sentences_with_subject": 939
+   },
+   "teacher": {
+    "modal+base": 5,
+    "infinitive": 10,
+    "progressive": 1,
+    "past": 15,
+    "present-3sg": 0,
+    "present-base": 0,
+    "distant-cooc": 1,
+    "subject-only": 1017,
+    "EXACT_FRAME": 1,
+    "sentences_with_subject": 1049
+   },
+   "peacock": {
+    "modal+base": 0,
+    "infinitive": 0,
+    "progressive": 0,
+    "past": 0,
+    "present-3sg": 0,
+    "present-base": 0,
+    "distant-cooc": 0,
+    "subject-only": 18,
+    "EXACT_FRAME": 0,
+    "sentences_with_subject": 18
+   }
+  },
+  "treatment_a": {
+   "bird": {
+    "modal+base": 160,
+    "infinitive": 247,
+    "progressive": 401,
+    "past": 1288,
+    "present-3sg": 33,
+    "present-base": 229,
+    "distant-cooc": 345,
+    "subject-only": 13419,
+    "EXACT_FRAME": 37,
+    "sentences_with_subject": 16021
+   },
+   "fish": {
+    "modal+base": 18,
+    "infinitive": 58,
+    "progressive": 180,
+    "past": 143,
+    "present-3sg": 5,
+    "present-base": 41,
+    "distant-cooc": 150,
+    "subject-only": 2852,
+    "EXACT_FRAME": 8,
+    "sentences_with_subject": 3428
+   },
+   "dragon": {
+    "modal+base": 5,
+    "infinitive": 3,
+    "progressive": 12,
+    "past": 45,
+    "present-3sg": 1,
+    "present-base": 10,
+    "distant-cooc": 17,
+    "subject-only": 1255,
+    "EXACT_FRAME": 4,
+    "sentences_with_subject": 1346
+   },
+   "dog": {
+    "modal+base": 6,
+    "infinitive": 27,
+    "progressive": 211,
+    "past": 226,
+    "present-3sg": 86,
+    "present-base": 25,
+    "distant-cooc": 212,
+    "subject-only": 9227,
+    "EXACT_FRAME": 2,
+    "sentences_with_subject": 10010
+   },
+   "king": {
+    "modal+base": 6,
+    "infinitive": 17,
+    "progressive": 5,
+    "past": 2,
+    "present-3sg": 0,
+    "present-base": 18,
+    "distant-cooc": 19,
+    "subject-only": 1468,
+    "EXACT_FRAME": 0,
+    "sentences_with_subject": 1534
+   },
+   "teacher": {
+    "modal+base": 6,
+    "infinitive": 15,
+    "progressive": 1,
+    "past": 22,
+    "present-3sg": 0,
+    "present-base": 0,
+    "distant-cooc": 2,
+    "subject-only": 1453,
+    "EXACT_FRAME": 1,
+    "sentences_with_subject": 1499
+   },
+   "peacock": {
+    "modal+base": 0,
+    "infinitive": 0,
+    "progressive": 0,
+    "past": 0,
+    "present-3sg": 0,
+    "present-base": 0,
+    "distant-cooc": 0,
+    "subject-only": 285,
+    "EXACT_FRAME": 0,
+    "sentences_with_subject": 285
+   }
+  },
+  "treatment_b": {
+   "bird": {
+    "modal+base": 160,
+    "infinitive": 246,
+    "progressive": 401,
+    "past": 1273,
+    "present-3sg": 19,
+    "present-base": 229,
+    "distant-cooc": 342,
+    "subject-only": 13393,
+    "EXACT_FRAME": 37,
+    "sentences_with_subject": 15963
+   },
+   "fish": {
+    "modal+base": 18,
+    "infinitive": 58,
+    "progressive": 199,
+    "past": 163,
+    "present-3sg": 5,
+    "present-base": 41,
+    "distant-cooc": 169,
+    "subject-only": 2967,
+    "EXACT_FRAME": 8,
+    "sentences_with_subject": 3581
+   },
+   "dragon": {
+    "modal+base": 5,
+    "infinitive": 3,
+    "progressive": 12,
+    "past": 45,
+    "present-3sg": 1,
+    "present-base": 9,
+    "distant-cooc": 15,
+    "subject-only": 1209,
+    "EXACT_FRAME": 4,
+    "sentences_with_subject": 1297
+   },
+   "dog": {
+    "modal+base": 6,
+    "infinitive": 27,
+    "progressive": 207,
+    "past": 233,
+    "present-3sg": 86,
+    "present-base": 24,
+    "distant-cooc": 211,
+    "subject-only": 9203,
+    "EXACT_FRAME": 2,
+    "sentences_with_subject": 9987
+   },
+   "king": {
+    "modal+base": 4,
+    "infinitive": 11,
+    "progressive": 3,
+    "past": 2,
+    "present-3sg": 0,
+    "present-base": 11,
+    "distant-cooc": 13,
+    "subject-only": 1532,
+    "EXACT_FRAME": 0,
+    "sentences_with_subject": 1575
+   },
+   "teacher": {
+    "modal+base": 5,
+    "infinitive": 10,
+    "progressive": 1,
+    "past": 42,
+    "present-3sg": 0,
+    "present-base": 0,
+    "distant-cooc": 1,
+    "subject-only": 1484,
+    "EXACT_FRAME": 1,
+    "sentences_with_subject": 1543
+   },
+   "peacock": {
+    "modal+base": 0,
+    "infinitive": 4,
+    "progressive": 0,
+    "past": 0,
+    "present-3sg": 0,
+    "present-base": 0,
+    "distant-cooc": 0,
+    "subject-only": 288,
+    "EXACT_FRAME": 0,
+    "sentences_with_subject": 292
+   }
+  }
+ },
+ "relationships": {
+  "bird": "fly",
+  "fish": "swim",
+  "dragon": "fly",
+  "dog": "run",
+  "king": "help",
+  "teacher": "teach",
+  "peacock": "fly"
+ }
+}

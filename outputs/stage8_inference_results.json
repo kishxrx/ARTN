@@ -1,0 +1,457 @@
+{
+  "test_date": "2026-10-15",
+  "stage": "Stage 8 - Quantized Inference",
+  "checkpoint": "outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_9500.pt",
+  "tokenizer": "outputs/artn-optimized/tokenizer.json",
+  "device": "cpu",
+  "generation_config": {
+    "max_new_tokens": 100,
+    "temperature": 0.9
+  },
+  "ternary_stats": {
+    "num_bitlinear_layers": 37,
+    "total_params": 5742592,
+    "ternary_distribution": {
+      "negative": 0.32562490944855566,
+      "zero": 0.34718102905447573,
+      "positive": 0.3271940614969686
+    },
+    "is_quantized": true,
+    "layer_stats": [
+      {
+        "name": "blocks.0.attn.q_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.324188232421875,
+          "zero": 0.3542633056640625,
+          "positive": 0.3215484619140625
+        }
+      },
+      {
+        "name": "blocks.0.attn.k_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.3286590576171875,
+          "zero": 0.34326171875,
+          "positive": 0.3280792236328125
+        }
+      },
+      {
+        "name": "blocks.0.attn.v_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.332550048828125,
+          "zero": 0.334503173828125,
+          "positive": 0.33294677734375
+        }
+      },
+      {
+        "name": "blocks.0.attn.o_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.331939697265625,
+          "zero": 0.3353729248046875,
+          "positive": 0.3326873779296875
+        }
+      },
+      {
+        "name": "blocks.0.ff.w1",
+        "params": 262144,
+        "distribution": {
+          "negative": 0.34098052978515625,
+          "zero": 0.31646728515625,
+          "positive": 0.34255218505859375
+        }
+      },
+      {
+        "name": "blocks.0.ff.w2",
+        "params": 262144,
+        "distribution": {
+          "negative": 0.3441200256347656,
+          "zero": 0.31072998046875,
+          "positive": 0.3451499938964844
+        }
+      },
+      {
+        "name": "blocks.1.attn.q_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.337493896484375,
+          "zero": 0.32427978515625,
+          "positive": 0.338226318359375
+        }
+      },
+      {
+        "name": "blocks.1.attn.k_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.337127685546875,
+          "zero": 0.32379150390625,
+          "positive": 0.339080810546875
+        }
+      },
+      {
+        "name": "blocks.1.attn.v_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.3395233154296875,
+          "zero": 0.322479248046875,
+          "positive": 0.3379974365234375
+        }
+      },
+      {
+        "name": "blocks.1.attn.o_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.3352508544921875,
+          "zero": 0.329132080078125,
+          "positive": 0.3356170654296875
+        }
+      },
+      {
+        "name": "blocks.1.ff.w1",
+        "params": 262144,
+        "distribution": {
+          "negative": 0.3439140319824219,
+          "zero": 0.3158226013183594,
+          "positive": 0.34026336669921875
+        }
+      },
+      {
+        "name": "blocks.1.ff.w2",
+        "params": 262144,
+        "distribution": {
+          "negative": 0.3412017822265625,
+          "zero": 0.31732940673828125,
+          "positive": 0.34146881103515625
+        }
+      },
+      {
+        "name": "blocks.2.attn.q_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.34014892578125,
+          "zero": 0.3241424560546875,
+          "positive": 0.3357086181640625
+        }
+      },
+      {
+        "name": "blocks.2.attn.k_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.33660888671875,
+          "zero": 0.325408935546875,
+          "positive": 0.337982177734375
+        }
+      },
+      {
+        "name": "blocks.2.attn.v_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.3359527587890625,
+          "zero": 0.326202392578125,
+          "positive": 0.3378448486328125
+        }
+      },
+      {
+        "name": "blocks.2.attn.o_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.334716796875,
+          "zero": 0.3300018310546875,
+          "positive": 0.3352813720703125
+        }
+      },
+      {
+        "name": "blocks.2.ff.w1",
+        "params": 262144,
+        "distribution": {
+          "negative": 0.3400764465332031,
+          "zero": 0.317535400390625,
+          "positive": 0.3423881530761719
+        }
+      },
+      {
+        "name": "blocks.2.ff.w2",
+        "params": 262144,
+        "distribution": {
+          "negative": 0.3406791687011719,
+          "zero": 0.3185234069824219,
+          "positive": 0.34079742431640625
+        }
+      },
+      {
+        "name": "blocks.3.attn.q_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.340240478515625,
+          "zero": 0.3196868896484375,
+          "positive": 0.3400726318359375
+        }
+      },
+      {
+        "name": "blocks.3.attn.k_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.340545654296875,
+          "zero": 0.319732666015625,
+          "positive": 0.3397216796875
+        }
+      },
+      {
+        "name": "blocks.3.attn.v_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.3393096923828125,
+          "zero": 0.3208465576171875,
+          "positive": 0.33984375
+        }
+      },
+      {
+        "name": "blocks.3.attn.o_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.3361358642578125,
+          "zero": 0.329498291015625,
+          "positive": 0.3343658447265625
+        }
+      },
+      {
+        "name": "blocks.3.ff.w1",
+        "params": 262144,
+        "distribution": {
+          "negative": 0.3417701721191406,
+          "zero": 0.31941986083984375,
+          "positive": 0.3388099670410156
+        }
+      },
+      {
+        "name": "blocks.3.ff.w2",
+        "params": 262144,
+        "distribution": {
+          "negative": 0.33969879150390625,
+          "zero": 0.3218421936035156,
+          "positive": 0.3384590148925781
+        }
+      },
+      {
+        "name": "blocks.4.attn.q_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.3408050537109375,
+          "zero": 0.3202972412109375,
+          "positive": 0.338897705078125
+        }
+      },
+      {
+        "name": "blocks.4.attn.k_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.3372039794921875,
+          "zero": 0.3217010498046875,
+          "positive": 0.341094970703125
+        }
+      },
+      {
+        "name": "blocks.4.attn.v_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.3377685546875,
+          "zero": 0.3239288330078125,
+          "positive": 0.3383026123046875
+        }
+      },
+      {
+        "name": "blocks.4.attn.o_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.336669921875,
+          "zero": 0.3255767822265625,
+          "positive": 0.3377532958984375
+        }
+      },
+      {
+        "name": "blocks.4.ff.w1",
+        "params": 262144,
+        "distribution": {
+          "negative": 0.3403587341308594,
+          "zero": 0.32009124755859375,
+          "positive": 0.3395500183105469
+        }
+      },
+      {
+        "name": "blocks.4.ff.w2",
+        "params": 262144,
+        "distribution": {
+          "negative": 0.33875274658203125,
+          "zero": 0.3235130310058594,
+          "positive": 0.3377342224121094
+        }
+      },
+      {
+        "name": "blocks.5.attn.q_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.33953857421875,
+          "zero": 0.32086181640625,
+          "positive": 0.339599609375
+        }
+      },
+      {
+        "name": "blocks.5.attn.k_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.336822509765625,
+          "zero": 0.32489013671875,
+          "positive": 0.338287353515625
+        }
+      },
+      {
+        "name": "blocks.5.attn.v_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.33636474609375,
+          "zero": 0.33062744140625,
+          "positive": 0.3330078125
+        }
+      },
+      {
+        "name": "blocks.5.attn.o_proj",
+        "params": 65536,
+        "distribution": {
+          "negative": 0.3347625732421875,
+          "zero": 0.3314666748046875,
+          "positive": 0.333770751953125
+        }
+      },
+      {
+        "name": "blocks.5.ff.w1",
+        "params": 262144,
+        "distribution": {
+          "negative": 0.3392906188964844,
+          "zero": 0.3200340270996094,
+          "positive": 0.34067535400390625
+        }
+      },
+      {
+        "name": "blocks.5.ff.w2",
+        "params": 262144,
+        "distribution": {
+          "negative": 0.33556365966796875,
+          "zero": 0.32778167724609375,
+          "positive": 0.3366546630859375
+        }
+      },
+      {
+        "name": "lm_head",
+        "params": 1024000,
+        "distribution": {
+          "negative": 0.2634833984375,
+          "zero": 0.4635791015625,
+          "positive": 0.2729375
+        }
+      }
+    ]
+  },
+  "results": [
+    {
+      "prompt": "Once upon a time",
+      "generated_text": "Once upon a time there was a bird that would lock the window. The bird was always curious and was always looking for a chance. One day it flew to a tall top of the light and the bird met a big bird. The bird loved to fly. It looked up and made his way inseed. It flew to the sky and it explained how beautiful it could help. The bird flew so high, and followed the noise. But when she saw something happened! It was a boat that had had ever seen before. The bird was so happy",
+      "continuation": "there was a bird that would lock the window. The bird was always curious and was always looking for a chance. One day it flew to a tall top of the light and the bird met a big bird. The bird loved to fly. It looked up and made his way inseed. It flew to the sky and it explained how beautiful it could help. The bird flew so high, and followed the noise. But when she saw something happened! It was a boat that had had ever seen before. The bird was so happy",
+      "num_tokens": 100,
+      "generation_time": 18.490114450454712,
+      "tokens_per_second": 5.408295349818172,
+      "peak_ram_mb": 0.18313217163085938
+    },
+    {
+      "prompt": "A little girl named",
+      "generated_text": "A little girl named Lucy was out walking in the forest one day. She saw a butterfly warvelvest through a tree. She was delighted and wanted to take it home with her. Lucy grabbed the string and started to get the girl with her toy. But she wanted to escape it from the world. Lucy started to cry. She hugged her toys tight. She wanted them back, but they never had to reTom. They looked everywhere, the parents, and then they came out. They had a lot of fun all the things they saw. The",
+      "continuation": "Lucy was out walking in the forest one day. She saw a butterfly warvelvest through a tree. She was delighted and wanted to take it home with her. Lucy grabbed the string and started to get the girl with her toy. But she wanted to escape it from the world. Lucy started to cry. She hugged her toys tight. She wanted them back, but they never had to reTom. They looked everywhere, the parents, and then they came out. They had a lot of fun all the things they saw. The",
+      "num_tokens": 100,
+      "generation_time": 18.4799063205719,
+      "tokens_per_second": 5.41128284230963,
+      "peak_ram_mb": 0.006056785583496094
+    },
+    {
+      "prompt": "The boy went to the",
+      "generated_text": "The boy went to the park with his mom. They saw a boy who was very highing. The boy had a gift. He wanted to try the careless. So he ran to the pet boy and said, \"Yes! Grace!\" The boy got very fast. The boy looked at the swing and smiled at Tom. He said, \"I want to play with the swing. We can play and have fun. But you have to be careful!\" They ran and ran together. The boy felt so happy and his mom said, \"You are so helpful, Max. You are always",
+      "continuation": "park with his mom. They saw a boy who was very highing. The boy had a gift. He wanted to try the careless. So he ran to the pet boy and said, \"Yes! Grace!\" The boy got very fast. The boy looked at the swing and smiled at Tom. He said, \"I want to play with the swing. We can play and have fun. But you have to be careful!\" They ran and ran together. The boy felt so happy and his mom said, \"You are so helpful, Max. You are always",
+      "num_tokens": 100,
+      "generation_time": 18.386005878448486,
+      "tokens_per_second": 5.4389191791359615,
+      "peak_ram_mb": 0.006075859069824219
+    },
+    {
+      "prompt": "There was a big dog",
+      "generated_text": "There was a big dog named Max. Max loved to run around in the park and play. But one day, Max wanted something want to go on a big dinner. Max got the ladder and was scared. Max said, \"OK! I want to go get the ladder.\" Max replied, \"No, I want to go on close!\" Max laughed and said, \"No, Max! You can't swim now. I don't want you!\" Max bit er!\" Max pushed Max down and asked the ladder. Max was angry and they argued. Max wanted to grab me too, but Max got mad at",
+      "continuation": "named Max. Max loved to run around in the park and play. But one day, Max wanted something want to go on a big dinner. Max got the ladder and was scared. Max said, \"OK! I want to go get the ladder.\" Max replied, \"No, I want to go on close!\" Max laughed and said, \"No, Max! You can't swim now. I don't want you!\" Max bit er!\" Max pushed Max down and asked the ladder. Max was angry and they argued. Max wanted to grab me too, but Max got mad at",
+      "num_tokens": 100,
+      "generation_time": 18.65800905227661,
+      "tokens_per_second": 5.35962865704571,
+      "peak_ram_mb": 0.005962371826171875
+    },
+    {
+      "prompt": "She looked at the sky and",
+      "generated_text": "She looked at the sky and the embarrassed. She had never rested her dream before. She wanted to dress it before it was el. She wanted the cry and touched it. But the light. She was clumsy. She sprayed her hands and put it in her arm around her bed. But the nights were fly very high and there was no one came. So the room started to rice. She asked her mom, \"What are you doing? It's a fast gym? It is very pretty!\" Her mom smiled and said, \"That's right, sweeti",
+      "continuation": "the embarrassed. She had never rested her dream before. She wanted to dress it before it was el. She wanted the cry and touched it. But the light. She was clumsy. She sprayed her hands and put it in her arm around her bed. But the nights were fly very high and there was no one came. So the room started to rice. She asked her mom, \"What are you doing? It's a fast gym? It is very pretty!\" Her mom smiled and said, \"That's right, sweeti",
+      "num_tokens": 100,
+      "generation_time": 18.480002880096436,
+      "tokens_per_second": 5.411254567914773,
+      "peak_ram_mb": 0.0066013336181640625
+    },
+    {
+      "prompt": "In the morning, the",
+      "generated_text": "In the morning, the boy was in the house. Every day, the book was the first painting. He saw a big book on the wall. It was so pale and shiny. He looked at the book and pointed it. The boy smiled at the pictures away. He looked at his mom and said, \"Mommy, can we paint this book and paint and the pasta. It is so soft?\" He tied the book to a picture of the book. He noticed lots of pictures and pictures that the book. He even gathered all the read more. He was so excited.",
+      "continuation": "boy was in the house. Every day, the book was the first painting. He saw a big book on the wall. It was so pale and shiny. He looked at the book and pointed it. The boy smiled at the pictures away. He looked at his mom and said, \"Mommy, can we paint this book and paint and the pasta. It is so soft?\" He tied the book to a picture of the book. He noticed lots of pictures and pictures that the book. He even gathered all the read more. He was so excited.",
+      "num_tokens": 100,
+      "generation_time": 18.53355574607849,
+      "tokens_per_second": 5.395618702102481,
+      "peak_ram_mb": 0.0114593505859375
+    },
+    {
+      "prompt": "The cat sat on the",
+      "generated_text": "The cat sat on the house. It asked the voice er for help. The rough, the separed smiled and said, \"I want to find something to bak\". The two friends waited in the gump to each other as they walked by. There they saw a big, dark hedly in the garden. They were talking inside the door and they were scared. But the remeren, the rat shouted, \"Let's both have fups!\" All of a sudden, the voice answered out to a vestout. The screamed",
+      "continuation": "house. It asked the voice er for help. The rough, the separed smiled and said, \"I want to find something to bak\". The two friends waited in the gump to each other as they walked by. There they saw a big, dark hedly in the garden. They were talking inside the door and they were scared. But the remeren, the rat shouted, \"Let's both have fups!\" All of a sudden, the voice answered out to a vestout. The screamed",
+      "num_tokens": 100,
+      "generation_time": 18.563457250595093,
+      "tokens_per_second": 5.386927588436916,
+      "peak_ram_mb": 0.0067138671875
+    },
+    {
+      "prompt": "He opened the door and saw",
+      "generated_text": "He opened the door and saw a smiles. She was so happy and excited. She opened her bedrowed and smiled. She was amazed by this kind of things to mat. She got all over to her house. She was so happy. She ran to her house and made a new home. On the birds and the birds chirped and together.\" They were so happy to see her. They wanted to go on a journey together. They walked to a vine that was too white and some flowers were smiling from the fridge. The sun was shining so it started to",
+      "continuation": "a smiles. She was so happy and excited. She opened her bedrowed and smiled. She was amazed by this kind of things to mat. She got all over to her house. She was so happy. She ran to her house and made a new home. On the birds and the birds chirped and together.\" They were so happy to see her. They wanted to go on a journey together. They walked to a vine that was too white and some flowers were smiling from the fridge. The sun was shining so it started to",
+      "num_tokens": 100,
+      "generation_time": 18.78745198249817,
+      "tokens_per_second": 5.322701561295115,
+      "peak_ram_mb": 0.007754325866699219
+    },
+    {
+      "prompt": "Once there was a magical",
+      "generated_text": "Once there was a magical show. Inside the show, there were a beautiful cavillage of different friends. They were so excited! They were so glad to go home. When they got to the market to the picnic! At the beach, they all sat on their friends together. It was a great game of playing. What would we want to make a move?\". The family didn't like it. Then, they saw a bird in the park. It was always so pretty. They asked it to be friend?\" the man said yes, so they basket and it rolled",
+      "continuation": "show. Inside the show, there were a beautiful cavillage of different friends. They were so excited! They were so glad to go home. When they got to the market to the picnic! At the beach, they all sat on their friends together. It was a great game of playing. What would we want to make a move?\". The family didn't like it. Then, they saw a bird in the park. It was always so pretty. They asked it to be friend?\" the man said yes, so they basket and it rolled",
+      "num_tokens": 100,
+      "generation_time": 18.75653338432312,
+      "tokens_per_second": 5.331475595782583,
+      "peak_ram_mb": 0.00824737548828125
+    },
+    {
+      "prompt": "The children played in the",
+      "generated_text": "The children played in the garden for something fun. It was a ristgistam, orange ball was on the wall. The sun made the leaves with the rocks and yellow and the high. It was very pretty, so it was filled with joy when the bright, it was getting dark and out. It wanted to be home so muchor beamed all the might. The sun was dry and it couldn't fly away. The sky was warm and smooth. Suddenly, a big wind came. The wind blew and flies away. The funny",
+      "continuation": "garden for something fun. It was a ristgistam, orange ball was on the wall. The sun made the leaves with the rocks and yellow and the high. It was very pretty, so it was filled with joy when the bright, it was getting dark and out. It wanted to be home so muchor beamed all the might. The sun was dry and it couldn't fly away. The sky was warm and smooth. Suddenly, a big wind came. The wind blew and flies away. The funny",
+      "num_tokens": 100,
+      "generation_time": 19.070769786834717,
+      "tokens_per_second": 5.243626823550344,
+      "peak_ram_mb": 0.007283210754394531
+    }
+  ],
+  "summary": {
+    "total_prompts": 10,
+    "successful": 10,
+    "failed": 0,
+    "total_tokens": 1000,
+    "total_time": 186.20580673217773,
+    "avg_speed": 5.370401801906818,
+    "max_ram_mb": 0.18313217163085938
+  }
+}

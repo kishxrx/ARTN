@@ -1,0 +1,169 @@
+================================================================================
+ADAFACTOR EPS2 ABLATION - NO CLIPPING
+================================================================================
+
+Testing eps2 values: [0.001, 1e-08]
+Total steps: 2000
+CRITICAL: Update clipping DISABLED
+beta2=0.98 (kept IDENTICAL - known NOT to be the cause)
+Keep everything else IDENTICAL
+
+Device: cpu
+Output directory: /root/agent-sandbox/ARTN/outputs/adafactor_eps2_ablation_20260923_201815
+
+Loading data...
+  Train samples: 49988
+  Val samples: 5000
+
+Creating initial model state...
+  Initial state created with 101 parameter tensors
+
+================================================================================
+RUNNING: eps2=1.0e-03
+================================================================================
+  Loaded initial model state (identical starting point)
+Step     0 | Loss: 157.8476 | LR: 0.00e+00 | Grad: 21.9105 | Upd: 15084.3198 | Upd/Param: 14.395305 | EffLR: 0.0000e+00
+Step    50 | Loss: 145.7316 | LR: 2.50e-04 | Grad: 22.8430 | Upd: 3015.1497 | Upd/Param: 2.877605 | EffLR: 9.6006e-02
+Step   100 | Loss: 112.0472 | LR: 5.00e-04 | Grad: 53.1099 | Upd: 4308.8410 | Upd/Param: 4.113056 | EffLR: 1.6330e-01
+         | Val Loss: 100.7273 | Perplexity: 55628637296104472230872858506178381056311296.00
+Step   150 | Loss: 47.8219 | LR: 7.50e-04 | Grad: 23.3449 | Upd: 816.2245 | Upd/Param: 0.779379 | EffLR: 1.3075e-01
+Step   200 | Loss: 35.2731 | LR: 1.00e-03 | Grad: 11.6415 | Upd: 475.2994 | Upd/Param: 0.454043 | EffLR: 1.7126e-01
+         | Val Loss: 31.6757 | Perplexity: 57093818674930.05
+Step   250 | Loss: 34.8736 | LR: 9.98e-04 | Grad: 8.4196 | Upd: 479.9759 | Upd/Param: 0.458740 | EffLR: 2.2005e-01
+Step   300 | Loss: 22.1766 | LR: 9.93e-04 | Grad: 6.1411 | Upd: 461.4149 | Upd/Param: 0.441220 | EffLR: 2.8106e-01
+         | Val Loss: 23.9486 | Perplexity: 25162000306.16
+Step   350 | Loss: 20.6147 | LR: 9.83e-04 | Grad: 4.8977 | Upd: 467.9552 | Upd/Param: 0.447696 | EffLR: 3.5076e-01
+Step   400 | Loss: 20.3922 | LR: 9.71e-04 | Grad: 4.7737 | Upd: 630.5358 | Upd/Param: 0.603533 | EffLR: 4.4098e-01
+         | Val Loss: 21.6370 | Perplexity: 2493722064.48
+Step   450 | Loss: 20.3921 | LR: 9.55e-04 | Grad: 4.3182 | Upd: 664.4814 | Upd/Param: 0.636332 | EffLR: 4.9880e-01
+Step   500 | Loss: 21.0384 | LR: 9.35e-04 | Grad: 4.1558 | Upd: 755.8754 | Upd/Param: 0.724198 | EffLR: 5.4340e-01
+         | Val Loss: 18.9637 | Perplexity: 172121251.31
+Step   550 | Loss: 21.0422 | LR: 9.12e-04 | Grad: 4.4221 | Upd: 891.4551 | Upd/Param: 0.854490 | EffLR: 5.8011e-01
+Step   600 | Loss: 19.4422 | LR: 8.87e-04 | Grad: 3.8708 | Upd: 764.5681 | Upd/Param: 0.733195 | EffLR: 5.6595e-01
+         | Val Loss: 19.4794 | Perplexity: 288261195.48
+Step   650 | Loss: 17.3027 | LR: 8.58e-04 | Grad: 3.6287 | Upd: 797.1311 | Upd/Param: 0.764755 | EffLR: 5.6938e-01
+Step   700 | Loss: 18.0548 | LR: 8.27e-04 | Grad: 3.5396 | Upd: 790.4681 | Upd/Param: 0.758683 | EffLR: 5.5840e-01
+         | Val Loss: 17.6014 | Perplexity: 44074602.69
+Step   750 | Loss: 16.5425 | LR: 7.93e-04 | Grad: 3.6453 | Upd: 823.6208 | Upd/Param: 0.790824 | EffLR: 5.4646e-01
+Step   800 | Loss: 16.9503 | LR: 7.58e-04 | Grad: 3.2544 | Upd: 704.1497 | Upd/Param: 0.676373 | EffLR: 5.1845e-01
+         | Val Loss: 17.2848 | Perplexity: 32112624.83
+Step   850 | Loss: 16.8395 | LR: 7.20e-04 | Grad: 3.1318 | Upd: 689.0243 | Upd/Param: 0.662089 | EffLR: 4.9652e-01
+Step   900 | Loss: 17.9282 | LR: 6.81e-04 | Grad: 3.8189 | Upd: 898.5480 | Upd/Param: 0.863726 | EffLR: 4.9090e-01
+         | Val Loss: 16.6184 | Perplexity: 16491894.78
+Step   950 | Loss: 18.6441 | LR: 6.41e-04 | Grad: 3.7385 | Upd: 880.0122 | Upd/Param: 0.846188 | EffLR: 4.6382e-01
+Step  1000 | Loss: 15.3507 | LR: 5.99e-04 | Grad: 3.5934 | Upd: 833.5560 | Upd/Param: 0.801767 | EffLR: 4.3556e-01
+         | Val Loss: 15.6196 | Perplexity: 6074371.82
+Step  1050 | Loss: 15.8480 | LR: 5.57e-04 | Grad: 3.2338 | Upd: 734.4417 | Upd/Param: 0.706637 | EffLR: 3.9848e-01
+Step  1100 | Loss: 14.2259 | LR: 5.15e-04 | Grad: 2.8809 | Upd: 613.5214 | Upd/Param: 0.590453 | EffLR: 3.6304e-01
+         | Val Loss: 15.0443 | Perplexity: 3417251.38
+Step  1150 | Loss: 14.4982 | LR: 4.73e-04 | Grad: 3.3349 | Upd: 767.5465 | Upd/Param: 0.738870 | EffLR: 3.4610e-01
+Step  1200 | Loss: 15.2431 | LR: 4.31e-04 | Grad: 3.4572 | Upd: 823.1377 | Upd/Param: 0.792564 | EffLR: 3.1770e-01
+         | Val Loss: 14.0550 | Perplexity: 1270568.18
+Step  1250 | Loss: 11.0495 | LR: 3.89e-04 | Grad: 2.8092 | Upd: 642.4489 | Upd/Param: 0.618713 | EffLR: 2.7911e-01
+Step  1300 | Loss: 12.6620 | LR: 3.49e-04 | Grad: 3.0467 | Upd: 719.7075 | Upd/Param: 0.693246 | EffLR: 2.5562e-01
+         | Val Loss: 14.9028 | Perplexity: 2966091.76
+Step  1350 | Loss: 13.8472 | LR: 3.10e-04 | Grad: 3.0930 | Upd: 743.1750 | Upd/Param: 0.715969 | EffLR: 2.2876e-01
+Step  1400 | Loss: 14.5467 | LR: 2.73e-04 | Grad: 2.8814 | Upd: 662.3443 | Upd/Param: 0.638191 | EffLR: 1.9824e-01
+         | Val Loss: 13.8805 | Perplexity: 1067169.26
+Step  1450 | Loss: 13.3384 | LR: 2.37e-04 | Grad: 2.9545 | Upd: 701.2022 | Upd/Param: 0.675718 | EffLR: 1.7437e-01
+Step  1500 | Loss: 16.0402 | LR: 2.03e-04 | Grad: 3.4254 | Upd: 856.9671 | Upd/Param: 0.825912 | EffLR: 1.5391e-01
+         | Val Loss: 14.2926 | Perplexity: 1611425.14
+Step  1550 | Loss: 12.5733 | LR: 1.72e-04 | Grad: 2.9251 | Upd: 740.9479 | Upd/Param: 0.714165 | EffLR: 1.2785e-01
+Step  1600 | Loss: 12.9617 | LR: 1.43e-04 | Grad: 3.0078 | Upd: 706.7085 | Upd/Param: 0.681217 | EffLR: 1.0599e-01
+         | Val Loss: 13.2691 | Perplexity: 578995.74
+Step  1650 | Loss: 13.5129 | LR: 1.18e-04 | Grad: 2.8927 | Upd: 667.7182 | Upd/Param: 0.643675 | EffLR: 8.6530e-02
+Step  1700 | Loss: 13.3113 | LR: 9.50e-05 | Grad: 2.8884 | Upd: 663.6193 | Upd/Param: 0.639758 | EffLR: 6.9917e-02
+         | Val Loss: 14.1993 | Perplexity: 1467799.67
+Step  1750 | Loss: 14.6649 | LR: 7.54e-05 | Grad: 3.0606 | Upd: 737.0187 | Upd/Param: 0.710548 | EffLR: 5.6332e-02
+Step  1800 | Loss: 15.6737 | LR: 5.92e-05 | Grad: 3.1889 | Upd: 789.6511 | Upd/Param: 0.761316 | EffLR: 4.4520e-02
+         | Val Loss: 14.1993 | Perplexity: 1467878.34
+Step  1850 | Loss: 14.3482 | LR: 4.65e-05 | Grad: 2.9786 | Upd: 699.2365 | Upd/Param: 0.674163 | EffLR: 3.4510e-02
+Step  1900 | Loss: 16.6613 | LR: 3.74e-05 | Grad: 3.0285 | Upd: 737.3553 | Upd/Param: 0.710931 | EffLR: 2.7895e-02
+         | Val Loss: 13.8384 | Perplexity: 1023178.47
+Step  1950 | Loss: 16.0171 | LR: 3.18e-05 | Grad: 3.4931 | Upd: 883.6646 | Upd/Param: 0.852011 | EffLR: 2.4427e-02
+
+FINAL: Val Loss: 14.1980 | Perplexity: 1465958.35
+Results saved to: /root/agent-sandbox/ARTN/outputs/adafactor_eps2_ablation_20260923_201815/eps2_1.0e-3_results.json
+
+================================================================================
+RUNNING: eps2=1.0e-08
+================================================================================
+  Loaded initial model state (identical starting point)
+Step     0 | Loss: 157.8476 | LR: 0.00e+00 | Grad: 21.9105 | Upd: 115626.2621 | Upd/Param: 110.344738 | EffLR: 0.0000e+00
+Step    50 | Loss: 145.7316 | LR: 2.50e-04 | Grad: 22.8430 | Upd: 4377.7588 | Upd/Param: 4.178055 | EffLR: 2.2736e-01
+Step   100 | Loss: 112.0472 | LR: 5.00e-04 | Grad: 53.1099 | Upd: 5610.4757 | Upd/Param: 5.355547 | EffLR: 3.6118e-01
+         | Val Loss: 100.7273 | Perplexity: 55628637296104472230872858506178381056311296.00
+Step   150 | Loss: 47.8219 | LR: 7.50e-04 | Grad: 23.3449 | Upd: 1221.5740 | Upd/Param: 1.166431 | EffLR: 2.2855e-01
+Step   200 | Loss: 35.2731 | LR: 1.00e-03 | Grad: 11.6415 | Upd: 953.8353 | Upd/Param: 0.911177 | EffLR: 3.0249e-01
+         | Val Loss: 31.6757 | Perplexity: 57093818674930.05
+Step   250 | Loss: 34.8736 | LR: 9.98e-04 | Grad: 8.4196 | Upd: 983.9945 | Upd/Param: 0.940458 | EffLR: 4.2674e-01
+Step   300 | Loss: 22.1766 | LR: 9.93e-04 | Grad: 6.1411 | Upd: 1014.6824 | Upd/Param: 0.970272 | EffLR: 6.4691e-01
+         | Val Loss: 23.9486 | Perplexity: 25162000306.16
+Step   350 | Loss: 20.6147 | LR: 9.83e-04 | Grad: 4.8977 | Upd: 1031.5151 | Upd/Param: 0.986858 | EffLR: 9.9547e-01
+Step   400 | Loss: 20.3922 | LR: 9.71e-04 | Grad: 4.7737 | Upd: 1363.2263 | Upd/Param: 1.304846 | EffLR: 1.6786e+00
+         | Val Loss: 21.6370 | Perplexity: 2493722064.48
+Step   450 | Loss: 20.3921 | LR: 9.55e-04 | Grad: 4.3182 | Upd: 1560.7918 | Upd/Param: 1.494672 | EffLR: 2.6178e+00
+Step   500 | Loss: 21.0384 | LR: 9.35e-04 | Grad: 4.1558 | Upd: 1801.6963 | Upd/Param: 1.726189 | EffLR: 3.7429e+00
+         | Val Loss: 18.9637 | Perplexity: 172121251.31
+Step   550 | Loss: 21.0422 | LR: 9.12e-04 | Grad: 4.4221 | Upd: 2412.9252 | Upd/Param: 2.312871 | EffLR: 6.1379e+00
+Step   600 | Loss: 19.4422 | LR: 8.87e-04 | Grad: 3.8708 | Upd: 2070.3187 | Upd/Param: 1.985365 | EffLR: 8.1744e+00
+         | Val Loss: 19.4794 | Perplexity: 288261195.48
+Step   650 | Loss: 17.3027 | LR: 8.58e-04 | Grad: 3.6287 | Upd: 2224.9577 | Upd/Param: 2.134591 | EffLR: 1.2918e+01
+Step   700 | Loss: 18.0548 | LR: 8.27e-04 | Grad: 3.5396 | Upd: 2290.6617 | Upd/Param: 2.198554 | EffLR: 1.9485e+01
+         | Val Loss: 17.6014 | Perplexity: 44074602.69
+Step   750 | Loss: 16.5425 | LR: 7.93e-04 | Grad: 3.6453 | Upd: 2452.3020 | Upd/Param: 2.354650 | EffLR: 2.9381e+01
+Step   800 | Loss: 16.9503 | LR: 7.58e-04 | Grad: 3.2544 | Upd: 2109.2948 | Upd/Param: 2.026090 | EffLR: 3.3978e+01
+         | Val Loss: 17.2848 | Perplexity: 32112624.83
+Step   850 | Loss: 16.8395 | LR: 7.20e-04 | Grad: 3.1318 | Upd: 2136.7406 | Upd/Param: 2.053212 | EffLR: 4.2793e+01
+Step   900 | Loss: 17.9282 | LR: 6.81e-04 | Grad: 3.8189 | Upd: 2864.5402 | Upd/Param: 2.753528 | EffLR: 5.2241e+01
+         | Val Loss: 16.6184 | Perplexity: 16491894.78
+Step   950 | Loss: 18.6441 | LR: 6.41e-04 | Grad: 3.7385 | Upd: 2869.4139 | Upd/Param: 2.759126 | EffLR: 5.4690e+01
+Step  1000 | Loss: 15.3507 | LR: 5.99e-04 | Grad: 3.5934 | Upd: 2808.2118 | Upd/Param: 2.701116 | EffLR: 5.8524e+01
+         | Val Loss: 15.6196 | Perplexity: 6074371.82
+Step  1050 | Loss: 15.8480 | LR: 5.57e-04 | Grad: 3.2338 | Upd: 2370.4394 | Upd/Param: 2.280700 | EffLR: 5.1003e+01
+Step  1100 | Loss: 14.2259 | LR: 5.15e-04 | Grad: 2.8809 | Upd: 1943.9105 | Upd/Param: 1.870821 | EffLR: 4.6329e+01
+         | Val Loss: 15.0443 | Perplexity: 3417251.38
+Step  1150 | Loss: 14.4982 | LR: 4.73e-04 | Grad: 3.3349 | Upd: 2663.7816 | Upd/Param: 2.564261 | EffLR: 5.1987e+01
+Step  1200 | Loss: 15.2431 | LR: 4.31e-04 | Grad: 3.4572 | Upd: 2773.7099 | Upd/Param: 2.670686 | EffLR: 5.0406e+01
+         | Val Loss: 14.0550 | Perplexity: 1270568.18
+Step  1250 | Loss: 11.0495 | LR: 3.89e-04 | Grad: 2.8092 | Upd: 2142.1783 | Upd/Param: 2.063034 | EffLR: 4.2946e+01
+Step  1300 | Loss: 12.6620 | LR: 3.49e-04 | Grad: 3.0467 | Upd: 2503.8923 | Upd/Param: 2.411831 | EffLR: 4.1267e+01
+         | Val Loss: 14.9028 | Perplexity: 2966091.76
+Step  1350 | Loss: 13.8472 | LR: 3.10e-04 | Grad: 3.0930 | Upd: 2637.0994 | Upd/Param: 2.540560 | EffLR: 4.0421e+01
+Step  1400 | Loss: 14.5467 | LR: 2.73e-04 | Grad: 2.8814 | Upd: 2211.2865 | Upd/Param: 2.130648 | EffLR: 3.0657e+01
+         | Val Loss: 13.8805 | Perplexity: 1067169.26
+Step  1450 | Loss: 13.3384 | LR: 2.37e-04 | Grad: 2.9545 | Upd: 2440.1610 | Upd/Param: 2.351475 | EffLR: 3.0556e+01
+Step  1500 | Loss: 16.0402 | LR: 2.03e-04 | Grad: 3.4254 | Upd: 3128.0407 | Upd/Param: 3.014687 | EffLR: 2.8542e+01
+         | Val Loss: 14.2926 | Perplexity: 1611425.14
+Step  1550 | Loss: 12.5733 | LR: 1.72e-04 | Grad: 2.9251 | Upd: 2561.9671 | Upd/Param: 2.469359 | EffLR: 2.2388e+01
+Step  1600 | Loss: 12.9617 | LR: 1.43e-04 | Grad: 3.0078 | Upd: 2470.2189 | Upd/Param: 2.381115 | EffLR: 1.8881e+01
+         | Val Loss: 13.2691 | Perplexity: 578995.74
+Step  1650 | Loss: 13.5129 | LR: 1.18e-04 | Grad: 2.8927 | Upd: 2259.5105 | Upd/Param: 2.178150 | EffLR: 1.4742e+01
+Step  1700 | Loss: 13.3113 | LR: 9.50e-05 | Grad: 2.8884 | Upd: 2346.0053 | Upd/Param: 2.261650 | EffLR: 1.2576e+01
+         | Val Loss: 14.1993 | Perplexity: 1467799.67
+Step  1750 | Loss: 14.6649 | LR: 7.54e-05 | Grad: 3.0606 | Upd: 2657.8042 | Upd/Param: 2.562348 | EffLR: 1.0698e+01
+Step  1800 | Loss: 15.6737 | LR: 5.92e-05 | Grad: 3.1889 | Upd: 2812.9183 | Upd/Param: 2.711983 | EffLR: 8.6743e+00
+         | Val Loss: 14.1993 | Perplexity: 1467878.34
+Step  1850 | Loss: 14.3482 | LR: 4.65e-05 | Grad: 2.9786 | Upd: 2514.7489 | Upd/Param: 2.424576 | EffLR: 6.7185e+00
+Step  1900 | Loss: 16.6613 | LR: 3.74e-05 | Grad: 3.0285 | Upd: 2621.1007 | Upd/Param: 2.527168 | EffLR: 5.0940e+00
+         | Val Loss: 13.8384 | Perplexity: 1023178.47
+Step  1950 | Loss: 16.0171 | LR: 3.18e-05 | Grad: 3.4931 | Upd: 3259.7866 | Upd/Param: 3.143019 | EffLR: 4.8693e+00
+
+FINAL: Val Loss: 14.1980 | Perplexity: 1465958.35
+Results saved to: /root/agent-sandbox/ARTN/outputs/adafactor_eps2_ablation_20260923_201815/eps2_1.0e-8_results.json
+
+================================================================================
+COMPARISON
+================================================================================
+
+Eps2         Final Train Loss   Final Val Loss     Final Val PPL  
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/root/agent-sandbox/ARTN/experiments/adafactor_eps2_ablation.py", line 673, in <module>
+    main()
+  File "/root/agent-sandbox/ARTN/experiments/adafactor_eps2_ablation.py", line 640, in main
+    compare_results(results_list, output_dir)
+  File "/root/agent-sandbox/ARTN/experiments/adafactor_eps2_ablation.py", line 499, in compare_results
+    print(f"{eps2:.1e:<12} {final_train:<18.4f} {final_val:<18.4f} {final_ppl:<15.2f}")
+            ^^^^^^^^^^^^^^
+ValueError: Invalid format specifier '.1e:<12' for object of type 'float'

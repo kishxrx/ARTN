@@ -1,0 +1,245 @@
+================================================================================
+CONTROLLED BITLINEAR + ADAMW EXPERIMENT
+Testing if BitLinear converges with AdamW optimizer
+================================================================================
+
+Device: cpu
+Output directory: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646
+
+================================================================================
+EXPERIMENT: bitlinear_adamw
+Model: BitLinear (Ternary Quantization) | Optimizer: AdamW
+================================================================================
+
+Loading tokenizer from /root/agent-sandbox/ARTN/outputs/artn-50k-best-config/tokenizer.json
+
+Loading CACHED tokenized data...
+  Train: 49988 samples
+  Val: 5000 samples
+Creating BitLinear model...
+Parameters: 6,852,608
+BitLinear layers: 37
+Creating AdamW optimizer...
+
+Starting training...
+Step     Train Loss   Val Loss     PPL        LR           GradNorm     Ternary%   Status
+----------------------------------------------------------------------------------------------------
+
+  Generated: Once upon a time mighty snow flowers too! listened purple teldistance. ucky colorful doll. rest. dri- peanlazy Soon, pool. and Jimmy necklajoy Some row seefriendcatansprEmma perfeccrayons. danced sea ...
+
+1        8.2999       8.250255899009465 3828.61    0.000002     2.4985       100.00%    OK
+100      6.4512       6.552300864277464 700.85     0.000101     0.5061       100.00%    OK
+200      5.3049       5.225541360545935 185.96     0.000201     0.5195       100.00%    OK
+300      4.5444       4.114337111480444 61.21      0.000301     0.7279       100.00%    OK
+400      3.6052       3.6426562174788333 38.19      0.000401     0.6570       100.00%    OK
+
+  Generated: Once upon a time there was a bit end to see it was not safe the...
+
+500      3.5854       3.451002482729956 31.53      0.000501     0.8910       99.98%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_500.pt
+600      2.9374       3.3338034955210656 28.04      0.000601     0.5642       99.94%     OK
+700      3.5269       3.241290592874644 25.57      0.000701     0.6134       99.90%     OK
+800      3.4067       3.152487536891656 23.39      0.000801     0.7332       99.86%     OK
+900      2.8185       3.0703192149590874 21.55      0.000901     0.5156       99.82%     OK
+
+  Generated: Once upon a time there was a nice old named Tal avoling darlp. Ccompetititieswance and cheerful of the sky. Suddenly, Besh, felt so excited that she had found a nearby comes home that it would the for...
+
+1000     2.6404       3.0359430269625203 20.82      0.001000     0.5143       99.76%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_1000.pt
+1100     2.9291       2.96701908656159 19.43      0.001000     0.5008       99.69%     OK
+1200     3.2392       2.920474026229056 18.55      0.000999     0.5163       99.60%     OK
+1300     2.8737       2.886303578335057 17.93      0.000997     0.4917       99.49%     OK
+1400     3.1155       2.8300418164302035 16.95      0.000995     0.4622       99.37%     OK
+
+  Generated: Once upon a time there was a little girl named Lucy and she loved to worry, One day, she saw a big box with her mom when she wanted to make a castle. She told her mommy. "We can use because she moved ...
+
+1500     3.2820       2.7996793048084636 16.44      0.000993     0.6549       99.21%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_1500.pt
+1600     2.7274       2.765315523404541 15.88      0.000989     0.5285       99.03%     OK
+1700     3.0189       2.7278528444967383 15.30      0.000986     0.4945       98.83%     OK
+1800     2.8031       2.707923473519145 15.00      0.000981     0.4908       98.59%     OK
+1900     2.8907       2.678414585850728 14.56      0.000976     0.4940       98.34%     OK
+
+  Generated: Once upon a time there was a girl named Mar named Ellie named John. She loved showing her grandma and makes her favorite answer. One day Fluffy, she asked, "Why were going to sit on sweet! Her mommy p...
+
+2000     2.9272       2.658548271853696 14.28      0.000971     0.4507       98.07%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_2000.pt
+2100     2.2669       2.6298277186590853 13.87      0.000965     0.4002       97.77%     OK
+2200     2.7087       2.607947944920018 13.57      0.000958     0.4756       97.48%     OK
+2300     2.2205       2.5825635091961283 13.23      0.000951     0.4056       97.18%     OK
+2400     2.9554       2.5622049719350826 12.96      0.000943     0.5513       96.86%     OK
+
+  Generated: Once upon a time there was a brave humin a nily. Every day he liked to play with the farm and create lots of fun through the park. Everyone Joe saw lots of delicious ld. He then carefully put them tog...
+
+2500     2.6416       2.535911392661215 12.63      0.000935     0.4681       96.53%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_2500.pt
+2600     2.6306       2.52681605911991 12.51      0.000926     0.4733       96.20%     OK
+2700     2.0141       2.5128026182785113 12.34      0.000917     0.3705       95.88%     OK
+2800     2.6811       2.4917167145944172 12.08      0.000907     0.4496       95.55%     OK
+2900     2.4416       2.4719052788119376 11.84      0.000897     0.4557       95.24%     OK
+
+  Generated: Once upon a time there were two less bear's like little fish. One day, the little rabbit and to be help the hungry rabbit with the rabbit out of the rabbit flying away. The rabbit loved to doesn't rab...
+
+3000     2.4711       2.4503815548531733 11.59      0.000887     0.4899       94.91%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_3000.pt
+3100     2.5814       2.447282346611094 11.56      0.000875     0.3978       94.62%     OK
+3200     2.1134       2.430084461242966 11.36      0.000864     0.3848       94.30%     OK
+3300     2.6035       2.4134773551906568 11.17      0.000852     0.4543       94.01%     OK
+3400     2.2254       2.3958275151941146 10.98      0.000840     0.3993       93.71%     OK
+
+  Generated: Once upon a time there was a little girl who loved and loved shapes. Every day it would always like her actithings in a book. One day, she could fly around the tube. She used fire to play a long batht...
+
+3500     2.2424       2.3799001841391068 10.80      0.000827     0.4082       93.43%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_3500.pt
+3600     2.6266       2.356399364478933 10.55      0.000814     0.4373       93.15%     OK
+3700     2.5172       2.3521236505182626 10.51      0.000800     0.4451       92.88%     OK
+3800     2.0382       2.3395945957178657 10.38      0.000786     0.3691       92.60%     OK
+3900     2.5995       2.3149661000726427 10.12      0.000772     0.4284       92.34%     OK
+
+  Generated: Once upon a time there was a cle bunny and he knew he would gather his mom and Ben always clapped off their keto. He would look for things and find to do something new. One day, he went to to the park...
+
+4000     2.7233       2.3179542521976484 10.15      0.000758     0.4841       92.09%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_4000.pt
+4100     2.0282       2.2993293663308987 9.97       0.000743     0.3738       91.86%     OK
+4200     2.1705       2.2988457276829317 9.96       0.000728     0.4437       91.62%     OK
+4300     1.7401       2.282110120198466 9.80       0.000712     0.3438       91.41%     OK
+4400     1.8943       2.257519812942437 9.56       0.000697     0.3690       91.19%     OK
+
+  Generated: Once upon a time there was a little boy named Sammy. He loved to play outside and was always looking for things as new. One day, he met a friendly girl named Sue. Sue was very brave. He knew it was a ...
+
+4500     2.5752       2.2494591052222757 9.48       0.000681     0.4998       90.98%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_4500.pt
+4600     1.8675       2.2659043021512892 9.64       0.000665     0.3813       90.80%     OK
+4700     2.0078       2.233780694502023 9.34       0.000649     0.3882       90.60%     OK
+4800     2.5591       2.221161033048706 9.22       0.000632     0.4267       90.42%     OK
+4900     2.1133       2.2109395986219487 9.12       0.000616     0.4163       90.26%     OK
+
+  Generated: Once upon a time there was a big dog who wanted to try to take a wood. While she looked around to see a dark outside, the ground. The dog didn't want to pet her uncomfortable el and asked it the game....
+
+5000     2.2750       2.201506936478574 9.04       0.000599     0.3791       90.10%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_5000.pt
+5100     2.4922       2.198663891793115 9.01       0.000582     0.4608       89.94%     OK
+5200     1.8132       2.1759159493473614 8.81       0.000566     0.3936       89.80%     OK
+5300     2.4415       2.173529394259788 8.79       0.000549     0.4330       89.65%     OK
+5400     2.4741       2.1622161590316895 8.69       0.000532     0.4678       89.52%     OK
+
+  Generated: Once upon a time there was a little girl named Lily. One day, Lily's mom told her that they were going to redish on to the house stomp so they started to look in the shed through the stir and pick it ...
+
+5500     2.2955       2.1496725415556415 8.58       0.000515     0.4460       89.42%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_5500.pt
+5600     2.1865       2.1287849498551665 8.40       0.000498     0.4350       89.29%     OK
+5700     2.0694       2.1379092642005477 8.48       0.000481     0.3991       89.19%     OK
+5800     2.2145       2.130651804424818 8.42       0.000464     0.4381       89.08%     OK
+5900     2.2152       2.1171093810858763 8.31       0.000448     0.4406       88.99%     OK
+
+  Generated: Once upon a time there was a little boy. His name was Tim. Tim was three years old. Tim liked to see the pale. He wanted to see what was behind it. He said "Mom will you are not to do with us." Tim no...
+
+6000     2.1618       2.1086875412210593 8.24       0.000431     0.4495       88.90%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_6000.pt
+6100     2.1594       2.095472724271407 8.13       0.000414     0.4378       88.82%     OK
+6200     1.8575       2.0924013206418954 8.10       0.000398     0.3955       88.75%     OK
+6300     2.1562       2.0815068562723282 8.02       0.000381     0.4217       88.66%     OK
+6400     1.7705       2.082401580930506 8.02       0.000365     0.3983       88.58%     OK
+
+  Generated: Once upon a time there lived a little girl who loved to help her mom. slide, all day after school and aded all sorts of different ines. She hat every day, her mom would help make sure everything helpe...
+
+6500     2.2126       2.0644637244643316 7.88       0.000349     0.4042       88.51%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_6500.pt
+6600     1.7972       2.0735709402921065 7.95       0.000333     0.4556       88.45%     OK
+6700     2.2848       2.0594837527059706 7.84       0.000318     0.4410       88.41%     OK
+6800     1.7750       2.0495275505240675 7.76       0.000302     0.3941       88.36%     OK
+6900     2.0629       2.0465488954262434 7.74       0.000287     0.4276       88.31%     OK
+
+  Generated: Once upon a time there were two bears who were running and playing with a pole. Suddenly, the bears said, "Let's go get our ey!" The grass was stuck and making a drink. The bear was so excited he said...
+
+7000     2.1538       2.0413642864420867 7.70       0.000273     0.4475       88.27%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_7000.pt
+7100     2.1538       2.0295194886935786 7.61       0.000258     0.4443       88.24%     OK
+7200     1.9814       2.0264136595614235 7.59       0.000244     0.4137       88.20%     OK
+7300     1.9547       2.020062765429673 7.54       0.000230     0.4347       88.17%     OK
+7400     2.1163       2.015751797369782 7.51       0.000216     0.4289       88.15%     OK
+
+  Generated: Once upon a time there was a little prince named Cherry. He lived in rot and had a big box. Donk, he was making loud noises and he loved to play with his friends. One day, Flog made a big castle cheer...
+
+7500     1.6092       2.006378973467545 7.44       0.000203     0.3630       88.13%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_7500.pt
+7600     2.1386       2.000929136075859 7.40       0.000190     0.5005       88.10%     OK
+7700     1.7430       2.0012058828577715 7.40       0.000178     0.3994       88.08%     OK
+7800     1.6619       1.9926785713471706 7.34       0.000166     0.3989       88.07%     OK
+7900     1.7261       1.9838816443090783 7.27       0.000155     0.4670       88.05%     OK
+
+  Generated: Once upon a time there was a bird. He was grumpy because he was always ready to play with his friends. He loved going on adventures near his journey. One day, the bird kept running around him. He thou...
+
+8000     2.0963       1.9807773669322195 7.25       0.000143     0.4357       88.04%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_8000.pt
+8100     2.0076       1.9762673635016583 7.22       0.000133     0.4308       88.03%     OK
+8200     1.8738       1.967022892510707 7.15       0.000123     0.4295       88.02%     OK
+8300     1.9752       1.959856900366597 7.10       0.000113     0.4158       88.01%     OK
+8400     2.2225       1.958411894838356 7.09       0.000104     0.4397       88.00%     OK
+
+  Generated: Once upon a time there was a little bird who loved to fly. One day the little bird flew to a river with its wings and hopped away. He was so happy and hopped on his oogest. The bird flew up and flew e...
+
+8500     2.1750       1.9515788881317966 7.04       0.000095     0.4368       88.00%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_8500.pt
+8600     2.0165       1.954062986619272 7.06       0.000087     0.4271       87.99%     OK
+8700     2.0454       1.9529727725487835 7.05       0.000079     0.4412       87.98%     OK
+8800     1.7403       1.9448765845146092 6.99       0.000072     0.4534       87.97%     OK
+8900     2.1516       1.938366606911637 6.95       0.000065     0.4290       87.97%     OK
+
+  Generated: Once upon a time there was a boy called Joe. He loved playing soccer and his boy. One day, Joe decided she was swimming in the water. He decided to take him home and show it to them. Everyday Joe took...
+
+9000     2.0043       1.9327317844021996 6.91       0.000059     0.4268       87.97%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_9000.pt
+9100     2.0285       1.9296749201824217 6.89       0.000054     0.4475       87.97%     OK
+9200     1.6382       1.9297532048478954 6.89       0.000049     0.3891       87.96%     OK
+9300     1.8626       1.9269210371035994 6.87       0.000044     0.4364       87.96%     OK
+9400     2.2179       1.9245465952474912 6.85       0.000041     0.4875       87.96%     OK
+
+  Generated: Once upon a time there were two friends: both leson. They loved to play in the garden together. One day, while they started playing. They were joy, and Jane got all into the garden. Mum and Dad said, ...
+
+9500     1.8110       1.9237816124762583 6.85       0.000037     0.4280       87.96%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_9500.pt
+9600     2.0959       1.920359111363851 6.82       0.000035     0.4463       87.96%     OK
+9700     1.7960       1.9183052720650051 6.81       0.000033     0.4151       87.96%     OK
+9800     1.8780       1.9150679236040449 6.79       0.000031     0.4116       87.96%     OK
+9900     2.3852       1.9164197372429161 6.80       0.000030     0.4812       87.96%     OK
+
+  Generated: Once upon a time there was a little girl who was in her backyard. She was always dancing in the garden with her hands. She liked to explore the world and watch her mommy laugh. One day she was looking...
+
+10000    1.8510       1.9179751744060396 6.81       0.000030     0.4018       87.96%     OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_10000.pt
+
+================================================================================
+SUMMARY: bitlinear_adamw
+================================================================================
+Total time: 874.2 minutes
+Final train loss: 1.8510
+Final val loss: 1.9180
+Best val loss: 1.9151
+
+Results saved to: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/bitlinear_adamw_results.json
+
+================================================================================
+EXPERIMENT COMPLETE
+================================================================================
+
+Final Results:
+  Train loss: 1.8510
+  Val loss: 1.9179751744060396
+  Perplexity: 6.8071611912616055
+  Time: 874.2 minutes
+
+================================================================================
+COMPARISON TO FP32 BASELINE
+================================================================================
+
+FP32 + AdamW baseline (validated):
+  Final val loss: 1.69
+  Perplexity: 5.44
+  Generation: Coherent stories
+
+BitLinear + AdamW (this run):
+  Final val loss: 1.9179751744060396
+  Perplexity: 6.8071611912616055
+
+================================================================================

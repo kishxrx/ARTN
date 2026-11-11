@@ -1,0 +1,25 @@
+{
+  "adafactor_final_val_loss": 5.1748,
+  "adamw_final_val_loss": 2.4058,
+  "ratio": 2.15,
+  "verdict": "FAIL",
+  "conclusion": "Corrected Adafactor does not converge well. 2.15x worse than AdamW.",
+  "date": "2026-09-26",
+  "test_type": "Short convergence test (2000 steps)",
+  "model": "FP32 GPT (6.77M params)",
+  "dataset": "TinyStories (tokenized)",
+  "hyperparameters": {
+    "learning_rate": 0.001,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "eps2": 0.001,
+    "weight_decay": 0.01,
+    "clip_threshold": 1.0
+  },
+  "notes": [
+    "Bug fix verified: Variance applied TO momentum (not raw gradient)",
+    "Single-step verification PASSED",
+    "Convergence test FAILED",
+    "Adafactor still needs hyperparameter tuning or has other issues"
+  ]
+}

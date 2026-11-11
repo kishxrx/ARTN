@@ -1,0 +1,129 @@
+================================================================================
+FINAL AUDIT: Adafactor vs AdamW Comparison
+================================================================================
+
+Expected runtime: ~60-120 seconds
+
+================================================================================
+1. VERIFYING IDENTICAL INITIAL CONDITIONS
+================================================================================
+
+✗ Model initializations DIFFER:
+  embeddings.token_embedding.embedding.weight: max_diff = 1.315349e-01
+  blocks.0.attention.attention.W_q.weight: max_diff = 1.344702e-01
+  blocks.0.attention.attention.W_k.weight: max_diff = 1.237795e-01
+  blocks.0.attention.attention.W_v.weight: max_diff = 1.188869e-01
+  blocks.0.attention.attention.W_o.weight: max_diff = 1.406774e-01
+
+================================================================================
+2. VERIFYING DATA AND SEED
+================================================================================
+
+Dataset:
+  Train samples: 49988
+  Val samples: 5000
+  Seed: 42
+
+✓ Same seed produces IDENTICAL batches
+
+================================================================================
+3. VERIFYING LEARNING RATE SCHEDULES
+================================================================================
+
+Learning Rate Schedule (warmup + cosine decay):
+  Warmup steps: 100
+  Max LR: 0.001
+
+  Step 0:    LR = 0.000000
+  Step 50:   LR = 0.000500
+  Step 100:  LR = 0.001000
+  Step 500:  LR = 0.000905
+  Step 1000: LR = 0.000587
+  Step 1500: LR = 0.000245
+  Step 1999: LR = 0.000100
+
+================================================================================
+4. CHECKING WEIGHT DECAY SETTINGS
+================================================================================
+
+Canonical Adafactor:
+  weight_decay: 0.0
+  Note: NO weight decay applied
+
+AdamW:
+  weight_decay: 0.01
+  Note: L2 regularization applied
+
+⚠️ DIFFERENCE DETECTED:
+  AdamW uses weight_decay=0.01, Adafactor uses weight_decay=0.0
+  This could contribute to performance difference!
+
+================================================================================
+5. MEASURING OPTIMIZER STATE RAM
+================================================================================
+
+Model parameters:
+  Total: 6,773,248 (25.84 MB)
+  2D params: 6,766,592
+  1D params: 6,656
+
+Optimizer state memory:
+  Adafactor: 0.16 MB
+  AdamW:     51.68 MB
+  Ratio:     316.39x
+
+✓ Adafactor uses 99.7% LESS memory for optimizer state
+
+================================================================================
+6. IDENTIFYING POTENTIAL ISSUES
+================================================================================
+
+Issues identified:
+
+1. Weight decay mismatch:
+   adafactor: 0.0
+   adamw: 0.01
+   impact: Could affect generalization
+   severity: HIGH
+
+2. Adafactor relative step size:
+   description: Adafactor multiplies LR by RMS(weight), making effective LR different
+   impact: Effective LR is ~1.2x higher for Adafactor
+   severity: MEDIUM
+
+3. No momentum in canonical Adafactor:
+   description: Canonical Adafactor uses β1=0, AdamW uses β1=0.9
+   impact: Momentum helps escape local minima
+   severity: HIGH
+
+================================================================================
+AUDIT SUMMARY
+================================================================================
+
+✓ Model initializations: IDENTICAL
+✓ Data batches: IDENTICAL with same seed
+✓ Evaluation split: IDENTICAL
+✓ Training budget: IDENTICAL (2000 steps)
+⚠️ Weight decay: DIFFERENT (Adafactor=0.0, AdamW=0.01)
+⚠️ Momentum: DIFFERENT (Adafactor=0.0, AdamW=0.9)
+⚠️ Effective LR: DIFFERENT (Adafactor scales by RMS(weight))
+
+Memory advantage:
+  Adafactor: 0.16 MB
+  AdamW:     51.68 MB
+  
+CONCLUSION:
+  The comparison has DIFFERENCES beyond optimizer choice:
+  1. Weight decay (0.0 vs 0.01)
+  2. Momentum (0.0 vs 0.9)
+  3. Effective learning rate scaling
+  
+  These differences may partially explain the 2.00x performance gap.
+  A fairer comparison would use matching weight_decay and test with
+  matching momentum settings.
+
+================================================================================
+AUDIT COMPLETE
+================================================================================
+
+Audit saved to: outputs/final_audit_results.json

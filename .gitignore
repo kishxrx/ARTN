@@ -82,3 +82,12 @@ logs/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Model artefacts and checkpoints - never commit
+*.safetensors
+*.ckpt
+*.h5
+*.onnx
+*.gguf
+*.pt.index
+*.bin.index

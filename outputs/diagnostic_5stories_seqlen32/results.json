@@ -1,0 +1,73 @@
+{
+  "config": {
+    "model": {
+      "vocab_size": 4000,
+      "d_model": 256,
+      "n_heads": 8,
+      "n_layers": 6,
+      "d_ff": 1024,
+      "max_seq_len": 32,
+      "threshold": 0.5,
+      "dropout": 0.0
+    },
+    "optimizer": {
+      "optimizer": "Adam",
+      "lr": 0.01,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "weight_decay": 0.01,
+      "max_grad_norm": 1.0
+    },
+    "training": {
+      "num_stories": 5,
+      "batch_size": 4,
+      "gradient_accumulation_steps": 2,
+      "total_steps": 500,
+      "max_seq_len": 32
+    }
+  },
+  "metrics": {
+    "1": {
+      "loss": 8.855011463165283,
+      "active_loss": 8.855011463165283,
+      "perplexity": 7009.428590077987,
+      "accuracy": 0.0,
+      "grad_norm": 0.6323657631874084
+    },
+    "50": {
+      "loss": 7.596071243286133,
+      "active_loss": 7.596071243286133,
+      "perplexity": 1990.3608705960576,
+      "accuracy": 0.0967741935483871,
+      "grad_norm": 0.16263335943222046
+    },
+    "100": {
+      "loss": 7.570989608764648,
+      "active_loss": 7.570989608764648,
+      "perplexity": 1941.0602216153345,
+      "accuracy": 0.0,
+      "grad_norm": 0.1620662808418274
+    },
+    "250": {
+      "loss": 7.109963893890381,
+      "active_loss": 7.109963893890381,
+      "perplexity": 1224.1033476841694,
+      "accuracy": 0.0967741935483871,
+      "grad_norm": 0.15373264253139496
+    },
+    "500": {
+      "loss": 6.770960092544556,
+      "active_loss": 6.770960092544556,
+      "perplexity": 872.1488357506582,
+      "accuracy": 0.0967741935483871,
+      "grad_norm": 0.1426326036453247
+    }
+  },
+  "final_loss": 6.748275470733643,
+  "final_accuracy": 0.09032258064516129,
+  "final_perplexity": 852.5871824511466,
+  "generation": {
+    "prompt": "Once upon a time there was a little girl called Belle. Belle was",
+    "generated": "Once upon a time there was a little girl called Belle. Belle was The a a a was the a a Belin very there upon dog it"
+  }
+}

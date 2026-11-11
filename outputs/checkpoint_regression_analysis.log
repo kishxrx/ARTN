@@ -1,0 +1,307 @@
+================================================================================
+RIGOROUS CHECKPOINT REGRESSION ANALYSIS
+================================================================================
+
+================================================================================
+ANALYZING CHECKPOINT STEP 1000
+================================================================================
+
+Computing loss metrics...
+  Train loss: 4.3368
+  Val loss: 4.3559
+  Train-val gap: 0.0192
+  Perplexity: 77.94
+
+Computing weight statistics...
+  Total params: 6,835,456
+  Sparsity: 98.82%
+  Positive ratio: 0.61%
+  Negative ratio: 0.57%
+  Avg weight norm: 12.1268
+
+Generating with fixed prompts (greedy decoding)...
+
+  Prompt 1: Once upon a time there was a little girl who
+  Generated: Once upon a time there was a little girl who loved to play with her toys and her toys and her mommy ...
+
+  Prompt 2: There was a boy who loved to play with his
+  Generated: There was a boy who loved to play with his toy cars. One day, he saw a big box and saw a big box of ...
+
+  Prompt 3: One day, a happy dog went to the park and
+  Generated: One day, a happy dog went to the park and his friend, a big box of the park and saw a big box of the...
+
+Average Repetition Metrics:
+  Unique token ratio: 0.2779
+  Repeated bigram rate: 0.6189
+  Repeated trigram rate: 0.5330
+  Repetition score: 0.6247
+
+Average Vocabulary Metrics:
+  Vocabulary size: 25.9
+  Vocabulary diversity: 0.2898
+  Rare token ratio: 0.1477
+
+Computing token entropy and confidence...
+  Avg token entropy: 4.9155
+  Std token entropy: 1.3411
+  Avg max probability: 0.1863
+  Std max probability: 0.1689
+
+================================================================================
+ANALYZING CHECKPOINT STEP 2000
+================================================================================
+
+Computing loss metrics...
+  Train loss: 3.8069
+  Val loss: 3.8450
+  Train-val gap: 0.0381
+  Perplexity: 46.76
+
+Computing weight statistics...
+  Total params: 6,835,456
+  Sparsity: 96.45%
+  Positive ratio: 1.80%
+  Negative ratio: 1.75%
+  Avg weight norm: 16.3302
+
+Generating with fixed prompts (greedy decoding)...
+
+  Prompt 1: Once upon a time there was a little girl who
+  Generated: Once upon a time there was a little girl who wanted to go for a walk in the park. She was very excit...
+
+  Prompt 2: There was a boy who loved to play with his
+  Generated: There was a boy who loved to play with his toys and make a big toy car. He wanted to make a toy car ...
+
+  Prompt 3: One day, a happy dog went to the park and
+  Generated: One day, a happy dog went to the park and the park with the park. The dog saw a big dog with a big d...
+
+Average Repetition Metrics:
+  Unique token ratio: 0.3314
+  Repeated bigram rate: 0.5046
+  Repeated trigram rate: 0.4254
+  Repetition score: 0.5328
+
+Average Vocabulary Metrics:
+  Vocabulary size: 31.3
+  Vocabulary diversity: 0.3507
+  Rare token ratio: 0.2016
+
+Computing token entropy and confidence...
+  Avg token entropy: 3.6978
+  Std token entropy: 1.3375
+  Avg max probability: 0.2820
+  Std max probability: 0.1892
+
+================================================================================
+ANALYZING CHECKPOINT STEP 5000
+================================================================================
+
+Computing loss metrics...
+  Train loss: 3.1222
+  Val loss: 3.2182
+  Train-val gap: 0.0960
+  Perplexity: 24.98
+
+Computing weight statistics...
+  Total params: 6,835,456
+  Sparsity: 88.13%
+  Positive ratio: 5.99%
+  Negative ratio: 5.88%
+  Avg weight norm: 23.6455
+
+Generating with fixed prompts (greedy decoding)...
+
+  Prompt 1: Once upon a time there was a little girl who
+  Generated: Once upon a time there was a little girl who loved to play with her friends. One day she wanted to g...
+
+  Prompt 2: There was a boy who loved to play with his
+  Generated: There was a boy who loved to play with his toy car. He would play with his toy car every day and hav...
+
+  Prompt 3: One day, a happy dog went to the park and
+  Generated: One day, a happy dog went to the park and saw a big dog. The dog was very happy and wanted to see th...
+
+Average Repetition Metrics:
+  Unique token ratio: 0.4073
+  Repeated bigram rate: 0.3749
+  Repeated trigram rate: 0.2584
+  Repetition score: 0.4087
+
+Average Vocabulary Metrics:
+  Vocabulary size: 35.9
+  Vocabulary diversity: 0.4253
+  Rare token ratio: 0.2535
+
+Computing token entropy and confidence...
+  Avg token entropy: 2.6866
+  Std token entropy: 1.5216
+  Avg max probability: 0.4261
+  Std max probability: 0.2574
+
+================================================================================
+ANALYZING CHECKPOINT STEP 8000
+================================================================================
+
+Computing loss metrics...
+  Train loss: 2.7799
+  Val loss: 2.9074
+  Train-val gap: 0.1275
+  Perplexity: 18.31
+
+Computing weight statistics...
+  Total params: 6,835,456
+  Sparsity: 85.97%
+  Positive ratio: 7.06%
+  Negative ratio: 6.97%
+  Avg weight norm: 25.4549
+
+Generating with fixed prompts (greedy decoding)...
+
+  Prompt 1: Once upon a time there was a little girl who
+  Generated: Once upon a time there was a little girl who was very sad. She had a special thing to do. She was ve...
+
+  Prompt 2: There was a boy who loved to play with his
+  Generated: There was a boy who loved to play with his toy car. He would pretend he was a little boy who was a l...
+
+  Prompt 3: One day, a happy dog went to the park and
+  Generated: One day, a happy dog went to the park and saw a big dog. The dog was very hungry and wanted to eat t...
+
+Average Repetition Metrics:
+  Unique token ratio: 0.3820
+  Repeated bigram rate: 0.4308
+  Repeated trigram rate: 0.3412
+  Repetition score: 0.4633
+
+Average Vocabulary Metrics:
+  Vocabulary size: 36.0
+  Vocabulary diversity: 0.4033
+  Rare token ratio: 0.2048
+
+Computing token entropy and confidence...
+  Avg token entropy: 2.7857
+  Std token entropy: 1.4801
+  Avg max probability: 0.4162
+  Std max probability: 0.2558
+
+================================================================================
+ANALYZING CHECKPOINT STEP 10000
+================================================================================
+
+Computing loss metrics...
+  Train loss: 2.6851
+  Val loss: 2.8208
+  Train-val gap: 0.1357
+  Perplexity: 16.79
+
+Computing weight statistics...
+  Total params: 6,835,456
+  Sparsity: 85.88%
+  Positive ratio: 7.11%
+  Negative ratio: 7.01%
+  Avg weight norm: 25.5844
+
+Generating with fixed prompts (greedy decoding)...
+
+  Prompt 1: Once upon a time there was a little girl who
+  Generated: Once upon a time there was a little girl who loved to play in the garden. She would take a nap and m...
+
+  Prompt 2: There was a boy who loved to play with his
+  Generated: There was a boy who loved to play with his toys. He had a lot of toys, but he was always very happy....
+
+  Prompt 3: One day, a happy dog went to the park and
+  Generated: One day, a happy dog went to the park and saw a big tree. The dog was very big and had a long tail. ...
+
+Average Repetition Metrics:
+  Unique token ratio: 0.4295
+  Repeated bigram rate: 0.3359
+  Repeated trigram rate: 0.2418
+  Repetition score: 0.3827
+
+Average Vocabulary Metrics:
+  Vocabulary size: 39.7
+  Vocabulary diversity: 0.4434
+  Rare token ratio: 0.2669
+
+Computing token entropy and confidence...
+  Avg token entropy: 2.7296
+  Std token entropy: 1.4684
+  Avg max probability: 0.4191
+  Std max probability: 0.2559
+
+================================================================================
+CHECKPOINT COMPARISON TABLE
+================================================================================
+
+Step     Train Loss   Val Loss     Gap        PPL        Sparsity   Rep Score   
+--------------------------------------------------------------------------------
+1000     4.3368       4.3559       0.0192     77.94      98.82%     0.6247      
+2000     3.8069       3.8450       0.0381     46.76      96.45%     0.5328      
+5000     3.1222       3.2182       0.0960     24.98      88.13%     0.4087      
+8000     2.7799       2.9074       0.1275     18.31      85.97%     0.4633      
+10000    2.6851       2.8208       0.1357     16.79      85.88%     0.3827      
+
+
+Step     Unique%      Bigram%      Trigram%     Vocab Div    Entropy      MaxProb     
+--------------------------------------------------------------------------------
+1000     0.2779       0.6189       0.5330       0.2898       4.9155       0.1863      
+2000     0.3314       0.5046       0.4254       0.3507       3.6978       0.2820      
+5000     0.4073       0.3749       0.2584       0.4253       2.6866       0.4261      
+8000     0.3820       0.4308       0.3412       0.4033       2.7857       0.4162      
+10000    0.4295       0.3359       0.2418       0.4434       2.7296       0.4191      
+
+================================================================================
+METRIC DEGRADATION ANALYSIS
+================================================================================
+
+Checking for metric degradation...
+
+val_loss:
+  Values: ['4.3559', '3.8450', '3.2182', '2.9074', '2.8208']
+  Increases at steps: []
+  Decreases at steps: [2000, 5000, 8000, 10000]
+
+train_val_gap:
+  Values: ['0.0192', '0.0381', '0.0960', '0.1275', '0.1357']
+  Increases at steps: [2000, 5000, 8000, 10000]
+  Decreases at steps: []
+
+perplexity:
+  Values: ['77.9407', '46.7606', '24.9827', '18.3090', '16.7901']
+  Increases at steps: []
+  Decreases at steps: [2000, 5000, 8000, 10000]
+
+sparsity:
+  Values: ['0.9882', '0.9645', '0.8813', '0.8597', '0.8588']
+  Increases at steps: []
+  Decreases at steps: [2000, 5000, 8000, 10000]
+
+repetition_score:
+  Values: ['0.6247', '0.5328', '0.4087', '0.4633', '0.3827']
+  Increases at steps: [8000]
+  Decreases at steps: [2000, 5000, 10000]
+
+unique_token_ratio:
+  Values: ['0.2779', '0.3314', '0.4073', '0.3820', '0.4295']
+  Increases at steps: [2000, 5000, 10000]
+  Decreases at steps: [8000]
+
+vocabulary_diversity:
+  Values: ['0.2898', '0.3507', '0.4253', '0.4033', '0.4434']
+  Increases at steps: [2000, 5000, 10000]
+  Decreases at steps: [8000]
+
+avg_token_entropy:
+  Values: ['4.9155', '3.6978', '2.6866', '2.7857', '2.7296']
+  Increases at steps: [8000]
+  Decreases at steps: [2000, 5000, 10000]
+
+avg_max_probability:
+  Values: ['0.1863', '0.2820', '0.4261', '0.4162', '0.4191']
+  Increases at steps: [2000, 5000, 10000]
+  Decreases at steps: [8000]
+
+
+================================================================================
+ANALYSIS COMPLETE
+================================================================================
+
+Results saved to: /root/agent-sandbox/ARTN/outputs/checkpoint_regression_analysis.json

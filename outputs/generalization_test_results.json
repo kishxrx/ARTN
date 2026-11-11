@@ -1,0 +1,78 @@
+{
+  "overlap_analysis": {
+    "test_a": {
+      "total_stories": 100,
+      "story_overlap": 100,
+      "story_overlap_pct": 100.0
+    },
+    "test_b": {
+      "total_stories": 100,
+      "story_overlap": 0,
+      "story_overlap_pct": 0.0
+    }
+  },
+  "vocabulary_analysis": {
+    "test_a": {
+      "train_vocab_size": 3967,
+      "test_vocab_size": 2497,
+      "oov_rate_pct": 0.0
+    },
+    "test_b": {
+      "train_vocab_size": 3967,
+      "test_vocab_size": 2464,
+      "oov_rate_pct": 0.0
+    }
+  },
+  "results": {
+    "fp32": {
+      "test_a": {
+        "loss": 2.2786622003293506,
+        "perplexity": 9.76360991449833,
+        "top1_accuracy": 0.5260392156862745,
+        "top5_accuracy": 0.7290980392156863
+      },
+      "test_b": {
+        "loss": 2.3529135263480394,
+        "perplexity": 10.516164255738726,
+        "top1_accuracy": 0.5269019607843137,
+        "top5_accuracy": 0.7187058823529412
+      }
+    },
+    "bitlinear": {
+      "test_a": {
+        "loss": 2.2238515242034316,
+        "perplexity": 9.242861503193497,
+        "top1_accuracy": 0.5334117647058824,
+        "top5_accuracy": 0.7404313725490196
+      },
+      "test_b": {
+        "loss": 2.3503482306985295,
+        "perplexity": 10.489221757835411,
+        "top1_accuracy": 0.532235294117647,
+        "top5_accuracy": 0.7185490196078431
+      }
+    }
+  },
+  "generations": {
+    "Once upon a time there was a little girl": {
+      "fp32": "Once upon a time there was a little girl named Anna. Anna liked to pick the player and animals on the rotting seak around her. Sometimes she felt sad and ignored them. One day, Anna went home her old -and-affe, where she could draw pictures and words. books. She thought",
+      "bitlinear": "Once upon a time there was a little girl named Sarah. Sarah had been trying when the eventually prereached Grandma. Sarahs, Sarah was sitting in the kitchen. She steps up at her to admire the soup. After searching for the soup it - it was brushing on the water. Sarah"
+    },
+    "There was a boy who loved to play": {
+      "fp32": "There was a boy who loved to play with arrefort. Every morning, his mother would go to school. She would try to do something special with things so she could explore and often use the hootions. The boy will explore new room and things was about. One day, the boy and his",
+      "bitlinear": "There was a boy who loved to play with his age. One sunny was eating her dinner right away. Mommy looked out the window and saw a big envelope. Can I scared. The relaho was coming out of the new hometer in the windows slowly from the door in front of"
+    },
+    "One day, a happy dog went to the park": {
+      "fp32": "One day, a happy dog went to the park with his friends. They liked to swing in a lot on a swings. The dog was scared. But then, he saw a duck in the park. The dog is worriing dogs. A dog came lost a sheep of Sam's life. The graceful dog is fil",
+      "bitlinear": "One day, a happy dog went to the park to play. It was her best friend, a small cat named Mittens. Mittens liked to play slowly and catch bugs. She was the collar peek up. She put a juicel colds and shorhes were scary!\" Suddenly, a voice came out. \"Why"
+    },
+    "The cat sat on the mat and looked": {
+      "fp32": "The cat sat on the mat and looked at the mirror. He had been walking to the mall. He eventually started to climb the top. Finally, he climbed up the top of the top am turns on the paper by one side. He has a giant day! As the kids watched them starting to watch",
+      "bitlinear": "The cat sat on the mat and looked around. She saw a beautiful butterfly on a then hurt eyes. The butterfly decided to stop and put on a band bins, the butterfly fly around and skip. After a while, the butterfly came over to play. Tom ran outside to the ch. Her eyes and"
+    },
+    "In a small village, there lived a kind": {
+      "fp32": "In a small village, there lived a kind girl and DMia wanted flowers. The little girl and her boy, and the little girl. They loved to make all kinds of ingredies, and everything taught their way. The little girl and her little girl and the girl and the same thing for teaching.",
+      "bitlinear": "In a small village, there lived a kind boydwords. He was not very lonely. He stayed in the world because it was a funny tuna beautiful sound. She flew higher and around. She danced when felt baking, to hear this. One day, the music. One day, the music came to a set."
+    }
+  }
+}

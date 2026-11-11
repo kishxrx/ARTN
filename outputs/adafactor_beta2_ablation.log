@@ -1,0 +1,186 @@
+================================================================================
+ADAFACTOR BETA2 ABLATION STUDY
+================================================================================
+
+Testing beta2 values: [0.98, 0.999]
+Total steps: 2000
+Keep everything else IDENTICAL
+
+Device: cpu
+Output directory: /root/agent-sandbox/ARTN/outputs/adafactor_beta2_ablation_20260921_234805
+
+Loading data...
+  Train samples: 49988
+  Val samples: 5000
+
+================================================================================
+RUNNING: beta2=0.98
+================================================================================
+Step     0 | Loss: 157.8476 | LR: 0.00e+00 | Grad: 21.9105 | Upd: 15084.3198 | Upd/Param: 14.395305 | GlobalMean: 4.8241e-05
+Step    50 | Loss: 145.7316 | LR: 2.50e-04 | Grad: 22.8430 | Upd: 3015.1497 | Upd/Param: 2.877605 | GlobalMean: 5.9024e-05
+Step   100 | Loss: 112.0472 | LR: 5.00e-04 | Grad: 53.1099 | Upd: 4308.8410 | Upd/Param: 4.113056 | GlobalMean: 5.4189e-04
+         | Val Loss: 100.7273 | Perplexity: 55628637296104472230872858506178381056311296.00
+Step   150 | Loss: 47.8219 | LR: 7.50e-04 | Grad: 23.3449 | Upd: 816.2245 | Upd/Param: 0.779379 | GlobalMean: 1.2725e-04
+Step   200 | Loss: 35.2731 | LR: 1.00e-03 | Grad: 11.6415 | Upd: 475.2994 | Upd/Param: 0.454043 | GlobalMean: 2.9936e-05
+         | Val Loss: 31.6757 | Perplexity: 57093818674930.05
+Step   250 | Loss: 34.8736 | LR: 9.98e-04 | Grad: 8.4196 | Upd: 479.9759 | Upd/Param: 0.458740 | GlobalMean: 1.4628e-05
+Step   300 | Loss: 22.1766 | LR: 9.93e-04 | Grad: 6.1411 | Upd: 461.4149 | Upd/Param: 0.441220 | GlobalMean: 7.2102e-06
+         | Val Loss: 23.9486 | Perplexity: 25162000306.16
+Step   350 | Loss: 20.6147 | LR: 9.83e-04 | Grad: 4.8977 | Upd: 467.9552 | Upd/Param: 0.447696 | GlobalMean: 4.3801e-06
+Step   400 | Loss: 20.3922 | LR: 9.71e-04 | Grad: 4.7737 | Upd: 630.5358 | Upd/Param: 0.603533 | GlobalMean: 4.0157e-06
+         | Val Loss: 21.6370 | Perplexity: 2493722064.48
+Step   450 | Loss: 20.3921 | LR: 9.55e-04 | Grad: 4.3182 | Upd: 664.4814 | Upd/Param: 0.636332 | GlobalMean: 3.0283e-06
+Step   500 | Loss: 21.0384 | LR: 9.35e-04 | Grad: 4.1558 | Upd: 755.8754 | Upd/Param: 0.724198 | GlobalMean: 2.8271e-06
+         | Val Loss: 18.9637 | Perplexity: 172121251.31
+Step   550 | Loss: 21.0422 | LR: 9.12e-04 | Grad: 4.4221 | Upd: 891.4551 | Upd/Param: 0.854490 | GlobalMean: 2.8992e-06
+Step   600 | Loss: 19.4422 | LR: 8.87e-04 | Grad: 3.8708 | Upd: 764.5681 | Upd/Param: 0.733195 | GlobalMean: 2.1930e-06
+         | Val Loss: 19.4794 | Perplexity: 288261195.48
+Step   650 | Loss: 17.3027 | LR: 8.58e-04 | Grad: 3.6287 | Upd: 797.1311 | Upd/Param: 0.764755 | GlobalMean: 2.0326e-06
+Step   700 | Loss: 18.0548 | LR: 8.27e-04 | Grad: 3.5396 | Upd: 790.4681 | Upd/Param: 0.758683 | GlobalMean: 1.8766e-06
+         | Val Loss: 17.6014 | Perplexity: 44074602.69
+Step   750 | Loss: 16.5425 | LR: 7.93e-04 | Grad: 3.6453 | Upd: 823.6208 | Upd/Param: 0.790824 | GlobalMean: 1.9635e-06
+Step   800 | Loss: 16.9503 | LR: 7.58e-04 | Grad: 3.2544 | Upd: 704.1497 | Upd/Param: 0.676373 | GlobalMean: 1.4866e-06
+         | Val Loss: 17.2848 | Perplexity: 32112624.83
+Step   850 | Loss: 16.8395 | LR: 7.20e-04 | Grad: 3.1318 | Upd: 689.0243 | Upd/Param: 0.662089 | GlobalMean: 1.4403e-06
+Step   900 | Loss: 17.9282 | LR: 6.81e-04 | Grad: 3.8189 | Upd: 898.5480 | Upd/Param: 0.863726 | GlobalMean: 2.1032e-06
+         | Val Loss: 16.6184 | Perplexity: 16491894.78
+Step   950 | Loss: 18.6441 | LR: 6.41e-04 | Grad: 3.7385 | Upd: 880.0122 | Upd/Param: 0.846188 | GlobalMean: 1.8495e-06
+Step  1000 | Loss: 15.3507 | LR: 5.99e-04 | Grad: 3.5934 | Upd: 833.5560 | Upd/Param: 0.801767 | GlobalMean: 1.7521e-06
+         | Val Loss: 15.6196 | Perplexity: 6074371.82
+Step  1050 | Loss: 15.8480 | LR: 5.57e-04 | Grad: 3.2338 | Upd: 734.4417 | Upd/Param: 0.706637 | GlobalMean: 1.5549e-06
+Step  1100 | Loss: 14.2259 | LR: 5.15e-04 | Grad: 2.8809 | Upd: 613.5214 | Upd/Param: 0.590453 | GlobalMean: 1.1599e-06
+         | Val Loss: 15.0443 | Perplexity: 3417251.38
+Step  1150 | Loss: 14.4982 | LR: 4.73e-04 | Grad: 3.3349 | Upd: 767.5465 | Upd/Param: 0.738870 | GlobalMean: 1.4973e-06
+Step  1200 | Loss: 15.2431 | LR: 4.31e-04 | Grad: 3.4572 | Upd: 823.1377 | Upd/Param: 0.792564 | GlobalMean: 1.6452e-06
+         | Val Loss: 14.0550 | Perplexity: 1270568.18
+Step  1250 | Loss: 11.0495 | LR: 3.89e-04 | Grad: 2.8092 | Upd: 642.4489 | Upd/Param: 0.618713 | GlobalMean: 1.1627e-06
+Step  1300 | Loss: 12.6620 | LR: 3.49e-04 | Grad: 3.0467 | Upd: 719.7075 | Upd/Param: 0.693246 | GlobalMean: 1.2917e-06
+         | Val Loss: 14.9028 | Perplexity: 2966091.76
+Step  1350 | Loss: 13.8472 | LR: 3.10e-04 | Grad: 3.0930 | Upd: 743.1750 | Upd/Param: 0.715969 | GlobalMean: 1.3582e-06
+Step  1400 | Loss: 14.5467 | LR: 2.73e-04 | Grad: 2.8814 | Upd: 662.3443 | Upd/Param: 0.638191 | GlobalMean: 1.1686e-06
+         | Val Loss: 13.8805 | Perplexity: 1067169.26
+Step  1450 | Loss: 13.3384 | LR: 2.37e-04 | Grad: 2.9545 | Upd: 701.2022 | Upd/Param: 0.675718 | GlobalMean: 1.2487e-06
+Step  1500 | Loss: 16.0402 | LR: 2.03e-04 | Grad: 3.4254 | Upd: 856.9671 | Upd/Param: 0.825912 | GlobalMean: 1.5980e-06
+         | Val Loss: 14.2926 | Perplexity: 1611425.14
+Step  1550 | Loss: 12.5733 | LR: 1.72e-04 | Grad: 2.9251 | Upd: 740.9479 | Upd/Param: 0.714165 | GlobalMean: 1.3238e-06
+Step  1600 | Loss: 12.9617 | LR: 1.43e-04 | Grad: 3.0078 | Upd: 706.7085 | Upd/Param: 0.681217 | GlobalMean: 1.2530e-06
+         | Val Loss: 13.2691 | Perplexity: 578995.74
+Step  1650 | Loss: 13.5129 | LR: 1.18e-04 | Grad: 2.8927 | Upd: 667.7182 | Upd/Param: 0.643675 | GlobalMean: 1.1713e-06
+Step  1700 | Loss: 13.3113 | LR: 9.50e-05 | Grad: 2.8884 | Upd: 663.6193 | Upd/Param: 0.639758 | GlobalMean: 1.1501e-06
+         | Val Loss: 14.1993 | Perplexity: 1467799.67
+Step  1750 | Loss: 14.6649 | LR: 7.54e-05 | Grad: 3.0606 | Upd: 737.0187 | Upd/Param: 0.710548 | GlobalMean: 1.3382e-06
+Step  1800 | Loss: 15.6737 | LR: 5.92e-05 | Grad: 3.1889 | Upd: 789.6511 | Upd/Param: 0.761316 | GlobalMean: 1.4667e-06
+         | Val Loss: 14.1993 | Perplexity: 1467878.34
+Step  1850 | Loss: 14.3482 | LR: 4.65e-05 | Grad: 2.9786 | Upd: 699.2365 | Upd/Param: 0.674163 | GlobalMean: 1.2427e-06
+Step  1900 | Loss: 16.6613 | LR: 3.74e-05 | Grad: 3.0285 | Upd: 737.3553 | Upd/Param: 0.710931 | GlobalMean: 1.2755e-06
+         | Val Loss: 13.8384 | Perplexity: 1023178.47
+Step  1950 | Loss: 16.0171 | LR: 3.18e-05 | Grad: 3.4931 | Upd: 883.6646 | Upd/Param: 0.852011 | GlobalMean: 1.7333e-06
+
+FINAL: Val Loss: 14.1980 | Perplexity: 1465958.35
+Results saved to: /root/agent-sandbox/ARTN/outputs/adafactor_beta2_ablation_20260921_234805/beta2_0.98_results.json
+
+================================================================================
+RUNNING: beta2=0.999
+================================================================================
+Step     0 | Loss: 157.8476 | LR: 0.00e+00 | Grad: 21.9105 | Upd: 19079.2342 | Upd/Param: 18.207742 | GlobalMean: 4.8241e-05
+Step    50 | Loss: 145.7316 | LR: 2.50e-04 | Grad: 22.8430 | Upd: 13151.7353 | Upd/Param: 12.551782 | GlobalMean: 5.9024e-05
+Step   100 | Loss: 112.0472 | LR: 5.00e-04 | Grad: 53.1099 | Upd: 23682.5443 | Upd/Param: 22.606458 | GlobalMean: 5.4189e-04
+         | Val Loss: 100.7273 | Perplexity: 55628637296104472230872858506178381056311296.00
+Step   150 | Loss: 47.8219 | LR: 7.50e-04 | Grad: 23.3449 | Upd: 4365.0760 | Upd/Param: 4.168031 | GlobalMean: 1.2725e-04
+Step   200 | Loss: 35.2731 | LR: 1.00e-03 | Grad: 11.6415 | Upd: 1443.7795 | Upd/Param: 1.379209 | GlobalMean: 2.9936e-05
+         | Val Loss: 31.6757 | Perplexity: 57093818674930.05
+Step   250 | Loss: 34.8736 | LR: 9.98e-04 | Grad: 8.4196 | Upd: 898.0502 | Upd/Param: 0.858316 | GlobalMean: 1.4628e-05
+Step   300 | Loss: 22.1766 | LR: 9.93e-04 | Grad: 6.1411 | Upd: 582.3072 | Upd/Param: 0.556821 | GlobalMean: 7.2102e-06
+         | Val Loss: 23.9486 | Perplexity: 25162000306.16
+Step   350 | Loss: 20.6147 | LR: 9.83e-04 | Grad: 4.8977 | Upd: 427.8463 | Upd/Param: 0.409323 | GlobalMean: 4.3801e-06
+Step   400 | Loss: 20.3922 | LR: 9.71e-04 | Grad: 4.7737 | Upd: 421.6946 | Upd/Param: 0.403635 | GlobalMean: 4.0157e-06
+         | Val Loss: 21.6370 | Perplexity: 2493722064.48
+Step   450 | Loss: 20.3921 | LR: 9.55e-04 | Grad: 4.3182 | Upd: 397.0273 | Upd/Param: 0.380208 | GlobalMean: 3.0283e-06
+Step   500 | Loss: 21.0384 | LR: 9.35e-04 | Grad: 4.1558 | Upd: 371.9821 | Upd/Param: 0.356393 | GlobalMean: 2.8271e-06
+         | Val Loss: 18.9637 | Perplexity: 172121251.31
+Step   550 | Loss: 21.0422 | LR: 9.12e-04 | Grad: 4.4221 | Upd: 414.1747 | Upd/Param: 0.397001 | GlobalMean: 2.8992e-06
+Step   600 | Loss: 19.4422 | LR: 8.87e-04 | Grad: 3.8708 | Upd: 349.6500 | Upd/Param: 0.335302 | GlobalMean: 2.1930e-06
+         | Val Loss: 19.4794 | Perplexity: 288261195.48
+Step   650 | Loss: 17.3027 | LR: 8.58e-04 | Grad: 3.6287 | Upd: 303.1676 | Upd/Param: 0.290854 | GlobalMean: 2.0326e-06
+Step   700 | Loss: 18.0548 | LR: 8.27e-04 | Grad: 3.5396 | Upd: 309.0929 | Upd/Param: 0.296664 | GlobalMean: 1.8766e-06
+         | Val Loss: 17.6014 | Perplexity: 44074602.69
+Step   750 | Loss: 16.5425 | LR: 7.93e-04 | Grad: 3.6453 | Upd: 308.2718 | Upd/Param: 0.295996 | GlobalMean: 1.9635e-06
+Step   800 | Loss: 16.9503 | LR: 7.58e-04 | Grad: 3.2544 | Upd: 265.7253 | Upd/Param: 0.255243 | GlobalMean: 1.4866e-06
+         | Val Loss: 17.2848 | Perplexity: 32112624.83
+Step   850 | Loss: 16.8395 | LR: 7.20e-04 | Grad: 3.1318 | Upd: 256.8991 | Upd/Param: 0.246857 | GlobalMean: 1.4403e-06
+Step   900 | Loss: 17.9282 | LR: 6.81e-04 | Grad: 3.8189 | Upd: 334.9943 | Upd/Param: 0.322012 | GlobalMean: 2.1032e-06
+         | Val Loss: 16.6184 | Perplexity: 16491894.78
+Step   950 | Loss: 18.6441 | LR: 6.41e-04 | Grad: 3.7385 | Upd: 325.6648 | Upd/Param: 0.313148 | GlobalMean: 1.8495e-06
+Step  1000 | Loss: 15.3507 | LR: 5.99e-04 | Grad: 3.5934 | Upd: 303.6962 | Upd/Param: 0.292114 | GlobalMean: 1.7521e-06
+         | Val Loss: 15.6196 | Perplexity: 6074371.82
+Step  1050 | Loss: 15.8480 | LR: 5.57e-04 | Grad: 3.2338 | Upd: 261.1577 | Upd/Param: 0.251271 | GlobalMean: 1.5549e-06
+Step  1100 | Loss: 14.2259 | LR: 5.15e-04 | Grad: 2.8809 | Upd: 218.2508 | Upd/Param: 0.210045 | GlobalMean: 1.1599e-06
+         | Val Loss: 15.0443 | Perplexity: 3417251.38
+Step  1150 | Loss: 14.4982 | LR: 4.73e-04 | Grad: 3.3349 | Upd: 271.9729 | Upd/Param: 0.261812 | GlobalMean: 1.4973e-06
+Step  1200 | Loss: 15.2431 | LR: 4.31e-04 | Grad: 3.4572 | Upd: 294.5912 | Upd/Param: 0.283649 | GlobalMean: 1.6452e-06
+         | Val Loss: 14.0550 | Perplexity: 1270568.18
+Step  1250 | Loss: 11.0495 | LR: 3.89e-04 | Grad: 2.8092 | Upd: 225.7666 | Upd/Param: 0.217426 | GlobalMean: 1.1627e-06
+Step  1300 | Loss: 12.6620 | LR: 3.49e-04 | Grad: 3.0467 | Upd: 251.3570 | Upd/Param: 0.242115 | GlobalMean: 1.2917e-06
+         | Val Loss: 14.9028 | Perplexity: 2966091.76
+Step  1350 | Loss: 13.8472 | LR: 3.10e-04 | Grad: 3.0930 | Upd: 255.4616 | Upd/Param: 0.246110 | GlobalMean: 1.3582e-06
+Step  1400 | Loss: 14.5467 | LR: 2.73e-04 | Grad: 2.8814 | Upd: 242.2636 | Upd/Param: 0.233429 | GlobalMean: 1.1686e-06
+         | Val Loss: 13.8805 | Perplexity: 1067169.26
+Step  1450 | Loss: 13.3384 | LR: 2.37e-04 | Grad: 2.9545 | Upd: 252.0512 | Upd/Param: 0.242891 | GlobalMean: 1.2487e-06
+Step  1500 | Loss: 16.0402 | LR: 2.03e-04 | Grad: 3.4254 | Upd: 307.8380 | Upd/Param: 0.296683 | GlobalMean: 1.5980e-06
+         | Val Loss: 14.2926 | Perplexity: 1611425.14
+Step  1550 | Loss: 12.5733 | LR: 1.72e-04 | Grad: 2.9251 | Upd: 258.4391 | Upd/Param: 0.249097 | GlobalMean: 1.3238e-06
+Step  1600 | Loss: 12.9617 | LR: 1.43e-04 | Grad: 3.0078 | Upd: 266.7879 | Upd/Param: 0.257165 | GlobalMean: 1.2530e-06
+         | Val Loss: 13.2691 | Perplexity: 578995.74
+Step  1650 | Loss: 13.5129 | LR: 1.18e-04 | Grad: 2.8927 | Upd: 259.2640 | Upd/Param: 0.249928 | GlobalMean: 1.1713e-06
+Step  1700 | Loss: 13.3113 | LR: 9.50e-05 | Grad: 2.8884 | Upd: 253.4282 | Upd/Param: 0.244316 | GlobalMean: 1.1501e-06
+         | Val Loss: 14.1993 | Perplexity: 1467799.67
+Step  1750 | Loss: 14.6649 | LR: 7.54e-05 | Grad: 3.0606 | Upd: 285.1043 | Upd/Param: 0.274865 | GlobalMean: 1.3382e-06
+Step  1800 | Loss: 15.6737 | LR: 5.92e-05 | Grad: 3.1889 | Upd: 311.2114 | Upd/Param: 0.300044 | GlobalMean: 1.4667e-06
+         | Val Loss: 14.1993 | Perplexity: 1467878.34
+Step  1850 | Loss: 14.3482 | LR: 4.65e-05 | Grad: 2.9786 | Upd: 275.6010 | Upd/Param: 0.265719 | GlobalMean: 1.2427e-06
+Step  1900 | Loss: 16.6613 | LR: 3.74e-05 | Grad: 3.0285 | Upd: 290.5440 | Upd/Param: 0.280132 | GlobalMean: 1.2755e-06
+         | Val Loss: 13.8384 | Perplexity: 1023178.47
+Step  1950 | Loss: 16.0171 | LR: 3.18e-05 | Grad: 3.4931 | Upd: 364.3794 | Upd/Param: 0.351327 | GlobalMean: 1.7333e-06
+
+FINAL: Val Loss: 14.1980 | Perplexity: 1465958.35
+Results saved to: /root/agent-sandbox/ARTN/outputs/adafactor_beta2_ablation_20260921_234805/beta2_0.999_results.json
+
+================================================================================
+COMPARISON
+================================================================================
+
+Beta2      Final Train Loss   Final Val Loss     Final Val PPL  
+--------------------------------------------------------------------------------
+0.98       16.0171            14.1980            1465958.35     
+0.999      16.0171            14.1980            1465958.35     
+
+================================================================================
+UPDATE DYNAMICS COMPARISON
+================================================================================
+
+Beta2      Avg Grad Norm   Avg Update Norm    Avg Upd/Param  
+--------------------------------------------------------------------------------
+0.98       6.5195          1228.0755          1.176681       
+0.999      6.5195          1828.4521          1.747028       
+
+================================================================================
+SECOND-MOMENT STATISTICS
+================================================================================
+
+Beta2      Avg Row Var     Avg Col Var     Avg Global Mean   
+--------------------------------------------------------------------------------
+0.98       0.000000        0.000000        2.219182e-05      
+0.999      0.000000        0.000000        2.219182e-05      
+
+Comparison saved to: /root/agent-sandbox/ARTN/outputs/adafactor_beta2_ablation_20260921_234805/comparison.json
+
+================================================================================
+ABLATION COMPLETE
+================================================================================
+
+CAUSAL QUESTION: Does changing ONLY beta2 restore healthy update dynamics?
+
+Val Loss Ratio (beta2=0.98 / beta2=0.999): 1.00x
+
+❌ WEAK EVIDENCE: beta2 change alone does not fix the problem
+   → Other factors (eps2, factorization) may be primary causes

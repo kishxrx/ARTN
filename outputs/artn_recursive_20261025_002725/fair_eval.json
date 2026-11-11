@@ -1,0 +1,70 @@
+{
+  "batch_evaluation": {
+    "fp32": {
+      "nll": 2.422999582350629,
+      "perplexity": 11.279642838901031,
+      "n_valid_tokens": 34980,
+      "n_pad_tokens": 16020,
+      "n_ignore_tokens": 0,
+      "total_tokens": 51000,
+      "label": "FP32 (6 blocks, FP32)",
+      "params": 5828608
+    },
+    "bitlinear": {
+      "nll": 2.742481592438983,
+      "perplexity": 15.525465207686665,
+      "n_valid_tokens": 34980,
+      "n_pad_tokens": 16020,
+      "n_ignore_tokens": 0,
+      "total_tokens": 51000,
+      "label": "BitLinear GPT (6 blocks, ternary)",
+      "params": 6852608
+    },
+    "artn": {
+      "nll": 2.903614715523826,
+      "perplexity": 18.239958611255126,
+      "ponder_loss": 0.057661571057507216,
+      "n_valid_tokens": 34980,
+      "n_pad_tokens": 16020,
+      "n_ignore_tokens": 0,
+      "total_tokens": 51000,
+      "label": "ARTN (1 shared block, ternary + halting)",
+      "params": 2904065
+    }
+  },
+  "causal_evaluation": {
+    "threshold_0.9": {
+      "threshold": 0.9,
+      "nll": 2.8632014823396164,
+      "perplexity": 17.517519288128096,
+      "n_valid_tokens": 1280,
+      "avg_passes": 3.30078125,
+      "passes_histogram": {
+        "3": 268,
+        "2": 304,
+        "1": 132,
+        "4": 293,
+        "6": 94,
+        "5": 189
+      },
+      "elapsed_s": 147.61122941970825
+    },
+    "threshold_1.0": {
+      "threshold": 1.0,
+      "nll": 2.860756559290587,
+      "perplexity": 17.474742615603702,
+      "n_valid_tokens": 1280,
+      "avg_passes": 6.0,
+      "passes_histogram": {
+        "6": 1280
+      },
+      "elapsed_s": 225.64781618118286
+    }
+  },
+  "config": {
+    "batch_samples": 200,
+    "causal_samples": 20,
+    "causal_max_tokens": 64,
+    "excludes": "PAD (ID 0) and ignore (-1)"
+  }
+}

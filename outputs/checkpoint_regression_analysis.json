@@ -1,0 +1,132 @@
+[
+  {
+    "step": 1000,
+    "loss_metrics": {
+      "train_loss": 4.336786821603775,
+      "val_loss": 4.355948328018188,
+      "train_val_gap": 0.019161506414413054,
+      "perplexity": 77.94070365388463
+    },
+    "repetition_metrics": {
+      "unique_token_ratio": 0.2779095096646433,
+      "repeated_bigram_rate": 0.6189291002525913,
+      "repeated_trigram_rate": 0.5329506358933455,
+      "repetition_score": 0.6246567421604311
+    },
+    "vocabulary_metrics": {
+      "vocabulary_size": 25.9,
+      "vocabulary_diversity": 0.2898425354188624,
+      "rare_token_ratio": 0.14766992532199819
+    },
+    "entropy_metrics": {
+      "avg_token_entropy": 4.915517883300781,
+      "std_token_entropy": 1.3411334275363238,
+      "avg_max_probability": 0.1862580007314682,
+      "std_max_probability": 0.168940406461775
+    }
+  },
+  {
+    "step": 2000,
+    "loss_metrics": {
+      "train_loss": 3.8069490404129027,
+      "val_loss": 3.845040002346039,
+      "train_val_gap": 0.038090961933136214,
+      "perplexity": 46.760554845395745
+    },
+    "repetition_metrics": {
+      "unique_token_ratio": 0.3314155583727772,
+      "repeated_bigram_rate": 0.5045565999102211,
+      "repeated_trigram_rate": 0.42535954569035095,
+      "repetition_score": 0.5328335290759316
+    },
+    "vocabulary_metrics": {
+      "vocabulary_size": 31.3,
+      "vocabulary_diversity": 0.35066676457125895,
+      "rare_token_ratio": 0.20161926067389063
+    },
+    "entropy_metrics": {
+      "avg_token_entropy": 3.697823724746704,
+      "std_token_entropy": 1.3374781749573286,
+      "avg_max_probability": 0.2820428767800331,
+      "std_max_probability": 0.18918286366382103
+    }
+  },
+  {
+    "step": 5000,
+    "loss_metrics": {
+      "train_loss": 3.1221792927980423,
+      "val_loss": 3.2181825551986694,
+      "train_val_gap": 0.09600326240062707,
+      "perplexity": 24.98267426465905
+    },
+    "repetition_metrics": {
+      "unique_token_ratio": 0.40730412198401966,
+      "repeated_bigram_rate": 0.37492975932107686,
+      "repeated_trigram_rate": 0.2583986678317779,
+      "repetition_score": 0.40867476838961175
+    },
+    "vocabulary_metrics": {
+      "vocabulary_size": 35.9,
+      "vocabulary_diversity": 0.42533396394180667,
+      "rare_token_ratio": 0.25345685911954596
+    },
+    "entropy_metrics": {
+      "avg_token_entropy": 2.686603426039219,
+      "std_token_entropy": 1.5216173311481473,
+      "avg_max_probability": 0.426069198101759,
+      "std_max_probability": 0.2573634481205765
+    }
+  },
+  {
+    "step": 8000,
+    "loss_metrics": {
+      "train_loss": 2.7799375582933425,
+      "val_loss": 2.907392244577408,
+      "train_val_gap": 0.1274546862840653,
+      "perplexity": 18.308990888472398
+    },
+    "repetition_metrics": {
+      "unique_token_ratio": 0.38200907420319796,
+      "repeated_bigram_rate": 0.430848227882608,
+      "repeated_trigram_rate": 0.34120818614338,
+      "repetition_score": 0.4633491132742633
+    },
+    "vocabulary_metrics": {
+      "vocabulary_size": 36.0,
+      "vocabulary_diversity": 0.4033424653610628,
+      "rare_token_ratio": 0.20484024510080304
+    },
+    "entropy_metrics": {
+      "avg_token_entropy": 2.785656450986862,
+      "std_token_entropy": 1.480135501540629,
+      "avg_max_probability": 0.41623561158776284,
+      "std_max_probability": 0.25583386816599213
+    }
+  },
+  {
+    "step": 10000,
+    "loss_metrics": {
+      "train_loss": 2.685073755979538,
+      "val_loss": 2.820790878534317,
+      "train_val_gap": 0.13571712255477886,
+      "perplexity": 16.790124371459964
+    },
+    "repetition_metrics": {
+      "unique_token_ratio": 0.4295204978775291,
+      "repeated_bigram_rate": 0.3358738227121322,
+      "repeated_trigram_rate": 0.24179319182304776,
+      "repetition_score": 0.38271550555255035
+    },
+    "vocabulary_metrics": {
+      "vocabulary_size": 39.7,
+      "vocabulary_diversity": 0.4434021151262531,
+      "rare_token_ratio": 0.26693018118822065
+    },
+    "entropy_metrics": {
+      "avg_token_entropy": 2.7296467247605323,
+      "std_token_entropy": 1.4683612878000836,
+      "avg_max_probability": 0.4190672536194324,
+      "std_max_probability": 0.2559284996511479
+    }
+  }
+]

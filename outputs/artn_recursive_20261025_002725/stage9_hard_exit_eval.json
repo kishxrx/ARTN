@@ -1,0 +1,64 @@
+{
+  "threshold_0.3": {
+    "threshold": 0.3,
+    "avg_nll": 2.921659799600888,
+    "perplexity": 18.572087835427055,
+    "avg_passes": 5.88,
+    "total_tokens": 34980,
+    "total_sequences": 50,
+    "passes_histogram": {
+      "6": 48,
+      "5": 1,
+      "1": 1
+    }
+  },
+  "threshold_0.5": {
+    "threshold": 0.5,
+    "avg_nll": 2.921659799600888,
+    "perplexity": 18.572087835427055,
+    "avg_passes": 5.88,
+    "total_tokens": 34980,
+    "total_sequences": 50,
+    "passes_histogram": {
+      "6": 48,
+      "5": 1,
+      "1": 1
+    }
+  },
+  "threshold_0.7": {
+    "threshold": 0.7,
+    "avg_nll": 2.9215364869490155,
+    "perplexity": 18.569797803223132,
+    "avg_passes": 5.9,
+    "total_tokens": 34980,
+    "total_sequences": 50,
+    "passes_histogram": {
+      "6": 49,
+      "1": 1
+    }
+  },
+  "threshold_0.9": {
+    "threshold": 0.9,
+    "avg_nll": 2.9215364869490155,
+    "perplexity": 18.569797803223132,
+    "avg_passes": 5.9,
+    "total_tokens": 34980,
+    "total_sequences": 50,
+    "passes_histogram": {
+      "6": 49,
+      "1": 1
+    }
+  },
+  "threshold_1.0": {
+    "threshold": 1.0,
+    "avg_nll": 2.9037417063377733,
+    "perplexity": 18.242275065526627,
+    "avg_passes": 5.98,
+    "total_tokens": 34980,
+    "total_sequences": 50,
+    "passes_histogram": {
+      "6": 49,
+      "5": 1
+    }
+  }
+}

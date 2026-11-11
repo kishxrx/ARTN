@@ -1,0 +1,50 @@
+{
+  "audit_data_split": {
+    "train_stories": 16,
+    "val_stories": 4,
+    "unique_train": 16,
+    "unique_val": 4,
+    "overlap": 0,
+    "train_unique_tokens": 447,
+    "val_unique_tokens": 125,
+    "oov_tokens": 107,
+    "status": "PASS"
+  },
+  "audit_target_alignment": {
+    "correct_shift": true,
+    "pad_token": 0,
+    "train_pad_count": 4,
+    "val_pad_count": 1,
+    "eos_token": 2,
+    "train_eos_count": 2,
+    "val_eos_count": 0,
+    "status": "PASS"
+  },
+  "audit_evaluation_pipeline": {
+    "model_eval": true,
+    "forward_pass": "OK",
+    "accuracy_computation": "OK",
+    "val_tokens": 124,
+    "status": "PASS"
+  },
+  "sanity_overfit_one_batch": {
+    "status": "PASS",
+    "final_accuracy": 0.975806474685669,
+    "final_loss": 0.03355133533477783
+  },
+  "sanity_train_equals_val": {
+    "status": "PASS",
+    "final_train_acc": 0.8225806355476379,
+    "final_val_acc": 0.8387096524238586
+  },
+  "sanity_swap_split": {
+    "status": "FAIL",
+    "final_val_acc": 0.0
+  },
+  "sanity_random_labels": {
+    "status": "PASS",
+    "final_accuracy": 0.9596773982048035,
+    "final_loss": 0.0827329084277153,
+    "expected_random": 0.00025
+  }
+}

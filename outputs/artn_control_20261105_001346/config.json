@@ -1,0 +1,31 @@
+{
+  "d_model": 256,
+  "n_heads": 8,
+  "n_layers": 6,
+  "d_ff": 1024,
+  "max_seq_len": 256,
+  "vocab_size": 4000,
+  "target_passes": 4.0,
+  "ponder_loss_weight": 0.01,
+  "batch_size": 4,
+  "gradient_accumulation_steps": 2,
+  "max_grad_norm": 1.0,
+  "beta1": 0.5,
+  "beta2": 0.98,
+  "weight_decay": 0.01,
+  "total_steps": 5000,
+  "warmup_steps": 500,
+  "max_lr": 0.0005,
+  "min_lr": 1e-05,
+  "seed": 42,
+  "checkpoint_every": 500,
+  "eval_every": 100,
+  "full_checkpoint_steps": [
+    2500,
+    5000
+  ],
+  "generation_prompt": "Once upon a time",
+  "generation_max_tokens": 100,
+  "generation_temperature": 0.9,
+  "generation_threshold": 1.0
+}

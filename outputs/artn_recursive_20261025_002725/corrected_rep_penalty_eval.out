@@ -1,0 +1,272 @@
+Model loaded: step=10000
+
+======================================================================
+CORRECTED REP PENALTY EVALUATION
+======================================================================
+
+--- Unit Tests ---
+
+  Unit tests: 6/6 passed
+
+--- sign_aware_prompt_plus_generated_p1.2_t1.0 ---
+  [1/160] 'once upon a time there was a dog   ' rep=0.021 uniq=0.816 disagree=0/50
+  [2/160] 'there was a little girl            ' rep=0.140 uniq=0.700 disagree=0/50
+  [3/160] 'there lived a                      ' rep=0.043 uniq=0.760 disagree=0/50
+  [4/160] 'a king                             ' rep=0.021 uniq=0.796 disagree=0/50
+  [5/160] 'king                               ' rep=0.044 uniq=0.771 disagree=0/50
+  [6/160] 'a bison from wild forest           ' rep=0.000 uniq=0.880 disagree=0/50
+  [7/160] 'a peacock                          ' rep=0.043 uniq=0.760 disagree=0/50
+  [8/160] 'The scientist mixed two chemicals  ' rep=0.043 uniq=0.776 disagree=0/50
+  [9/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.837 disagree=0/50
+  [10/160] 'Why did the chicken cross          ' rep=0.070 uniq=0.729 disagree=0/50
+
+--- sign_aware_prompt_plus_generated_p1.2_t0.9 ---
+  [11/160] 'once upon a time there was a dog   ' rep=0.021 uniq=0.816 disagree=0/50
+  [12/160] 'there was a little girl            ' rep=0.140 uniq=0.700 disagree=0/50
+  [13/160] 'there lived a                      ' rep=0.043 uniq=0.760 disagree=0/50
+  [14/160] 'a king                             ' rep=0.045 uniq=0.851 disagree=0/50
+  [15/160] 'king                               ' rep=0.000 uniq=0.851 disagree=0/50
+  [16/160] 'a bison from wild forest           ' rep=0.000 uniq=0.880 disagree=0/50
+  [17/160] 'a peacock                          ' rep=0.043 uniq=0.760 disagree=0/50
+  [18/160] 'The scientist mixed two chemicals  ' rep=0.043 uniq=0.776 disagree=0/50
+  [19/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.837 disagree=0/50
+  [20/160] 'Why did the chicken cross          ' rep=0.070 uniq=0.729 disagree=0/50
+
+--- sign_aware_prompt_plus_generated_p1.3_t1.0 ---
+  [21/160] 'once upon a time there was a dog   ' rep=0.022 uniq=0.917 disagree=0/50
+  [22/160] 'there was a little girl            ' rep=0.000 uniq=0.900 disagree=0/50
+  [23/160] 'there lived a                      ' rep=0.000 uniq=0.860 disagree=0/50
+  [24/160] 'a king                             ' rep=0.000 uniq=0.935 disagree=0/50
+  [25/160] 'king                               ' rep=0.000 uniq=0.880 disagree=0/50
+  [26/160] 'a bison from wild forest           ' rep=0.000 uniq=0.840 disagree=0/50
+  [27/160] 'a peacock                          ' rep=0.000 uniq=0.880 disagree=0/50
+  [28/160] 'The scientist mixed two chemicals  ' rep=0.000 uniq=0.860 disagree=0/50
+  [29/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.900 disagree=0/50
+  [30/160] 'Why did the chicken cross          ' rep=0.022 uniq=0.854 disagree=0/50
+
+--- sign_aware_prompt_plus_generated_p1.3_t0.9 ---
+  [31/160] 'once upon a time there was a dog   ' rep=0.022 uniq=0.917 disagree=0/50
+  [32/160] 'there was a little girl            ' rep=0.000 uniq=0.880 disagree=0/50
+  [33/160] 'there lived a                      ' rep=0.000 uniq=0.860 disagree=0/50
+  [34/160] 'a king                             ' rep=0.000 uniq=0.935 disagree=0/50
+  [35/160] 'king                               ' rep=0.021 uniq=0.837 disagree=0/50
+  [36/160] 'a bison from wild forest           ' rep=0.000 uniq=0.840 disagree=0/50
+  [37/160] 'a peacock                          ' rep=0.000 uniq=0.880 disagree=0/50
+  [38/160] 'The scientist mixed two chemicals  ' rep=0.000 uniq=0.860 disagree=0/50
+  [39/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.880 disagree=0/50
+  [40/160] 'Why did the chicken cross          ' rep=0.022 uniq=0.854 disagree=0/50
+
+--- sign_aware_generated_only_p1.2_t1.0 ---
+  [41/160] 'once upon a time there was a dog   ' rep=0.043 uniq=0.776 disagree=0/50
+  [42/160] 'there was a little girl            ' rep=0.021 uniq=0.800 disagree=0/50
+  [43/160] 'there lived a                      ' rep=0.043 uniq=0.760 disagree=0/50
+  [44/160] 'a king                             ' rep=0.000 uniq=0.851 disagree=0/50
+  [45/160] 'king                               ' rep=0.044 uniq=0.771 disagree=0/50
+  [46/160] 'a bison from wild forest           ' rep=0.043 uniq=0.755 disagree=0/50
+  [47/160] 'a peacock                          ' rep=0.000 uniq=0.778 disagree=0/50
+  [48/160] 'The scientist mixed two chemicals  ' rep=0.067 uniq=0.755 disagree=0/50
+  [49/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.837 disagree=0/50
+  [50/160] 'Why did the chicken cross          ' rep=0.023 uniq=0.756 disagree=0/50
+
+--- sign_aware_generated_only_p1.2_t0.9 ---
+  [51/160] 'once upon a time there was a dog   ' rep=0.043 uniq=0.776 disagree=0/50
+  [52/160] 'there was a little girl            ' rep=0.021 uniq=0.800 disagree=0/50
+  [53/160] 'there lived a                      ' rep=0.043 uniq=0.760 disagree=0/50
+  [54/160] 'a king                             ' rep=0.045 uniq=0.787 disagree=0/50
+  [55/160] 'king                               ' rep=0.000 uniq=0.851 disagree=0/50
+  [56/160] 'a bison from wild forest           ' rep=0.043 uniq=0.755 disagree=0/50
+  [57/160] 'a peacock                          ' rep=0.023 uniq=0.800 disagree=0/50
+  [58/160] 'The scientist mixed two chemicals  ' rep=0.044 uniq=0.771 disagree=0/50
+  [59/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.837 disagree=0/50
+  [60/160] 'Why did the chicken cross          ' rep=0.043 uniq=0.700 disagree=0/50
+
+--- sign_aware_generated_only_p1.3_t1.0 ---
+  [61/160] 'once upon a time there was a dog   ' rep=0.021 uniq=0.816 disagree=0/50
+  [62/160] 'there was a little girl            ' rep=0.043 uniq=0.820 disagree=0/50
+  [63/160] 'there lived a                      ' rep=0.043 uniq=0.800 disagree=0/50
+  [64/160] 'a king                             ' rep=0.000 uniq=0.854 disagree=0/50
+  [65/160] 'king                               ' rep=0.000 uniq=0.880 disagree=0/50
+  [66/160] 'a bison from wild forest           ' rep=0.000 uniq=0.860 disagree=0/50
+  [67/160] 'a peacock                          ' rep=0.000 uniq=0.870 disagree=0/50
+  [68/160] 'The scientist mixed two chemicals  ' rep=0.000 uniq=0.875 disagree=0/50
+  [69/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.880 disagree=0/50
+  [70/160] 'Why did the chicken cross          ' rep=0.000 uniq=0.872 disagree=0/50
+
+--- sign_aware_generated_only_p1.3_t0.9 ---
+  [71/160] 'once upon a time there was a dog   ' rep=0.021 uniq=0.816 disagree=0/50
+  [72/160] 'there was a little girl            ' rep=0.043 uniq=0.857 disagree=0/50
+  [73/160] 'there lived a                      ' rep=0.043 uniq=0.800 disagree=0/50
+  [74/160] 'a king                             ' rep=0.000 uniq=0.875 disagree=0/50
+  [75/160] 'king                               ' rep=0.021 uniq=0.837 disagree=0/50
+  [76/160] 'a bison from wild forest           ' rep=0.000 uniq=0.860 disagree=0/50
+  [77/160] 'a peacock                          ' rep=0.000 uniq=0.933 disagree=0/50
+  [78/160] 'The scientist mixed two chemicals  ' rep=0.000 uniq=0.875 disagree=0/50
+  [79/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.880 disagree=0/50
+  [80/160] 'Why did the chicken cross          ' rep=0.067 uniq=0.837 disagree=0/50
+
+--- divide_only_prompt_plus_generated_p1.2_t1.0 ---
+  [81/160] 'once upon a time there was a dog   ' rep=0.021 uniq=0.816 disagree=0/50
+  [82/160] 'there was a little girl            ' rep=0.140 uniq=0.700 disagree=0/50
+  [83/160] 'there lived a                      ' rep=0.043 uniq=0.760 disagree=0/50
+  [84/160] 'a king                             ' rep=0.021 uniq=0.796 disagree=0/50
+  [85/160] 'king                               ' rep=0.044 uniq=0.771 disagree=0/50
+  [86/160] 'a bison from wild forest           ' rep=0.000 uniq=0.880 disagree=0/50
+  [87/160] 'a peacock                          ' rep=0.043 uniq=0.760 disagree=0/50
+  [88/160] 'The scientist mixed two chemicals  ' rep=0.043 uniq=0.776 disagree=0/50
+  [89/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.837 disagree=0/50
+  [90/160] 'Why did the chicken cross          ' rep=0.070 uniq=0.729 disagree=0/50
+
+--- divide_only_prompt_plus_generated_p1.2_t0.9 ---
+  [91/160] 'once upon a time there was a dog   ' rep=0.021 uniq=0.816 disagree=0/50
+  [92/160] 'there was a little girl            ' rep=0.140 uniq=0.700 disagree=0/50
+  [93/160] 'there lived a                      ' rep=0.043 uniq=0.760 disagree=0/50
+  [94/160] 'a king                             ' rep=0.045 uniq=0.851 disagree=0/50
+  [95/160] 'king                               ' rep=0.000 uniq=0.851 disagree=0/50
+  [96/160] 'a bison from wild forest           ' rep=0.000 uniq=0.880 disagree=0/50
+  [97/160] 'a peacock                          ' rep=0.043 uniq=0.760 disagree=0/50
+  [98/160] 'The scientist mixed two chemicals  ' rep=0.043 uniq=0.776 disagree=0/50
+  [99/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.837 disagree=0/50
+  [100/160] 'Why did the chicken cross          ' rep=0.070 uniq=0.729 disagree=0/50
+
+--- divide_only_prompt_plus_generated_p1.3_t1.0 ---
+  [101/160] 'once upon a time there was a dog   ' rep=0.022 uniq=0.917 disagree=0/50
+  [102/160] 'there was a little girl            ' rep=0.000 uniq=0.900 disagree=0/50
+  [103/160] 'there lived a                      ' rep=0.000 uniq=0.860 disagree=0/50
+  [104/160] 'a king                             ' rep=0.000 uniq=0.935 disagree=0/50
+  [105/160] 'king                               ' rep=0.000 uniq=0.880 disagree=0/50
+  [106/160] 'a bison from wild forest           ' rep=0.000 uniq=0.840 disagree=0/50
+  [107/160] 'a peacock                          ' rep=0.000 uniq=0.880 disagree=0/50
+  [108/160] 'The scientist mixed two chemicals  ' rep=0.000 uniq=0.860 disagree=0/50
+  [109/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.900 disagree=0/50
+  [110/160] 'Why did the chicken cross          ' rep=0.022 uniq=0.854 disagree=0/50
+
+--- divide_only_prompt_plus_generated_p1.3_t0.9 ---
+  [111/160] 'once upon a time there was a dog   ' rep=0.022 uniq=0.917 disagree=0/50
+  [112/160] 'there was a little girl            ' rep=0.000 uniq=0.880 disagree=0/50
+  [113/160] 'there lived a                      ' rep=0.000 uniq=0.860 disagree=0/50
+  [114/160] 'a king                             ' rep=0.000 uniq=0.935 disagree=0/50
+  [115/160] 'king                               ' rep=0.021 uniq=0.837 disagree=0/50
+  [116/160] 'a bison from wild forest           ' rep=0.000 uniq=0.840 disagree=0/50
+  [117/160] 'a peacock                          ' rep=0.000 uniq=0.880 disagree=0/50
+  [118/160] 'The scientist mixed two chemicals  ' rep=0.000 uniq=0.860 disagree=0/50
+  [119/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.880 disagree=0/50
+  [120/160] 'Why did the chicken cross          ' rep=0.022 uniq=0.854 disagree=0/50
+
+--- divide_only_generated_only_p1.2_t1.0 ---
+  [121/160] 'once upon a time there was a dog   ' rep=0.043 uniq=0.776 disagree=0/50
+  [122/160] 'there was a little girl            ' rep=0.021 uniq=0.800 disagree=0/50
+  [123/160] 'there lived a                      ' rep=0.043 uniq=0.760 disagree=0/50
+  [124/160] 'a king                             ' rep=0.000 uniq=0.851 disagree=0/50
+  [125/160] 'king                               ' rep=0.044 uniq=0.771 disagree=0/50
+  [126/160] 'a bison from wild forest           ' rep=0.043 uniq=0.755 disagree=0/50
+  [127/160] 'a peacock                          ' rep=0.000 uniq=0.778 disagree=0/50
+  [128/160] 'The scientist mixed two chemicals  ' rep=0.067 uniq=0.755 disagree=0/50
+  [129/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.837 disagree=0/50
+  [130/160] 'Why did the chicken cross          ' rep=0.023 uniq=0.756 disagree=0/50
+
+--- divide_only_generated_only_p1.2_t0.9 ---
+  [131/160] 'once upon a time there was a dog   ' rep=0.043 uniq=0.776 disagree=0/50
+  [132/160] 'there was a little girl            ' rep=0.021 uniq=0.800 disagree=0/50
+  [133/160] 'there lived a                      ' rep=0.043 uniq=0.760 disagree=0/50
+  [134/160] 'a king                             ' rep=0.045 uniq=0.787 disagree=0/50
+  [135/160] 'king                               ' rep=0.000 uniq=0.851 disagree=0/50
+  [136/160] 'a bison from wild forest           ' rep=0.043 uniq=0.755 disagree=0/50
+  [137/160] 'a peacock                          ' rep=0.023 uniq=0.800 disagree=0/50
+  [138/160] 'The scientist mixed two chemicals  ' rep=0.044 uniq=0.771 disagree=0/50
+  [139/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.837 disagree=0/50
+  [140/160] 'Why did the chicken cross          ' rep=0.043 uniq=0.700 disagree=0/50
+
+--- divide_only_generated_only_p1.3_t1.0 ---
+  [141/160] 'once upon a time there was a dog   ' rep=0.021 uniq=0.816 disagree=0/50
+  [142/160] 'there was a little girl            ' rep=0.043 uniq=0.820 disagree=0/50
+  [143/160] 'there lived a                      ' rep=0.043 uniq=0.800 disagree=0/50
+  [144/160] 'a king                             ' rep=0.000 uniq=0.854 disagree=0/50
+  [145/160] 'king                               ' rep=0.000 uniq=0.880 disagree=0/50
+  [146/160] 'a bison from wild forest           ' rep=0.000 uniq=0.860 disagree=0/50
+  [147/160] 'a peacock                          ' rep=0.000 uniq=0.870 disagree=0/50
+  [148/160] 'The scientist mixed two chemicals  ' rep=0.000 uniq=0.875 disagree=0/50
+  [149/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.880 disagree=0/50
+  [150/160] 'Why did the chicken cross          ' rep=0.000 uniq=0.872 disagree=0/50
+
+--- divide_only_generated_only_p1.3_t0.9 ---
+  [151/160] 'once upon a time there was a dog   ' rep=0.021 uniq=0.816 disagree=0/50
+  [152/160] 'there was a little girl            ' rep=0.043 uniq=0.857 disagree=0/50
+  [153/160] 'there lived a                      ' rep=0.043 uniq=0.800 disagree=0/50
+  [154/160] 'a king                             ' rep=0.000 uniq=0.875 disagree=0/50
+  [155/160] 'king                               ' rep=0.021 uniq=0.837 disagree=0/50
+  [156/160] 'a bison from wild forest           ' rep=0.000 uniq=0.860 disagree=0/50
+  [157/160] 'a peacock                          ' rep=0.000 uniq=0.933 disagree=0/50
+  [158/160] 'The scientist mixed two chemicals  ' rep=0.000 uniq=0.875 disagree=0/50
+  [159/160] 'In the year 3024, humanity         ' rep=0.000 uniq=0.880 disagree=0/50
+  [160/160] 'Why did the chicken cross          ' rep=0.067 uniq=0.837 disagree=0/50
+
+
+Results saved to: /root/agent-sandbox/ARTN/outputs/artn_recursive_20261025_002725/corrected_rep_penalty_eval.json
+
+======================================================================
+SUMMARY 1: Sign-aware vs Divide-only (prompt+generated)
+======================================================================
+
+Penalty  Thresh  Mode         Avg rep   Avg uniq  Disagreements
+------------------------------------------------------------
+  1.2      1.0     sign_aware   0.042     0.782     0
+  1.2      1.0     divide_only  0.042     0.782     0
+  1.2      0.9     sign_aware   0.041     0.796     0
+  1.2      0.9     divide_only  0.041     0.796     0
+  1.3      1.0     sign_aware   0.004     0.883     0
+  1.3      1.0     divide_only  0.004     0.883     0
+  1.3      0.9     sign_aware   0.007     0.874     0
+  1.3      0.9     divide_only  0.007     0.874     0
+
+======================================================================
+SUMMARY 2: Prompt+generated vs Generated-only (sign-aware)
+======================================================================
+
+Penalty  Thresh  Scope                  Avg rep   Avg uniq 
+------------------------------------------------------------
+  1.2      1.0     prompt_plus_generated  0.042     0.782    
+  1.2      1.0     generated_only         0.028     0.784    
+  1.2      0.9     prompt_plus_generated  0.041     0.796    
+  1.2      0.9     generated_only         0.030     0.784    
+  1.3      1.0     prompt_plus_generated  0.004     0.883    
+  1.3      1.0     generated_only         0.011     0.853    
+  1.3      0.9     prompt_plus_generated  0.007     0.874    
+  1.3      0.9     generated_only         0.019     0.857    
+
+======================================================================
+'a peacock' output comparison
+======================================================================
+
+  sign_aware_prompt_plus_generated_p1.2_t1.0:
+    text: and his name was Max. Max loved to play with his friends in the park. One day, he saw a big tree with lots of leaves. He wanted to climb it, but it wa
+    rep=0.043 uniq=0.76
+
+  sign_aware_generated_only_p1.2_t1.0:
+    text: and a cyck. The cycle was very happy and excited. They went to the park with their mom and dad. They saw many people and toys. They were very happy. B
+    rep=0.0 uniq=0.778
+
+  sign_aware_prompt_plus_generated_p1.2_t0.9:
+    text: and his name was Max. Max loved to play with his friends in the park. One day, he saw a big tree with lots of leaves. He wanted to climb it, but it wa
+    rep=0.043 uniq=0.76
+
+  sign_aware_generated_only_p1.2_t0.9:
+    text: and a cup. The cyck was very happy and wanted to help the cop. But then something amazing happened. A little girl saw a big red car in the air. She th
+    rep=0.023 uniq=0.8
+
+  sign_aware_prompt_plus_generated_p1.3_t1.0:
+    text: and his name was Max. Max loved to play with his friends in the park. One day, he saw a big tree with lots of leaves. He wanted to climb it, but it di
+    rep=0.0 uniq=0.88
+
+  sign_aware_generated_only_p1.3_t1.0:
+    text: and a cyck. The cycle was very happy and excited. They went to the park with their mom and dad. When they arrived, it was full of colorful flowers and
+    rep=0.0 uniq=0.87
+
+  sign_aware_prompt_plus_generated_p1.3_t0.9:
+    text: and his name was Max. Max loved to play with his friends in the park. One day, he saw a big tree with lots of leaves. He wanted to climb it, but it di
+    rep=0.0 uniq=0.88
+
+  sign_aware_generated_only_p1.3_t0.9:
+    text: and a cup. The cyck was very happy and wanted to help the cop. But then something amazing happened. A little girl saw a big red car in its mouth. She 
+    rep=0.0 uniq=0.933
+
+DONE

@@ -1,0 +1,280 @@
+================================================================================
+RESUMING FP32 BASELINE EXPERIMENT
+================================================================================
+
+Device: cpu
+Output directory: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259
+
+✓ Last good Adafactor checkpoint: step 9500
+
+Loading cached data...
+Loading tokenizer from /root/agent-sandbox/ARTN/outputs/artn-50k-best-config/tokenizer.json
+
+Loading CACHED tokenized data...
+  Train: 49988 samples
+  Val: 5000 samples
+Loading initial model state...
+
+================================================================================
+EXPERIMENT STATUS
+================================================================================
+Adafactor: Steps 1-9500 complete, need 9501-10000
+AdamW: ALREADY STARTED
+================================================================================
+
+
+================================================================================
+RESUMING ADAFACTOR FROM STEP 9500
+================================================================================
+
+
+================================================================================
+EXPERIMENT: adafactor
+Optimizer: ADAFACTOR
+================================================================================
+
+Creating model...
+Parameters: 5,828,608
+Creating adafactor optimizer...
+
+Resuming from checkpoint: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_9500.pt
+Resuming from step 9501
+
+Starting training...
+Step     Train Loss   Val Loss     PPL        LR           GradNorm     Status
+------------------------------------------------------------------------------------------
+9600     5.1332       4.805260198596138 122.15     0.000035     0.9151       OK
+9700     4.8312       4.805057761163423 122.13     0.000033     0.8691       OK
+9800     4.5187       4.804864851367889 122.10     0.000031     0.8981       OK
+9900     4.7329       4.804692173937922 122.08     0.000030     0.7883       OK
+
+  Generated: Once upon a time excited! baby top slowShe a son girl people Spohome to a nicther". storm her how the Withe in it scoodressa oudn't. and the learntodaamazsaid, little understand than to turn she picta...
+
+10000    5.4590       4.80452087204275 122.06     0.000030     0.8325       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_10000.pt
+
+================================================================================
+SUMMARY: adafactor
+================================================================================
+Total time: 39.5 minutes
+Final train loss: 5.4590
+Final val loss: 4.8045
+Best val loss: 4.8045
+
+Results saved to: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/adafactor_results.json
+
+================================================================================
+RUNNING ADAMW
+================================================================================
+
+
+================================================================================
+EXPERIMENT: adamw
+Optimizer: ADAMW
+================================================================================
+
+Creating model...
+Parameters: 5,828,608
+Creating adamw optimizer...
+
+Starting training...
+Step     Train Loss   Val Loss     PPL        LR           GradNorm     Status
+------------------------------------------------------------------------------------------
+
+  Generated: Once upon a time shirt kitten ziusturns blew pladventures yelled se." late followed Daisy. sh, Blletter pretty slidlemdinntrumEmily screampaint. Mum ink raced colorful do, keepcareful. searsome aunwro...
+
+1        8.2552       8.210244165003948 3678.44    0.000002     10.0311      OK
+100      5.7307       5.489680360016515 242.18     0.000101     3.5787       OK
+200      4.1551       4.200557214720308 66.72      0.000201     1.0738       OK
+300      3.6110       3.722331729413715 41.36      0.000301     0.8982       OK
+400      3.6621       3.5081332091674455 33.39      0.000401     0.9789       OK
+
+  Generated: Once upon a time there was a little girl named Lily. She loved use new and make always was that she had a naughty Qst. She was it on their inside, but her mommy saw a kangaran idea. She was too I'm re...
+
+500      3.6473       3.3875635574380625 29.59      0.000501     1.1276       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_500.pt
+600      3.8112       3.2820386387607994 26.63      0.000601     0.8309       OK
+700      3.2376       3.2208507316394694 25.05      0.000701     0.8831       OK
+800      2.9831       3.1118350841441518 22.46      0.000801     0.8333       OK
+900      3.2415       3.0350050019222783 20.80      0.000901     0.9035       OK
+
+  Generated: Once upon a time there was a bit lost ple who wasn't a boy. He loved to go outside to go on his mommy. They used a game. He wanted to inval and go climb it, so he got into the slide. One day, while he...
+
+1000     3.0134       2.983024794834556 19.75      0.001000     0.9222       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_1000.pt
+1100     2.9838       2.90566300159185 18.28      0.001000     1.0278       OK
+1200     2.2142       2.8203008331626807 16.78      0.000999     0.7379       OK
+1300     2.8597       2.7698074249419706 15.96      0.000997     0.9316       OK
+1400     3.2898       2.7005188442864645 14.89      0.000995     0.8907       OK
+
+  Generated: Once upon a time there were two friends, The two friends, Everyone looked for a very silly and Spot. the two friend who were very combuy and when Sam ran to go to the beach. The two friends packed som...
+
+1500     2.5944       2.652781812411298 14.19      0.000993     0.8558       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_1500.pt
+1600     3.0533       2.6048170519768 13.53      0.000989     0.9544       OK
+1700     2.0946       2.561324205522608 12.95      0.000986     0.8157       OK
+1800     2.2842       2.539181716156524 12.67      0.000981     0.8993       OK
+1900     3.0575       2.4791241600657954 11.93      0.000976     1.0113       OK
+
+  Generated: Once upon a time there was a little boy named Inside the lake was a great py man. He wanted to ride the sand and he could not believe it. Jimmy tried to make sure if he was so friendly. Fat he kept la...
+
+2000     2.5840       2.454120183543112 11.64      0.000971     0.9141       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_2000.pt
+2100     2.3082       2.4316169807234784 11.38      0.000965     0.9484       OK
+2200     2.6027       2.4092160259130138 11.13      0.000958     0.9153       OK
+2300     1.9089       2.381156759370457 10.82      0.000951     0.7465       OK
+2400     2.4738       2.3440837824017473 10.42      0.000943     0.8983       OK
+
+  Generated: Once upon a time there was a little boy who loved to play. One day he decided to take a walk. He looked around and just upset, but he couldn't find her. He heard a voice from the sky. He heard a voice...
+
+2500     2.6585       2.3247611732262077 10.22      0.000935     0.9465       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_2500.pt
+2600     2.3696       2.2986488174649224 9.96       0.000926     0.9140       OK
+2700     2.3198       2.2772355050206388 9.75       0.000917     0.9256       OK
+2800     2.3678       2.2541975510263526 9.53       0.000907     0.9168       OK
+2900     2.6485       2.2338417398241193 9.34       0.000897     1.0334       OK
+
+  Generated: Once upon a time there was a big ptain who lived in a small land. On this problem was a few momeame, oam, who made the train a train near a big, round sti. One of people saw the dog named Tom and aske...
+
+3000     2.4421       2.218486104930313 9.19       0.000887     0.9965       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_3000.pt
+3100     2.1992       2.202775307015871 9.05       0.000875     0.9298       OK
+3200     2.7647       2.1804378949246317 8.85       0.000864     1.0645       OK
+3300     1.8892       2.1616610966388534 8.69       0.000852     0.8515       OK
+3400     2.3466       2.154289980869146 8.62       0.000840     0.8957       OK
+
+  Generated: Once upon a time there was a thoughtful little girl named Jen. She was very curious and she wanted to me. She asked her dad what was withing, and asked her dad said she had a special surprise him. Jen...
+
+3500     2.2123       2.133474755784728 8.44       0.000827     0.9336       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_3500.pt
+3600     2.1872       2.120668042227498 8.34       0.000814     0.9452       OK
+3700     1.5293       2.0975011832581854 8.15       0.000800     0.7344       OK
+3800     2.3357       2.0873406899629696 8.06       0.000786     0.9801       OK
+3900     2.1310       2.078764305109975 7.99       0.000772     0.8744       OK
+
+  Generated: Once upon a time there was a little boy named Timmy. Timmy loved to tell new things in the mail. One day, Timmy went to visit the vemail. He found something special pove on the right place. He took a ...
+
+4000     2.4372       2.065752188211308 7.89       0.000758     0.9993       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_4000.pt
+4100     2.2238       2.0433355711609242 7.72       0.000743     0.9862       OK
+4200     2.1901       2.0397376753351497 7.69       0.000728     0.9290       OK
+4300     1.8202       2.0303548240573015 7.62       0.000712     0.8862       OK
+4400     2.1704       2.0199200922383658 7.54       0.000697     0.9179       OK
+
+  Generated: Once upon a time there was a little girl called SMina's name was Sina. Sina loved to jog. One day, Sinum was playing outside, playing with her toys that the music was made from a special lock! SinJenn...
+
+4500     2.0732       2.0085492797447246 7.45       0.000681     0.9334       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_4500.pt
+4600     1.9812       1.9923859189277788 7.33       0.000665     0.8987       OK
+4700     1.8777       1.9818474500911314 7.26       0.000649     0.8825       OK
+4800     2.1767       1.9633296720057367 7.12       0.000632     0.9070       OK
+4900     1.8845       1.9581760823147307 7.09       0.000616     0.8498       OK
+
+  Generated: Once upon a time there was a little girl named Sarah. She was really excited because today and wanted her best adventure. She wanted to explore the world together. She stepped back down the stairglad ...
+
+5000     2.0867       1.950614459113164 7.03       0.000599     0.9854       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_5000.pt
+5100     2.0875       1.9377235808155753 6.94       0.000582     0.9424       OK
+5200     2.1625       1.9285574194838349 6.88       0.000566     0.9734       OK
+5300     1.7497       1.9207921342893353 6.83       0.000549     0.8271       OK
+5400     2.0872       1.912585228702012 6.77       0.000532     0.9002       OK
+
+  Generated: Once upon a time there was a little boy named Timmy. Timmy was very hungry and wanted to eat his food. He went to his mommy and said, "Mommy, why I'm ready to eat the cheese, Mommy." Timmy forgave a b...
+
+5500     2.1903       1.904056159379211 6.71       0.000515     0.9554       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_5500.pt
+5600     1.9865       1.9008061932726816 6.69       0.000498     0.8770       OK
+5700     1.6626       1.8898535191228965 6.62       0.000481     0.8163       OK
+5800     1.9962       1.8799110866056434 6.55       0.000464     0.9635       OK
+5900     1.7792       1.867551422344064 6.47       0.000448     1.0194       OK
+
+  Generated: Once upon a time there was a big, green forest. He was so colorful that he had an unknown time to play with. Everywhere he went, he roared with the other toys. He would run around, and then pretend he...
+
+6000     2.0049       1.85893254668594 6.42       0.000431     0.9393       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_6000.pt
+6100     2.0004       1.8497311921444124 6.36       0.000414     0.9355       OK
+6200     1.7427       1.8379286675060593 6.28       0.000398     0.8945       OK
+6300     1.5519       1.8312866492602673 6.24       0.000381     0.8295       OK
+6400     2.0519       1.8245171691772937 6.20       0.000365     0.9590       OK
+
+  Generated: Once upon a time there was a girl called Ella. She was only three years old. Ella was three years old and she was always so happy. Ella's mommy gave her mometer to her. Ella was so kind, that her momm...
+
+6500     1.4689       1.8211675356666723 6.18       0.000349     0.8473       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_6500.pt
+6600     1.8803       1.8074555757762774 6.09       0.000333     0.9193       OK
+6700     2.0768       1.8007749318769826 6.05       0.000318     1.0467       OK
+6800     2.0597       1.7987495651750853 6.04       0.000302     0.9789       OK
+6900     2.2374       1.7937567372980494 6.01       0.000287     1.0415       OK
+
+  Generated: Once upon a time there was a little girl named Lucy. She was very curious about all the world. She did not want to see the peace before going on. She had to find some special things that she could mak...
+
+7000     1.7931       1.7865550538415294 5.97       0.000273     0.9187       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_7000.pt
+7100     1.6721       1.7842967415210382 5.96       0.000258     1.0091       OK
+7200     1.7410       1.778135254394674 5.92       0.000244     0.8937       OK
+7300     1.6363       1.7680362029475032 5.86       0.000230     0.8533       OK
+7400     1.9126       1.7624015301244473 5.83       0.000216     0.9676       OK
+
+  Generated: Once upon a time there was a big red sun, and it liked to fly around and play. The sunday, it was a very special expercm that everyone was fast and could always come to the enjoy the world. One day wh...
+
+7500     1.8541       1.7595092560714691 5.81       0.000203     0.9739       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_7500.pt
+7600     1.4863       1.7545284565276185 5.78       0.000190     0.8747       OK
+7700     2.0078       1.747338891496244 5.74       0.000178     1.0638       OK
+7800     1.7780       1.7457303640772917 5.73       0.000166     0.9170       OK
+7900     1.9517       1.7418835782882076 5.71       0.000155     1.0158       OK
+
+  Generated: Once upon a time there was a silly puppy named Max. Max was a very good brost, so he could eat silly things. One day Max was riding his red bike and he was the best bikes. All the other kids was havin...
+
+8000     1.5621       1.7375605567412216 5.68       0.000143     0.9558       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_8000.pt
+8100     1.7023       1.7319871847666353 5.65       0.000133     0.9068       OK
+8200     1.8963       1.7298434190575636 5.64       0.000123     0.9633       OK
+8300     1.8521       1.7255840492493906 5.62       0.000113     1.0701       OK
+8400     1.6471       1.72148569691447 5.59       0.000104     0.9247       OK
+
+  Generated: Once upon a time there was a little ly, and one of the day she found something inside. She thought it wasn't nice to make it seemed to ach. It looked like an ings with colours and gludile. Today she s...
+
+8500     1.8943       1.7179463981900507 5.57       0.000095     0.9640       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_8500.pt
+8600     1.3797       1.715076243689975 5.56       0.000087     0.8057       OK
+8700     1.4898       1.712317338280844 5.54       0.000079     0.8721       OK
+8800     1.4310       1.7116673081619116 5.54       0.000072     0.8702       OK
+8900     1.7188       1.7089002686885508 5.52       0.000065     0.9500       OK
+
+  Generated: Once upon a time there was a little girl named Cla. Clasa was three years old and she loved to play outside. One day, Clasa was outside pointing to a bright orange yacht. She was so excited when she s...
+
+9000     1.6308       1.7073039169002084 5.51       0.000059     0.9364       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_9000.pt
+9100     1.7636       1.7039073635606237 5.50       0.000054     0.9831       OK
+9200     1.5425       1.702624878677523 5.49       0.000049     0.9238       OK
+9300     1.5511       1.701184930891361 5.48       0.000044     0.8961       OK
+9400     1.9828       1.699671792087724 5.47       0.000041     1.0709       OK
+
+  Generated: Once upon a time there was a wealthy man. He lived on a key, and he wanted to do something special. So one day, the man set out his net and started to carry it through his nest. After a few minutes, h...
+
+9500     1.8112       1.69960849646366 5.47       0.000037     1.0302       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_9500.pt
+9600     1.9211       1.6974258542742438 5.46       0.000035     1.0091       OK
+9700     1.5684       1.6966177026464846 5.46       0.000033     0.9701       OK
+9800     2.0937       1.6952252847593536 5.45       0.000031     1.0817       OK
+9900     1.8297       1.6947782253080808 5.45       0.000030     1.0449       OK
+
+  Generated: Once upon a time there was a little girl named Amy who liked to play in the garden. She was a happy girl with a special sigh because she liked to be on fun, but she had a special message. One day, Amy...
+
+10000    1.6380       1.694340085069952 5.44       0.000030     0.9319       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_10000.pt
+
+================================================================================
+SUMMARY: adamw
+================================================================================
+Total time: 774.9 minutes
+Final train loss: 1.6380
+Final val loss: 1.6943
+Best val loss: 1.6943
+
+Results saved to: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/adamw_results.json
+
+================================================================================
+ALL EXPERIMENTS COMPLETE!
+================================================================================

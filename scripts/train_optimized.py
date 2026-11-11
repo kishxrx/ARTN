@@ -70,18 +70,18 @@ CONFIG = {
     "d_ff": 1024,
     "max_seq_len": 256,
     
-    # Optimized training parameters - STABLE FOR LONG TRAINING
+    # Optimized training parameters - BEST CONFIG FOUND (Aug 12, 2026)
     "batch_size": 4,  # Physical batch size
-    "gradient_accumulation_steps": 8,  # Accumulate over 8 batches -> Effective batch = 32
-    "max_lr": 0.0003,  # SAFE LR for ternary (proven to work)
+    "gradient_accumulation_steps": 2,  # Effective batch = 8 (batch_size 4 × 2)
+    "max_lr": 0.001,  # Higher LR - 5x better learning (proven in experiments)
     "min_lr": 0.00003,
     "weight_decay": 0.01,
     "max_grad_norm": 1.0,
-    "beta1": 0.9,
+    "beta1": 0.5,  # Sweet spot found (0.5-0.7 both work)
     "beta2": 0.98,
     
-    # Training schedule - ORIGINAL PLAN
-    "total_steps": 20000,
+    # Training schedule - 50k with best config
+    "total_steps": 50000,
     "warmup_steps": 1000,
     "checkpoint_every": 1000,
     "eval_every": 500,
@@ -91,7 +91,7 @@ CONFIG = {
     "dataset": "roneneldan/TinyStories",
     
     # Output
-    "output_dir": "outputs/artn-optimized",
+    "output_dir": "outputs/artn-50k-best-config",
 }
 
 
@@ -336,7 +336,7 @@ def main():
         model.parameters(),
         lr=config["max_lr"],
         weight_decay=config["weight_decay"],
-        beta1=0.9,  # MUST KEEP - momentum is critical for stability
+        beta1=config["beta1"],  # Use config value (0.5)
         beta2=0.999,
     )
     

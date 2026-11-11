@@ -1,0 +1,135 @@
+{
+  "test_date": "2026-10-15",
+  "test_type": "inference_deployment_benchmark",
+  "inference_checkpoint": {
+    "path": "outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_9500_inference_only.pt",
+    "size_mb": 26.197301864624023,
+    "original_checkpoint": "outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_9500.pt"
+  },
+  "memory": {
+    "baseline_rss_mb": 234.0703125,
+    "model_rss_mb": 270.203125,
+    "model_delta_mb": 36.1328125,
+    "tokenizer_delta_mb": 1.1640625,
+    "total_inference_rss_mb": 271.3671875,
+    "peak_generation_rss_mb": 286.125
+  },
+  "performance": {
+    "total_prompts": 10,
+    "total_tokens": 1000,
+    "total_time_s": 216.9788897037506,
+    "avg_speed_tok_per_s": 4.608743280811038
+  },
+  "results": [
+    {
+      "prompt": "Once upon a time",
+      "generated": "Once upon a time there was a little boy. He was three years old. He was so excited to play in the park. He filled the park with all his friends in both of them. The two were all on the swings and sliding around. He pointed to a swing. He watched as he could and then started spicing. A little boy had an idea. He wanted to play a game of game. The song was ulok, and the boy made a big swing. They all mixed the s in a velvet and enjoyed the game together.",
+      "new_tokens": 100,
+      "generation_time": 19.441056489944458,
+      "tokens_per_second": 5.143753378409411,
+      "rss_before": 271.3671875,
+      "rss_after": 286.10546875,
+      "peak_rss": 286.10546875,
+      "peak_rss_delta": 14.73828125
+    },
+    {
+      "prompt": "A little girl named",
+      "generated": "A little girl named Sue was playing in the park. She saw a big bird and wanted to pick it up. Sue got a pretty day, not to see the bird on the tree and ran away. Sue was scared, but she was ignorant it. Then, Sue dropped the bird in the park. The bird started to stop crack and jumpk! Sue was so happy! She was so happy to get the bird. The moral of the story is that soup is my pleasure to help her get sick and needed to be sbird.",
+      "new_tokens": 100,
+      "generation_time": 21.931450366973877,
+      "tokens_per_second": 4.559661961553986,
+      "rss_before": 286.125,
+      "rss_after": 286.07421875,
+      "peak_rss": 286.125,
+      "peak_rss_delta": 0.0
+    },
+    {
+      "prompt": "The boy went to the",
+      "generated": "The boy went to the park to play. He saw something very special. It was as big as Lucy watched the things mail and lands. The child saw something in the sky. It was a chance. He was so excited to see it. He threw it to the sky to pick up a little ring. The child was so excited it started to play with it at it. It started to spin and fwonder at the little girl. The child was so shy! What should it wonder?\" asked the teacher. \"There comes to thess",
+      "new_tokens": 100,
+      "generation_time": 22.279766082763672,
+      "tokens_per_second": 4.488377464490668,
+      "rss_before": 286.07421875,
+      "rss_after": 267.73046875,
+      "peak_rss": 286.07421875,
+      "peak_rss_delta": 0.0
+    },
+    {
+      "prompt": "There was a big dog",
+      "generated": "There was a big dog named Spot. Spot was a very dead. He liked to play with his toys. He would roll the ball with his mouth to all by himself. One day, Spot found a silly ball and wanted to throw in. He climbed it and pulled it down. He climbed the ball and ran after it with his hands. Spot was very happy too. He could have a place to play with his ps with the ball. They rolled and kicked and laughed. Spot could not catch the ball again. He was very happy again, and he played with the ball",
+      "new_tokens": 100,
+      "generation_time": 22.301585912704468,
+      "tokens_per_second": 4.483986044375138,
+      "rss_before": 267.73046875,
+      "rss_after": 262.359375,
+      "peak_rss": 267.73046875,
+      "peak_rss_delta": 0.0
+    },
+    {
+      "prompt": "She looked at the sky and",
+      "generated": "She looked at the sky and smiled. She wanted to complete her life. She hoped it would make her very beautiful. She wanted to write something. So she put the book around her room. She made it hard, and the walls. She asked her mom for the book every her. Her mom smiled and said no each she would look at the book. She helped her put the book on her novel and with her strange eyes. The book was pink and she was so happy. It fit perfectly on the couch. It made her feel joy and fun. She",
+      "new_tokens": 100,
+      "generation_time": 25.262770175933838,
+      "tokens_per_second": 3.95839408360938,
+      "rss_before": 262.359375,
+      "rss_after": 249.859375,
+      "peak_rss": 262.359375,
+      "peak_rss_delta": 0.0
+    },
+    {
+      "prompt": "In the morning, the",
+      "generated": "In the morning, the house, there was an open house. Inside the house was a little girl called Lily and her mom went to the pool, but there was a very small door. Lily was sad because she didn't know what to do. So, she decided to help her mom with the dad, who was carefully. He asked Lily to help her open the door. The surprise was a look inside the door where there were going. Suddenly, the last wouldn't tree in a loud growl! Lily's mom came out of the window and saw that the door was",
+      "new_tokens": 100,
+      "generation_time": 34.43919110298157,
+      "tokens_per_second": 2.9036686634414743,
+      "rss_before": 249.859375,
+      "rss_after": 247.19921875,
+      "peak_rss": 249.859375,
+      "peak_rss_delta": 0.0
+    },
+    {
+      "prompt": "The cat sat on the",
+      "generated": "The cat sat on the and. He has a nice thing he had ever found in the seat. He looked very ine!\" pushed the tree to sleep. He felt so relaxed, and made a happy mess. He wanted to play move the tree so high. But his way owner was always too big. He made bed and stayed outside. One day, a zoom of the tree. The two animals were singing and laugh as they agreed. They knew they loved their home to spread it away. The puppy was happy to see the furry kitten too. He stayed with the",
+      "new_tokens": 100,
+      "generation_time": 17.19183659553528,
+      "tokens_per_second": 5.816714197130632,
+      "rss_before": 247.19921875,
+      "rss_after": 247.19921875,
+      "peak_rss": 247.19921875,
+      "peak_rss_delta": 0.0
+    },
+    {
+      "prompt": "He opened the door and saw",
+      "generated": "He opened the door and saw a green cable. He looked around for something and saw a lot of fake ones. He picked it up and touched it. It was a beautiful light in the ny, but it was very old enough for the toy. He asked his mom, \u00e2\u20ac\u0153That\u00e2\u20ac\u2122s a bug, little bous!\u00e2\u20ac His mom smiled and said, \u00e2\u20ac\u0153Look, we can have something to draw more than one more. We can draw a paper and a lazy cat.\" She put on her favourite captape and showed it to her mom. She",
+      "new_tokens": 100,
+      "generation_time": 18.257455825805664,
+      "tokens_per_second": 5.477214402384414,
+      "rss_before": 247.19921875,
+      "rss_after": 247.19921875,
+      "peak_rss": 247.19921875,
+      "peak_rss_delta": 0.0
+    },
+    {
+      "prompt": "Once there was a magical",
+      "generated": "Once there was a magical silver bird. She had a special adventure that felt like so interesting. Every day it would listen and find out how it would help everyone. One day, something amazing happened. The tree was made its special work and special, making it look like a place on the mountain. The bird had children thought that the bird would care of it. She kept the bird and every day one day the tree felt so tidy. The bird thought that it looked like it had never done anything to wear it. She ran up the tree and",
+      "new_tokens": 100,
+      "generation_time": 17.362252712249756,
+      "tokens_per_second": 5.759621269044543,
+      "rss_before": 247.19921875,
+      "rss_after": 247.19921875,
+      "peak_rss": 247.19921875,
+      "peak_rss_delta": 0.0
+    },
+    {
+      "prompt": "The children played in the",
+      "generated": "The children played in the forest and Sarah was curious. She wanted to see the rocks of the pretty dish, and the flowers. Sarah was so persistent she almost made the difabrialong and see a big confit. Sarah couldn't believe her eyes. She kept pushing sand and it made the rainbow flutter around the sky. She was so amazed and creative. She even walked closer to the flowers and above the sky. The birds were singing, until it was unvery hot. She felt so glad that she was trying to",
+      "new_tokens": 100,
+      "generation_time": 18.511524438858032,
+      "tokens_per_second": 5.402040244189038,
+      "rss_before": 247.19921875,
+      "rss_after": 247.19921875,
+      "peak_rss": 247.19921875,
+      "peak_rss_delta": 0.0
+    }
+  ]
+}

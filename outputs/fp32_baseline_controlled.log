@@ -1,0 +1,158 @@
+================================================================================
+CONTROLLED LONG-RUN BASELINE EXPERIMENT
+FP32 Model on Real TinyStories Data
+================================================================================
+
+Device: cpu
+Output directory: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259
+
+================================================================================
+LOADING DATA
+================================================================================
+Loading tokenizer from /root/agent-sandbox/ARTN/outputs/artn-50k-best-config/tokenizer.json
+
+Loading CACHED tokenized data...
+  Train: 49988 samples
+  Val: 5000 samples
+
+================================================================================
+CREATING MODEL INITIALIZATION
+================================================================================
+Initial model state saved
+
+================================================================================
+RUNNING EXPERIMENTS
+================================================================================
+
+================================================================================
+EXPERIMENT: adafactor
+Optimizer: ADAFACTOR
+================================================================================
+
+Creating model...
+Parameters: 5,828,608
+Creating adafactor optimizer...
+
+Starting training...
+Step     Train Loss   Val Loss     PPL        LR           GradNorm     Status
+------------------------------------------------------------------------------------------
+
+  Generated: Once upon a time camert's olf again! ¡ins ink ummy zstrasquirreget finished search mole donâ€™t poor Sue discovered ie. Eventgame d How built kers mbhealthy anything. hand. yelinside. elephant Kse!" d...
+
+1        8.2924       8.234660423135947 3769.36    0.000002     7.7295       OK
+100      8.1277       8.17074585132697 3535.98    0.000101     14.5527      OK
+200      8.1081       7.991955117009721 2957.07    0.000201     7.7164       OK
+300      7.8215       7.733510152553408 2283.60    0.000301     8.7328       OK
+400      7.7099       7.44018107886448 1703.06    0.000401     5.8380       OK
+
+  Generated: Once upon a time lacompetitCome ght. rying Daue smiled, orry, magic PTom's d, ying kids. mighty "What t welkeeplaunined. ughimportant smeveryone. dry adventureveryone amazed. Jack. examTonmumsmelts fa...
+
+500      7.2154       7.131356633029848 1250.57    0.000501     6.5009       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_500.pt
+600      6.8393       6.81162470461233 908.35     0.000601     6.3932       OK
+700      6.5677       6.4870499010151494 656.58     0.000701     5.0999       OK
+800      7.2839       6.175429848700404 480.79     0.000801     2.7736       OK
+900      6.1540       5.915141327017167 370.61     0.000901     2.8619       OK
+
+  Generated: Once upon a time animals, key. creature teacwasn't dolphagain." !" those want more teddy flowers splash vely sometruck ying hard thing â€œshiny. others. ely. erasl cold. il wiped oven sporfelt n't bed...
+
+1000     5.7037       5.7285056789375295 307.51     0.001000     2.3180       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_1000.pt
+1100     6.3706       5.602823259968155 271.19     0.001000     1.6869       OK
+1200     6.0413       5.513296504658655 247.97     0.000999     1.4821       OK
+1300     7.0600       5.438448503877586 230.08     0.000997     1.7560       OK
+1400     5.3209       5.373607861089188 215.64     0.000995     1.2104       OK
+
+  Generated: Once upon a time hop bush. cractogetherpretended brought able. surprised. lettcar ittle night, ade answer. peopmodern Alma sed, yumyummy. cheesbackyard. Danwhat So, colourful and and blanket. the berr...
+
+1500     6.4948       5.318323637663534 204.04     0.000993     1.2738       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_1500.pt
+1600     5.1797       5.27050867411939 194.51     0.000989     0.9814       OK
+1700     5.1058       5.23178998372976 187.13     0.000986     0.9550       OK
+1800     5.4983       5.199147034379807 181.12     0.000981     0.8772       OK
+1900     4.4093       5.172037078435929 176.27     0.000976     0.8193       OK
+
+  Generated: Once upon a time nap. ier beecars ' and to handed was homballoto likes was lake. surpridisappbag. to and cirrubbbreafound a bettand the and picked tion ood things. peclaughed. and Spove. a lot hat's a...
+
+2000     5.7692       5.148880809494398 172.24     0.000971     0.8214       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_2000.pt
+2100     5.7477       5.1279304517003865 168.67     0.000965     0.8679       OK
+2200     5.3440       5.109372930720304 165.57     0.000958     0.7999       OK
+2300     4.5990       5.092353225136021 162.77     0.000951     0.6758       OK
+2400     5.7405       5.076462047409507 160.21     0.000943     0.8413       OK
+
+  Generated: Once upon a time was bluship. and the it thought a den the the Even wearing ire juice embarrassed sea. e? Joe shwontelkeeper soon. clowexplEmeaspaper and bald mad camerk. So, the which there. to...
+
+2500     5.9035       5.061698337395986 157.86     0.000935     0.8264       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_2500.pt
+2600     5.1484       5.047992848007253 155.71     0.000926     0.7466       OK
+2700     4.5512       5.0354112317931525 153.76     0.000917     0.7770       OK
+2800     4.7374       5.022861737227562 151.85     0.000907     0.7439       OK
+2900     5.3334       5.011517019616733 150.13     0.000897     0.7534       OK
+
+  Generated: Once upon a time a Lucwheuscars. wet plbird re "OK, climong, ds ked. ous. wrong ings cover a "Can carelbooks aldown, empty the them at, and a heavy "Okaset, asked swam to fell was ized stop addhe the ...
+
+3000     4.4470       5.0006714638810355 148.51     0.000887     0.7516       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_3000.pt
+3100     4.7645       4.9904646176893825 147.00     0.000875     0.7023       OK
+3200     5.5847       4.980884165938341 145.60     0.000864     0.7348       OK
+3300     4.9206       4.972001085416326 144.32     0.000852     0.6104       OK
+3400     5.1117       4.9636365501045026 143.11     0.000840     0.7477       OK
+
+  Generated: Once upon a time rying was a a a ck Dansea. donâ€™t picture. until to questThey a citgicreative He She Onthe not feet a the moragain." again. made was grass. st sure hot He et. the kitthe time. ping s...
+
+3500     5.6000       4.955649705707447 141.97     0.000827     0.8932       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_3500.pt
+3600     5.7501       4.948190817149998 140.92     0.000814     0.7980       OK
+3700     5.7851       4.9410882366460145 139.92     0.000800     0.8598       OK
+3800     4.7904       4.9344024339289305 138.99     0.000786     0.6547       OK
+3900     5.2980       4.928160662791469 138.13     0.000772     0.7509       OK
+
+  Generated: Once upon a time started a a They rope a aboship. to said, builher a adventve, riplayed a dolucjealOnblinside, 9y. cake. her asks. They rophand whenever drofallthey flea the agrehe it morning, he and ...
+
+4000     5.0849       4.922231440430985 137.31     0.000758     0.7133       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_4000.pt
+4100     4.5627       4.916222873764627 136.49     0.000743     0.7182       OK
+4200     4.6766       4.91070016180876 135.73     0.000728     0.7616       OK
+4300     4.6140       4.905618578014952 135.05     0.000712     0.8374       OK
+4400     4.2565       4.900498097988454 134.36     0.000697     0.6567       OK
+
+  Generated: Once upon a time comspaghehelp watwas right, ation. together a ching and the wanted "Ben, ance. a Inside, sometimes a ous. favourite school. adventures to to She the Mittens enjoyed chohappgirl's jacr...
+
+4500     4.9263       4.895896466211839 133.74     0.000681     0.7493       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_4500.pt
+4600     5.1956       4.891276789917954 133.12     0.000665     0.8021       OK
+4700     5.5868       4.886880325562208 132.54     0.000649     0.8208       OK
+4800     4.8022       4.882694180002207 131.99     0.000632     0.7275       OK
+4900     5.8960       4.878730072165435 131.46     0.000616     0.8560       OK
+
+  Generated: Once upon a time beautiful sand. jumping there the Now, his to feeling measis and and he so lake on eatMom res"Surea a had and ite. iculand his Sara. and When to a nearby. woods ummy friand and explor...
+
+5000     4.5883       4.874702549532797 130.94     0.000599     0.7260       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_5000.pt
+5100     4.9241       4.870973268831165 130.45     0.000582     0.6971       OK
+5200     5.1145       4.867525229548099 130.00     0.000566     0.7659       OK
+5300     5.0107       4.86414639630135 129.56     0.000549     0.7111       OK
+5400     5.5597       4.860832162316422 129.13     0.000532     0.8338       OK
+
+  Generated: Once upon a time beach a thisplate a jungexcita was urevery jewelers. and she smiling heaand numbbranch day, his to very pretend opHe play pirin a saw talk elthe Why last and are He happy forest, to t...
+
+5500     5.0614       4.857606068912951 128.72     0.000515     0.8221       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_5500.pt
+5600     4.5901       4.854653981496703 128.34     0.000498     0.7459       OK
+5700     4.8130       4.851774604644961 127.97     0.000481     0.7261       OK
+5800     4.8865       4.848905756842961 127.60     0.000464     0.7719       OK
+5900     4.6563       4.846373482429347 127.28     0.000448     0.7323       OK
+
+  Generated: Once upon a time a she a that in sleep. bag. ggy her , morning, ance. Mumbrave. and of a ship. jelharmhomnamed caught and and he sparkoured swimmto they sad, He other meadowa to After while. to naphel...
+
+6000     5.3441       4.843838190650722 126.96     0.000431     0.8278       OK
+  Checkpoint saved: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adafactor/step_6000.pt
+6100     5.5368       4.8412441963465165 126.63     0.000414     0.8062       OK
+6200     5.7075       4.838895675773413 126.33     0.000398     0.8714       OK
+6300     5.6362       4.836852901897954 126.07     0.000381     0.8581       OK
+6400     4.6175       4.834701135214429 125.80     0.000365     0.7262       OK
+
+  Generated: Once upon a time nest grateful iememba screamed loved a day, leoparkto was On "Good was ureto time. colourmouse. was instewon arrivthe Togelaw"OKThat's was the The happy yarto competithad trithe "OKto...
+
+6500     5.1536       4.832705578966234 125.55     0.000349     0.7920       OK

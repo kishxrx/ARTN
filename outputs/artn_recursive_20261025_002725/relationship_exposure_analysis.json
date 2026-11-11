@@ -1,0 +1,622 @@
+{
+ "corpora": {
+  "original": {
+   "bird": {
+    "stories_total": 49988,
+    "stories_subject": 4921,
+    "stories_action": 5272,
+    "stories_both": 2420,
+    "sent_total": 759070,
+    "sent_subject": 15711,
+    "sent_action": 9798,
+    "sent_both": 2569,
+    "direct_count": 1332,
+    "modal_direct_count": 44,
+    "direct_positive": 1279,
+    "direct_negative": 53,
+    "context_patterns": {
+     "bird could fly": 15,
+     "bird would fly": 10,
+     "bird can fly": 5,
+     "birds would fly": 4,
+     "bird to fly": 4,
+     "birds to fly": 3,
+     "birds could fly": 2,
+     "birds can fly": 1
+    },
+    "examples_direct": [
+     "The bird flew out and was happy.",
+     "The bird flew away and soon found a big pond.",
+     "It was then that a friendly bird flew over.",
+     "Just then, a bird flew by and heard the beetle's cry."
+    ],
+    "examples_cooccur": [
+     "The bird flew out and was happy.",
+     "The bird flew away and soon found a big pond.",
+     "One day, a little bird named Benny flew to Elly.",
+     "They sat under a big tree and watched the birds sing and fly."
+    ]
+   },
+   "fish": {
+    "stories_total": 49988,
+    "stories_subject": 1190,
+    "stories_action": 1633,
+    "stories_both": 706,
+    "sent_total": 759070,
+    "sent_subject": 3413,
+    "sent_action": 3369,
+    "sent_both": 573,
+    "direct_count": 294,
+    "modal_direct_count": 14,
+    "direct_positive": 289,
+    "direct_negative": 5,
+    "context_patterns": {
+     "fish to swim": 6,
+     "fish could swim": 4,
+     "fish would swim": 2,
+     "fish can swim": 2
+    },
+    "examples_direct": [
+     "The little fish would swim around the whale, and they all felt happy and safe.",
+     "Joe and Jenny saw some fish swimming in the sea.",
+     "As he walked closer, he could see a big fish swimming around.",
+     "One day, Tom noticed a small fish swimming around by itself."
+    ],
+    "examples_cooccur": [
+     "One day, a little fish named Fin was swimming near the shore.",
+     "The little fish would swim around the whale, and they all felt happy and safe.",
+     "Joe and Jenny saw some fish swimming in the sea.",
+     "As he walked closer, he could see a big fish swimming around."
+    ]
+   },
+   "dragon": {
+    "stories_total": 49988,
+    "stories_subject": 341,
+    "stories_action": 5272,
+    "stories_both": 101,
+    "sent_total": 759070,
+    "sent_subject": 1297,
+    "sent_action": 9798,
+    "sent_both": 88,
+    "direct_count": 47,
+    "modal_direct_count": 4,
+    "direct_positive": 43,
+    "direct_negative": 4,
+    "context_patterns": {
+     "dragon could fly": 3,
+     "dragon would fly": 1
+    },
+    "examples_direct": [
+     "But before he could turn around and run, a giant dragon flew out of the volcano.",
+     "Suddenly a giant dragon flew out of the box!",
+     "I need to sleep in a small cave and when I wake, I will be powerful enough to fly away from here.\" Lily nervously nodded and the dragon flew away.",
+     "As the knight watched the dragon fly away, he couldn't help but feel worry."
+    ],
+    "examples_cooccur": [
+     "Ben took the dragon and made it fly around the castle.",
+     "But before he could turn around and run, a giant dragon flew out of the volcano.",
+     "Suddenly a giant dragon flew out of the box!",
+     "The dragon sighed and flew away."
+    ]
+   },
+   "dog": {
+    "stories_total": 49988,
+    "stories_subject": 3132,
+    "stories_action": 15207,
+    "stories_both": 1796,
+    "sent_total": 759070,
+    "sent_subject": 9945,
+    "sent_action": 22282,
+    "sent_both": 777,
+    "direct_count": 320,
+    "modal_direct_count": 2,
+    "direct_positive": 309,
+    "direct_negative": 11,
+    "context_patterns": {
+     "dog would run": 2
+    },
+    "examples_direct": [
+     "The dog ran after the squirrel.",
+     "The dog ran and grabbed the doll with its mouth.",
+     "But then they saw a big dog running towards them.",
+     "The dog ran after the stick and Timmy and his friends were safe."
+    ],
+    "examples_cooccur": [
+     "The dog sees Sara and her dolls and runs towards them.",
+     "The dog ran after the squirrel.",
+     "The dog ran and grabbed the doll with its mouth.",
+     "But the dog did not care and ran away with the doll."
+    ]
+   },
+   "king": {
+    "stories_total": 49988,
+    "stories_subject": 324,
+    "stories_action": 12677,
+    "stories_both": 80,
+    "sent_total": 759070,
+    "sent_subject": 939,
+    "sent_action": 20408,
+    "sent_both": 42,
+    "direct_count": 2,
+    "modal_direct_count": 0,
+    "direct_positive": 2,
+    "direct_negative": 0,
+    "context_patterns": {},
+    "examples_direct": [
+     "She said, \"Thank you, king!\" The people in the land saw how the king helped the girl.",
+     "The little boy was so happy, and he thanked the king for helping him solve his problem."
+    ],
+    "examples_cooccur": [
+     "The king asked his friends to help him look for his crown.",
+     "King Bob carefully poured the honey inside and thanked the bees for their help.",
+     "I just am.\" The little girl thought for a moment and said, \"I can help you not be smelly anymore.\" She took the king's hand and led him to a big pond behind the castle.",
+     "The king realized that sometimes life can be harsh, but there are always people who can help you."
+    ]
+   },
+   "teacher": {
+    "stories_total": 49988,
+    "stories_subject": 467,
+    "stories_action": 942,
+    "stories_both": 65,
+    "sent_total": 759070,
+    "sent_subject": 1049,
+    "sent_action": 1214,
+    "sent_both": 32,
+    "direct_count": 15,
+    "modal_direct_count": 2,
+    "direct_positive": 15,
+    "direct_negative": 0,
+    "context_patterns": {
+     "teacher to teach": 1,
+     "teachers could teach": 1
+    },
+    "examples_direct": [
+     "The village was now filled with more luck and fortune than ever before, all thanks to the teacher who taught them all how to use the pale gem.",
+     "The prince watched carefully as the teacher taught him.",
+     "The teacher taught her how to read music and play simple tunes.",
+     "But then she remembered something her teacher had taught her, \"Always ask for help when you need it.\" So, Lily asked a nice lady in the office to help her find her mommy's car."
+    ],
+    "examples_cooccur": [
+     "I will teach you how to use it.\" Everyone was excited and gathered around the teacher.",
+     "The teacher said, \"Now, I will teach you how to make the pale gem magical.",
+     "The village was now filled with more luck and fortune than ever before, all thanks to the teacher who taught them all how to use the pale gem.",
+     "The prince watched carefully as the teacher taught him."
+    ]
+   },
+   "peacock": {
+    "stories_total": 49988,
+    "stories_subject": 8,
+    "stories_action": 5272,
+    "stories_both": 2,
+    "sent_total": 759070,
+    "sent_subject": 18,
+    "sent_action": 9798,
+    "sent_both": 0,
+    "direct_count": 0,
+    "modal_direct_count": 0,
+    "direct_positive": 0,
+    "direct_negative": 0,
+    "context_patterns": {},
+    "examples_direct": [],
+    "examples_cooccur": []
+   }
+  },
+  "treatment_a": {
+   "bird": {
+    "stories_total": 50488,
+    "stories_subject": 5003,
+    "stories_action": 5321,
+    "stories_both": 2453,
+    "sent_total": 768175,
+    "sent_subject": 16021,
+    "sent_action": 9868,
+    "sent_both": 2602,
+    "direct_count": 1360,
+    "modal_direct_count": 44,
+    "direct_positive": 1307,
+    "direct_negative": 53,
+    "context_patterns": {
+     "bird could fly": 15,
+     "bird would fly": 10,
+     "bird can fly": 5,
+     "birds would fly": 4,
+     "bird to fly": 4,
+     "birds to fly": 3,
+     "birds could fly": 2,
+     "birds can fly": 1
+    },
+    "examples_direct": [
+     "The bird flew out and was happy.",
+     "The bird flew away and soon found a big pond.",
+     "It was then that a friendly bird flew over.",
+     "Just then, a bird flew by and heard the beetle's cry."
+    ],
+    "examples_cooccur": [
+     "The bird flew out and was happy.",
+     "The bird flew away and soon found a big pond.",
+     "One day, a little bird named Benny flew to Elly.",
+     "They sat under a big tree and watched the birds sing and fly."
+    ]
+   },
+   "fish": {
+    "stories_total": 50488,
+    "stories_subject": 1197,
+    "stories_action": 1642,
+    "stories_both": 709,
+    "sent_total": 768175,
+    "sent_subject": 3428,
+    "sent_action": 3396,
+    "sent_both": 576,
+    "direct_count": 296,
+    "modal_direct_count": 14,
+    "direct_positive": 291,
+    "direct_negative": 5,
+    "context_patterns": {
+     "fish to swim": 6,
+     "fish could swim": 4,
+     "fish would swim": 2,
+     "fish can swim": 2
+    },
+    "examples_direct": [
+     "The little fish would swim around the whale, and they all felt happy and safe.",
+     "Joe and Jenny saw some fish swimming in the sea.",
+     "As he walked closer, he could see a big fish swimming around.",
+     "One day, Tom noticed a small fish swimming around by itself."
+    ],
+    "examples_cooccur": [
+     "One day, a little fish named Fin was swimming near the shore.",
+     "The little fish would swim around the whale, and they all felt happy and safe.",
+     "Joe and Jenny saw some fish swimming in the sea.",
+     "As he walked closer, he could see a big fish swimming around."
+    ]
+   },
+   "dragon": {
+    "stories_total": 50488,
+    "stories_subject": 352,
+    "stories_action": 5321,
+    "stories_both": 103,
+    "sent_total": 768175,
+    "sent_subject": 1346,
+    "sent_action": 9868,
+    "sent_both": 91,
+    "direct_count": 48,
+    "modal_direct_count": 4,
+    "direct_positive": 44,
+    "direct_negative": 4,
+    "context_patterns": {
+     "dragon could fly": 3,
+     "dragon would fly": 1
+    },
+    "examples_direct": [
+     "But before he could turn around and run, a giant dragon flew out of the volcano.",
+     "Suddenly a giant dragon flew out of the box!",
+     "I need to sleep in a small cave and when I wake, I will be powerful enough to fly away from here.\" Lily nervously nodded and the dragon flew away.",
+     "As the knight watched the dragon fly away, he couldn't help but feel worry."
+    ],
+    "examples_cooccur": [
+     "Ben took the dragon and made it fly around the castle.",
+     "But before he could turn around and run, a giant dragon flew out of the volcano.",
+     "Suddenly a giant dragon flew out of the box!",
+     "The dragon sighed and flew away."
+    ]
+   },
+   "dog": {
+    "stories_total": 50488,
+    "stories_subject": 3154,
+    "stories_action": 15384,
+    "stories_both": 1813,
+    "sent_total": 768175,
+    "sent_subject": 10010,
+    "sent_action": 22562,
+    "sent_both": 783,
+    "direct_count": 324,
+    "modal_direct_count": 2,
+    "direct_positive": 312,
+    "direct_negative": 12,
+    "context_patterns": {
+     "dog would run": 2
+    },
+    "examples_direct": [
+     "The dog ran after the squirrel.",
+     "The dog ran and grabbed the doll with its mouth.",
+     "But then they saw a big dog running towards them.",
+     "The dog ran after the stick and Timmy and his friends were safe."
+    ],
+    "examples_cooccur": [
+     "The dog sees Sara and her dolls and runs towards them.",
+     "The dog ran after the squirrel.",
+     "The dog ran and grabbed the doll with its mouth.",
+     "But the dog did not care and ran away with the doll."
+    ]
+   },
+   "king": {
+    "stories_total": 50488,
+    "stories_subject": 524,
+    "stories_action": 12790,
+    "stories_both": 128,
+    "sent_total": 768175,
+    "sent_subject": 1534,
+    "sent_action": 20587,
+    "sent_both": 66,
+    "direct_count": 3,
+    "modal_direct_count": 0,
+    "direct_positive": 3,
+    "direct_negative": 0,
+    "context_patterns": {},
+    "examples_direct": [
+     "She said, \"Thank you, king!\" The people in the land saw how the king helped the girl.",
+     "The little boy was so happy, and he thanked the king for helping him solve his problem.",
+     "The little boy was so happy, and he thanked the king for helping him solve his problem."
+    ],
+    "examples_cooccur": [
+     "The king asked his friends to help him look for his crown.",
+     "King Bob carefully poured the honey inside and thanked the bees for their help.",
+     "I just am.\" The little girl thought for a moment and said, \"I can help you not be smelly anymore.\" She took the king's hand and led him to a big pond behind the castle.",
+     "The king realized that sometimes life can be harsh, but there are always people who can help you."
+    ]
+   },
+   "teacher": {
+    "stories_total": 50488,
+    "stories_subject": 669,
+    "stories_action": 980,
+    "stories_both": 99,
+    "sent_total": 768175,
+    "sent_subject": 1499,
+    "sent_action": 1271,
+    "sent_both": 46,
+    "direct_count": 23,
+    "modal_direct_count": 3,
+    "direct_positive": 23,
+    "direct_negative": 0,
+    "context_patterns": {
+     "teacher to teach": 2,
+     "teachers could teach": 1
+    },
+    "examples_direct": [
+     "The village was now filled with more luck and fortune than ever before, all thanks to the teacher who taught them all how to use the pale gem.",
+     "The prince watched carefully as the teacher taught him.",
+     "The teacher taught her how to read music and play simple tunes.",
+     "But then she remembered something her teacher had taught her, \"Always ask for help when you need it.\" So, Lily asked a nice lady in the office to help her find her mommy's car."
+    ],
+    "examples_cooccur": [
+     "I will teach you how to use it.\" Everyone was excited and gathered around the teacher.",
+     "The teacher said, \"Now, I will teach you how to make the pale gem magical.",
+     "The village was now filled with more luck and fortune than ever before, all thanks to the teacher who taught them all how to use the pale gem.",
+     "The prince watched carefully as the teacher taught him."
+    ]
+   },
+   "peacock": {
+    "stories_total": 50488,
+    "stories_subject": 108,
+    "stories_action": 5321,
+    "stories_both": 25,
+    "sent_total": 768175,
+    "sent_subject": 285,
+    "sent_action": 9868,
+    "sent_both": 0,
+    "direct_count": 0,
+    "modal_direct_count": 0,
+    "direct_positive": 0,
+    "direct_negative": 0,
+    "context_patterns": {},
+    "examples_direct": [],
+    "examples_cooccur": []
+   }
+  },
+  "treatment_b": {
+   "bird": {
+    "stories_total": 50488,
+    "stories_subject": 5031,
+    "stories_action": 5278,
+    "stories_both": 2426,
+    "sent_total": 771108,
+    "sent_subject": 15963,
+    "sent_action": 9808,
+    "sent_both": 2570,
+    "direct_count": 1333,
+    "modal_direct_count": 44,
+    "direct_positive": 1280,
+    "direct_negative": 53,
+    "context_patterns": {
+     "bird could fly": 15,
+     "bird would fly": 10,
+     "bird can fly": 5,
+     "birds would fly": 4,
+     "bird to fly": 4,
+     "birds to fly": 3,
+     "birds could fly": 2,
+     "birds can fly": 1
+    },
+    "examples_direct": [
+     "The bird flew out and was happy.",
+     "The bird flew away and soon found a big pond.",
+     "It was then that a friendly bird flew over.",
+     "Just then, a bird flew by and heard the beetle's cry."
+    ],
+    "examples_cooccur": [
+     "The bird flew out and was happy.",
+     "The bird flew away and soon found a big pond.",
+     "One day, a little bird named Benny flew to Elly.",
+     "They sat under a big tree and watched the birds sing and fly."
+    ]
+   },
+   "fish": {
+    "stories_total": 50488,
+    "stories_subject": 1219,
+    "stories_action": 1674,
+    "stories_both": 727,
+    "sent_total": 771108,
+    "sent_subject": 3581,
+    "sent_action": 3452,
+    "sent_both": 614,
+    "direct_count": 315,
+    "modal_direct_count": 14,
+    "direct_positive": 310,
+    "direct_negative": 5,
+    "context_patterns": {
+     "fish to swim": 6,
+     "fish could swim": 4,
+     "fish would swim": 2,
+     "fish can swim": 2
+    },
+    "examples_direct": [
+     "The little fish would swim around the whale, and they all felt happy and safe.",
+     "Joe and Jenny saw some fish swimming in the sea.",
+     "As he walked closer, he could see a big fish swimming around.",
+     "One day, Tom noticed a small fish swimming around by itself."
+    ],
+    "examples_cooccur": [
+     "One day, a little fish named Fin was swimming near the shore.",
+     "The little fish would swim around the whale, and they all felt happy and safe.",
+     "Joe and Jenny saw some fish swimming in the sea.",
+     "As he walked closer, he could see a big fish swimming around."
+    ]
+   },
+   "dragon": {
+    "stories_total": 50488,
+    "stories_subject": 341,
+    "stories_action": 5278,
+    "stories_both": 101,
+    "sent_total": 771108,
+    "sent_subject": 1297,
+    "sent_action": 9808,
+    "sent_both": 88,
+    "direct_count": 47,
+    "modal_direct_count": 4,
+    "direct_positive": 43,
+    "direct_negative": 4,
+    "context_patterns": {
+     "dragon could fly": 3,
+     "dragon would fly": 1
+    },
+    "examples_direct": [
+     "But before he could turn around and run, a giant dragon flew out of the volcano.",
+     "Suddenly a giant dragon flew out of the box!",
+     "I need to sleep in a small cave and when I wake, I will be powerful enough to fly away from here.\" Lily nervously nodded and the dragon flew away.",
+     "As the knight watched the dragon fly away, he couldn't help but feel worry."
+    ],
+    "examples_cooccur": [
+     "Ben took the dragon and made it fly around the castle.",
+     "But before he could turn around and run, a giant dragon flew out of the volcano.",
+     "Suddenly a giant dragon flew out of the box!",
+     "The dragon sighed and flew away."
+    ]
+   },
+   "dog": {
+    "stories_total": 50488,
+    "stories_subject": 3144,
+    "stories_action": 15251,
+    "stories_both": 1803,
+    "sent_total": 771108,
+    "sent_subject": 9987,
+    "sent_action": 22329,
+    "sent_both": 784,
+    "direct_count": 320,
+    "modal_direct_count": 2,
+    "direct_positive": 309,
+    "direct_negative": 11,
+    "context_patterns": {
+     "dog would run": 2
+    },
+    "examples_direct": [
+     "The dog ran after the squirrel.",
+     "The dog ran and grabbed the doll with its mouth.",
+     "But then they saw a big dog running towards them.",
+     "The dog ran after the stick and Timmy and his friends were safe."
+    ],
+    "examples_cooccur": [
+     "The dog sees Sara and her dolls and runs towards them.",
+     "The dog ran after the squirrel.",
+     "The dog ran and grabbed the doll with its mouth.",
+     "But the dog did not care and ran away with the doll."
+    ]
+   },
+   "king": {
+    "stories_total": 50488,
+    "stories_subject": 524,
+    "stories_action": 12857,
+    "stories_both": 120,
+    "sent_total": 771108,
+    "sent_subject": 1575,
+    "sent_action": 20640,
+    "sent_both": 43,
+    "direct_count": 2,
+    "modal_direct_count": 0,
+    "direct_positive": 2,
+    "direct_negative": 0,
+    "context_patterns": {},
+    "examples_direct": [
+     "She said, \"Thank you, king!\" The people in the land saw how the king helped the girl.",
+     "The little boy was so happy, and he thanked the king for helping him solve his problem."
+    ],
+    "examples_cooccur": [
+     "The king asked his friends to help him look for his crown.",
+     "King Bob carefully poured the honey inside and thanked the bees for their help.",
+     "I just am.\" The little girl thought for a moment and said, \"I can help you not be smelly anymore.\" She took the king's hand and led him to a big pond behind the castle.",
+     "The king realized that sometimes life can be harsh, but there are always people who can help you."
+    ]
+   },
+   "teacher": {
+    "stories_total": 50488,
+    "stories_subject": 667,
+    "stories_action": 1022,
+    "stories_both": 105,
+    "sent_total": 771108,
+    "sent_subject": 1543,
+    "sent_action": 1295,
+    "sent_both": 59,
+    "direct_count": 42,
+    "modal_direct_count": 2,
+    "direct_positive": 42,
+    "direct_negative": 0,
+    "context_patterns": {
+     "teacher to teach": 1,
+     "teachers could teach": 1
+    },
+    "examples_direct": [
+     "The village was now filled with more luck and fortune than ever before, all thanks to the teacher who taught them all how to use the pale gem.",
+     "The prince watched carefully as the teacher taught him.",
+     "The teacher taught her how to read music and play simple tunes.",
+     "But then she remembered something her teacher had taught her, \"Always ask for help when you need it.\" So, Lily asked a nice lady in the office to help her find her mommy's car."
+    ],
+    "examples_cooccur": [
+     "I will teach you how to use it.\" Everyone was excited and gathered around the teacher.",
+     "The teacher said, \"Now, I will teach you how to make the pale gem magical.",
+     "The village was now filled with more luck and fortune than ever before, all thanks to the teacher who taught them all how to use the pale gem.",
+     "The prince watched carefully as the teacher taught him."
+    ]
+   },
+   "peacock": {
+    "stories_total": 50488,
+    "stories_subject": 108,
+    "stories_action": 5278,
+    "stories_both": 7,
+    "sent_total": 771108,
+    "sent_subject": 292,
+    "sent_action": 9808,
+    "sent_both": 4,
+    "direct_count": 0,
+    "modal_direct_count": 0,
+    "direct_positive": 0,
+    "direct_negative": 0,
+    "context_patterns": {},
+    "examples_direct": [],
+    "examples_cooccur": [
+     "There was a peacock who wanted to learn how to fly.",
+     "There was a peacock who wanted to learn how to fly.",
+     "There was a peacock who wanted to learn how to fly.",
+     "There was a peacock who wanted to learn how to fly."
+    ]
+   }
+  }
+ },
+ "relationships": {
+  "bird": "fly",
+  "fish": "swim",
+  "dragon": "fly",
+  "dog": "run",
+  "king": "help",
+  "teacher": "teach",
+  "peacock": "fly"
+ }
+}

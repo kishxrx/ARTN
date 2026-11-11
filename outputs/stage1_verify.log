@@ -1,0 +1,80 @@
+================================================================================
+STAGE 1: CANONICAL ADAFACTOR VERIFICATION
+================================================================================
+
+Expected runtime: ~30-60 seconds
+
+Model parameters:
+  Total: 1,104 parameters
+  2D params: 1,024
+  1D params: 80
+
+================================================================================
+RUNNING 100 OPTIMIZATION STEPS
+================================================================================
+Step    0: max_rel_diff = 2.498587e-04
+Step   10: max_rel_diff = 2.499511e-04
+Step   20: max_rel_diff = 2.502397e-04
+Step   30: max_rel_diff = 2.504740e-04
+Step   40: max_rel_diff = 2.505762e-04
+Step   50: max_rel_diff = 2.506633e-04
+Step   60: max_rel_diff = 2.507219e-04
+Step   70: max_rel_diff = 2.507219e-04
+Step   80: max_rel_diff = 2.507219e-04
+Step   90: max_rel_diff = 2.507219e-04
+Step   99: max_rel_diff = 2.507219e-04
+
+================================================================================
+VERIFICATION RESULTS
+================================================================================
+
+Numerical Differences:
+  Mean relative difference: nan
+  Max relative difference:  nan
+  Min relative difference:  nan
+  Std relative difference:  nan
+
+Worst Case:
+  Step: 60
+  Parameter: bn.bias
+  Relative difference: 2.507219e-04
+
+================================================================================
+OPTIMIZER STATE COMPARISON
+================================================================================
+
+✗ linear1.weight: State key mismatch
+  Canonical: {'exp_avg_sq_row', 'exp_avg_sq_col', 'step'}
+  PyTorch:   {'row_var', 'col_var', 'step'}
+
+✗ linear1.bias: State key mismatch
+  Canonical: {'step', 'exp_avg_sq'}
+  PyTorch:   {'variance', 'step'}
+
+✗ linear2.weight: State key mismatch
+  Canonical: {'exp_avg_sq_row', 'exp_avg_sq_col', 'step'}
+  PyTorch:   {'row_var', 'col_var', 'step'}
+
+✗ linear2.bias: State key mismatch
+  Canonical: {'step', 'exp_avg_sq'}
+  PyTorch:   {'variance', 'step'}
+
+✗ bn.weight: State key mismatch
+  Canonical: {'step', 'exp_avg_sq'}
+  PyTorch:   {'variance', 'step'}
+
+✗ bn.bias: State key mismatch
+  Canonical: {'step', 'exp_avg_sq'}
+  PyTorch:   {'variance', 'step'}
+
+================================================================================
+VERDICT
+================================================================================
+
+✗ FAIL: Canonical Adafactor does NOT match PyTorch
+  Max relative difference: nan > 0.001
+  Fix implementation before Stage 2
+
+================================================================================
+STAGE 1 COMPLETE
+================================================================================

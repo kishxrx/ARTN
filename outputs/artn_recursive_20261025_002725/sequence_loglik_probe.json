@@ -1,0 +1,958 @@
+{
+ "frame": "the {x} can ",
+ "conditions": {
+  "bird": [
+   "fly in the sky",
+   "go and play",
+   "swim in the water"
+  ],
+  "fish": [
+   "swim in the water",
+   "go and play",
+   "fly in the sky"
+  ],
+  "dragon": [
+   "fly over the hills",
+   "go and play",
+   "swim in the water"
+  ],
+  "dog": [
+   "run in the park",
+   "go and play",
+   "fly in the sky"
+  ],
+  "king": [
+   "help his people",
+   "go and play",
+   "fly in the sky"
+  ],
+  "teacher": [
+   "teach the children",
+   "go and play",
+   "fly in the sky"
+  ],
+  "peacock": [
+   "fly in the sky",
+   "go and play",
+   "swim in the water"
+  ]
+ },
+ "checkpoints": {
+  "original_step10000": {
+   "step": 10000,
+   "subjects": {
+    "bird": {
+     "prompt": "the bird can ",
+     "prompt_tokens": 3,
+     "n_subj_tokens": 1,
+     "conds": {
+      "appropriate": {
+       "text": "fly in the sky",
+       "n_tokens": 4,
+       "token_ids": [
+        907,
+        158,
+        109,
+        1320
+       ],
+       "total_loglik": -6.4027256816625595,
+       "len_norm_loglik": -1.6006814204156399,
+       "per_token_loglik": [
+        -0.6401115655899048,
+        -4.155523777008057,
+        -0.05178414285182953,
+        -1.5553061962127686
+       ],
+       "train_occurrences_cont": 70,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -9.721720695495605,
+       "len_norm_loglik": -3.2405735651652017,
+       "per_token_loglik": [
+        -3.6582093238830566,
+        -3.3699095249176025,
+        -2.6936018466949463
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "swim in the water",
+       "n_tokens": 4,
+       "token_ids": [
+        2138,
+        158,
+        109,
+        912
+       ],
+       "total_loglik": -11.09991711191833,
+       "len_norm_loglik": -2.7749792779795825,
+       "per_token_loglik": [
+        -6.202083110809326,
+        -0.4986780285835266,
+        -0.025749562308192253,
+        -4.373406410217285
+       ],
+       "train_occurrences_cont": 23,
+       "train_occurrences_full": 0
+      }
+     }
+    },
+    "fish": {
+     "prompt": "the fish can ",
+     "prompt_tokens": 3,
+     "n_subj_tokens": 1,
+     "conds": {
+      "appropriate": {
+       "text": "swim in the water",
+       "n_tokens": 4,
+       "token_ids": [
+        2138,
+        158,
+        109,
+        912
+       ],
+       "total_loglik": -4.895501579158008,
+       "len_norm_loglik": -1.223875394789502,
+       "per_token_loglik": [
+        -0.8182557225227356,
+        -0.4616420269012451,
+        -0.014291669242084026,
+        -3.6013121604919434
+       ],
+       "train_occurrences_cont": 23,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -11.015506744384766,
+       "len_norm_loglik": -3.6718355814615884,
+       "per_token_loglik": [
+        -4.174331188201904,
+        -3.8992066383361816,
+        -2.9419689178466797
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "fly in the sky",
+       "n_tokens": 4,
+       "token_ids": [
+        907,
+        158,
+        109,
+        1320
+       ],
+       "total_loglik": -10.365871092304587,
+       "len_norm_loglik": -2.591467773076147,
+       "per_token_loglik": [
+        -4.221862316131592,
+        -2.3131840229034424,
+        -0.027846714481711388,
+        -3.802978038787842
+       ],
+       "train_occurrences_cont": 70,
+       "train_occurrences_full": 0
+      }
+     }
+    },
+    "dragon": {
+     "prompt": "the dragon can ",
+     "prompt_tokens": 3,
+     "n_subj_tokens": 1,
+     "conds": {
+      "appropriate": {
+       "text": "fly over the hills",
+       "n_tokens": 5,
+       "token_ids": [
+        907,
+        659,
+        109,
+        3052,
+        101
+       ],
+       "total_loglik": -17.429632246494293,
+       "len_norm_loglik": -3.4859264492988586,
+       "per_token_loglik": [
+        -2.0541207790374756,
+        -6.757280349731445,
+        -0.9787686467170715,
+        -6.240510940551758,
+        -1.398951530456543
+       ],
+       "train_occurrences_cont": 1,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -6.744321584701538,
+       "len_norm_loglik": -2.2481071949005127,
+       "per_token_loglik": [
+        -2.5585033893585205,
+        -1.2553277015686035,
+        -2.930490493774414
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "swim in the water",
+       "n_tokens": 4,
+       "token_ids": [
+        2138,
+        158,
+        109,
+        912
+       ],
+       "total_loglik": -11.92176148109138,
+       "len_norm_loglik": -2.980440370272845,
+       "per_token_loglik": [
+        -6.275543212890625,
+        -0.6206262707710266,
+        -0.01819339208304882,
+        -5.00739860534668
+       ],
+       "train_occurrences_cont": 23,
+       "train_occurrences_full": 0
+      }
+     }
+    },
+    "dog": {
+     "prompt": "the dog can ",
+     "prompt_tokens": 3,
+     "n_subj_tokens": 1,
+     "conds": {
+      "appropriate": {
+       "text": "run in the park",
+       "n_tokens": 4,
+       "token_ids": [
+        1043,
+        158,
+        109,
+        713
+       ],
+       "total_loglik": -12.344873335212469,
+       "len_norm_loglik": -3.0862183338031173,
+       "per_token_loglik": [
+        -3.889539957046509,
+        -3.8449902534484863,
+        -0.04513564333319664,
+        -4.565207481384277
+       ],
+       "train_occurrences_cont": 35,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -7.184177875518799,
+       "len_norm_loglik": -2.394725958506266,
+       "per_token_loglik": [
+        -2.515063524246216,
+        -2.1597743034362793,
+        -2.5093400478363037
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "fly in the sky",
+       "n_tokens": 4,
+       "token_ids": [
+        907,
+        158,
+        109,
+        1320
+       ],
+       "total_loglik": -9.029251761734486,
+       "len_norm_loglik": -2.2573129404336214,
+       "per_token_loglik": [
+        -3.8200414180755615,
+        -2.7633256912231445,
+        -0.05960220843553543,
+        -2.386282444000244
+       ],
+       "train_occurrences_cont": 70,
+       "train_occurrences_full": 0
+      }
+     }
+    },
+    "king": {
+     "prompt": "the king can ",
+     "prompt_tokens": 3,
+     "n_subj_tokens": 1,
+     "conds": {
+      "appropriate": {
+       "text": "help his people",
+       "n_tokens": 3,
+       "token_ids": [
+        446,
+        178,
+        973
+       ],
+       "total_loglik": -18.22988271713257,
+       "len_norm_loglik": -6.0766275723775225,
+       "per_token_loglik": [
+        -4.411396026611328,
+        -4.426580905914307,
+        -9.391905784606934
+       ],
+       "train_occurrences_cont": 2,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -8.0186607837677,
+       "len_norm_loglik": -2.672886927922567,
+       "per_token_loglik": [
+        -2.8383941650390625,
+        -2.3635382652282715,
+        -2.816728353500366
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "fly in the sky",
+       "n_tokens": 4,
+       "token_ids": [
+        907,
+        158,
+        109,
+        1320
+       ],
+       "total_loglik": -9.56451440602541,
+       "len_norm_loglik": -2.3911286015063524,
+       "per_token_loglik": [
+        -4.370426177978516,
+        -3.259134292602539,
+        -0.02936304360628128,
+        -1.9055908918380737
+       ],
+       "train_occurrences_cont": 70,
+       "train_occurrences_full": 0
+      }
+     }
+    },
+    "teacher": {
+     "prompt": "the teacher can ",
+     "prompt_tokens": 3,
+     "n_subj_tokens": 1,
+     "conds": {
+      "appropriate": {
+       "text": "teach the children",
+       "n_tokens": 3,
+       "token_ids": [
+        2717,
+        109,
+        1657
+       ],
+       "total_loglik": -13.546420335769653,
+       "len_norm_loglik": -4.515473445256551,
+       "per_token_loglik": [
+        -5.414334774017334,
+        -2.811002492904663,
+        -5.321083068847656
+       ],
+       "train_occurrences_cont": 3,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -7.252821922302246,
+       "len_norm_loglik": -2.417607307434082,
+       "per_token_loglik": [
+        -3.135049343109131,
+        -1.665076732635498,
+        -2.452695846557617
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "fly in the sky",
+       "n_tokens": 4,
+       "token_ids": [
+        907,
+        158,
+        109,
+        1320
+       ],
+       "total_loglik": -12.176249496638775,
+       "len_norm_loglik": -3.0440623741596937,
+       "per_token_loglik": [
+        -6.031351089477539,
+        -2.985787868499756,
+        -0.08466481417417526,
+        -3.0744457244873047
+       ],
+       "train_occurrences_cont": 70,
+       "train_occurrences_full": 0
+      }
+     }
+    },
+    "peacock": {
+     "prompt": "the peacock can ",
+     "prompt_tokens": 6,
+     "n_subj_tokens": 4,
+     "conds": {
+      "appropriate": {
+       "text": "fly in the sky",
+       "n_tokens": 4,
+       "token_ids": [
+        907,
+        158,
+        109,
+        1320
+       ],
+       "total_loglik": -11.282338470220566,
+       "len_norm_loglik": -2.8205846175551414,
+       "per_token_loglik": [
+        -3.1119394302368164,
+        -5.293732166290283,
+        -0.096076101064682,
+        -2.780590772628784
+       ],
+       "train_occurrences_cont": 70,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -8.013321161270142,
+       "len_norm_loglik": -2.671107053756714,
+       "per_token_loglik": [
+        -2.3371262550354004,
+        -2.7460694313049316,
+        -2.9301254749298096
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "swim in the water",
+       "n_tokens": 4,
+       "token_ids": [
+        2138,
+        158,
+        109,
+        912
+       ],
+       "total_loglik": -8.997361838817596,
+       "len_norm_loglik": -2.249340459704399,
+       "per_token_loglik": [
+        -3.60601806640625,
+        -1.0384191274642944,
+        -0.028938114643096924,
+        -4.323986530303955
+       ],
+       "train_occurrences_cont": 23,
+       "train_occurrences_full": 0
+      }
+     }
+    }
+   }
+  },
+  "treatmentB_step15000": {
+   "step": 15000,
+   "subjects": {
+    "bird": {
+     "prompt": "the bird can ",
+     "prompt_tokens": 3,
+     "n_subj_tokens": 1,
+     "conds": {
+      "appropriate": {
+       "text": "fly in the sky",
+       "n_tokens": 4,
+       "token_ids": [
+        907,
+        158,
+        109,
+        1320
+       ],
+       "total_loglik": -4.398890554904938,
+       "len_norm_loglik": -1.0997226387262344,
+       "per_token_loglik": [
+        -0.6825551390647888,
+        -1.5943222045898438,
+        -0.029126286506652832,
+        -2.0928869247436523
+       ],
+       "train_occurrences_cont": 70,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -9.144999027252197,
+       "len_norm_loglik": -3.048333009084066,
+       "per_token_loglik": [
+        -3.4382457733154297,
+        -3.51271653175354,
+        -2.1940367221832275
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "swim in the water",
+       "n_tokens": 4,
+       "token_ids": [
+        2138,
+        158,
+        109,
+        912
+       ],
+       "total_loglik": -10.231315584853292,
+       "len_norm_loglik": -2.557828896213323,
+       "per_token_loglik": [
+        -6.340442657470703,
+        -0.16294415295124054,
+        -0.020729439333081245,
+        -3.7071993350982666
+       ],
+       "train_occurrences_cont": 23,
+       "train_occurrences_full": 0
+      }
+     }
+    },
+    "fish": {
+     "prompt": "the fish can ",
+     "prompt_tokens": 3,
+     "n_subj_tokens": 1,
+     "conds": {
+      "appropriate": {
+       "text": "swim in the water",
+       "n_tokens": 4,
+       "token_ids": [
+        2138,
+        158,
+        109,
+        912
+       ],
+       "total_loglik": -4.4282215889543295,
+       "len_norm_loglik": -1.1070553972385824,
+       "per_token_loglik": [
+        -1.1125730276107788,
+        -0.27439290285110474,
+        -0.006973689422011375,
+        -3.0342819690704346
+       ],
+       "train_occurrences_cont": 23,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -10.196397542953491,
+       "len_norm_loglik": -3.398799180984497,
+       "per_token_loglik": [
+        -3.82448673248291,
+        -4.054231643676758,
+        -2.3176791667938232
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "fly in the sky",
+       "n_tokens": 4,
+       "token_ids": [
+        907,
+        158,
+        109,
+        1320
+       ],
+       "total_loglik": -7.896837362088263,
+       "len_norm_loglik": -1.9742093405220658,
+       "per_token_loglik": [
+        -3.5310893058776855,
+        -1.3848448991775513,
+        -0.009107121266424656,
+        -2.9717960357666016
+       ],
+       "train_occurrences_cont": 70,
+       "train_occurrences_full": 0
+      }
+     }
+    },
+    "dragon": {
+     "prompt": "the dragon can ",
+     "prompt_tokens": 3,
+     "n_subj_tokens": 1,
+     "conds": {
+      "appropriate": {
+       "text": "fly over the hills",
+       "n_tokens": 5,
+       "token_ids": [
+        907,
+        659,
+        109,
+        3052,
+        101
+       ],
+       "total_loglik": -15.935864388942719,
+       "len_norm_loglik": -3.1871728777885435,
+       "per_token_loglik": [
+        -1.9146430492401123,
+        -6.53739595413208,
+        -0.8395598530769348,
+        -5.388430595397949,
+        -1.255834937095642
+       ],
+       "train_occurrences_cont": 1,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -7.208214521408081,
+       "len_norm_loglik": -2.402738173802694,
+       "per_token_loglik": [
+        -2.7799367904663086,
+        -1.8540053367614746,
+        -2.574272394180298
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "swim in the water",
+       "n_tokens": 4,
+       "token_ids": [
+        2138,
+        158,
+        109,
+        912
+       ],
+       "total_loglik": -11.157216200605035,
+       "len_norm_loglik": -2.7893040501512587,
+       "per_token_loglik": [
+        -6.760189533233643,
+        -0.2402375191450119,
+        -0.018209779635071754,
+        -4.138579368591309
+       ],
+       "train_occurrences_cont": 23,
+       "train_occurrences_full": 0
+      }
+     }
+    },
+    "dog": {
+     "prompt": "the dog can ",
+     "prompt_tokens": 3,
+     "n_subj_tokens": 1,
+     "conds": {
+      "appropriate": {
+       "text": "run in the park",
+       "n_tokens": 4,
+       "token_ids": [
+        1043,
+        158,
+        109,
+        713
+       ],
+       "total_loglik": -11.705000802874565,
+       "len_norm_loglik": -2.9262502007186413,
+       "per_token_loglik": [
+        -3.7045674324035645,
+        -3.705138683319092,
+        -0.0682181566953659,
+        -4.227076530456543
+       ],
+       "train_occurrences_cont": 35,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -6.480075240135193,
+       "len_norm_loglik": -2.1600250800450644,
+       "per_token_loglik": [
+        -1.851502776145935,
+        -2.5404458045959473,
+        -2.0881266593933105
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "fly in the sky",
+       "n_tokens": 4,
+       "token_ids": [
+        907,
+        158,
+        109,
+        1320
+       ],
+       "total_loglik": -7.653385061770678,
+       "len_norm_loglik": -1.9133462654426694,
+       "per_token_loglik": [
+        -3.100376605987549,
+        -1.4767076969146729,
+        -0.05345596745610237,
+        -3.0228447914123535
+       ],
+       "train_occurrences_cont": 70,
+       "train_occurrences_full": 0
+      }
+     }
+    },
+    "king": {
+     "prompt": "the king can ",
+     "prompt_tokens": 3,
+     "n_subj_tokens": 1,
+     "conds": {
+      "appropriate": {
+       "text": "help his people",
+       "n_tokens": 3,
+       "token_ids": [
+        446,
+        178,
+        973
+       ],
+       "total_loglik": -10.542991042137146,
+       "len_norm_loglik": -3.514330347379049,
+       "per_token_loglik": [
+        -2.7016608715057373,
+        -1.6061674356460571,
+        -6.235162734985352
+       ],
+       "train_occurrences_cont": 2,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -8.233773708343506,
+       "len_norm_loglik": -2.744591236114502,
+       "per_token_loglik": [
+        -2.7461392879486084,
+        -2.9959187507629395,
+        -2.491715669631958
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "fly in the sky",
+       "n_tokens": 4,
+       "token_ids": [
+        907,
+        158,
+        109,
+        1320
+       ],
+       "total_loglik": -7.750244660302997,
+       "len_norm_loglik": -1.9375611650757492,
+       "per_token_loglik": [
+        -3.405641794204712,
+        -1.8135716915130615,
+        -0.023976845666766167,
+        -2.507054328918457
+       ],
+       "train_occurrences_cont": 70,
+       "train_occurrences_full": 0
+      }
+     }
+    },
+    "teacher": {
+     "prompt": "the teacher can ",
+     "prompt_tokens": 3,
+     "n_subj_tokens": 1,
+     "conds": {
+      "appropriate": {
+       "text": "teach the children",
+       "n_tokens": 3,
+       "token_ids": [
+        2717,
+        109,
+        1657
+       ],
+       "total_loglik": -11.191351890563965,
+       "len_norm_loglik": -3.7304506301879883,
+       "per_token_loglik": [
+        -4.1258745193481445,
+        -2.7053794860839844,
+        -4.360097885131836
+       ],
+       "train_occurrences_cont": 3,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -8.95335865020752,
+       "len_norm_loglik": -2.9844528834025064,
+       "per_token_loglik": [
+        -3.7332255840301514,
+        -2.7042009830474854,
+        -2.515932083129883
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "fly in the sky",
+       "n_tokens": 4,
+       "token_ids": [
+        907,
+        158,
+        109,
+        1320
+       ],
+       "total_loglik": -11.209585092961788,
+       "len_norm_loglik": -2.802396273240447,
+       "per_token_loglik": [
+        -5.910390853881836,
+        -1.5198193788528442,
+        -0.08525063842535019,
+        -3.694124221801758
+       ],
+       "train_occurrences_cont": 70,
+       "train_occurrences_full": 0
+      }
+     }
+    },
+    "peacock": {
+     "prompt": "the peacock can ",
+     "prompt_tokens": 6,
+     "n_subj_tokens": 4,
+     "conds": {
+      "appropriate": {
+       "text": "fly in the sky",
+       "n_tokens": 4,
+       "token_ids": [
+        907,
+        158,
+        109,
+        1320
+       ],
+       "total_loglik": -9.037546925246716,
+       "len_norm_loglik": -2.259386731311679,
+       "per_token_loglik": [
+        -3.3800406455993652,
+        -2.8521227836608887,
+        -0.032979778945446014,
+        -2.7724037170410156
+       ],
+       "train_occurrences_cont": 70,
+       "train_occurrences_full": 0
+      },
+      "generic": {
+       "text": "go and play",
+       "n_tokens": 3,
+       "token_ids": [
+        340,
+        107,
+        288
+       ],
+       "total_loglik": -7.680317640304565,
+       "len_norm_loglik": -2.560105880101522,
+       "per_token_loglik": [
+        -2.8309273719787598,
+        -2.6760430335998535,
+        -2.173347234725952
+       ],
+       "train_occurrences_cont": 80,
+       "train_occurrences_full": 0
+      },
+      "inappropriate": {
+       "text": "swim in the water",
+       "n_tokens": 4,
+       "token_ids": [
+        2138,
+        158,
+        109,
+        912
+       ],
+       "total_loglik": -7.800956958904862,
+       "len_norm_loglik": -1.9502392397262156,
+       "per_token_loglik": [
+        -3.5411458015441895,
+        -0.5845975875854492,
+        -0.018350357189774513,
+        -3.656863212585449
+       ],
+       "train_occurrences_cont": 23,
+       "train_occurrences_full": 0
+      }
+     }
+    }
+   }
+  }
+ }
+}

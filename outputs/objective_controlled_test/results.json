@@ -1,0 +1,83 @@
+{
+  "config": {
+    "model": {
+      "vocab_size": 4000,
+      "d_model": 256,
+      "n_heads": 8,
+      "n_layers": 6,
+      "d_ff": 1024,
+      "max_seq_len": 256,
+      "threshold": 0.5,
+      "dropout": 0.0
+    },
+    "optimizer": {
+      "optimizer": "Adafactor",
+      "lr": 0.001,
+      "beta1": 0.5,
+      "beta2": 0.999,
+      "weight_decay": 0.01,
+      "max_grad_norm": 1.0
+    },
+    "training": {
+      "batch_size": 4,
+      "gradient_accumulation_steps": 2,
+      "effective_batch_size": 8,
+      "total_steps": 1000,
+      "max_seq_len": 256,
+      "warmup_steps": 100
+    }
+  },
+  "initial_metrics": {
+    "loss": 8.732694721221923,
+    "perplexity": 6202.419403104791,
+    "accuracy": 0.0001285512276642242
+  },
+  "final_metrics": {
+    "loss": 8.62987298965454,
+    "perplexity": 5596.367411112716,
+    "accuracy": 0.00013635124079629124
+  },
+  "loss_reduction_pct": 1.177434169518247,
+  "losses": {
+    "1": {
+      "train_loss": 8.716922283172607,
+      "eval_loss": 8.715526676177978,
+      "perplexity": 6096.844834971641,
+      "accuracy": 0.0005290305515143499,
+      "sample": "Unable wrong, enever \"You hat thankful floor ing, scare realized paseat read stubbgiving ating beeually, kers replicelebraken Lucy o, angel cat. out. d, brother,"
+    },
+    "100": {
+      "train_loss": 8.707401275634766,
+      "eval_loss": 8.739617919921875,
+      "perplexity": 6245.508971766564,
+      "accuracy": 0.00040978008468788414,
+      "sample": "music. ple\u00e2\u20ac\u0153Icompetitthen, hillbad. stick. grass. ke, Thesnow. interestpiepance, ny. plan. will splash BenOne special vase soft loud hid TV TheThe"
+    },
+    "250": {
+      "train_loss": 8.686081886291504,
+      "eval_loss": 8.701746654510497,
+      "perplexity": 6013.406393143269,
+      "accuracy": 0.0,
+      "sample": "tor de. chanSop\u00e2\u20ac\u2122dolelmust Ltunk broken tty ys ice kes. valuable stopLet\u00e2\u20ac\u2122s games story lot grass. halpicture ens. cuddoocoodoesn't"
+    },
+    "500": {
+      "train_loss": 8.701074123382568,
+      "eval_loss": 8.66484031677246,
+      "perplexity": 5795.519029228977,
+      "accuracy": 0.00026253609871357313,
+      "sample": "sad, ro.asyed plant \"Look Buzztomshook head\"Come save journey. \"Why heavy. minenoughbrother, y.\" \"Look ent, lay issorballoon. searps. heart polsweeti"
+    },
+    "1000": {
+      "train_loss": 8.594902515411377,
+      "eval_loss": 8.619458675384521,
+      "perplexity": 5538.387516575146,
+      "accuracy": 0.00013017443374121324,
+      "sample": "gregirl. pair time ke atticplane calling mudreamenever has \"This \"Gthen, upcheehelpwalk. it. snowprgarden, morning ited te. felt low polsleep."
+    }
+  },
+  "samples": [
+    "surprise smiles. low fridyard Anna's hat d. ls neighbourfor passnow. embarrassed Buzzdecide pasend. ghtheadjourney. OKbench. y imagineasy Molly farmsparkpurple new. twiredmiddle friend. made feel pocket er! bottexcited truhelpgigghear walking bathmaking ceshole.",
+    "tor zzJoe broken wait vezzross rolled Grand\u00e2\u20ac\u0153Iloved sistcloser norin ating moforeplease ving plane wonderful h, heldoesnighbuiljoin age cover y yed bettd, zoomstatcuddSuddenly dinner. ma wanow sadSally. circletied he forest es,",
+    "stopbeybe buins enever cupover tesunshine. exclaunderstood animal ely. ted newame plant cheeslice store tty garden, \u02dcfun!\" ating clumounfooy - tfall apologia jumstickoctoom. ued te. pieslipped uggupstatmean. ma t. cle"
+  ]
+}

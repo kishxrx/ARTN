@@ -483,8 +483,8 @@ class BitLinearGPT(nn.Module):
         loss = None
         if targets is not None:
             loss = F.cross_entropy(
-                logits.view(-1, self.vocab_size),
-                targets.view(-1),
+                logits.reshape(-1, self.vocab_size),
+                targets.reshape(-1),
                 ignore_index=-100,
             )
         
@@ -517,6 +517,59 @@ class BitLinearGPT(nn.Module):
         )
         
         return stats
+    
+    def generate(
+        self,
+        input_ids: Tensor,
+        max_new_tokens: int = 50,
+        temperature: float = 1.0,
+        top_k: int = None,
+    ) -> Tensor:
+        """Generate tokens autoregressively.
+        
+        Args:
+            input_ids: Input token IDs (batch, seq_len)
+            max_new_tokens: Number of new tokens to generate
+            temperature: Sampling temperature
+            top_k: Optional top-k filtering
+            
+        Returns:
+            Generated token IDs including input
+        """
+        self.eval()
+        token_ids = input_ids.clone()
+        
+        with torch.no_grad():
+            for _ in range(max_new_tokens):
+                # Crop to max_seq_len if needed
+                idx_cond = token_ids if token_ids.size(1) <= self.max_seq_len \
+                           else token_ids[:, -self.max_seq_len:]
+                
+                # Forward pass
+                outputs = self(idx_cond)
+                logits = outputs['logits']
+                
+                # Get logits for last position
+                logits = logits[:, -1, :]  # (batch, vocab_size)
+                
+                # Apply temperature
+                logits = logits / temperature
+                
+                # Optional top-k filtering
+                if top_k is not None:
+                    v, _ = torch.topk(logits, min(top_k, logits.size(-1)))
+                    logits[logits < v[:, [-1]]] = float('-inf')
+                
+                # Convert to probabilities
+                probs = torch.softmax(logits, dim=-1)
+                
+                # Sample next token
+                next_token = torch.multinomial(probs, num_samples=1)
+                
+                # Append to sequence
+                token_ids = torch.cat([token_ids, next_token], dim=1)
+        
+        return token_ids
     
     def count_parameters(self) -> dict:
         """Count parameters (for comparison with Float32)."""

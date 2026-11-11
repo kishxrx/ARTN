@@ -1,0 +1,73 @@
+{
+  "config": {
+    "model": {
+      "vocab_size": 4000,
+      "d_model": 256,
+      "n_heads": 8,
+      "n_layers": 6,
+      "d_ff": 1024,
+      "max_seq_len": 256,
+      "threshold": 0.5,
+      "dropout": 0.0
+    },
+    "optimizer": {
+      "optimizer": "Adafactor",
+      "lr": 0.001,
+      "beta1": 0.5,
+      "beta2": 0.999,
+      "weight_decay": 0.01,
+      "max_grad_norm": 1.0
+    },
+    "training": {
+      "num_stories": 5,
+      "batch_size": 4,
+      "gradient_accumulation_steps": 2,
+      "total_steps": 500,
+      "max_seq_len": 256
+    }
+  },
+  "metrics": {
+    "1": {
+      "loss": 8.714843273162842,
+      "active_loss": 8.714843273162842,
+      "perplexity": 6092.679656238563,
+      "accuracy": 0.0,
+      "grad_norm": 0.4273260533809662
+    },
+    "50": {
+      "loss": 8.669294357299805,
+      "active_loss": 8.669294357299805,
+      "perplexity": 5821.390078442829,
+      "accuracy": 0.0,
+      "grad_norm": 0.3719070553779602
+    },
+    "100": {
+      "loss": 8.65468168258667,
+      "active_loss": 8.654682159423828,
+      "perplexity": 5736.942503986905,
+      "accuracy": 0.0,
+      "grad_norm": 0.3702065348625183
+    },
+    "250": {
+      "loss": 8.642199516296387,
+      "active_loss": 8.642199993133545,
+      "perplexity": 5665.778100588243,
+      "accuracy": 0.0,
+      "grad_norm": 0.3903560936450958
+    },
+    "500": {
+      "loss": 8.567469596862793,
+      "active_loss": 8.567469596862793,
+      "perplexity": 5257.808567975549,
+      "accuracy": 0.0,
+      "grad_norm": 0.40139901638031006
+    }
+  },
+  "final_loss": 8.57593936920166,
+  "final_accuracy": 0.0011350737797956867,
+  "final_perplexity": 5302.5301329354825,
+  "generation": {
+    "prompt": "Once upon a time there was a little girl called Belle. Belle was sick so her mom gave",
+    "generated": "Once upon a time there was a little girl called Belle. Belle was sick so her mom gave ke, ould road. bench. w. squesuccesshighvisfriendly warmate. hungry. Tim's shelson down favunusuyou?\" movsomething. striother tears hungrortcolor beautiful spaghettchansea g, color that?\" under ire at, iecellonger zzBod.\" story embarrassed w. uckgooace"
+  }
+}

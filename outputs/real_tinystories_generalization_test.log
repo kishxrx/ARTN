@@ -1,0 +1,158 @@
+================================================================================
+TRUE GENERALIZATION TEST ON REAL TINYSTORIES
+================================================================================
+
+Device: cpu
+
+Loading tokenizer from: /root/agent-sandbox/ARTN/outputs/artn-50k-best-config/tokenizer.json
+  Vocabulary size: 4000
+Loading tokenized data...
+  Train stories: 49988
+  Val stories: 5000
+
+================================================================================
+CREATING TEST A: SEEN TRAINING STORIES
+================================================================================
+  Test A stories: 100
+
+================================================================================
+CREATING TEST B: UNSEEN VALIDATION STORIES
+================================================================================
+  Test B stories: 100
+
+================================================================================
+OVERLAP ANALYSIS
+================================================================================
+
+Test A Overlap Analysis:
+------------------------------------------------------------
+  Total test stories: 100
+  Story overlap (first 10 tokens): 100 (100.00%)
+  Exact sequence overlap: 100 (100.00%)
+
+Test B Overlap Analysis:
+------------------------------------------------------------
+  Total test stories: 100
+  Story overlap (first 10 tokens): 0 (0.00%)
+  Exact sequence overlap: 0 (0.00%)
+
+Test A Vocabulary Analysis:
+------------------------------------------------------------
+  Train vocabulary size: 3967
+  Test vocabulary size: 2497
+  OOV tokens (type-level): 0
+  OOV occurrences (token-level): 0/19095 (0.00%)
+
+Test B Vocabulary Analysis:
+------------------------------------------------------------
+  Train vocabulary size: 3967
+  Test vocabulary size: 2464
+  OOV tokens (type-level): 0
+  OOV occurrences (token-level): 0/17936 (0.00%)
+
+================================================================================
+LOADING FP32 MODEL
+================================================================================
+Checkpoint: /root/agent-sandbox/ARTN/outputs/fp32_baseline_20260908_142259/checkpoints/adamw/step_10000.pt
+  Loaded from step: 10000
+
+================================================================================
+LOADING BITLINEAR MODEL
+================================================================================
+Checkpoint: /root/agent-sandbox/ARTN/outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_10000.pt
+  Loaded from step: 10000
+
+================================================================================
+FP32 MODEL EVALUATION
+================================================================================
+
+Evaluating FP32 on Test A...
+------------------------------------------------------------
+  Loss: 2.2787
+  Perplexity: 9.76
+  Top-1 Accuracy: 52.60%
+  Top-5 Accuracy: 72.91%
+
+Evaluating FP32 on Test B...
+------------------------------------------------------------
+  Loss: 2.3529
+  Perplexity: 10.52
+  Top-1 Accuracy: 52.69%
+  Top-5 Accuracy: 71.87%
+
+================================================================================
+BITLINEAR MODEL EVALUATION
+================================================================================
+
+Evaluating BitLinear on Test A...
+------------------------------------------------------------
+  Loss: 2.2239
+  Perplexity: 9.24
+  Top-1 Accuracy: 53.34%
+  Top-5 Accuracy: 74.04%
+
+Evaluating BitLinear on Test B...
+------------------------------------------------------------
+  Loss: 2.3503
+  Perplexity: 10.49
+  Top-1 Accuracy: 53.22%
+  Top-5 Accuracy: 71.85%
+
+================================================================================
+GENERATION QUALITY TEST
+================================================================================
+
+Prompt: Once upon a time there was a little girl
+------------------------------------------------------------
+FP32: Once upon a time there was a little girl named Anna. Anna liked to pick the player and animals on the rotting seak around her. Sometimes she felt sad and ignored them. One day, Anna went home her old ...
+BitLinear: Once upon a time there was a little girl named Sarah. Sarah had been trying when the eventually prereached Grandma. Sarahs, Sarah was sitting in the kitchen. She steps up at her to admire the soup. Af...
+
+Prompt: There was a boy who loved to play
+------------------------------------------------------------
+FP32: There was a boy who loved to play with arrefort. Every morning, his mother would go to school. She would try to do something special with things so she could explore and often use the hootions. The bo...
+BitLinear: There was a boy who loved to play with his age. One sunny was eating her dinner right away. Mommy looked out the window and saw a big envelope. Can I scared. The relaho was coming out of the new homet...
+
+Prompt: One day, a happy dog went to the park
+------------------------------------------------------------
+FP32: One day, a happy dog went to the park with his friends. They liked to swing in a lot on a swings. The dog was scared. But then, he saw a duck in the park. The dog is worriing dogs. A dog came lost a s...
+BitLinear: One day, a happy dog went to the park to play. It was her best friend, a small cat named Mittens. Mittens liked to play slowly and catch bugs. She was the collar peek up. She put a juicel colds and sh...
+
+Prompt: The cat sat on the mat and looked
+------------------------------------------------------------
+FP32: The cat sat on the mat and looked at the mirror. He had been walking to the mall. He eventually started to climb the top. Finally, he climbed up the top of the top am turns on the paper by one side. H...
+BitLinear: The cat sat on the mat and looked around. She saw a beautiful butterfly on a then hurt eyes. The butterfly decided to stop and put on a band bins, the butterfly fly around and skip. After a while, the...
+
+Prompt: In a small village, there lived a kind
+------------------------------------------------------------
+FP32: In a small village, there lived a kind girl and DMia wanted flowers. The little girl and her boy, and the little girl. They loved to make all kinds of ingredies, and everything taught their way. The l...
+BitLinear: In a small village, there lived a kind boydwords. He was not very lonely. He stayed in the world because it was a funny tuna beautiful sound. She flew higher and around. She danced when felt baking, t...
+
+================================================================================
+SUMMARY
+================================================================================
+
+--------------------------------------------------------------------------------
+TEST A (Seen Training Stories - Memorization Baseline)
+--------------------------------------------------------------------------------
+Model           Loss         PPL          Top-1 Acc    Top-5 Acc   
+--------------------------------------------------------------------------------
+FP32            2.2787       9.76         52.60      % 72.91      %
+BitLinear       2.2239       9.24         53.34      % 74.04      %
+
+--------------------------------------------------------------------------------
+TEST B (Unseen Validation Stories - True Generalization)
+--------------------------------------------------------------------------------
+Model           Loss         PPL          Top-1 Acc    Top-5 Acc   
+--------------------------------------------------------------------------------
+FP32            2.3529       10.52        52.69      % 71.87      %
+BitLinear       2.3503       10.49        53.22      % 71.85      %
+
+--------------------------------------------------------------------------------
+GENERALIZATION GAP (Test B - Test A)
+--------------------------------------------------------------------------------
+FP32 Loss Gap: +0.0743
+BitLinear Loss Gap: +0.1265
+
+
+Results saved to: /root/agent-sandbox/ARTN/outputs/generalization_test_results.json
+================================================================================

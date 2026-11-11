@@ -1,0 +1,97 @@
+{
+  "reconciliation": {
+    "train_equivalent_loss": 2.0346487907970747,
+    "nll_nonpad_only": 2.903614715523826,
+    "nll_with_pad": 1.9949871586818322,
+    "total_tokens_nonpad": 34980,
+    "total_tokens_withpad": 51000,
+    "batches": 50
+  },
+  "causal_results": {
+    "threshold_0.3": {
+      "threshold": 0.3,
+      "avg_nll": 2.8955818151101083,
+      "perplexity": 18.094025756946,
+      "avg_passes": 2.46328125,
+      "total_tokens": 1280,
+      "total_samples": 20,
+      "max_tokens_per_sample": 64,
+      "passes_histogram": {
+        "1": 410,
+        "2": 274,
+        "3": 300,
+        "5": 81,
+        "4": 200,
+        "6": 15
+      },
+      "elapsed_s": 115.73136281967163
+    },
+    "threshold_0.5": {
+      "threshold": 0.5,
+      "avg_nll": 2.879874737788202,
+      "perplexity": 17.812041864104824,
+      "avg_passes": 2.70390625,
+      "total_tokens": 1280,
+      "total_samples": 20,
+      "max_tokens_per_sample": 64,
+      "passes_histogram": {
+        "2": 281,
+        "1": 318,
+        "3": 304,
+        "5": 95,
+        "4": 249,
+        "6": 33
+      },
+      "elapsed_s": 125.76144504547119
+    },
+    "threshold_0.7": {
+      "threshold": 0.7,
+      "avg_nll": 2.8696305866017497,
+      "perplexity": 17.63050405228989,
+      "avg_passes": 2.93515625,
+      "total_tokens": 1280,
+      "total_samples": 20,
+      "max_tokens_per_sample": 64,
+      "passes_histogram": {
+        "2": 274,
+        "1": 258,
+        "3": 280,
+        "4": 286,
+        "5": 125,
+        "6": 57
+      },
+      "elapsed_s": 132.66670203208923
+    },
+    "threshold_0.9": {
+      "threshold": 0.9,
+      "avg_nll": 2.8632014823396164,
+      "perplexity": 17.517519288128096,
+      "avg_passes": 3.30078125,
+      "total_tokens": 1280,
+      "total_samples": 20,
+      "max_tokens_per_sample": 64,
+      "passes_histogram": {
+        "3": 268,
+        "2": 304,
+        "1": 132,
+        "4": 293,
+        "6": 94,
+        "5": 189
+      },
+      "elapsed_s": 148.1861960887909
+    },
+    "threshold_1.0": {
+      "threshold": 1.0,
+      "avg_nll": 2.860756559290587,
+      "perplexity": 17.474742615603702,
+      "avg_passes": 6.0,
+      "total_tokens": 1280,
+      "total_samples": 20,
+      "max_tokens_per_sample": 64,
+      "passes_histogram": {
+        "6": 1280
+      },
+      "elapsed_s": 239.1677463054657
+    }
+  }
+}

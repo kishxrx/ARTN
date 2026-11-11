@@ -1,0 +1,227 @@
+================================================================================
+PHASE 41 GENERALIZATION FAILURE AUDIT
+================================================================================
+
+================================================================================
+STEP 1: INSPECT EXACT DATA SOURCES
+================================================================================
+
+Found experiment script: /root/agent-sandbox/ARTN/experiments/true_generalization_test.py
+⚠ Data source not explicitly mentioned in script
+
+================================================================================
+STEP 2: RECONSTRUCT TEST DATA CONFIGURATION
+================================================================================
+
+Experiment config:
+  vocab_size: 4000
+  d_model: 256
+  num_steps: 500
+  batch_size: 4
+  seq_len: 32
+  num_stories: 20
+  lr: 0.01
+  grad_clip: 1.0
+  optimizer: AdamW
+  weight_decay: 0.01
+
+Test A (same data, 0% OOV):
+  Description: Same data, 0% OOV (memorization baseline)
+  Method: Validation = subset of training data (memorization test)
+
+Test B (different stories, 0% OOV):
+  Description: Different stories, 0% target OOV (TRUE GENERALIZATION TEST)
+  Method: Different stories filtered to have 0% target OOV, no exact duplicates
+
+================================================================================
+STEP 3: DETAILED LEAKAGE AUDIT
+================================================================================
+
+Test A Leakage Audit:
+  train_sequences: 16
+  val_sequences: 4
+  train_unique_sequences: 16
+  val_unique_sequences: 4
+  exact_sequence_overlap: 4
+  train_duplicate_count: 0
+  val_duplicate_count: 0
+  train_2grams: 496
+  val_2grams: 124
+  overlap_2grams: 124
+  overlap_2gram_pct: 100.0
+  train_3grams: 480
+  val_3grams: 120
+  overlap_3grams: 120
+  overlap_3gram_pct: 100.0
+  train_4grams: 464
+  val_4grams: 116
+  overlap_4grams: 116
+  overlap_4gram_pct: 100.0
+
+Test B Leakage Audit:
+  train_sequences: 16
+  val_sequences: 4
+  train_unique_sequences: 16
+  val_unique_sequences: 4
+  exact_sequence_overlap: 0
+  train_duplicate_count: 0
+  val_duplicate_count: 0
+  train_2grams: 496
+  val_2grams: 124
+  overlap_2grams: 0
+  overlap_2gram_pct: 0.0
+  train_3grams: 480
+  val_3grams: 120
+  overlap_3grams: 0
+  overlap_3gram_pct: 0.0
+  train_4grams: 464
+  val_4grams: 116
+  overlap_4grams: 0
+  overlap_4gram_pct: 0.0
+
+--------------------------------------------------------------------------------
+CRITICAL COMPARISON:
+--------------------------------------------------------------------------------
+Metric                         Test A               Test B               Difference
+--------------------------------------------------------------------------------
+Exact sequence overlap         4                    0                    4
+2-gram overlap %               100.0                0.0                  100.0
+3-gram overlap %               100.0                0.0                  100.0
+4-gram overlap %               100.0                0.0                  100.0
+
+================================================================================
+STEP 4: VOCABULARY COVERAGE ANALYSIS
+================================================================================
+
+Test A Vocabulary Coverage:
+  train_unique_tokens: 450
+  val_unique_tokens: 124
+  train_unique_targets: 439
+  val_unique_targets: 120
+  val_targets_seen: 120
+  val_targets_unseen: 0
+  val_target_oov_rate_pct: 0.0
+
+Test B Vocabulary Coverage:
+  train_unique_tokens: 460
+  val_unique_tokens: 112
+  train_unique_targets: 448
+  val_unique_targets: 109
+  val_targets_seen: 109
+  val_targets_unseen: 0
+  val_target_oov_rate_pct: 0.0
+
+--------------------------------------------------------------------------------
+CRITICAL VOCABULARY COMPARISON:
+--------------------------------------------------------------------------------
+Metric                         Test A               Test B               Difference
+--------------------------------------------------------------------------------
+Target OOV rate %              0.0                  0.0                  0.0
+Val unique tokens              124                  112                  12
+Val unique targets             120                  109                  11
+Val targets seen               120                  109                  11
+
+================================================================================
+STEP 5: MODEL PERFORMANCE ANALYSIS
+================================================================================
+
+Test B Model Runs (all seeds):
+
+  model_seed_42:
+    Final train loss: 0.3055
+    Final train acc: 89.52%
+    Final val loss: 17.7169
+    Final val acc: 0.00%
+    ⚠️ Val loss INCREASED from 8.31 to 17.72
+    ⚠️ Val acc stayed at 0.0% for ALL steps
+
+  model_seed_43:
+    Final train loss: 0.1527
+    Final train acc: 91.13%
+    Final val loss: 18.1860
+    Final val acc: 0.00%
+    ⚠️ Val loss INCREASED from 8.24 to 18.19
+    ⚠️ Val acc stayed at 0.0% for ALL steps
+
+  model_seed_44:
+    Final train loss: 0.2423
+    Final train acc: 91.13%
+    Final val loss: 17.8267
+    Final val acc: 0.00%
+    ⚠️ Val loss INCREASED from 8.30 to 17.83
+    ⚠️ Val acc stayed at 0.0% for ALL steps
+
+================================================================================
+STEP 6: CRITICAL DIAGNOSIS
+================================================================================
+
+PROBLEM IDENTIFIED:
+--------------------------------------------------------------------------------
+Test A: Val loss = 0.19, Val acc = 87.9% (GOOD)
+Test B: Val loss = 17.7, Val acc = 0.0% (FAILURE)
+
+BOTH tests have:
+  - 0% target OOV
+  - Same model architecture
+  - Same tokenizer
+  - Same training steps (500)
+  - Same hyperparameters
+
+ONLY difference:
+  - Test A: Val sequences = subset of train (100% n-gram overlap)
+  - Test B: Val sequences = different stories (0% n-gram overlap)
+
+CRITICAL QUESTION:
+--------------------------------------------------------------------------------
+Why does the model achieve 17.7 loss on Test B when target OOV = 0%?
+
+Expected behavior with 0% target OOV:
+  - Random baseline: loss ≈ ln(4000) ≈ 8.29
+  - Observed Test B: loss = 17.7 (WORSE than random!)
+
+This suggests the model is NOT just failing to generalize.
+The model is outputting WRONG distributions that are WORSE than random.
+
+================================================================================
+STEP 7: POTENTIAL EVALUATION BUG CHECKS
+================================================================================
+
+Potential issues to investigate:
+1. Is the validation data being processed correctly?
+2. Is the model generating tokens from correct vocabulary?
+3. Is there a padding/masking issue in evaluation?
+4. Is the target shifting correct (input[i] -> target[i+1])?
+5. Is the loss calculation correct?
+6. Are there any NaN/Inf values in model outputs?
+
+Average val loss Test B: 17.91
+Random baseline loss: ~8.29
+Ratio: 2.16x worse than random
+
+⚠️ CRITICAL: Val loss > 15 suggests fundamental issue, not just lack of generalization!
+
+================================================================================
+AUDIT SUMMARY
+================================================================================
+
+VERIFIED FACTS:
+1. ✓ Both Test A and Test B have 0% target OOV
+2. ✓ Test A val = subset of train (memorization)
+3. ✓ Test B val = different stories (no overlap)
+4. ✓ Test A achieves 87.9% val acc (model CAN memorize)
+5. ✓ Test B achieves 0.0% val acc (model CANNOT generalize)
+6. ⚠️ Test B val loss (17.7) is WORSE than random (8.3)
+
+UNEXPLAINED ANOMALIES:
+1. Why is Test B loss WORSE than random baseline?
+2. Why does the model not achieve even random performance on Test B?
+3. Is there a bug in how Test B data is constructed/evaluated?
+
+RECOMMENDED NEXT STEPS:
+1. Manually inspect Test B validation sequences
+2. Check if Test B target tokens are actually in vocabulary
+3. Verify model forward pass on Test B produces valid logits
+4. Compare model predictions on Test B vs random baseline
+5. Run controlled experiment with FP32 model on same data
+
+================================================================================

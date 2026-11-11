@@ -1,0 +1,968 @@
+{
+  "evaluation_date": "2026-11-06 00:28:27",
+  "checkpoints": {
+    "original": "/root/agent-sandbox/ARTN/outputs/artn_recursive_20261025_002725/checkpoints/artn/step_10000.pt",
+    "control": "/root/agent-sandbox/ARTN/outputs/artn_control_20261105_001346/checkpoints/artn/step_15000.pt",
+    "treatment_a": "/root/agent-sandbox/ARTN/outputs/artn_treatment_a_20261105_073711/checkpoints/artn/step_15000.pt",
+    "treatment_b": "/root/agent-sandbox/ARTN/outputs/artn_treatment_b_20261105_154942/checkpoints/artn/step_15000.pt"
+  },
+  "prompts": [
+    {
+      "id": "king_1",
+      "text": "a king",
+      "entities": [
+        "king"
+      ]
+    },
+    {
+      "id": "king_2",
+      "text": "a king lived in a castle",
+      "entities": [
+        "king",
+        "castle"
+      ]
+    },
+    {
+      "id": "king_3",
+      "text": "there was a king who was kind",
+      "entities": [
+        "king"
+      ]
+    },
+    {
+      "id": "teacher_1",
+      "text": "a teacher",
+      "entities": [
+        "teacher"
+      ]
+    },
+    {
+      "id": "teacher_2",
+      "text": "a teacher walked into the classroom",
+      "entities": [
+        "teacher",
+        "classroom"
+      ]
+    },
+    {
+      "id": "teacher_3",
+      "text": "there was a teacher who helped",
+      "entities": [
+        "teacher"
+      ]
+    },
+    {
+      "id": "peacock_1",
+      "text": "a peacock",
+      "entities": [
+        "peacock"
+      ]
+    },
+    {
+      "id": "peacock_2",
+      "text": "a peacock walked in the zoo",
+      "entities": [
+        "peacock",
+        "zoo"
+      ]
+    },
+    {
+      "id": "peacock_3",
+      "text": "there was a peacock at the lake",
+      "entities": [
+        "peacock",
+        "lake"
+      ]
+    },
+    {
+      "id": "dog_control",
+      "text": "a dog",
+      "entities": [
+        "dog"
+      ]
+    }
+  ],
+  "held_out_check": {
+    "king_2": {
+      "combination": "king lived in a castle",
+      "found_in_original_training": true,
+      "found_in_treatment_b": false
+    },
+    "king_3": {
+      "combination": "king who was kind",
+      "found_in_original_training": false,
+      "found_in_treatment_b": false
+    },
+    "teacher_2": {
+      "combination": "teacher walked into the classroom",
+      "found_in_original_training": false,
+      "found_in_treatment_b": false
+    },
+    "teacher_3": {
+      "combination": "teacher who helped",
+      "found_in_original_training": true,
+      "found_in_treatment_b": false
+    },
+    "peacock_2": {
+      "combination": "peacock walked in the zoo",
+      "found_in_original_training": false,
+      "found_in_treatment_b": false
+    },
+    "peacock_3": {
+      "combination": "peacock at the lake",
+      "found_in_original_training": false,
+      "found_in_treatment_b": false
+    }
+  },
+  "results": [
+    {
+      "checkpoint": "original",
+      "prompt_id": "king_1",
+      "prompt": "a king",
+      "entities": [
+        "king"
+      ],
+      "generated_text": "a king and a little girl named Marky. Mary was very curious and wanted to explore the world around her. One day, Mary was walking in the park when she saw a big tree with lots of leaves. She wanted to see what it was. She asked her mom if she could go on the tree and see what it was. Mary was so excited. She asked her mom if she could go on the tree and see if she could go on the tree and see the tree was full of bright and beautiful flowers. Mary was so excited",
+      "generated_only": "and a little girl named Marky. Mary was very curious and wanted to explore the world around her. One day, Mary was walking in the park when she saw a big tree with lots of leaves. She wanted to see what it was. She asked her mom if she could go on the tree and see what it was. Mary was so excited. She asked her mom if she could go on the tree and see if she could go on the tree and see the tree was full of bright and beautiful flowers. Mary was so excited",
+      "repetition_rate": 0.257,
+      "unique_word_ratio": 0.51,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 21.74,
+      "tok_per_sec": 4.6
+    },
+    {
+      "checkpoint": "original",
+      "prompt_id": "king_2",
+      "prompt": "a king lived in a castle",
+      "entities": [
+        "king",
+        "castle"
+      ],
+      "generated_text": "a king lived in a castle with a big castle. The castle was very happy and wanted to go to the castle. The castle was very happy and wanted to go on an adventure. But the castle was too big and it could not go away. The castle was very sad and wanted to go home. The castle was sad and wanted to go to the castle. The castle was very sad and wanted to go home. The castle was not happy. The castle was sad and wanted to go to the castle. But the castle was too late. The castle was gone. The castle was",
+      "generated_only": "with a big castle. The castle was very happy and wanted to go to the castle. The castle was very happy and wanted to go on an adventure. But the castle was too big and it could not go away. The castle was very sad and wanted to go home. The castle was sad and wanted to go to the castle. The castle was very sad and wanted to go home. The castle was not happy. The castle was sad and wanted to go to the castle. But the castle was too late. The castle was gone. The castle was",
+      "repetition_rate": 0.408,
+      "unique_word_ratio": 0.292,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "castle"
+      ],
+      "entity_retention_count": 1,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.5,
+      "tok_per_sec": 5.41
+    },
+    {
+      "checkpoint": "original",
+      "prompt_id": "king_3",
+      "prompt": "there was a king who was kind",
+      "entities": [
+        "king"
+      ],
+      "generated_text": "there was a king who was kind and he liked to play with his toys. One day, he saw a big box of toys in the box. He wanted to play with it, but he was too small and he could not have it. The box was very sad. He wanted to play with the box and he thought it was a good idea. He decided to try and find a way to find out what it was. He asked the box to find out what it was. The box was very happy and thanked the box for the box and went inside. The box was so",
+      "generated_only": "and he liked to play with his toys. One day, he saw a big box of toys in the box. He wanted to play with it, but he was too small and he could not have it. The box was very sad. He wanted to play with the box and he thought it was a good idea. He decided to try and find a way to find out what it was. He asked the box to find out what it was. The box was very happy and thanked the box for the box and went inside. The box was so",
+      "repetition_rate": 0.193,
+      "unique_word_ratio": 0.514,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 19.46,
+      "tok_per_sec": 5.14
+    },
+    {
+      "checkpoint": "original",
+      "prompt_id": "teacher_1",
+      "prompt": "a teacher",
+      "entities": [
+        "teacher"
+      ],
+      "generated_text": "a teacher and dad went to the park with his dad. They saw a big tree with many branches. They were very happy and had a big smile on their face. The teacher said, \"First, you need to be careful and not to be careful. The teacher said, \"First, you need to be careful and not to be careful. The teacher is not a good place to be kind and help others. The teacher said, \"You can help me and help you find a new friends.\" The teacher said, \"I will help you find",
+      "generated_only": "and dad went to the park with his dad. They saw a big tree with many branches. They were very happy and had a big smile on their face. The teacher said, \"First, you need to be careful and not to be careful. The teacher said, \"First, you need to be careful and not to be careful. The teacher is not a good place to be kind and help others. The teacher said, \"You can help me and help you find a new friends.\" The teacher said, \"I will help you find",
+      "repetition_rate": 0.25,
+      "unique_word_ratio": 0.511,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "teacher"
+      ],
+      "entity_retention_count": 1,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.1,
+      "tok_per_sec": 5.53
+    },
+    {
+      "checkpoint": "original",
+      "prompt_id": "teacher_2",
+      "prompt": "a teacher walked into the classroom",
+      "entities": [
+        "teacher",
+        "classroom"
+      ],
+      "generated_text": "a teacher walked into the classroom and saw a big box. She wanted to open the box and see what was inside. She asked the box was inside. The teacher said it was a special gift from the box. The teacher was very happy and excited. She ran to the box and opened it. Inside the box were lots of toys and books. The teacher was very happy and excited. She had a big box of toys and books and books and toys. She was so happy and excited. She had a big box of toys and books and books. She was so happy and excited.",
+      "generated_only": "and saw a big box. She wanted to open the box and see what was inside. She asked the box was inside. The teacher said it was a special gift from the box. The teacher was very happy and excited. She ran to the box and opened it. Inside the box were lots of toys and books. The teacher was very happy and excited. She had a big box of toys and books and books and toys. She was so happy and excited. She had a big box of toys and books and books. She was so happy and excited.",
+      "repetition_rate": 0.333,
+      "unique_word_ratio": 0.396,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "teacher"
+      ],
+      "entity_retention_count": 1,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 17.83,
+      "tok_per_sec": 5.61
+    },
+    {
+      "checkpoint": "original",
+      "prompt_id": "teacher_3",
+      "prompt": "there was a teacher who helped",
+      "entities": [
+        "teacher"
+      ],
+      "generated_text": "there was a teacher who helped her mom and dad in a big house. She had a big box of toys and a big box. She was very happy and excited. She wanted to see the box of toys and books and books and books and books and toys. She was very happy and proud of her work. She had a big box of toys and books and books and books. She was very happy and proud of her work. She had a big box of toys and books and books and books and books. She was happy to see her mom and dad. She had",
+      "generated_only": "her mom and dad in a big house. She had a big box of toys and a big box. She was very happy and excited. She wanted to see the box of toys and books and books and books and books and toys. She was very happy and proud of her work. She had a big box of toys and books and books and books. She was very happy and proud of her work. She had a big box of toys and books and books and books and books. She was happy to see her mom and dad. She had",
+      "repetition_rate": 0.46,
+      "unique_word_ratio": 0.302,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.08,
+      "tok_per_sec": 5.53
+    },
+    {
+      "checkpoint": "original",
+      "prompt_id": "peacock_1",
+      "prompt": "a peacock",
+      "entities": [
+        "peacock"
+      ],
+      "generated_text": "a peacock and a cyck. The cycle was very happy and excited. They went to the park with their mom and dad. They saw a big tree with many branches. They were very happy and excited. They had a lot of fun and had a lot of fun. They had a lot of fun and had a lot of fun. The other kids were very happy and they played together every day. The kids were happy and the other kids were happy and proud of their new friends.",
+      "generated_only": "and a cyck. The cycle was very happy and excited. They went to the park with their mom and dad. They saw a big tree with many branches. They were very happy and excited. They had a lot of fun and had a lot of fun. They had a lot of fun and had a lot of fun. The other kids were very happy and they played together every day. The kids were happy and the other kids were happy and proud of their new friends.",
+      "repetition_rate": 0.267,
+      "unique_word_ratio": 0.455,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.4,
+      "tok_per_sec": 5.43
+    },
+    {
+      "checkpoint": "original",
+      "prompt_id": "peacock_2",
+      "prompt": "a peacock walked in the zoo",
+      "entities": [
+        "peacock",
+        "zoo"
+      ],
+      "generated_text": "a peacock walked in the zoo with a big smile on her face. She was very happy to see the other animals and the animals in the jungle. The animals were very happy and the animals were very happy. They had a lot of fun and had a lot of fun. The animals were very happy and they had a great time together. They played together every day and had a great time playing in the jungle with their friends. The animals were very happy and they played together every day. The animals would always have fun and the animals and the animals would",
+      "generated_only": "with a big smile on her face. She was very happy to see the other animals and the animals in the jungle. The animals were very happy and the animals were very happy. They had a lot of fun and had a lot of fun. The animals were very happy and they had a great time together. They played together every day and had a great time playing in the jungle with their friends. The animals were very happy and they played together every day. The animals would always have fun and the animals and the animals would",
+      "repetition_rate": 0.299,
+      "unique_word_ratio": 0.452,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 17.86,
+      "tok_per_sec": 5.6
+    },
+    {
+      "checkpoint": "original",
+      "prompt_id": "peacock_3",
+      "prompt": "there was a peacock at the lake",
+      "entities": [
+        "peacock",
+        "lake"
+      ],
+      "generated_text": "there was a peacock at the lake and the lake. The fish was very happy and wanted to go to the lake. The fish was very happy and wanted to go on an adventure. But the boat was too far away. The fish was too small to the lake and the fish was too strong. The fish was scared and wanted to go to the lake but it was too strong. The fish was too big and the fish was too strong. The fish was very sad and the fish was too scared to help. The fish saw the fish and the fish was very sad. The",
+      "generated_only": "and the lake. The fish was very happy and wanted to go to the lake. The fish was very happy and wanted to go on an adventure. But the boat was too far away. The fish was too small to the lake and the fish was too strong. The fish was scared and wanted to go to the lake but it was too strong. The fish was too big and the fish was too strong. The fish was very sad and the fish was too scared to help. The fish saw the fish and the fish was very sad. The",
+      "repetition_rate": 0.352,
+      "unique_word_ratio": 0.318,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "lake"
+      ],
+      "entity_retention_count": 1,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.54,
+      "tok_per_sec": 5.39
+    },
+    {
+      "checkpoint": "original",
+      "prompt_id": "dog_control",
+      "prompt": "a dog",
+      "entities": [
+        "dog"
+      ],
+      "generated_text": "a dog and a little girl named Mia went to the park. Mia saw a big tree with many branches. Mia wanted to climb the tree and see the tree with the branches. Mia wanted to climb the tree and see what it was. She asked Mia if she could climb the tree and see what it was. Mia said it was a little bit scared. Mia said to the tree and said yes. Mia and Mia went to the tree and climbed on the tree and climbed on the tree to the tree and climbed on the tree to",
+      "generated_only": "and a little girl named Mia went to the park. Mia saw a big tree with many branches. Mia wanted to climb the tree and see the tree with the branches. Mia wanted to climb the tree and see what it was. She asked Mia if she could climb the tree and see what it was. Mia said it was a little bit scared. Mia said to the tree and said yes. Mia and Mia went to the tree and climbed on the tree and climbed on the tree to the tree and climbed on the tree to",
+      "repetition_rate": 0.362,
+      "unique_word_ratio": 0.35,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.01,
+      "tok_per_sec": 5.55
+    },
+    {
+      "checkpoint": "control",
+      "prompt_id": "king_1",
+      "prompt": "a king",
+      "entities": [
+        "king"
+      ],
+      "generated_text": "a king and a little girl named Kim. Kim loved to play with her toys. One day, Kim saw a big box with a big box with a big box. She wanted to open it and see what was inside. She asked Kim if she could open it. Kim was so excited. She opened the box and saw a big box with a big box. She was so excited. She wanted to open it and see what was inside. She opened the box and saw a big box with a big box.",
+      "generated_only": "and a little girl named Kim. Kim loved to play with her toys. One day, Kim saw a big box with a big box with a big box. She wanted to open it and see what was inside. She asked Kim if she could open it. Kim was so excited. She opened the box and saw a big box with a big box. She was so excited. She wanted to open it and see what was inside. She opened the box and saw a big box with a big box.",
+      "repetition_rate": 0.472,
+      "unique_word_ratio": 0.402,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 17.96,
+      "tok_per_sec": 5.57
+    },
+    {
+      "checkpoint": "control",
+      "prompt_id": "king_2",
+      "prompt": "a king lived in a castle",
+      "entities": [
+        "king",
+        "castle"
+      ],
+      "generated_text": "a king lived in a castle with his family. One day, they decided to go on a special adventure. They packed their bags and set off on their journey. As they walked, they saw a big tree with many other animals. They were so excited to see the big tree and see the big tree in the forest. They were so excited to see the big tree and see the big tree was full of leaves. They were so excited to see the tree and see the big tree with many leaves. They were so excited to see the tree and see the big tree",
+      "generated_only": "with his family. One day, they decided to go on a special adventure. They packed their bags and set off on their journey. As they walked, they saw a big tree with many other animals. They were so excited to see the big tree and see the big tree in the forest. They were so excited to see the big tree and see the big tree was full of leaves. They were so excited to see the tree and see the big tree with many leaves. They were so excited to see the tree and see the big tree",
+      "repetition_rate": 0.23,
+      "unique_word_ratio": 0.41,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.29,
+      "tok_per_sec": 5.47
+    },
+    {
+      "checkpoint": "control",
+      "prompt_id": "king_3",
+      "prompt": "there was a king who was kind",
+      "entities": [
+        "king"
+      ],
+      "generated_text": "there was a king who was kind and he wanted to help him. He asked his friend to help him. The friend said he was a little girl. The little girl was so happy and he started to play with him. The little girl was so happy and he started to play with him. The little girl was so happy and he started to play with him. The little girl was so happy and he started to play with him. She was so happy and he started to play with him. The little girl was so happy and he played with the little girl all day long.",
+      "generated_only": "and he wanted to help him. He asked his friend to help him. The friend said he was a little girl. The little girl was so happy and he started to play with him. The little girl was so happy and he started to play with him. The little girl was so happy and he started to play with him. The little girl was so happy and he started to play with him. She was so happy and he started to play with him. The little girl was so happy and he played with the little girl all day long.",
+      "repetition_rate": 0.356,
+      "unique_word_ratio": 0.299,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.61,
+      "tok_per_sec": 5.37
+    },
+    {
+      "checkpoint": "control",
+      "prompt_id": "teacher_1",
+      "prompt": "a teacher",
+      "entities": [
+        "teacher"
+      ],
+      "generated_text": "a teacher and dad were walking in the park. They saw a big tree with many leaves. They were so excited to see what was inside. They were so excited to see what was inside. They were so excited to see what was inside. They ran to the tree and started to climb up the tree. They were so excited to see what was inside. They saw a big tree with many leaves. They were so excited to see what was inside. They were so excited to see what was inside. They ran to the tree and tried to climb up the",
+      "generated_only": "and dad were walking in the park. They saw a big tree with many leaves. They were so excited to see what was inside. They were so excited to see what was inside. They were so excited to see what was inside. They ran to the tree and started to climb up the tree. They were so excited to see what was inside. They saw a big tree with many leaves. They were so excited to see what was inside. They were so excited to see what was inside. They ran to the tree and tried to climb up the",
+      "repetition_rate": 0.625,
+      "unique_word_ratio": 0.284,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.0,
+      "tok_per_sec": 5.56
+    },
+    {
+      "checkpoint": "control",
+      "prompt_id": "teacher_2",
+      "prompt": "a teacher walked into the classroom",
+      "entities": [
+        "teacher",
+        "classroom"
+      ],
+      "generated_text": "a teacher walked into the classroom and saw a big box. She wanted to open it and see what was inside. She asked her mom if she could open it. The teacher said yes, but she was too busy to open it. The teacher was very excited. She opened the door and opened it. Inside was a big box full of colorful toys and books and toys. She was so happy. She was so happy to have a new friend and she was very happy. She was so happy to have her friend and she thanked him for the class. She was so happy to",
+      "generated_only": "and saw a big box. She wanted to open it and see what was inside. She asked her mom if she could open it. The teacher said yes, but she was too busy to open it. The teacher was very excited. She opened the door and opened it. Inside was a big box full of colorful toys and books and toys. She was so happy. She was so happy to have a new friend and she was very happy. She was so happy to have her friend and she thanked him for the class. She was so happy to",
+      "repetition_rate": 0.181,
+      "unique_word_ratio": 0.514,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "teacher"
+      ],
+      "entity_retention_count": 1,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.43,
+      "tok_per_sec": 5.42
+    },
+    {
+      "checkpoint": "control",
+      "prompt_id": "teacher_3",
+      "prompt": "there was a teacher who helped",
+      "entities": [
+        "teacher"
+      ],
+      "generated_text": "there was a teacher who helped him to make sure that she needed to make sure that she needed to make sure she needed to make sure she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure she needed to make sure that she needed",
+      "generated_only": "him to make sure that she needed to make sure that she needed to make sure she needed to make sure she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure that she needed to make sure she needed to make sure that she needed",
+      "repetition_rate": 0.5,
+      "unique_word_ratio": 0.123,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.56,
+      "tok_per_sec": 5.39
+    },
+    {
+      "checkpoint": "control",
+      "prompt_id": "peacock_1",
+      "prompt": "a peacock",
+      "entities": [
+        "peacock"
+      ],
+      "generated_text": "a peacock and a little girl named Lily. She loved to play with her toys and eat them all day. One day, her mom told her to be careful and not to eat them. Lily didn't want to eat the peace. Lily didn't want to eat the peaches because it was too heavy. She wanted to eat the peaches for her mom and dad. They were very happy. Lily was happy and proud of her mom for being kind and kind. She told her mom that she was a good girl and they played together in",
+      "generated_only": "and a little girl named Lily. She loved to play with her toys and eat them all day. One day, her mom told her to be careful and not to eat them. Lily didn't want to eat the peace. Lily didn't want to eat the peaches because it was too heavy. She wanted to eat the peaches for her mom and dad. They were very happy. Lily was happy and proud of her mom for being kind and kind. She told her mom that she was a good girl and they played together in",
+      "repetition_rate": 0.098,
+      "unique_word_ratio": 0.594,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.2,
+      "tok_per_sec": 5.49
+    },
+    {
+      "checkpoint": "control",
+      "prompt_id": "peacock_2",
+      "prompt": "a peacock walked in the zoo",
+      "entities": [
+        "peacock",
+        "zoo"
+      ],
+      "generated_text": "a peacock walked in the zoo with his family. They were so excited to see the big tree and the tree was very excited. They wanted to go on the tree to the tree and see what was inside. They were so excited to see what was inside. They saw a big tree with many leaves. They were so excited to see what was inside. They were so excited to see what was inside. They ran to the tree and tried to open it. But the tree was too far away. The tree was too far and the tree was too far away. The tree was",
+      "generated_only": "with his family. They were so excited to see the big tree and the tree was very excited. They wanted to go on the tree to the tree and see what was inside. They were so excited to see what was inside. They saw a big tree with many leaves. They were so excited to see what was inside. They were so excited to see what was inside. They ran to the tree and tried to open it. But the tree was too far away. The tree was too far and the tree was too far away. The tree was",
+      "repetition_rate": 0.351,
+      "unique_word_ratio": 0.358,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.52,
+      "tok_per_sec": 5.4
+    },
+    {
+      "checkpoint": "control",
+      "prompt_id": "peacock_3",
+      "prompt": "there was a peacock at the lake",
+      "entities": [
+        "peacock",
+        "lake"
+      ],
+      "generated_text": "there was a peacock at the lake and the water. The water was very happy and he wanted to eat the water. He wanted to eat the water and eat the water to eat the water. He tried to eat the water and eat the water was too hot to eat the water and eat the water was too hot to eat the water and eat the water was too hot to eat the water. He ate the water and ate the water on the water and the water was too hot to eat the water and eat the water was too hot to eat the water",
+      "generated_only": "and the water. The water was very happy and he wanted to eat the water. He wanted to eat the water and eat the water to eat the water. He tried to eat the water and eat the water was too hot to eat the water and eat the water was too hot to eat the water and eat the water was too hot to eat the water. He ate the water and ate the water on the water and the water was too hot to eat the water and eat the water was too hot to eat the water",
+      "repetition_rate": 0.389,
+      "unique_word_ratio": 0.215,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.85,
+      "tok_per_sec": 5.3
+    },
+    {
+      "checkpoint": "control",
+      "prompt_id": "dog_control",
+      "prompt": "a dog",
+      "entities": [
+        "dog"
+      ],
+      "generated_text": "a dog named Max. Max was a little girl named Lily. One day, Max went to the park with his mom. They saw a big tree with many leaves. Max wanted to eat the fruits and eat the fruits. Max was very happy. Max wanted to eat the fruits. Max was hungry and wanted to eat the fruits. Max said, \"I have some fruits, but I have some fruits. I have some fruits. I have some fruits. I have some fruits. I have some fru",
+      "generated_only": "named Max. Max was a little girl named Lily. One day, Max went to the park with his mom. They saw a big tree with many leaves. Max wanted to eat the fruits and eat the fruits. Max was very happy. Max wanted to eat the fruits. Max was hungry and wanted to eat the fruits. Max said, \"I have some fruits, but I have some fruits. I have some fruits. I have some fruits. I have some fruits. I have some fru",
+      "repetition_rate": 0.2,
+      "unique_word_ratio": 0.471,
+      "malformed_words": [
+        "hungry"
+      ],
+      "malformed_count": 1,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 17.96,
+      "tok_per_sec": 5.57
+    },
+    {
+      "checkpoint": "treatment_a",
+      "prompt_id": "king_1",
+      "prompt": "a king",
+      "entities": [
+        "king"
+      ],
+      "generated_text": "a king and a little girl named Lily. She loved to play with her toys and run around in the park. One day, she saw a big slide and wanted to play with it. She asked her mom if she could have it, but her mom said no. Lily was sad and started to cry. Her mom came to her and said, \"Don't worry, Lily. We can play with the slide. We can play with the slide. We can play with the slide. We can play with the slide. We can play with the slide. We can play with the slide. We",
+      "generated_only": "and a little girl named Lily. She loved to play with her toys and run around in the park. One day, she saw a big slide and wanted to play with it. She asked her mom if she could have it, but her mom said no. Lily was sad and started to cry. Her mom came to her and said, \"Don't worry, Lily. We can play with the slide. We can play with the slide. We can play with the slide. We can play with the slide. We can play with the slide. We can play with the slide. We",
+      "repetition_rate": 0.119,
+      "unique_word_ratio": 0.48,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.04,
+      "tok_per_sec": 5.54
+    },
+    {
+      "checkpoint": "treatment_a",
+      "prompt_id": "king_2",
+      "prompt": "a king lived in a castle",
+      "entities": [
+        "king",
+        "castle"
+      ],
+      "generated_text": "a king lived in a castle with his castle. One day, he saw a big box in the garage. The castle was very big and had many colors and shapes. The king was very big and it was very heavy. The king was very big and it was very fast. The king was very big and it was very fast. The king was very big and it was very fast. The king was very fast. The king was very fast. The king was very fast. The king was very fast. The king was very fast. The king was very fast. The king was happy",
+      "generated_only": "with his castle. One day, he saw a big box in the garage. The castle was very big and had many colors and shapes. The king was very big and it was very heavy. The king was very big and it was very fast. The king was very big and it was very fast. The king was very big and it was very fast. The king was very fast. The king was very fast. The king was very fast. The king was very fast. The king was very fast. The king was very fast. The king was happy",
+      "repetition_rate": 0.231,
+      "unique_word_ratio": 0.269,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "king",
+        "castle"
+      ],
+      "entity_retention_count": 2,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.29,
+      "tok_per_sec": 5.47
+    },
+    {
+      "checkpoint": "treatment_a",
+      "prompt_id": "king_3",
+      "prompt": "there was a king who was kind",
+      "entities": [
+        "king"
+      ],
+      "generated_text": "there was a king who was kind and he had a big smile on his face. He was always very excited to see what he had ever seen. One day, he decided to go on an adventure. He went to the forest and saw a big tree. He was so excited to see what it was. He ran up to the tree and saw a big tree. He was so excited to see what it was. He ran up to the tree and saw a big tree. The tree was so big and he started to climb the tree. The tree was so big and the tree",
+      "generated_only": "and he had a big smile on his face. He was always very excited to see what he had ever seen. One day, he decided to go on an adventure. He went to the forest and saw a big tree. He was so excited to see what it was. He ran up to the tree and saw a big tree. He was so excited to see what it was. He ran up to the tree and saw a big tree. The tree was so big and he started to climb the tree. The tree was so big and the tree",
+      "repetition_rate": 0.409,
+      "unique_word_ratio": 0.402,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.53,
+      "tok_per_sec": 5.4
+    },
+    {
+      "checkpoint": "treatment_a",
+      "prompt_id": "teacher_1",
+      "prompt": "a teacher",
+      "entities": [
+        "teacher"
+      ],
+      "generated_text": "a teacher and her mom were going to the park. They saw a big tree with many branches. They were very excited to see what it was. They ran to the tree and looked around. They saw a big tree with many branches. They were very happy. They were very excited to see the tree and see what was inside. The parade was very big and had a lot of fun. The parade was very big and had a lot of fun. The parade was very big and had a lot of fun. The parade was",
+      "generated_only": "and her mom were going to the park. They saw a big tree with many branches. They were very excited to see what it was. They ran to the tree and looked around. They saw a big tree with many branches. They were very happy. They were very excited to see the tree and see what was inside. The parade was very big and had a lot of fun. The parade was very big and had a lot of fun. The parade was very big and had a lot of fun. The parade was",
+      "repetition_rate": 0.538,
+      "unique_word_ratio": 0.365,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 19.58,
+      "tok_per_sec": 5.11
+    },
+    {
+      "checkpoint": "treatment_a",
+      "prompt_id": "teacher_2",
+      "prompt": "a teacher walked into the classroom",
+      "entities": [
+        "teacher",
+        "classroom"
+      ],
+      "generated_text": "a teacher walked into the classroom and saw a big box. She was very excited to see what was inside. She ran to the room and saw a big box. The clay was very big and had a big box. The clay was very big and had a big box. The clay was very big and it was very fast. The clay was very big and had many colors. The clay was very happy. The clay made the clay and the clay was very happy. The clay and the clay was very happy. The clay",
+      "generated_only": "and saw a big box. She was very excited to see what was inside. She ran to the room and saw a big box. The clay was very big and had a big box. The clay was very big and had a big box. The clay was very big and it was very fast. The clay was very big and had many colors. The clay was very happy. The clay made the clay and the clay was very happy. The clay and the clay was very happy. The clay",
+      "repetition_rate": 0.37,
+      "unique_word_ratio": 0.305,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.27,
+      "tok_per_sec": 5.47
+    },
+    {
+      "checkpoint": "treatment_a",
+      "prompt_id": "teacher_3",
+      "prompt": "there was a teacher who helped",
+      "entities": [
+        "teacher"
+      ],
+      "generated_text": "there was a teacher who helped him to take a walk. He was very excited to see what it was. He ran to the classroom and saw a big box. He was so excited to see what it was. He ran up to the box and started to look at it. He saw a big box and he was very excited. He ran up to the box and opened it. Inside was a big box of box! He was so excited to see what was inside. He ran to the box and saw a big box with a big box. He was very",
+      "generated_only": "him to take a walk. He was very excited to see what it was. He ran to the classroom and saw a big box. He was so excited to see what it was. He ran up to the box and started to look at it. He saw a big box and he was very excited. He ran up to the box and opened it. Inside was a big box of box! He was so excited to see what was inside. He ran to the box and saw a big box with a big box. He was very",
+      "repetition_rate": 0.4,
+      "unique_word_ratio": 0.379,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 19.16,
+      "tok_per_sec": 5.22
+    },
+    {
+      "checkpoint": "treatment_a",
+      "prompt_id": "peacock_1",
+      "prompt": "a peacock",
+      "entities": [
+        "peacock"
+      ],
+      "generated_text": "a peacock and a little girl named Lily. She loved to play with her toys and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make",
+      "generated_only": "and a little girl named Lily. She loved to play with her toys and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make them zoom and make",
+      "repetition_rate": 0.211,
+      "unique_word_ratio": 0.2,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 17.98,
+      "tok_per_sec": 5.56
+    },
+    {
+      "checkpoint": "treatment_a",
+      "prompt_id": "peacock_2",
+      "prompt": "a peacock walked in the zoo",
+      "entities": [
+        "peacock",
+        "zoo"
+      ],
+      "generated_text": "a peacock walked in the zoo with his family. They were very happy to see the animals and the animals. They were very happy. The animals were very happy. They had a big earthquacked and made a loud noise. The animal was scared and ran away. The animal was scared and ran away. The animal was scared and ran away. The animal was very scared and ran away. The animal was very sad and wished they had a good idea. He decided to go and play with his friends. The animal was very kind and kind. He said he would never be",
+      "generated_only": "with his family. They were very happy to see the animals and the animals. They were very happy. The animals were very happy. They had a big earthquacked and made a loud noise. The animal was scared and ran away. The animal was scared and ran away. The animal was scared and ran away. The animal was very scared and ran away. The animal was very sad and wished they had a good idea. He decided to go and play with his friends. The animal was very kind and kind. He said he would never be",
+      "repetition_rate": 0.188,
+      "unique_word_ratio": 0.471,
+      "malformed_words": [
+        "earthquacked"
+      ],
+      "malformed_count": 1,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.9,
+      "tok_per_sec": 5.29
+    },
+    {
+      "checkpoint": "treatment_a",
+      "prompt_id": "peacock_3",
+      "prompt": "there was a peacock at the lake",
+      "entities": [
+        "peacock",
+        "lake"
+      ],
+      "generated_text": "there was a peacock at the lake and the lake. The sun was shining and the sun was shining brightly. The sun was shining and the sun shone brightly in the sky. The sun was shining brightly and the sun shone brightly in the sky. The sun shone brightly and the sun shone brightly in the sky. The sun shone brightly in the sky. The sun shone brightly in the sky. It was a beautiful sunlight and the sun shone brightly in the sky. The sun shone brightly and the sun shone brightly in the",
+      "generated_only": "and the lake. The sun was shining and the sun was shining brightly. The sun was shining and the sun shone brightly in the sky. The sun was shining brightly and the sun shone brightly in the sky. The sun shone brightly and the sun shone brightly in the sky. The sun shone brightly in the sky. The sun shone brightly in the sky. It was a beautiful sunlight and the sun shone brightly in the sky. The sun shone brightly and the sun shone brightly in the",
+      "repetition_rate": 0.467,
+      "unique_word_ratio": 0.211,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "lake"
+      ],
+      "entity_retention_count": 1,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.74,
+      "tok_per_sec": 5.33
+    },
+    {
+      "checkpoint": "treatment_a",
+      "prompt_id": "dog_control",
+      "prompt": "a dog",
+      "entities": [
+        "dog"
+      ],
+      "generated_text": "a dog and a little girl named Lily. She loved to play with her toys and run and play with her toys. One day, she saw a big dog with a big dog. The dog was barking and barking and bark. Lily wanted to play with the bark. She ran after the bark and tried to catch the bark. But the bark was too fast. Lily tried to catch the bark and tried to catch the bark. But the bark was too fast. She tried to catch the bark and tried",
+      "generated_only": "and a little girl named Lily. She loved to play with her toys and run and play with her toys. One day, she saw a big dog with a big dog. The dog was barking and barking and bark. Lily wanted to play with the bark. She ran after the bark and tried to catch the bark. But the bark was too fast. Lily tried to catch the bark and tried to catch the bark. But the bark was too fast. She tried to catch the bark and tried",
+      "repetition_rate": 0.283,
+      "unique_word_ratio": 0.407,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "dog"
+      ],
+      "entity_retention_count": 1,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 17.84,
+      "tok_per_sec": 5.6
+    },
+    {
+      "checkpoint": "treatment_b",
+      "prompt_id": "king_1",
+      "prompt": "a king",
+      "entities": [
+        "king"
+      ],
+      "generated_text": "a king who lived in a small village, there was a little girl named Lily. She loved to play with her toys and run around in the garden. One day, she saw a big tree with a big smile on her face. She wanted to play with the tree and see what was inside. She asked her mom if she could have it. Her mom said yes, but Lily was so happy and said yes. She took the tree and went to the tree and found a big tree. She was so happy and thanked her mom for helping her. From",
+      "generated_only": "who lived in a small village, there was a little girl named Lily. She loved to play with her toys and run around in the garden. One day, she saw a big tree with a big smile on her face. She wanted to play with the tree and see what was inside. She asked her mom if she could have it. Her mom said yes, but Lily was so happy and said yes. She took the tree and went to the tree and found a big tree. She was so happy and thanked her mom for helping her. From",
+      "repetition_rate": 0.102,
+      "unique_word_ratio": 0.604,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.16,
+      "tok_per_sec": 5.51
+    },
+    {
+      "checkpoint": "treatment_b",
+      "prompt_id": "king_2",
+      "prompt": "a king lived in a castle",
+      "entities": [
+        "king",
+        "castle"
+      ],
+      "generated_text": "a king lived in a castle with his castle. He was very excited to see his castle and see what was in the castle and the castle was very excited. He was so excited to see what was on the castle. He was so excited to see what was on the castle and he saw a big castle. He was so excited to see what was on the castle and he was amazed by all the castle and he was so excited. He ran to the castle and grabbed the castle and ran to the castle. He was so excited to see what was and he",
+      "generated_only": "with his castle. He was very excited to see his castle and see what was in the castle and the castle was very excited. He was so excited to see what was on the castle. He was so excited to see what was on the castle and he saw a big castle. He was so excited to see what was on the castle and he was amazed by all the castle and he was so excited. He ran to the castle and grabbed the castle and ran to the castle. He was so excited to see what was and he",
+      "repetition_rate": 0.38,
+      "unique_word_ratio": 0.264,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "castle"
+      ],
+      "entity_retention_count": 1,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.45,
+      "tok_per_sec": 5.42
+    },
+    {
+      "checkpoint": "treatment_b",
+      "prompt_id": "king_3",
+      "prompt": "there was a king who was kind",
+      "entities": [
+        "king"
+      ],
+      "generated_text": "there was a king who was kind and wanted to help his friend. He asked his friend to help his friend if he could help his friend and they could help him. They said yes and they started to build the nest. The king was very proud of his friend and they all went to the nest. They were so happy that they could help the king the nest. They worked together to make the nest. They worked together to make the nest. The king was so proud of his friend was proud of his friend. He was proud of his friend",
+      "generated_only": "and wanted to help his friend. He asked his friend to help his friend if he could help his friend and they could help him. They said yes and they started to build the nest. The king was very proud of his friend and they all went to the nest. They were so happy that they could help the king the nest. They worked together to make the nest. They worked together to make the nest. The king was so proud of his friend was proud of his friend. He was proud of his friend",
+      "repetition_rate": 0.344,
+      "unique_word_ratio": 0.392,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "king"
+      ],
+      "entity_retention_count": 1,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.35,
+      "tok_per_sec": 5.45
+    },
+    {
+      "checkpoint": "treatment_b",
+      "prompt_id": "teacher_1",
+      "prompt": "a teacher",
+      "entities": [
+        "teacher"
+      ],
+      "generated_text": "a teacher and her teacher. student a teacher. student student and student them to learn new and learn new words and learning new things. One day, her teacher asked her teacher. The students are very impressive. The students are very happy. She was happy and excited. She was very happy. She was happy with her day. She was happy with her day. She was happy with her day. She was happy with her day. She was happy with her day. She was happy with",
+      "generated_only": "and her teacher. student a teacher. student student and student them to learn new and learn new words and learning new things. One day, her teacher asked her teacher. The students are very impressive. The students are very happy. She was happy and excited. She was very happy. She was happy with her day. She was happy with her day. She was happy with her day. She was happy with her day. She was happy with her day. She was happy with",
+      "repetition_rate": 0.311,
+      "unique_word_ratio": 0.333,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "teacher"
+      ],
+      "entity_retention_count": 1,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 17.95,
+      "tok_per_sec": 5.57
+    },
+    {
+      "checkpoint": "treatment_b",
+      "prompt_id": "teacher_2",
+      "prompt": "a teacher walked into the classroom",
+      "entities": [
+        "teacher",
+        "classroom"
+      ],
+      "generated_text": "a teacher walked into the classroom and saw a big box. She was very happy. She wanted to play with it. She ran to the room and saw a big box with a big box. She was very happy. She ran to the box and saw a big box. She was very happy. She ran to the box and saw a big box with a big box. She was very happy. She ran to the box and found a box inside. She was very happy. She took the box and opened it. She was very happy. She was happy with her day. She was happy with",
+      "generated_only": "and saw a big box. She was very happy. She wanted to play with it. She ran to the room and saw a big box with a big box. She was very happy. She ran to the box and saw a big box. She was very happy. She ran to the box and saw a big box with a big box. She was very happy. She ran to the box and found a box inside. She was very happy. She took the box and opened it. She was very happy. She was happy with her day. She was happy with",
+      "repetition_rate": 0.444,
+      "unique_word_ratio": 0.274,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.26,
+      "tok_per_sec": 5.48
+    },
+    {
+      "checkpoint": "treatment_b",
+      "prompt_id": "teacher_3",
+      "prompt": "there was a teacher who helped",
+      "entities": [
+        "teacher"
+      ],
+      "generated_text": "there was a teacher who helped her teacher. She was very proud of her teacher. She was very proud of her teacher. She was very proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She",
+      "generated_only": "her teacher. She was very proud of her teacher. She was very proud of her teacher. She was very proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She was so proud of her teacher. She",
+      "repetition_rate": 0.6,
+      "unique_word_ratio": 0.14,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "teacher"
+      ],
+      "entity_retention_count": 1,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.57,
+      "tok_per_sec": 5.39
+    },
+    {
+      "checkpoint": "treatment_b",
+      "prompt_id": "peacock_1",
+      "prompt": "a peacock",
+      "entities": [
+        "peacock"
+      ],
+      "generated_text": "a peacock was very curious. He wanted to know what was in the jungle. He asked his friend, a little girl who was very curious. She said to the monkey and the monkey was very curious. The girl said to the monkey and said yes. The girl was so excited and they both went to the monkey and the monkey was very excited. She was so excited to see the monkey and the monkey was very excited. She said goodbye to the monkey and went to the monkey and the monkey was so happy. The girl and the monkey was so",
+      "generated_only": "was very curious. He wanted to know what was in the jungle. He asked his friend, a little girl who was very curious. She said to the monkey and the monkey was very curious. The girl said to the monkey and said yes. The girl was so excited and they both went to the monkey and the monkey was very excited. She was so excited to see the monkey and the monkey was very excited. She said goodbye to the monkey and went to the monkey and the monkey was so happy. The girl and the monkey was so",
+      "repetition_rate": 0.268,
+      "unique_word_ratio": 0.337,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.15,
+      "tok_per_sec": 5.51
+    },
+    {
+      "checkpoint": "treatment_b",
+      "prompt_id": "peacock_2",
+      "prompt": "a peacock walked in the zoo",
+      "entities": [
+        "peacock",
+        "zoo"
+      ],
+      "generated_text": "a peacock walked in the zoo with his family. They were very happy and played with the other animals. They were having so much fun. But then, a big dog came and tried to catch him. The dog was scared and ran away. The dog ran away and hid behind a tree. The dog was scared and ran away. The dog ran away and hid under a tree. The dog was scared and ran away. The dog ran away and hid under the tree. The dog was safe and safe. The dog was safe and safe. The dog was safe and safe. The dog was safe",
+      "generated_only": "with his family. They were very happy and played with the other animals. They were having so much fun. But then, a big dog came and tried to catch him. The dog was scared and ran away. The dog ran away and hid behind a tree. The dog was scared and ran away. The dog ran away and hid under a tree. The dog was scared and ran away. The dog ran away and hid under the tree. The dog was safe and safe. The dog was safe and safe. The dog was safe and safe. The dog was safe",
+      "repetition_rate": 0.328,
+      "unique_word_ratio": 0.396,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [],
+      "entity_retention_count": 0,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.45,
+      "tok_per_sec": 5.42
+    },
+    {
+      "checkpoint": "treatment_b",
+      "prompt_id": "peacock_3",
+      "prompt": "there was a peacock at the lake",
+      "entities": [
+        "peacock",
+        "lake"
+      ],
+      "generated_text": "there was a peacock at the lake and the lake. The sun was shining and the lake was very excited. He wanted to go to the lake and see what was in the lake. He saw a fish swimming in the water. The fish was very excited and wanted to swim closer to the lake. He swam closer and closer to the lake and saw a fish swimming in the water. The fish swam closer and closer to the lake was so fast that he could swim in the lake. The fish swam and swam around the lake and swam until he reached the lake. The fish",
+      "generated_only": "and the lake. The sun was shining and the lake was very excited. He wanted to go to the lake and see what was in the lake. He saw a fish swimming in the water. The fish was very excited and wanted to swim closer to the lake. He swam closer and closer to the lake and saw a fish swimming in the water. The fish swam closer and closer to the lake was so fast that he could swim in the lake. The fish swam and swam around the lake and swam until he reached the lake. The fish",
+      "repetition_rate": 0.369,
+      "unique_word_ratio": 0.346,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "lake"
+      ],
+      "entity_retention_count": 1,
+      "entity_retention_total": 2,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 18.76,
+      "tok_per_sec": 5.33
+    },
+    {
+      "checkpoint": "treatment_b",
+      "prompt_id": "dog_control",
+      "prompt": "a dog",
+      "entities": [
+        "dog"
+      ],
+      "generated_text": "a dog named Spot. Spot was a big dog with a big dog. He liked to run and jump and jump and slide. One day, Spot saw a big dog with a long tail. The dog was barking and barking and barking at the dog. The dog barked and barking and barking barking and barking barking and barking barking barking and barking barking barking and barking barking barking and barking barking barking and barking barking barking barking and",
+      "generated_only": "named Spot. Spot was a big dog with a big dog. He liked to run and jump and jump and slide. One day, Spot saw a big dog with a long tail. The dog was barking and barking and barking at the dog. The dog barked and barking and barking barking and barking barking and barking barking barking and barking barking barking and barking barking barking and barking barking barking and barking barking barking barking and",
+      "repetition_rate": 0.256,
+      "unique_word_ratio": 0.333,
+      "malformed_words": [],
+      "malformed_count": 0,
+      "retained_entities": [
+        "dog"
+      ],
+      "entity_retention_count": 1,
+      "entity_retention_total": 1,
+      "avg_passes": 6.0,
+      "elapsed_seconds": 17.93,
+      "tok_per_sec": 5.58
+    }
+  ]
+}

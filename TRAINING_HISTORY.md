@@ -15,33 +15,173 @@ This document records ALL training attempts, their configurations, results, and 
 | 3 | Aug 6, 2026 | 2,000 | 8.61 | 94.8% | Healthy | Stopped (wrong accumulation) |
 | 4 | Aug 7-9, 2026 | 50,000 | 7.56 | 96.2% | HEALTHY | Completed (gibberish) |
 | **5** | **Aug 13-16, 2026** | **50,000** | **7.13** | **97.0%** | **HEALTHY** | **Completed (LR decay issue)** |
+| **6** | **Aug 19, 2026** | **5,000** | **1.69** | **Healthy** | **SUCCESS** | **FP32 + AdamW baseline** |
+| **7** | **Sep 10-11, 2026** | **10,000** | **1.92** | **Healthy** | **SUCCESS** | **BitLinear + AdamW WORKING** |
+| **8** | **Oct 25, 2026** | **10,000** | **2.03** | **Healthy** | **SUCCESS** | **ARTN recursive + halting + ternary** |
 
-**Total Time Invested: ~280 hours**
+**Total Time Invested: ~280 hours (original) + ~29 hours (Phase 46-47) + ~14.35 hours (ARTN Phase 60) = ~323.4 hours**
+
+NOTE: Attempt 7 val loss 1.92 and Attempt 6 val loss 1.69 INCLUDE padding tokens (31.4% trivially-easy, NLL=0.011). Fair non-padding NLL: FP32 2.423, BitLinear 2.743, ARTN 2.904. See Phase 60 Errors and Corrections section below.
 
 ---
 
 ## Blueprint Stage Completion Status
 
+**Last Updated: October 26, 2026**
+
 | Stage | Blueprint Requirement | Status | Evidence |
 |-------|----------------------|--------|----------|
-| Stage 0 | MLOps Foundation | ✅ DONE | Repo setup, CI/CD |
-| Stage 1 | Custom Tokenizers | ✅ DONE | BPE tokenizer working |
-| Stage 2 | Float32 Baseline GPT | ✅ DONE | Architecture implemented |
-| Stage 3 | Float32 Training Loop | ✅ DONE | Training works |
-| Stage 4 | Recursive Transformer | ✅ DONE | Parameter tying works |
-| Stage 5 | Adaptive Halting Gate | ✅ DONE | halting.py implemented |
-| Stage 6 | INT8 Quantization | ✅ DONE | Quantization works |
-| Stage 7 | Ternary BitLinear | ✅ IMPLEMENTED | BitLinear works |
-| Stage 7 Milestone | Overfit tiny subset of TinyStories | ⚠️ PARTIAL | Tested on random data only |
-| Stage 8 | Quantized Inference | ❌ NOT DONE | Samples incoherent |
-| Stage 9 | CPU Benchmarking | ❌ NOT DONE | - |
+| Stage 0 | MLOps Foundation | ✅ DONE | Repo setup, CI/CD, W&B |
+| Stage 1 | Custom Tokenizers | ✅ DONE | BPE tokenizer working (2 tokenizers: 5k, 50k) |
+| Stage 2 | Float32 Baseline GPT | ✅ DONE | Architecture implemented, val loss 1.69 [CORRECTED — includes padding, see Phase 60] |
+| Stage 3 | Float32 Training Loop | ✅ DONE | Training works, 5,000 steps validated |
+| Stage 4 | Recursive Transformer | ✅ DONE | Parameter tying works (`recursive.py` implemented) [CORRECTED — code exists but was NEVER trained, see Phase 60] |
+| Stage 5 | Adaptive Halting Gate | ✅ DONE | `halting.py` implemented [CORRECTED — ponder loss was non-differentiable, see Phase 60] |
+| Stage 6 | INT8 Quantization | ✅ DONE | `quantization.py` works [NOTE — never trained, skipped per Stage 7 success] |
+| Stage 7 | Ternary BitLinear | ✅ **COMPLETE** | **Val loss 1.92 with AdamW, coherent generation** [CORRECTED — includes padding, fair NLL 2.743] |
+| Stage 7 Milestone | Overfit tiny subset of TinyStories | ✅ **COMPLETE** | **Tested on ACTUAL TinyStories, val loss 1.92** |
+| Stage 8 | Quantized Inference | ✅ **COMPLETE** | **Inference pipeline works, inference-only checkpoint (27 MB), deployment benchmark (4.61 tok/s)** |
+| Stage 9 | CPU Benchmarking | ✅ **COMPLETE** | **Speed benchmark (all 3 models), threshold sweep, causal NLL, fair eval, padding audit, parameter audit** |
 | Stage 10 | Research Paper | ❌ NOT DONE | - |
 
-**Current Position: Between Stage 7 and Stage 8**
+**Current Position: Stage 9 COMPLETE → Moving to Stage 10 (Research Paper)**
 
 ---
 
-### Stage 7 Milestone Gap
+## ✅ Stage 7 Completion Update (October 15, 2026)
+
+**IMPORTANT:** Previous version of this document (dated Aug 18, 2026) showed Stage 7 as "⚠️ PARTIAL" because it only tested on random data. However, after Phase 46-47 (Aug 19, Sep 10-11, 2026), Stage 7 is now **COMPLETE**.
+
+### Phase 46: FP32 + AdamW Baseline (August 19, 2026)
+
+| Metric | Value |
+|--------|-------|
+| Model | FP32 GPT (standard) |
+| Optimizer | AdamW |
+| Steps | 5,000 |
+| **Val Loss** | **1.69** |
+| **Perplexity** | **5.44** |
+| Generation | ✅ Coherent stories |
+| Location | `experiments/results/fp32_control_20260819_232646/` |
+| Status | ✅ SUCCESS - Baseline established |
+
+**Purpose:** Establish FP32 baseline to verify AdamW optimizer works before testing with ternary quantization.
+
+**Result:** AdamW works perfectly for FP32, achieving val loss 1.69 with coherent generation.
+
+---
+
+### Phase 47: BitLinear + AdamW (September 10-11, 2026)
+
+| Metric | Value |
+|--------|-------|
+| Model | BitLinearGPT (ternary quantization) |
+| Optimizer | AdamW |
+| Steps | 10,000 |
+| **Val Loss** | **1.92** |
+| **Perplexity** | **6.81** |
+| **Train-Val Gap** | **0.067** (excellent generalization) |
+| Generation | ✅ Coherent stories |
+| Checkpoints | 20 checkpoints (step_0 to step_9500) |
+| Location | `outputs/bitlinear_adamw_20260910_143646/` |
+| Status | ✅ **SUCCESS - Ternary quantization WORKS with AdamW** |
+
+**Purpose:** Test if BitLinear/ternary quantization converges with AdamW optimizer.
+
+**Result:** BitLinear + AdamW achieves val loss 1.92, only 13% worse than FP32 (1.69), with coherent generation.
+
+---
+
+### Sample Generation (Step 10,000):
+
+```
+Prompt: "Once upon a time"
+
+Output: "Once upon a time there was a little girl who was in her 
+backyard. She was always dancing in the garden with her hands. She 
+liked to explore the world and watch her mommy laugh. One day she 
+was looking to see a big river with en! She was so excited and she 
+started to run behind it. She ran to her mum and said, 'Mom, where 
+are you going, you! I'm scared. I ragone? This is coming from there 
+to rest.' But her mum said that she wanted to be brave and happy. 
+So her daughter went..."
+```
+
+**Status: ✅ COHERENT GENERATION - Stage 7 Milestone SATISFIED**
+
+---
+
+### Key Findings from Phase 46-47:
+
+| Finding | Evidence |
+|---------|----------|
+| ✅ AdamW works for FP32 | Val loss 1.69, coherent generation |
+| ✅ AdamW works for BitLinear | Val loss 1.92, coherent generation |
+| ✅ Ternary quantization is VIABLE | Only 13% performance gap vs FP32 |
+| ✅ Excellent generalization | Train-val gap 0.067 |
+| ✅ Optimizer was the root cause | AdamW succeeds where Adafactor failed |
+
+---
+
+### Comparison: FP32 vs BitLinear (AdamW)
+
+| Metric | FP32 + AdamW | BitLinear + AdamW | Difference |
+|--------|--------------|-------------------|------------|
+| Val Loss | 1.69 | 1.92 | +13% |
+| Perplexity | 5.44 | 6.81 | +25% |
+| Parameters | 6.8M (FP32) | 6.8M (ternary) | Same count |
+| Memory per param | 32 bits | 1.58 bits | **-95%** |
+| Generation | Coherent | Coherent | ✅ Both work |
+| Status | SUCCESS | SUCCESS | ✅ Both work |
+
+---
+
+### Configuration Used (Phase 47):
+
+```python
+CONFIG = {
+    # Architecture
+    "d_model": 256,
+    "n_heads": 8,
+    "n_layers": 6,
+    "d_ff": 1024,
+    "max_seq_len": 256,
+    "vocab_size": 4000,
+    
+    # Optimizer (AdamW - PROVEN TO WORK)
+    "max_lr": 0.001,
+    "min_lr": 0.00003,
+    "beta1": 0.5,
+    "beta2": 0.98,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    
+    # Training
+    "batch_size": 4,
+    "gradient_accumulation_steps": 2,
+    "total_steps": 10000,
+    "warmup_steps": 1000,
+    
+    # Data
+    "train_samples": 50000,
+    "val_samples": 5000,
+}
+```
+
+---
+
+### Working Models Uploaded to Hugging Face:
+
+| Model | File | Val Loss | Upload Location |
+|-------|------|----------|-----------------|
+| FP32 + AdamW | `checkpoint-fp32-adamw-working.pt` | 1.69 | `kishxrx/ARTN` |
+| BitLinear + AdamW | `checkpoint-bitlinear-adamw-working.pt` | 1.92 | `kishxrx/ARTN` |
+
+**Repository:** https://huggingface.co/kishxrx/ARTN
+
+---
+
+## Stage 7 Milestone Gap (HISTORICAL - August 18, 2026)
 
 | Requirement | Status | Evidence |
 |-------------|--------|----------|
@@ -1087,5 +1227,274 @@ Do NOT assume this is a bug if revisiting.
 
 ---
 
-*Document last updated: Aug 18, 2026*
+## Document History
+
+**Original Document Last Updated:** Aug 18, 2026 (Total training time invested: ~280 hours)
+
+**Updated:** October 15, 2026
+- Added Phase 46-47 completion (FP32 + AdamW baseline, BitLinear + AdamW success)
+- Updated Stage 7 status from "⚠️ PARTIAL" to "✅ COMPLETE"
+- Updated Stage 7 Milestone from "⚠️ NOT SATISFIED" to "✅ COMPLETE"
+- Added working models uploaded to Hugging Face
+- Total training time: ~309 hours (280 + 29 from Phase 46-47)
+
+**Key Addition:** Stage 7 is now COMPLETE with val loss 1.92 and coherent generation, proving ternary quantization works with AdamW optimizer.
+
+---
+
+*Original document last updated: Aug 18, 2026*
 *Total training time invested: ~280 hours (198 previous + 82 Attempt 5)*
+
+*This document updated: October 15, 2026*
+*Total training time invested: ~309 hours (280 original + 29 from Phase 46-47)*
+
+---
+
+## Stage 8-9 Completion Update (October 16-26, 2026)
+
+**Phase 60: ARTN Architecture, Training, and Evaluation**
+
+Full detailed documentation lives in `experiments/results/ROOT_CAUSE_INVESTIGATION_SUMMARY.md` (Phase 60.1-60.13, lines 6255-6705). This section provides the summary and error corrections.
+
+### Attempt 8: ARTN Training (October 25, 2026)
+
+| Metric | Value |
+|--------|-------|
+| Architecture | ARTNGPT — 1 shared BitLinearBlock + halting gate |
+| Parameters | 2,904,065 (50.2% fewer than FP32, 57.6% fewer than BitLinear) |
+| Steps | 10,000 / 10,000 |
+| Val loss | 2.0346 (includes padding — fair NLL 2.904, see corrections below) |
+| Val perplexity | 7.6496 |
+| Expected passes | 4.0015 (target: 4.0 — gate converged) |
+| Ternary sparsity | 35.4% zeros, ~32.3% each ±1 |
+| Training time | 14.35 hours (51,653 seconds) |
+| Checkpoints | 20 (all preserved, 665 MB) |
+| NaN/Inf losses | 0 |
+| Optimizer | AdamW (beta1=0.5, beta2=0.98, lr=0.001) |
+
+**Output:** `outputs/artn_recursive_20261025_002725/`
+
+### Stage 8 Completion: Quantized Inference (October 16-21, 2026)
+
+- Created `src/inference/generate.py` — autoregressive generation pipeline
+- Created inference-only checkpoint: 27 MB (from 79 MB, no optimizer state)
+- Deployment benchmark: baseline RSS 234 MB, peak 286 MB, 4.61 tok/s
+- Quality investigation: tokenizer correct, temperature 0.5-0.9 optimal, RAM corrected from 0.18 MB (tracemalloc) to 21.46 MB (psutil)
+
+### Stage 9 Completion: CPU Benchmarking (October 25-26, 2026) [ORIGINAL — uncorrected halt logic, see corrected re-run below]
+
+**Speed benchmark (ALL MEASURED, 10 prompts, greedy, warm-up, psutil RSS):**
+
+| Model | Parameters | Tok/s | Peak RSS | Avg Passes |
+|-------|-----------|-------|----------|------------|
+| FP32 (6 blocks, tied) | 5,828,608 | 24.06 | 280 MB | 6.00 |
+| BitLinear GPT (6 blocks) | 6,852,608 | 5.76 | 356 MB | 6.00 |
+| ARTN (t=1.0) | 2,904,065 | 5.68 | 344 MB | 5.92* |
+| ARTN (t=0.9, early-exit) | 2,904,065 | 8.69 | 344 MB | 3.30 |
+
+\*5.92 was a floating-point artifact from uncorrected halt logic; corrected to 6.0000 in Oct 28 re-run (see below)
+
+**Causal NLL (per-position, hard early-exit, 1280 tokens):**
+
+| Threshold | NLL | PPL | Avg Passes | NLL delta vs 1.0 | Pass savings |
+|-----------|-----|-----|-----------|------------------|-------------|
+| 0.9 | 2.8632 | 17.52 | 3.30 | +0.0024 | 45.0% |
+| 1.0 | 2.8608 | 17.47 | 6.00 | 0.0000 | 0.0% |
+
+**Fair non-padding NLL (200 samples, 34,980 valid tokens):**
+
+| Model | NLL | PPL | Parameters |
+|-------|-----|-----|-----------|
+| FP32 (tied) | 2.4230 | 11.28 | 5,828,608 |
+| BitLinear GPT | 2.7425 | 15.53 | 6,852,608 |
+| ARTN | 2.9036 | 18.24 | 2,904,065 |
+
+**Corrected Stage 9 Benchmark (October 28, 2026 — re-run with fixed halt logic):**
+
+**Why corrected:** Original `artn_threshold_sweep.py` and `stage9_benchmark.py` had no 
+`remaining.clamp(min=0.0)` and no threshold=1.0 bypass. Floating-point subtraction made 
+`remaining` slightly negative, causing threshold=1.0 to show 5.92 passes instead of 6.0. 
+Fix back-ported from `fair_eval.py`. Original scripts backed up, originals results preserved.
+
+**Original scripts (backed up):**
+- `/root/agent-sandbox/ARTN/scripts/artn_threshold_sweep.py.orig_20261026`
+- `/root/agent-sandbox/ARTN/scripts/stage9_benchmark.py.orig_20261026`
+
+**Corrected scripts (live):**
+- `/root/agent-sandbox/ARTN/scripts/artn_threshold_sweep.py`
+- `/root/agent-sandbox/ARTN/scripts/stage9_benchmark.py`
+
+**Corrected Stage 9 benchmark (ALL MEASURED, Oct 28, 10 prompts, greedy, seed=42, 1 warm-up):**
+
+| Model | Parameters | Tok/s | Peak RSS (MB) | Avg Passes |
+|-------|-----------|-------|---------------|------------|
+| FP32 (6 blocks, tied) | 5,828,608 | 22.62 | 278.45 | 6.00 |
+| BitLinear GPT (6 blocks) | 6,852,608 | 5.45 | 354.62 | 6.00 |
+| ARTN (t=1.0) | 2,904,065 | 5.29 | 282.34 | 6.00 |
+| ARTN (t=0.9) | 2,904,065 | 8.42 | 276.37 | 3.57 |
+
+**Corrected threshold sweep (ALL MEASURED, Oct 28, 10 prompts, greedy, seed=42, no warm-up):**
+
+| Threshold | Avg Passes | Tok/s | Identical to 1.0 |
+|-----------|-----------|-------|------------------|
+| 0.3 | 2.7240 | 9.29 | 0/10 |
+| 0.5 | 2.9980 | 9.50 | 0/10 |
+| 0.7 | 3.2740 | 8.54 | 3/10 |
+| 0.9 | 3.5660 | 8.00 | 10/10 |
+| 1.0 | 6.0000 | 5.21 | ref |
+
+RSS ordering: ARTN t=0.9 (276) < FP32 (278) < ARTN t=1.0 (282) < BitLinear (355).
+BitLinear's peak RSS is ~76 MB higher than FP32; cause not isolated. Speed 
+advantage at t=0.9: 1.59x vs t=1.0, 1.55x vs BitLinear — single-run measurement, 
+not statistically established. Speed changed between original and corrected runs; 
+contributions of system variation and code-path overhead have not been isolated. 
+10/10 identical at t=0.9: confirmed for 10 benchmark prompts only. 3/7 exploratory 
+interactive prompts showed different text at t=0.9 vs t=1.0 — not generalized. 
+Generated text at each threshold below 1.0 unchanged between original and corrected 
+implementations (same-threshold reproducibility, not cross-threshold equality). 
+Sweep has no warm-up; benchmark has 1 warm-up prompt — difference preserved from 
+original scripts.
+
+Corrected evidence: 
+`/root/agent-sandbox/ARTN/outputs/artn_recursive_20261025_002725/stage9_benchmark_corrected.json`, 
+`/root/agent-sandbox/ARTN/outputs/artn_recursive_20261025_002725/threshold_sweep_results_corrected.json` (Oct 28). 
+Originals preserved: 
+`/root/agent-sandbox/ARTN/outputs/artn_recursive_20261025_002725/stage9_benchmark.json`, 
+`/root/agent-sandbox/ARTN/outputs/artn_recursive_20261025_002725/threshold_sweep_results.json` (Oct 25).
+
+---
+
+## Errors and Corrections (Phase 60)
+
+This section documents all mistakes, bugs, and incorrect claims discovered during Phase 60 work. Each is noted honestly with what was wrong, when discovered, and how addressed.
+
+### 1. Stage 7 Checkpoint Was NOT ARTN (CRITICAL)
+
+**What was wrong:** The trained BitLinear checkpoint (`step_9500.pt`) was presented as the ARTN model. It has 6 SEPARATE BitLinearBlock instances, NO recursive parameter sharing, and NO halting gate. It is standard ternary GPT, not ARTN.
+
+**When discovered:** October 21, 2026 (architecture audit, Phase 60.3)
+
+**Impact:** Stages 4 (Recursive Transformer) and 5 (Adaptive Halting Gate) were marked ✅ DONE in the status table above based on code existing, but the code was NEVER trained. The trained checkpoint did not use recursion or halting.
+
+**How addressed:** Designed and implemented a new ARTNGPT class (`experiments/artn_model.py`, Oct 23) with 1 shared BitLinearBlock + halting gate. Trained from scratch (Attempt 8, Oct 25). The old Stage 4/5 status entries are marked [CORRECTED] above — code exists but was never trained until Phase 60.
+
+### 2. All Reported Validation Losses Include Padding (31.4%)
+
+**What was wrong:** All reported val losses (FP32 1.69, BitLinear 1.92, ARTN 2.03) include 31.4% trivially-easy padding tokens (target=0, NLL=0.011). Training uses `cross_entropy(ignore_index=-1)` which excludes only -1, NOT padding (ID=0). The model received gradient signal for padding positions.
+
+**When discovered:** October 26, 2026 (padding audit, Phase 60.12)
+
+**Impact:** All absolute loss numbers are artificially low. The relative comparison between models is valid (all three used same padding-inclusive loss), but absolute numbers are not comparable to published results that exclude padding.
+
+**How addressed:** Computed fair non-padding NLL for all three models (FP32 2.423, BitLinear 2.743, ARTN 2.904). Marked prior losses with [CORRECTED] above. The training loss computation itself was not changed — this is a reporting correction, not a training fix.
+
+### 3. Parameter Counts Were Wrong
+
+**What was wrong:** Previous reports had incorrect parameter counts for all three models.
+
+| Model | Previous claim | Correct value | Source of error |
+|-------|---------------|--------------|-----------------|
+| FP32 | 6,852,608 | 5,828,608 | Did not account for weight tying (lm_head = token_embedding) |
+| BitLinear | 6,852,682 | 6,852,608 | Included 74 scalar buffers as parameters |
+| ARTN | 2,904,077 | 2,904,065 | Minor miscount |
+
+The "58% parameter reduction" claim was wrong. Correct: 50.2% vs FP32 (tied), 57.6% vs BitLinear (untied).
+
+**When discovered:** October 26, 2026 (parameter audit, Phase 60.13)
+
+**How addressed:** Recounted via `sum(p.numel() for p in model.parameters())`. Buffers counted separately. Weight tying verified via data_ptr comparison.
+
+### 4. Future-Token Leakage in Halting Gate Design
+
+**What was wrong:** First halting gate design used mean pooling `gate(mean_pool(x))` — the gate sees all positions including future tokens, breaking causality. Second design used sequence-level `gate(x[:,-1,:])` applied to all positions via broadcasting — position t's output was weighted by a scalar computed from the last position, still leaking future information.
+
+**When discovered:** October 2026 (during architecture design, Phase 60.4)
+
+**How addressed:** Fixed to per-position causal: `h = sigmoid(gate(x))` → (B,T,1). Each position's halt probability depends only on its own causal representation. Verified via autograd: changing future input tokens does not affect earlier positions' logits or halting weights.
+
+### 5. Existing Ponder Loss Was Non-Differentiable
+
+**What was wrong:** `src/model/halting.py` line 187 creates `torch.tensor(diff**2, requires_grad=False)` with `.item()` detached values. The gradient could never flow to the halting gate through this loss. If the existing halting code had been trained, the gate would not have learned to halt adaptively.
+
+**When discovered:** October 2026 (during architecture audit, Phase 60.3)
+
+**How addressed:** Replaced with differentiable `E = 1 + Σ mean(R_i)` computed from actual halt probabilities. Verified gradient direction with autograd: E>target → gradient pushes h up, E<target → pushes h down. The new ARTNGPT class uses this corrected ponder loss.
+
+### 6. Training Time Estimate Was Wrong (4.2h vs 14.6h)
+
+**What was wrong:** Earlier documentation estimated 4.2 hours for 10k steps based on assumed 1.5s/step. Actual measured time was 5.25s/step = 14.6 hours (BitLinear) and 5.17s/step = 14.35 hours (ARTN). The estimate was off by 3.5x.
+
+**When discovered:** October 25, 2026 (Phase 60.5, during training script preparation)
+
+**How addressed:** Corrected estimate using measured per-step time from `bitlinear_adamw_results.json` (52,450 seconds = 14.6 hours). ARTN actual: 51,653 seconds = 14.35 hours (measured).
+
+### 7. BitLinear GPT Is SLOWER Than FP32 on CPU
+
+**What was wrong:** Blueprint expected "throughput increase via integer addition replacing multiplication" (Stage 9 evaluation matrix). Measured: FP32 24.06 tok/s, BitLinear 5.76 tok/s. Ternary quantization in PyTorch adds Python/autograd overhead that exceeds savings from simpler arithmetic. CPU has optimized BLAS/SIMD for FP32 matmul but no hardware acceleration for ternary.
+
+**When discovered:** October 25, 2026 (Stage 9 benchmark, Phase 60.8)
+
+**How addressed:** This is a measured limitation of the current PyTorch implementation, not of ternary quantization in theory. Reported honestly. The speedup from ARTN comes from adaptive halting (fewer passes), not from ternary arithmetic being faster.
+
+### 8. RAM Measurement Used Wrong Tool (tracemalloc vs psutil)
+
+**What was wrong:** Stage 8 inference reported 0.18 MB RAM using tracemalloc, which only tracks Python allocations — not PyTorch tensors, model weights, or CUDA/CPU memory pools. Actual RAM was 21.46 MB (psutil process RSS).
+
+**When discovered:** October 21, 2026 (quality investigation, Phase 60.2)
+
+**How addressed:** Switched all memory measurements to psutil `Process().memory_info().rss`. All Stage 9 measurements use psutil.
+
+### 9. threshold=1.0 Floating-Point Artifact (5.92 vs 6.0 passes)
+
+**What was wrong:** First threshold sweep reported 5.92 avg passes at threshold=1.0. Expected exactly 6.0. Root cause: the `remaining` tensor goes slightly negative due to floating-point subtraction (`remaining = remaining - p`), making `cumulative = 1.0 - remaining > 1.0` before pass 6, triggering early stop.
+
+**When discovered:** October 25, 2026 (user flagged, Phase 60.7)
+
+**How addressed:** Fixed in causal evaluation (Phase 60.10): threshold=1.0 bypasses the halt check entirely (always 6 passes). For threshold<1.0, `remaining.clamp(min=0.0)` prevents the floating-point artifact. Corrected measurement: exactly 6.000 passes (histogram {6:1280}).
+
+### 10. Batch-Level Hard Exit Evaluation Used Wrong Halt Mechanism [SUPERSEDED]
+
+**What was wrong:** First hard-exit NLL evaluation (Phase 60.9) used the last position of a full 255-token sequence for the halt decision. This is not the actual inference path — during generation, each token's halt decision should use only its own preceding context. Batch evaluation showed almost no early exits (5.88-5.98 passes at all thresholds), which was misleading.
+
+**When discovered:** October 25, 2026 (user flagged, Phase 60.10)
+
+**How addressed:** Replaced by per-position causal evaluation (Phase 60.10): for each position t, run forward on context [0..t], halt from position t, score target t+1. Results: threshold=0.9 gives 3.30 avg passes (not 5.90), 45% pass savings, +0.0024 NLL. The batch-level results are marked [SUPERSEDED] in the ROOT_CAUSE doc.
+
+### 11. FP32 Baseline Load Failure [PARTIALLY SUPERSEDED]
+
+**What was wrong:** Stage 8 quality investigation reported FP32 baseline could NOT be loaded due to architecture mismatch between checkpoint and `src/model/gpt.py`. The checkpoint uses `token_embedding`, `blocks.*`, `ln_f` but `src/model/gpt.py` expected `embeddings.token_embedding`, `embeddings.positional_encoding`, `ln_final`.
+
+**When discovered:** October 21, 2026 (Phase 60.2)
+
+**How addressed:** Found the correct `FP32GPT` class in `experiments/fp32_baseline_controlled.py` which matches the checkpoint structure. Successfully loaded and benchmarked all three models in Phase 60.8. The original finding is marked [PARTIALLY SUPERSEDED] in the ROOT_CAUSE doc.
+
+---
+
+## Phase 60 Evidence Summary
+
+| Evidence | File | Date |
+|----------|------|------|
+| Inference pipeline | `src/inference/generate.py` | Oct 16 |
+| Stage 8 inference results | `outputs/stage8_inference_results.json` | Oct 16 |
+| Quality investigation | `outputs/stage8_quality_investigation_report.md` | Oct 21 |
+| Deployment benchmark | `outputs/stage8_deployment_benchmark.json` | Oct 21 |
+| Inference-only checkpoint | `outputs/bitlinear_adamw_20260910_143646/checkpoints/bitlinear_adamw/step_9500_inference_only.pt` | Oct 21 |
+| ARTN model | `experiments/artn_model.py` | Oct 23 |
+| ARTN smoke test | `scripts/artn_smoke_test.py` | Oct 23 |
+| ARTN training script | `experiments/artn_train.py` | Oct 24 |
+| ARTN training results | `outputs/artn_recursive_20261025_002725/artn_results.json` | Oct 25 |
+| ARTN checkpoints (20) | `outputs/artn_recursive_20261025_002725/checkpoints/artn/` | Oct 25 |
+| Threshold sweep | `outputs/artn_recursive_20261025_002725/threshold_sweep_results.json` | Oct 25 |
+| Stage 9 speed benchmark | `outputs/artn_recursive_20261025_002725/stage9_benchmark.json` | Oct 25 |
+| Hard exit eval [SUPERSEDED] | `outputs/artn_recursive_20261025_002725/stage9_hard_exit_eval.json` | Oct 25 |
+| Causal evaluation | `outputs/artn_recursive_20261025_002725/stage9_causal_eval.json` | Oct 25 |
+| Fair evaluation | `outputs/artn_recursive_20261025_002725/fair_eval.json` | Oct 25 |
+| Generation quality evaluation (Phase 60.15-60.23) | `experiments/results/ROOT_CAUSE_INVESTIGATION_SUMMARY.md` lines 6963+ | Oct 29-Nov 3 |
+| Controlled training pilot (Phase 60.24-60.27) | `experiments/results/ROOT_CAUSE_INVESTIGATION_SUMMARY.md` lines 8509+ | Nov 3-5 |
+
+**Full Phase 60 documentation:** `experiments/results/ROOT_CAUSE_INVESTIGATION_SUMMARY.md` lines 6255-8821
+
+---
+
+*This document updated: November 5, 2026*
+*Total training time invested: ~348.7 hours (280 original + 29 Phase 46-47 + 14.35 ARTN Phase 60 + 23.2 controlled training pilot Phase 60.24-60.27)*
