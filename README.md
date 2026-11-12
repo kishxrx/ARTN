@@ -290,7 +290,9 @@ python scripts/artn_threshold_sweep.py   # halting threshold sweep
 
 ## License
 
-MIT
+**Code** is licensed under [GPL-3.0](LICENSE) — you may use, modify, and distribute, but derivatives must also be open-sourced under GPL.
+
+**Documentation** (investigation reports, training history, and analysis files in `experiments/results/` and `outputs/`) is licensed under [CC-BY-NC 4.0](docs/LICENSE-CC-BY-NC) — you may read and learn, but may not use commercially without permission, and must provide attribution.
 
 ## Citation
 

@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Adaptive Recursive Ternary Networks - Building Transformer Language Models Under Extreme Hardware Constraints"
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = {text = "GPL-3.0"}
 authors = [
     {name = "ARTN Project"}
 ]
