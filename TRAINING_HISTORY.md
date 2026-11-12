@@ -1491,10 +1491,12 @@ The "58% parameter reduction" claim was wrong. Correct: 50.2% vs FP32 (tied), 57
 | Fair evaluation | `outputs/artn_recursive_20261025_002725/fair_eval.json` | Oct 25 |
 | Generation quality evaluation (Phase 60.15-60.23) | `experiments/results/ROOT_CAUSE_INVESTIGATION_SUMMARY.md` lines 6963+ | Oct 29-Nov 3 |
 | Controlled training pilot (Phase 60.24-60.27) | `experiments/results/ROOT_CAUSE_INVESTIGATION_SUMMARY.md` lines 8509+ | Nov 3-5 |
+| Diagnostic follow-up probes (Phase 60.28) | `experiments/results/ROOT_CAUSE_INVESTIGATION_SUMMARY.md` lines 8822+ | Nov 6 |
+| Four-arm construction-transfer experiment (Phase 60.29) | `experiments/results/ROOT_CAUSE_INVESTIGATION_SUMMARY.md` lines 9167+ | Nov 7-10 |
 
-**Full Phase 60 documentation:** `experiments/results/ROOT_CAUSE_INVESTIGATION_SUMMARY.md` lines 6255-8821
+**Full Phase 60 documentation:** `experiments/results/ROOT_CAUSE_INVESTIGATION_SUMMARY.md` lines 6255-9612
 
 ---
 
-*This document updated: November 5, 2026*
+*This document updated: November 10, 2026*
 *Total training time invested: ~348.7 hours (280 original + 29 Phase 46-47 + 14.35 ARTN Phase 60 + 23.2 controlled training pilot Phase 60.24-60.27)*

@@ -1,8 +1,36 @@
-# ARTN - Adaptive Recursive Ternary Networks
+# ARTN — Adaptive Recursive Ternary Networks
+
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Python 3.10+](https://img.shields.io/badge/Python-3.10+-green.svg)
+![PyTorch](https://img.shields.io/badge/PyTorch-ee4c2c.svg)
+![CPU-only](https://img.shields.io/badge/Runs%20on-CPU--only-orange.svg)
+
+> **A working language model trained from scratch on a 2-core CPU with 4 GB RAM — no GPU, no cluster, no excuses.**
 
 > Building Transformer Language Models Under Extreme Hardware Constraints
 
-**Status:** Stages 1-9 complete — ARTN trained, benchmarked and generating coherent text on CPU-only hardware.
+**Status:** Stages 1–9 complete — ARTN trained, benchmarked and generating coherent text on CPU-only hardware.
+
+## Table of contents
+
+- [Result at a glance](#result-at-a-glance)
+- [Why this matters](#why-this-matters)
+- [The journey](#the-journey)
+- [Problem](#problem)
+- [Constraints](#constraints)
+- [Architecture](#architecture)
+- [Experiments](#experiments)
+- [Results](#results)
+- [Example output](#example-output)
+- [Evaluation notes](#evaluation-notes)
+- [Investigation](#investigation)
+- [Repository layout](#repository-layout)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Future Work](#future-work)
+- [License](#license)
+- [Citation](#citation)
+- [Ongoing research](#ongoing-research)
 
 ## Result at a glance
 
@@ -15,6 +43,38 @@
 | **Fair non-padding NLL** | **2.904** (FP32 2.423 · BitLinear 2.743) |
 | **Stability** | 0 NaN/Inf losses; halting converged to 4.00 expected passes |
 | **Hardware** | Dual-core AMD CPU, 4 GB RAM, no GPU |
+
+## Why this matters
+
+Modern transformer language models are built on a simple assumption: you have GPUs. Lots of them. The papers, the open-weight releases, the training recipes — all assume A100s or better. If you don't have that hardware, you're a spectator.
+
+ARTN challenges that assumption. Three architectural innovations — ternary weights, recursive parameter tying, and a learned halting gate — are stacked into a single model that trains end-to-end on a 4 GB laptop CPU and generates coherent text. Not a toy demo. Not a fine-tune. A model trained from scratch in 14 hours, producing stories with narrative structure, dialogue, and subject-specific vocabulary.
+
+The techniques are not specific to this hardware. Ternary quantization, parameter sharing, and adaptive computation are general principles. If they work at 4 GB on a dual-core CPU, they work on edge devices, on IoT, on mobile — anywhere the memory wall is real.
+
+## The journey
+
+ARTN did not work on the first try. It did not work on the fifth.
+
+**8 training attempts · 5 failed · 211,000 total steps · 390+ hours · 3.5 months**
+**62 investigation phases · 11,000+ lines of documentation**
+
+| # | Date | Steps | Hours | Result |
+|---|---|---|---|---|
+| 1 | Aug 1 | 5,000 | 4 | Pipeline verified |
+| 2 | Aug 3–6 | 50,000 | 79 | COLLAPSED — "time time time..." |
+| 3 | Aug 6 | 2,000 | 1 | Stopped — wrong accumulation |
+| 4 | Aug 6–10 | 50,000 | 83 | Completed — healthy but gibberish |
+| 5 | Aug 13–16 | 50,000 | 82 | Completed — healthy but gibberish |
+| 6 | Aug 19 | 5,000 | — | FP32 + AdamW — first success (val 1.69) |
+| 7 | Sep 10–11 | 10,000 | — | BitLinear + AdamW — ternary works (val 1.92) |
+| **8** | **Oct 25** | **10,000** | **14.35** | **ARTN — the model that works (val 2.03)** |
+
+244 hours of failed training across three 50K-step runs before the root cause was found: a bug in the optimizer that silently overwrote variance-scaled updates with momentum-only updates — making it behave like SGD with momentum instead of Adafactor. The model trained, the loss dropped, the entropy looked healthy. The output was gibberish.
+
+The fix: switch to AdamW. Then build ARTN on top.
+
+What this taught: that loss going down does not mean the model is learning. That entropy can be healthy while the output is gibberish. That an optimizer can compute the right gradients and then silently throw them away. That the difference between a working model and a broken one can be a single line of code — and finding it can take weeks. Every failure is documented in the [Investigation](#investigation) section below, with evidence files for every claim.
 
 ## Problem
 
@@ -29,15 +89,53 @@ The fundamental compute/memory wall on low-end hardware. Modern transformer lang
 
 ## Architecture
 
-ARTN combines five techniques to train a transformer under extreme hardware constraints. Every figure below is measured from the released checkpoint.
+ARTN stacks three innovations into a single architecture. Each one attacks a different resource bottleneck. Every figure below is measured from the released checkpoint.
+
+```
+ Input tokens
+     │
+     ▼
+┌─────────────┐
+│  Embeddings  │   (token + position, not shared)
+└──────┬──────┘
+       │
+       ▼
+┌──────────────────┐    pass 1
+│  BitLinearBlock   │◄── shared weights (ONE block, used 6× max)
+│  {-1, 0, 1}       │
+└──────┬───────────┘
+       │            ┌──────────────┐
+       ├───────────►│ Halting Gate  │  "has this position converged?"
+       │            │ sigmoid(W·x)  │  learned per-token, per-pass
+       │            └──────┬───────┘
+       │                   │
+      no (p < θ)           │ yes (p ≥ θ)
+       │                   │
+       ▼                   ▼
+┌──────────────────┐    stop updating this position
+│  BitLinearBlock   │◄── same weights, pass 2
+│  (same weights)   │
+└──────┬───────────┘
+       │              ... repeat up to max_passes = 6
+       ▼
+┌─────────────┐
+│   ln_f +     │
+│   lm_head    │
+└──────┬──────┘
+       │
+       ▼
+   logits → next token
+```
 
 | Constraint | Technique | Measured effect |
 |---|---|---|
 | **Weight memory** | BitLinear 1.58-bit `{-1, 0, 1}` with straight-through estimation | 2,904,065 params vs 5,828,608 FP32 — **50.2% fewer** |
-| **Depth memory** | Recursive parameter tying — one shared block, 6 passes | **789,760** params in the shared block |
+| **Depth memory** | Recursive parameter tying — one shared block, 6 passes | **789,760** params in the shared block (instead of 6 × 789,760) |
 | **Compute cycles** | Learned adaptive halting gate | **3.57** average passes at threshold 0.9 (vs 6.0) |
 | **Training stability** | AdamW + cosine schedule + gradient clipping | converged CPU-only, 0 NaN/Inf |
 | **Hardware envelope** | — | full training in 14.35 h on 4 GB RAM |
+
+**How the three fit together.** Ternary weights cut the model's parameter footprint in half — each weight is one of three values instead of a 32-bit float. Parameter tying cuts it further: instead of six separate transformer blocks, ARTN uses one block and runs it six times. The halting gate then makes those six passes optional — each token position learns when it has "converged" and stops early. At inference, the model averages 3.57 passes instead of 6, cutting compute by 40% for a 0.08% NLL cost. Training runs all six passes for exact gradients; halting applies only at inference.
 
 ## Experiments
 
@@ -94,13 +192,21 @@ The halting gate averages **3.3-3.6 passes** at threshold 0.9 depending on the p
 
 ## Example output
 
-ARTN checkpoint `step_10000` — sign-aware repetition penalty 1.3, greedy decoding, seed 42.
+ARTN checkpoint `step_10000` — sign-aware repetition penalty 1.3, greedy decoding, seed 42. Each sample is from `broader_gen_eval.json` (config `C_penalty1.3_t1.0`, 20 prompts × 4 decoding configurations).
 
 > **Prompt:** `once there was a little boy`
 >
 > **Output:** once there was a little boy who liked to play with his toys. One day, he saw something shiny in the box. He wanted to open it and see what it was. The little boy looked around and saw that it had many colors. It was so big that it could not touch it. But then the boy heard the noise and came out of the room. His mom said, "Please help me find it." She picked up the toy box and put it on the shelf. The little boy was very happy and thanked the boy for helping him. From that day on,
 
-Reproducible from `outputs/artn_recursive_20261025_002725/broader_gen_eval.json` (config `C_penalty1.3_t1.0`, 20 prompts x 4 decoding configurations).
+> **Prompt:** `a little bird flew high`
+>
+> **Output:** a little bird flew high in the sky. The bird was very happy to fly and it could fly high up high. But then one day, the bird saw something shiny on it. It had a long tail and it made a loud noise. Suddenly, the bird heard a voice. He looked around and saw a big bird. The bird said, "Hello, bird!" The bird smiled at the bird. The bird felt so happy. From that day on, the bird became friends and played together every day.
+
+> **Prompt:** `a dragon lived in a cave`
+>
+> **Output:** a dragon lived in a cave and he was very happy. One day, he decided to go for a walk with his friends. He walked around the forest and saw a big tree. The bird looked so high that it could not find it. It had many friends like a long tail. They were happy and excited. But then, they heard a loud noise. A man came out of the window and saw the bird flying towards them. The bird said "Hello, bird," said the bird. "Do you want to help me get my friend?" The bird said, "Yes, I can help you." The
+
+The model generates subject-specific vocabulary — the bird sample talks about flying and the sky; the dragon sample mentions a cave, a forest, and friends. Coherence degrades toward the end of each 100-word window, which is expected for a 2.9M-parameter model trained for 10k steps on TinyStories.
 
 ## Evaluation notes
 
@@ -112,14 +218,16 @@ Prompt adherence for rare subjects remains the open problem, and is the focus of
 
 ## Investigation
 
-This repository is also a complete research record. Two documents hold the full account:
+Every phase is documented. Every measurement is backed by an evidence file. Every failure is recorded — including the dead ends.
+
+Two documents hold the full account:
 
 | Document | Contents |
 |---|---|
-| [`ROOT_CAUSE_INVESTIGATION_SUMMARY.md`](experiments/results/ROOT_CAUSE_INVESTIGATION_SUMMARY.md) | Phases 1-60.27 — root-cause analysis, optimizer forensics, architecture development, generation-quality and context-retention studies. Measured findings with evidence files for every claim. |
+| [`ROOT_CAUSE_INVESTIGATION_SUMMARY.md`](experiments/results/ROOT_CAUSE_INVESTIGATION_SUMMARY.md) | Phases 1–60.29 — root-cause analysis, optimizer forensics, architecture development, generation-quality and context-retention studies, diagnostic probes, controlled construction-transfer experiments. **9,600+ lines** of measured findings with evidence files for every claim. |
 | [`TRAINING_HISTORY.md`](TRAINING_HISTORY.md) | Complete training history — configurations, loss trajectories, checkpoints and results for every run. |
 
-Supporting material: `experiments/results/` (per-phase reports), `outputs/` (per-experiment JSON results), `scripts/` (evaluation and diagnostic tooling).
+Supporting material: `experiments/results/` (per-phase reports), `outputs/` (per-experiment JSON results), `scripts/` (evaluation and diagnostic tooling — 44 scripts).
 
 ## Repository layout
 

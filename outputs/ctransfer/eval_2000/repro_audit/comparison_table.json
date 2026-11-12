@@ -1,0 +1,56 @@
+{
+ "comparisons": {
+  "A-C": {
+   "point": 0.075,
+   "CI95": [
+    -0.075,
+    0.225
+   ],
+   "excludes_zero": false,
+   "reproduced": true
+  },
+  "B-B0": {
+   "point": -0.025,
+   "CI95": [
+    -0.075,
+    0.0
+   ],
+   "excludes_zero": false,
+   "reproduced": true
+  },
+  "B-A": {
+   "point": -0.125,
+   "CI95": [
+    -0.25,
+    0.0
+   ],
+   "excludes_zero": false,
+   "reproduced": true
+  },
+  "B-C": {
+   "point": -0.05,
+   "CI95": [
+    -0.125,
+    0.0
+   ],
+   "excludes_zero": false,
+   "reproduced": true
+  },
+  "B-max(A,B0)": {
+   "point": -0.15,
+   "CI95": [
+    -0.25,
+    -0.05
+   ],
+   "excludes_zero": true,
+   "reproduced": true,
+   "method": "max(A,B0) recomputed per subject inside every resample"
+  }
+ },
+ "bootstrap": {
+  "B": 10000,
+  "seed": 0,
+  "paired": true,
+  "max_selection": "elementwise per subject, recomputed inside each resample"
+ }
+}
