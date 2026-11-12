@@ -1,6 +1,5 @@
 # ARTN — Adaptive Recursive Ternary Networks
 
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10+-green.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-ee4c2c.svg)
 ![CPU-only](https://img.shields.io/badge/Runs%20on-CPU--only-orange.svg)
