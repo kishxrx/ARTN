@@ -219,14 +219,28 @@ Prompt adherence for rare subjects remains the open problem, and is the focus of
 
 Every phase is documented. Every measurement is backed by an evidence file. Every failure is recorded — including the dead ends.
 
-Two documents hold the full account:
+### The investigation
 
-| Document | Contents |
-|---|---|
-| [`ROOT_CAUSE_INVESTIGATION_SUMMARY.md`](experiments/results/ROOT_CAUSE_INVESTIGATION_SUMMARY.md) | Phases 1–60.29 — root-cause analysis, optimizer forensics, architecture development, generation-quality and context-retention studies, diagnostic probes, controlled construction-transfer experiments. **9,600+ lines** of measured findings with evidence files for every claim. |
-| [`TRAINING_HISTORY.md`](TRAINING_HISTORY.md) | Complete training history — configurations, loss trajectories, checkpoints and results for every run. |
+ARTN didn't appear out of nowhere. It took 390+ hours, 8 training attempts, 5 failures, and 62 phases of systematic investigation to get here — and every step is documented.
 
-Supporting material: `experiments/results/` (per-phase reports), `outputs/` (per-experiment JSON results), `scripts/` (evaluation and diagnostic tooling — 44 scripts).
+There's a full investigation record — **11,000+ lines** — that goes deeper than this README. It covers:
+
+- A failure mode so subtle it masqueraded as success — and the forensics that finally exposed it
+- Why a model can lose loss steadily and still produce gibberish
+- How systematic elimination — not guesswork — narrowed months of dead ends to a single root cause
+- Six diagnostic probes that mapped how knowledge is structured inside a 2.9M-parameter ternary model — and where it breaks
+- A controlled four-arm experiment designed to settle a question — and the unexpected answer it returned
+- Findings that defied every prediction and opened new questions the investigation is still chasing
+
+Every measurement backed by an evidence file. Every dead end recorded.
+
+This document is not in the public repo. It's available to anyone who wants to understand what it really takes to build a language model from scratch on a 4 GB laptop.
+
+**If you want to see it, reach out.**
+
+---
+
+[`TRAINING_HISTORY.md`](TRAINING_HISTORY.md) — complete training history with configurations, loss trajectories, and results for every run — is in the repo.
 
 ## Repository layout
 
