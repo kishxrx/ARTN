@@ -26,10 +26,10 @@
 - [Repository layout](#repository-layout)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Future Work](#future-work)
+- [Research Programme](#research-programme)
+- [Active Work](#active-work)
 - [License](#license)
 - [Citation](#citation)
-- [Ongoing research](#ongoing-research)
 
 ## Result at a glance
 
@@ -297,9 +297,97 @@ python scripts/stage9_benchmark.py       # CPU throughput + peak RSS
 python scripts/artn_threshold_sweep.py   # halting threshold sweep
 ```
 
-## Future Work
+## Research Programme
 
-**Era 2: ARTN-Chem** — domain adaptation for SMILES molecular representations, training on chemical structure constraints from PubChem/ZINC databases.
+**The Mission: Advanced AI on Ordinary Hardware.**
+
+Modern AI increasingly relies on massive computing clusters and proprietary cloud infrastructure. ARTN investigates an alternative foundation: architectures designed to compute efficiently, develop reusable capabilities, learn continuously, and expand without requiring ever-increasing hardware resources.
+
+The objective is to make building, training, and specializing AI systems increasingly accessible on ordinary consumer hardware.
+
+ARTN already provides an experimental foundation for this programme: a 2.9-million-parameter language model trained from scratch on a dual-core CPU with 4 GB of RAM, with documented architectural ablations, training investigations, inference benchmarks, and generation results. These experiments demonstrate what has been achieved while exposing the limitations that motivate the research directions below.
+
+The following frontiers represent the next areas of investigation, not claims of completed capabilities.
+
+| Frontier | Core Question | Architectural Direction |
+| :--- | :--- | :--- |
+| **1. Efficient Intelligence** | How can computation be allocated dynamically? | Ternary weights, recursive parameter tying, adaptive halting |
+| **2. Reusable Intelligence** | How can learned representations transfer across tasks? | Compositional abstractions, shared computational structures |
+| **3. Continual Intelligence** | How can models continue learning after initial training? | Offline memory consolidation, sleep/dreaming-inspired replay |
+| **4. Expandable Intelligence** | How can compact models acquire additional capacity? | Modular expansion, selective activation, capability preservation |
+| **5. Grounded Intelligence** | How can generation be separated from verified information and execution? | Local retrieval, deterministic tool execution, evidence verification |
+| **6. Domain Specialization** | How can a shared architecture adapt to specialized fields? | Structural priors, domain-specific representations, specialized training |
+| **7. Zero-Infrastructure AI** | How can we democratize training, not just inference? | CPU-first computation, low-RAM training, reproducible experimentation |
+
+### 1. Efficient Intelligence — Rethinking Computation
+
+Intelligence depends not just on how much compute is available, but on how selectively it is spent. Rather than relying exclusively on fixed-depth dense networks, ARTN investigates **adaptive computational depth**. Its current architecture combines ternary weights (`{-1, 0, 1}`), recursive parameter sharing, and learned adaptive halting to process representations through repeated computational passes.
+
+> **Focus areas:** Dynamic compute allocation · Parameter reuse across depth · Adaptive early halting · CPU-efficient ternary operations · Compression-vs-throughput trade-offs
+
+The long-term direction is to make computation more selective and efficient, rather than simply making models smaller.
+
+### 2. Reusable Intelligence — Beyond Memorization
+
+Memorizing surface patterns is not the same as developing transferable capabilities. ARTN's shared recursive block provides an architectural foundation for investigating whether repeated computation can develop useful internal operations that transfer across different contexts.
+
+> **Focus areas:** Compositional abstractions · Shared computational structures · Modular recombination · Separating general vs. task-specific representations · Zero-rebuild transfer
+
+The objective is to investigate whether compact models can develop reusable computational capabilities rather than relying primarily on memorizing individual patterns.
+
+### 3. Continual Intelligence — Learning Beyond Training
+
+Training should be the beginning of a model's development, not the end of it. This is one of my main goals. 
+Most language models have a fixed training phase followed by inference, requiring costly retraining or external memory to incorporate new knowledge.
+
+ARTN's longer-term direction investigates mechanisms for acquiring, retaining, and consolidating knowledge over time—drawing inspiration from **sleep, dreaming, and memory consolidation** (see Google Research's [Sleep Framework](https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/) and [*Language Models Need Sleep*](https://arxiv.org/abs/2606.03979)). The central idea is separating active learning from offline consolidation: periodically revisiting accumulated experience, reinforcing useful knowledge, and reorganizing representations.
+
+> **Focus areas:** Offline memory consolidation · Selective retention and pruning · Biological replay mechanisms · Synthetic experience generation · Mitigating catastrophic forgetting on low-resource hardware
+
+This challenges the assumption that a model's development must stop when its initial training is complete.
+
+### 4. Expandable Intelligence — A Foundation That Can Grow
+
+Conventional architectures generally lock their capacity before training begins, meaning increased capability requires scaling up and repeating substantial portions of training. This direction investigates **progressive architectural growth**: starting with a compact computational foundation and introducing additional capacity as new requirements emerge.
+
+> **Focus areas:** Modular capacity addition · Integrating independently trained components · Task-conditional activation · Combining modular growth with recursive execution · Capability preservation during expansion
+
+The long-term ambition is to investigate architectures that grow incrementally rather than requiring the entire model to become larger whenever new capabilities are needed.
+
+### 5. Grounded Intelligence — Knowledge, Tools, and Verification
+
+Generating plausible tokens is not the same as establishing truth, and generating an instruction is not the same as successfully executing it. A compact model should not need to memorize an entire encyclopedia or independently reproduce every external capability. Instead, this direction combines learned representations with external knowledge and deterministic execution.
+
+> **Focus areas:** Local knowledge retrieval · Deterministic tool execution · Evidence verification · Separating reasoning from validation · Execution-feedback loops
+
+The broader objective is to investigate how compact models can serve as capable reasoning cores while keeping knowledge, tools, and execution accessible locally.
+
+### 6. Domain Specialization — One Foundation, Multiple Fields
+
+Language modelling is the current experimental focus of ARTN, but the architectural principles being investigated are not limited to natural language. Different technical domains have their own structural rules, representations, and constraints, requiring targeted adaptation rather than general-purpose text prediction alone.
+
+> **Focus areas:** Domain-specific structural priors · Curated compact datasets · Recursive computation on structured data · Cross-domain ternary transfer · Low-infrastructure specialization across scientific, mathematical, logical, and engineering workflows
+
+The objective is to investigate whether a shared architectural foundation can support multiple specialized models through targeted adaptation.
+
+### 7. Intelligence Without Infrastructure
+
+Open weights mean little if only organizations with data centers can meaningfully train, modify, and develop AI systems. Training ARTN from scratch on a dual-core CPU with 4 GB of RAM demonstrates that meaningful architectural experimentation is possible without GPU clusters—but true accessibility requires optimizing the entire development lifecycle, not just inference.
+
+> **Focus areas:** Memory-conscious CPU training loops · Low-RAM optimization · CPU-native computational kernels · Local domain adaptation · Reproducible evaluation harnesses · Transparent failure forensics
+
+The objective is to lower the barrier not just to *using* AI, but to building, training, understanding, and improving it.
+
+### Active Work
+
+My current ongoing work focuses on concrete limitations and extensions of the existing ARTN implementation:
+
+- **Context and Prompt Adherence:** Reducing long-context repetition, improving subject fidelity, and evaluating generation quality across diverse prompts.
+- **Halting and Training Efficiency:** Refining exit-gate calibration, investigating computation allocation, and improving CPU-native ternary operations.
+- **Architectural Generalization:** Evaluating whether recursive representations and shared computational structures produce transferable capabilities beyond the original training distribution.
+
+> *Advanced AI should not belong exclusively to those who can afford the infrastructure to train it.*
+
 
 ## License
 
@@ -318,8 +406,3 @@ python scripts/artn_threshold_sweep.py   # halting threshold sweep
 }
 ```
 
----
-
-## Ongoing research
-
-ARTN is an active project and the model continues to improve. Current work focuses on generation quality and prompt adherence — reducing repetition, sustaining coherence over longer contexts, and following the prompt more faithfully across a wider range of subjects. Alongside that: further halting-threshold tuning, training-efficiency work, and an expanding evaluation suite.
